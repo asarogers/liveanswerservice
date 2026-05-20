@@ -1,0 +1,65 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="140" cy="290" r="270" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1060" cy="220" r="230" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="720" cy="530" r="160" fill="#E0D8CF" opacity="0.3"/>
+
+  <!-- Scale / balance (worth it?) -->
+  <rect x="585" y="160" width="30" height="200" rx="6" fill="#4A6B50" opacity="0.7"/>
+  <rect x="520" y="155" width="160" height="14" rx="7" fill="#4A6B50" opacity="0.7"/>
+  <!-- Left pan -->
+  <path d="M540 172 Q520 210 495 240 Q480 255 470 265 L620 265 Q610 255 595 240 Q570 210 560 172 Z" fill="none" stroke="#4A6B50" stroke-width="3" opacity="0.6"/>
+  <ellipse cx="545" cy="268" rx="82" ry="14" fill="#D8D0C8" opacity="0.7"/>
+  <!-- Cost items in left pan -->
+  <rect x="490" y="235" width="110" height="28" rx="5" fill="#C4622D" opacity="0.35"/>
+  <rect x="496" y="240" width="60" height="6" rx="2" fill="#FAF7F2" opacity="0.8"/>
+  <rect x="496" y="250" width="45" height="5" rx="2" fill="#FAF7F2" opacity="0.6"/>
+  <!-- Right pan -->
+  <path d="M640 172 Q660 210 685 240 Q700 255 710 265 L860 265 Q850 255 835 240 Q810 210 780 172 Z" fill="none" stroke="#4A6B50" stroke-width="3" opacity="0.6"/>
+  <ellipse cx="750" cy="268" rx="82" ry="14" fill="#D8D0C8" opacity="0.7"/>
+  <!-- Value items in right pan -->
+  <circle cx="728" cy="248" r="14" fill="#6B8F71" opacity="0.6"/>
+  <path d="M722 248 L726 253 L736 241" stroke="#FAF7F2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="758" cy="245" r="14" fill="#6B8F71" opacity="0.6"/>
+  <path d="M752 245 L756 250 L766 238" stroke="#FAF7F2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Left panel: cost breakdown -->
+  <rect x="140" y="195" width="240" height="240" rx="12" fill="#FAF7F2" opacity="0.88"/>
+  <rect x="140" y="195" width="240" height="40" rx="12" fill="#C4622D"/>
+  <rect x="140" y="221" width="240" height="14" fill="#C4622D"/>
+  <text x="260" y="220" text-anchor="middle" fill="#FAF7F2" font-size="12" font-family="system-ui, sans-serif" font-weight="700">THE COST</text>
+  <rect x="158" y="252" width="60" height="7" rx="2.5" fill="#9A9A9A" opacity="0.45"/>
+  <rect x="228" y="252" width="135" height="7" rx="2.5" fill="#C4622D" opacity="0.5"/>
+  <rect x="158" y="270" width="60" height="7" rx="2.5" fill="#9A9A9A" opacity="0.45"/>
+  <rect x="228" y="270" width="125" height="7" rx="2.5" fill="#C4622D" opacity="0.45"/>
+  <rect x="158" y="288" width="60" height="7" rx="2.5" fill="#9A9A9A" opacity="0.45"/>
+  <rect x="228" y="288" width="130" height="7" rx="2.5" fill="#C4622D" opacity="0.4"/>
+  <rect x="155" y="308" width="210" height="1.5" fill="#E0D8CF"/>
+  <rect x="158" y="320" width="80" height="8" rx="2.5" fill="#3A3A3A" opacity="0.5"/>
+  <rect x="248" y="320" width="115" height="8" rx="2.5" fill="#C4622D" opacity="0.7"/>
+
+  <!-- Right panel: value breakdown -->
+  <rect x="820" y="195" width="240" height="240" rx="12" fill="#FAF7F2" opacity="0.88"/>
+  <rect x="820" y="195" width="240" height="40" rx="12" fill="#6B8F71"/>
+  <rect x="820" y="221" width="240" height="14" fill="#6B8F71"/>
+  <text x="940" y="220" text-anchor="middle" fill="#FAF7F2" font-size="12" font-family="system-ui, sans-serif" font-weight="700">THE VALUE</text>
+  <circle cx="848" cy="256" r="8" fill="#6B8F71" opacity="0.8"/>
+  <path d="M844 256 L847 260 L854 251" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="864" y="252" width="178" height="7" rx="2.5" fill="#5A5A5A" opacity="0.4"/>
+  <circle cx="848" cy="280" r="8" fill="#6B8F71" opacity="0.8"/>
+  <path d="M844 280 L847 284 L854 275" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="864" y="276" width="165" height="7" rx="2.5" fill="#5A5A5A" opacity="0.4"/>
+  <circle cx="848" cy="304" r="8" fill="#6B8F71" opacity="0.8"/>
+  <path d="M844 304 L847 308 L854 299" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="864" y="300" width="172" height="7" rx="2.5" fill="#5A5A5A" opacity="0.4"/>
+  <circle cx="848" cy="328" r="8" fill="#6B8F71" opacity="0.8"/>
+  <path d="M844 328 L847 332 L854 323" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="864" y="324" width="158" height="7" rx="2.5" fill="#5A5A5A" opacity="0.4"/>
+
+  <!-- Verdict badge -->
+  <ellipse cx="600" cy="410" rx="120" ry="38" fill="#6B8F71" opacity="0.15"/>
+  <ellipse cx="600" cy="410" rx="105" ry="30" fill="#6B8F71" opacity="0.2"/>
+  <text x="600" y="415" text-anchor="middle" fill="#4A6B50" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Worth It For Most Families</text>
+
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

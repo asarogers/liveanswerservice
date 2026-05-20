@@ -1,0 +1,82 @@
+{
+  "project": "liveanswerservice",
+  "generated": "2026-05-13T00:00:00Z",
+  "scored_date": "2026-05-13",
+  "total_keywords": 0,
+  "_comment": "MANUALLY MAINTAINED PUBLISHING SCHEDULE — see BUSINESS.md week-by-week roadmap. URLs in `exclude` get robots:noindex + omitted from sitemap. URLs in `sitemaps.priority` get sitemap priority 0.95 (vs 0.8 default). Each Monday, MOVE the next batch of URLs from `exclude` into `sitemaps.priority.urls` and redeploy. Mission Control's page-schedule panel will eventually edit this file directly.",
+  "sitemaps": {
+    "priority": {
+      "filename": "sitemap-priority.xml",
+      "description": "Week 1 launch — pages indexed and prioritized in the sitemap.",
+      "urls": [
+        { "url": "/services/hvac-answering-service",      "tier": "G", "action": "target_now", "reason": "Week 1 launch — HVAC vertical" },
+        { "url": "/services/attorney-answering-service",  "tier": "G", "action": "target_now", "reason": "Week 1 launch — Legal vertical" },
+        { "url": "/services/small-business-answering-service", "tier": "G", "action": "target_now", "reason": "Week 1 launch — SMB landing" },
+        { "url": "/locations/san-jose",                   "tier": "F", "action": "target_now", "reason": "Week 1 launch — HQ/NAP city" },
+        { "url": "/pricing",                              "tier": "F", "action": "target_now", "reason": "Week 1 launch — pricing page" },
+        { "url": "/calculator",                           "tier": "F", "action": "target_now", "reason": "Week 1 launch — missed-call calculator" }
+      ]
+    },
+    "longtail": {
+      "filename": "sitemap-longtail.xml",
+      "description": "Lower-priority pages currently indexed (default 0.8 priority).",
+      "urls": []
+    }
+  },
+  "orphans": {
+    "description": "Pages built but linked from nowhere. Empty for now.",
+    "urls": []
+  },
+  "exclude": {
+    "description": "Pages built into the repo but NOT indexed yet (per BUSINESS.md publishing schedule). robots:noindex emitted per page; omitted from sitemap. Move into sitemaps.priority on the launch week, then redeploy.",
+    "urls": [
+      { "url": "/services/dental-answering-service",            "tier": "G", "action": "exclude", "reason": "Week 2 launch" },
+      { "url": "/how-it-works",                                 "tier": "F", "action": "exclude", "reason": "Week 2 launch" },
+      { "url": "/start-trial",                                  "tier": "F", "action": "exclude", "reason": "Week 2 launch" },
+      { "url": "/services/restaurant-answering-service",        "tier": "G", "action": "exclude", "reason": "Week 3 launch" },
+      { "url": "/comparison",                                   "tier": "F", "action": "exclude", "reason": "Week 3 launch" },
+      { "url": "/ccpa-compliance-call-recording",               "tier": "F", "action": "exclude", "reason": "Week 3 launch" },
+      { "url": "/locations/sacramento",                         "tier": "G", "action": "exclude", "reason": "Week 4 launch — local SEO" },
+      { "url": "/locations/los-angeles",                        "tier": "G", "action": "exclude", "reason": "Week 4 launch — local SEO" },
+      { "url": "/locations/san-francisco-bay-area",             "tier": "G", "action": "exclude", "reason": "Week 4 launch — local SEO" },
+      { "url": "/services/real-estate-answering-service",       "tier": "F", "action": "exclude", "reason": "Week 5 launch" },
+      { "url": "/services/property-management-answering-service", "tier": "F", "action": "exclude", "reason": "Week 5 launch" },
+      { "url": "/services/salon-and-spa-answering-service",     "tier": "F", "action": "exclude", "reason": "Week 5 launch" },
+      { "url": "/24-7-answering-service",                       "tier": "G", "action": "exclude", "reason": "Week 6 launch" },
+      { "url": "/bilingual-answering-service-california",       "tier": "G", "action": "exclude", "reason": "Week 6 launch" },
+      { "url": "/cheap-answering-service",                      "tier": "G", "action": "exclude", "reason": "Week 6 launch — highest-trending kw" },
+      { "url": "/services/medical-office-answering-service",    "tier": "F", "action": "exclude", "reason": "Week 7 launch" },
+      { "url": "/services/live-answering-service",              "tier": "F", "action": "exclude", "reason": "Week 7 launch" },
+      { "url": "/vs-hiring-a-receptionist",                     "tier": "F", "action": "exclude", "reason": "Week 7 launch" },
+      { "url": "/free-trial",                                   "tier": "F", "action": "exclude", "reason": "Week 7 launch — paid-ad LP" }
+    ]
+  },
+  "internal_linking": {
+    "homepage": {
+      "description": "Featured service cards on the homepage hero — top Week 1 verticals.",
+      "links": [
+        { "url": "/services/hvac-answering-service",     "keyword": "HVAC answering service",     "tier": "G" },
+        { "url": "/services/attorney-answering-service", "keyword": "Attorney answering service", "tier": "G" },
+        { "url": "/services/small-business-answering-service", "keyword": "Small business answering service", "tier": "G" }
+      ]
+    },
+    "hub": {
+      "description": "Service-index page secondary links.",
+      "links": []
+    },
+    "footer": {
+      "description": "Footer navigation links.",
+      "links": []
+    }
+  },
+  "clusters": {},
+  "lastmod_schedule": [
+    { "week": 1, "target_date": "2026-05-18", "count": 7,  "urls": ["/", "/services/hvac-answering-service", "/services/attorney-answering-service", "/services/small-business-answering-service", "/locations/san-jose", "/pricing", "/calculator"] },
+    { "week": 2, "target_date": "2026-05-25", "count": 3,  "urls": ["/services/dental-answering-service", "/how-it-works", "/start-trial"] },
+    { "week": 3, "target_date": "2026-06-01", "count": 3,  "urls": ["/services/restaurant-answering-service", "/comparison", "/ccpa-compliance-call-recording"] },
+    { "week": 4, "target_date": "2026-06-08", "count": 3,  "urls": ["/locations/sacramento", "/locations/los-angeles", "/locations/san-francisco-bay-area"] },
+    { "week": 5, "target_date": "2026-06-15", "count": 3,  "urls": ["/services/real-estate-answering-service", "/services/property-management-answering-service", "/services/salon-and-spa-answering-service"] },
+    { "week": 6, "target_date": "2026-06-22", "count": 3,  "urls": ["/24-7-answering-service", "/bilingual-answering-service-california", "/cheap-answering-service"] },
+    { "week": 7, "target_date": "2026-06-29", "count": 4,  "urls": ["/services/medical-office-answering-service", "/services/live-answering-service", "/vs-hiring-a-receptionist", "/free-trial"] }
+  ]
+}

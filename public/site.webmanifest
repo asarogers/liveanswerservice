@@ -1,0 +1,14 @@
+{
+  "name": "Live Answer",
+  "short_name": "Live Answer",
+  "description": "AI receptionist that answers every call 24/7. Built for California small businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF9F5",
+  "theme_color": "#1A1A17",
+  "icons": [
+    { "src": "/favicon-16x16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

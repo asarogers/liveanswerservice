@@ -1,0 +1,56 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="130" cy="280" r="270" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1070" cy="240" r="220" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="680" cy="520" r="155" fill="#E0D8CF" opacity="0.3"/>
+
+  <!-- VS divider -->
+  <rect x="588" y="160" width="24" height="280" rx="4" fill="#E0D8CF" opacity="0.8"/>
+  <ellipse cx="600" cy="300" rx="28" ry="28" fill="#FAF7F2"/>
+  <text x="600" y="305" text-anchor="middle" fill="#C4622D" font-size="16" font-family="system-ui, sans-serif" font-weight="800">VS</text>
+
+  <!-- Left: Personal Chef -->
+  <rect x="148" y="160" width="420" height="50" rx="10" fill="#6B8F71"/>
+  <text x="358" y="191" text-anchor="middle" fill="#FAF7F2" font-size="14" font-family="system-ui, sans-serif" font-weight="700">PERSONAL CHEF</text>
+  <!-- Chef icon -->
+  <circle cx="222" cy="270" r="30" fill="#6B8F71" opacity="0.15"/>
+  <ellipse cx="222" cy="258" rx="14" ry="16" fill="#D8C0A0"/>
+  <path d="M200 290 Q200 310 222 314 Q244 310 244 290 Q244 278 222 275 Q200 278 200 290 Z" fill="#FAF7F2"/>
+  <rect x="214" y="248" width="16" height="6" rx="3" fill="#E8E0D8"/>
+  <!-- Chef hat -->
+  <ellipse cx="222" cy="246" rx="18" ry="6" fill="#FAF7F2"/>
+  <rect x="210" y="228" width="24" height="20" rx="10" fill="#FAF7F2"/>
+  <!-- Chef features -->
+  <rect x="165" y="330" width="390" height="7" rx="2.5" fill="#4A6B50" opacity="0.3"/>
+  <rect x="165" y="348" width="360" height="7" rx="2.5" fill="#4A6B50" opacity="0.25"/>
+  <rect x="165" y="366" width="375" height="7" rx="2.5" fill="#4A6B50" opacity="0.25"/>
+  <rect x="165" y="384" width="340" height="7" rx="2.5" fill="#4A6B50" opacity="0.2"/>
+  <!-- Meal prep illustration -->
+  <rect x="280" y="240" width="130" height="80" rx="8" fill="#D8D0C8" opacity="0.5"/>
+  <rect x="286" y="246" width="118" height="68" rx="6" fill="#EFF5F0" opacity="0.85"/>
+  <ellipse cx="335" cy="278" rx="28" ry="13" fill="#6B8F71" opacity="0.5"/>
+  <ellipse cx="370" cy="282" rx="20" ry="11" fill="#C4622D" opacity="0.45"/>
+
+  <!-- Right: Home Care Aide -->
+  <rect x="632" y="160" width="420" height="50" rx="10" fill="#C4622D" opacity="0.8"/>
+  <text x="842" y="191" text-anchor="middle" fill="#FAF7F2" font-size="14" font-family="system-ui, sans-serif" font-weight="700">HOME CARE AIDE</text>
+  <!-- Aide icon -->
+  <circle cx="700" cy="270" r="30" fill="#C4622D" opacity="0.12"/>
+  <ellipse cx="700" cy="258" rx="14" ry="16" fill="#D8C0A0"/>
+  <path d="M678 290 Q678 310 700 314 Q722 310 722 290 Q722 278 700 275 Q678 278 678 290 Z" fill="#E8E8F0"/>
+  <!-- Care cross symbol -->
+  <rect x="694" y="278" width="12" height="30" rx="3" fill="#C4622D" opacity="0.5"/>
+  <rect x="686" y="286" width="28" height="12" rx="3" fill="#C4622D" opacity="0.5"/>
+  <!-- Aide features -->
+  <rect x="642" y="330" width="395" height="7" rx="2.5" fill="#C4622D" opacity="0.3"/>
+  <rect x="642" y="348" width="370" height="7" rx="2.5" fill="#C4622D" opacity="0.25"/>
+  <rect x="642" y="366" width="380" height="7" rx="2.5" fill="#C4622D" opacity="0.25"/>
+  <rect x="642" y="384" width="355" height="7" rx="2.5" fill="#C4622D" opacity="0.2"/>
+
+  <!-- Bottom: Key difference -->
+  <rect x="250" y="430" width="700" height="55" rx="10" fill="#FAF7F2" opacity="0.9"/>
+  <rect x="250" y="430" width="700" height="55" rx="10" fill="none" stroke="#6B8F71" stroke-width="1.5" opacity="0.4"/>
+  <text x="600" y="462" text-anchor="middle" fill="#4A6B50" font-size="13" font-family="system-ui, sans-serif" font-weight="600">Chef = specialized meal preparation · Aide = general daily living support</text>
+
+  <rect x="430" y="508" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

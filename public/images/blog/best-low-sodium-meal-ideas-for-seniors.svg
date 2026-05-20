@@ -1,0 +1,112 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <!-- Soft background blobs -->
+  <circle cx="160" cy="300" r="270" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1050" cy="240" r="230" fill="#FFF0E8" opacity="0.45"/>
+  <circle cx="950" cy="500" r="180" fill="#E8F0E9" opacity="0.35"/>
+
+  <!-- ── DINNER PLATE (center) ── -->
+  <!-- Plate shadow -->
+  <ellipse cx="602" cy="302" rx="228" ry="228" fill="#D8D0C8" opacity="0.3"/>
+  <!-- Plate rim -->
+  <circle cx="598" cy="295" r="222" fill="#FFFFFF"/>
+  <circle cx="598" cy="295" r="205" fill="#FAF7F2"/>
+  <circle cx="598" cy="295" r="200" fill="#FFFFFF"/>
+
+  <!-- ── FOOD ON PLATE ── -->
+  <!-- Salmon fillet (terracotta/coral) -->
+  <path d="M500 240 Q560 220 630 238 Q660 250 650 295 Q630 320 570 318 Q510 315 488 290 Q476 268 500 240 Z" fill="#E07050"/>
+  <path d="M505 248 Q555 232 620 246 Q645 256 638 290 Q622 308 572 306 Q518 304 500 282 Q490 264 505 248 Z" fill="#E89070" opacity="0.7"/>
+  <!-- Salmon flakes detail -->
+  <line x1="520" y1="265" x2="545" y2="272" stroke="#C85030" stroke-width="1.5" opacity="0.4"/>
+  <line x1="535" y1="250" x2="555" y2="258" stroke="#C85030" stroke-width="1.5" opacity="0.4"/>
+  <line x1="560" y1="244" x2="580" y2="252" stroke="#C85030" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Roasted asparagus spears -->
+  <g opacity="0.9">
+    <rect x="660" y="245" width="8" height="90" rx="4" fill="#5A8A40" transform="rotate(8 664 290)"/>
+    <ellipse cx="664" cy="246" rx="6" ry="9" fill="#3A6820" transform="rotate(8 664 246)"/>
+    <rect x="676" y="248" width="8" height="88" rx="4" fill="#6A9A50" transform="rotate(5 680 292)"/>
+    <ellipse cx="680" cy="249" rx="6" ry="9" fill="#4A7830" transform="rotate(5 680 249)"/>
+    <rect x="692" y="252" width="8" height="85" rx="4" fill="#5A8A40" transform="rotate(2 696 294)"/>
+    <ellipse cx="696" cy="253" rx="6" ry="9" fill="#3A6820" transform="rotate(2 696 253)"/>
+  </g>
+
+  <!-- Cherry tomatoes cluster -->
+  <circle cx="510" cy="335" r="22" fill="#D94030"/>
+  <circle cx="510" cy="335" r="14" fill="#E86050" opacity="0.6"/>
+  <ellipse cx="503" cy="317" rx="4" ry="6" fill="#2C5A20" transform="rotate(-15 503 317)"/>
+  <circle cx="548" cy="342" r="19" fill="#C83020"/>
+  <circle cx="548" cy="342" r="12" fill="#E05040" opacity="0.6"/>
+  <ellipse cx="543" cy="325" rx="4" ry="6" fill="#2C5A20" transform="rotate(-10 543 325)"/>
+
+  <!-- Lemon wedge -->
+  <path d="M580 340 Q620 330 640 350 Q625 378 590 375 Q568 368 568 355 Q568 344 580 340 Z" fill="#F0C830"/>
+  <path d="M585 345 Q618 336 635 353 Q622 373 592 371 Q574 366 574 355 Q574 347 585 345 Z" fill="#F8E060" opacity="0.7"/>
+  <!-- Lemon segments -->
+  <line x1="600" y1="340" x2="600" y2="374" stroke="#D8A820" stroke-width="1" opacity="0.6"/>
+  <line x1="583" y1="345" x2="628" y2="365" stroke="#D8A820" stroke-width="1" opacity="0.6"/>
+  <line x1="632" y1="350" x2="574" y2="362" stroke="#D8A820" stroke-width="1" opacity="0.6"/>
+
+  <!-- Fresh herb garnish (dill-like) -->
+  <g transform="translate(540, 235)">
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#5A8840" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-18" rx="9" ry="5" fill="#6B9A50" opacity="0.8" transform="rotate(-35 -10 -18)"/>
+    <ellipse cx="10" cy="-28" rx="9" ry="5" fill="#6B9A50" opacity="0.8" transform="rotate(35 10 -28)"/>
+    <ellipse cx="-8" cy="-38" rx="7" ry="4" fill="#6B9A50" opacity="0.75" transform="rotate(-25 -8 -38)"/>
+  </g>
+
+  <!-- ── HERB BUNDLE (left side) ── -->
+  <g transform="translate(220, 380)">
+    <!-- Stem -->
+    <line x1="0" y1="0" x2="0" y2="-140" stroke="#5A7A40" stroke-width="3" stroke-linecap="round"/>
+    <!-- Rosemary leaves -->
+    <ellipse cx="-12" cy="-30" rx="14" ry="6" fill="#6B8F71" opacity="0.7" transform="rotate(-45 -12 -30)"/>
+    <ellipse cx="13" cy="-50" rx="14" ry="6" fill="#6B8F71" opacity="0.7" transform="rotate(45 13 -50)"/>
+    <ellipse cx="-12" cy="-70" rx="13" ry="6" fill="#4A6B50" opacity="0.75" transform="rotate(-40 -12 -70)"/>
+    <ellipse cx="12" cy="-90" rx="13" ry="6" fill="#6B8F71" opacity="0.7" transform="rotate(40 12 -90)"/>
+    <ellipse cx="-10" cy="-108" rx="11" ry="5" fill="#4A6B50" opacity="0.7" transform="rotate(-35 -10 -108)"/>
+    <ellipse cx="9" cy="-125" rx="10" ry="5" fill="#6B8F71" opacity="0.65" transform="rotate(35 9 -125)"/>
+    <!-- Twine tie -->
+    <rect x="-18" y="-22" width="36" height="10" rx="5" fill="#C4622D" opacity="0.75"/>
+  </g>
+
+  <!-- ── LEMON HALVES (right side) ── -->
+  <!-- Lemon 1 (whole, background) -->
+  <ellipse cx="960" cy="260" rx="70" ry="68" fill="#F0C830"/>
+  <ellipse cx="960" cy="260" rx="58" ry="56" fill="#F8E060"/>
+  <!-- Lemon 2 (cut half) -->
+  <path d="M1010 330 Q1010 260 940 260 Q1010 260 1010 330 Z" fill="#F0C830"/>
+  <path d="M940 260 Q1010 260 1010 330 Q980 380 930 365 Q885 345 910 300 Q920 270 940 260 Z" fill="#F8D840"/>
+  <!-- Lemon half interior -->
+  <path d="M942 265 Q1005 265 1005 328 Q978 372 932 358 Q890 340 914 303 Q924 274 942 265 Z" fill="#FDE870"/>
+  <!-- Lemon segments -->
+  <line x1="942" y1="265" x2="975" y2="345" stroke="#E8C020" stroke-width="1.5" opacity="0.7"/>
+  <line x1="942" y1="265" x2="1000" y2="305" stroke="#E8C020" stroke-width="1.5" opacity="0.7"/>
+  <line x1="942" y1="265" x2="930" y2="358" stroke="#E8C020" stroke-width="1.5" opacity="0.7"/>
+  <!-- Center dot -->
+  <circle cx="942" cy="265" r="6" fill="#E8C020"/>
+
+  <!-- ── SALT SHAKER WITH X (crossed out, subtle) ── -->
+  <!-- Shaker body -->
+  <rect x="120" y="200" width="52" height="85" rx="10" fill="#E0D8CF"/>
+  <rect x="126" y="195" width="40" height="18" rx="8" fill="#D0C8C0"/>
+  <!-- Salt dots -->
+  <circle cx="140" cy="204" r="2.5" fill="#FAF7F2"/>
+  <circle cx="152" cy="204" r="2.5" fill="#FAF7F2"/>
+  <circle cx="146" cy="200" r="2.5" fill="#FAF7F2"/>
+  <!-- Cross-out circle -->
+  <circle cx="146" cy="250" r="35" fill="none" stroke="#C4622D" stroke-width="4" opacity="0.7"/>
+  <line x1="121" y1="225" x2="171" y2="275" stroke="#C4622D" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- ── SPARKLE DOTS ── -->
+  <circle cx="390" cy="155" r="6" fill="#C4622D" opacity="0.55"/>
+  <circle cx="415" cy="172" r="4" fill="#C4622D" opacity="0.4"/>
+  <circle cx="790" cy="160" r="6" fill="#6B8F71" opacity="0.45"/>
+  <circle cx="808" cy="180" r="4" fill="#6B8F71" opacity="0.35"/>
+  <circle cx="1070" cy="420" r="7" fill="#C4622D" opacity="0.4"/>
+
+  <!-- Bottom accent -->
+  <rect x="440" y="502" width="320" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

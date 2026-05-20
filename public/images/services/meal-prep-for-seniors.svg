@@ -1,0 +1,81 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="107" cy="257" r="287" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1027" cy="237" r="247" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="887" cy="527" r="147" fill="#E0D8CF" opacity="0.3"/>
+  
+  <!-- Container row -->
+  <!-- Container 1 (greens) -->
+  <rect x="240" y="230" width="130" height="95" rx="10" fill="#D8E8DA"/>
+  <rect x="240" y="230" width="130" height="20" rx="10" fill="#6B8F71"/>
+  <rect x="240" y="242" width="130" height="8" fill="#6B8F71"/>
+  <!-- Lid clips -->
+  <rect x="252" y="225" width="16" height="10" rx="3" fill="#4A6B50"/>
+  <rect x="350" y="225" width="16" height="10" rx="3" fill="#4A6B50"/>
+  <!-- Contents: chicken + broccoli -->
+  <ellipse cx="285" cy="285" rx="28" ry="18" fill="#D4885A" opacity="0.7"/>
+  <circle cx="335" cy="280" r="14" fill="#5A8840"/>
+  <circle cx="335" cy="278" r="9" fill="#70A050" opacity="0.7"/>
+  <!-- Label strip -->
+  <rect x="255" y="315" width="55" height="6" rx="3" fill="#4A6B50" opacity="0.4"/>
+
+  <!-- Container 2 (salmon) -->
+  <rect x="400" y="230" width="130" height="95" rx="10" fill="#E8DDD8"/>
+  <rect x="400" y="230" width="130" height="20" rx="10" fill="#C4622D" opacity="0.7"/>
+  <rect x="400" y="242" width="130" height="8" fill="#C4622D" opacity="0.7"/>
+  <rect x="412" y="225" width="16" height="10" rx="3" fill="#C4622D"/>
+  <rect x="510" y="225" width="16" height="10" rx="3" fill="#C4622D"/>
+  <!-- Contents: salmon + quinoa -->
+  <path d="M420 275 Q460 262 500 275 Q490 290 460 292 Q430 290 420 275 Z" fill="#E07050" opacity="0.6"/>
+  <ellipse cx="465" cy="300" rx="32" ry="10" fill="#E8DFB8" opacity="0.7"/>
+  <rect x="415" y="315" width="55" height="6" rx="3" fill="#C4622D" opacity="0.3"/>
+
+  <!-- Container 3 (soup) -->
+  <rect x="560" y="230" width="130" height="95" rx="10" fill="#E8E0D8"/>
+  <rect x="560" y="230" width="130" height="20" rx="10" fill="#8A7868"/>
+  <rect x="560" y="242" width="130" height="8" fill="#8A7868"/>
+  <rect x="572" y="225" width="16" height="10" rx="3" fill="#8A7868"/>
+  <rect x="670" y="225" width="16" height="10" rx="3" fill="#8A7868"/>
+  <!-- Contents: lentil soup -->
+  <rect x="573" y="262" width="104" height="52" rx="6" fill="#C89050" opacity="0.6"/>
+  <circle cx="600" cy="280" r="6" fill="#B07840" opacity="0.7"/>
+  <circle cx="618" cy="275" r="5" fill="#A86830" opacity="0.7"/>
+  <circle cx="638" cy="282" r="6" fill="#B07840" opacity="0.7"/>
+  <circle cx="655" cy="276" r="5" fill="#A86830" opacity="0.7"/>
+  <rect x="575" y="315" width="55" height="6" rx="3" fill="#8A7868" opacity="0.3"/>
+
+  <!-- Fresh ingredients cluster below -->
+  <!-- Tomato -->
+  <circle cx="340" cy="390" r="18" fill="#C4622D" opacity="0.5"/>
+  <path d="M334 378 Q340 373 346 378" stroke="#4A6B50" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <!-- Lemon -->
+  <ellipse cx="390" cy="395" rx="20" ry="16" fill="#F8D830" opacity="0.6"/>
+  <ellipse cx="390" cy="393" rx="15" ry="11" fill="#FDE860" opacity="0.4"/>
+  <!-- Avocado -->
+  <ellipse cx="445" cy="392" rx="18" ry="22" fill="#6B8F71"/>
+  <ellipse cx="445" cy="392" rx="11" ry="14" fill="#B5D4BB"/>
+  <circle cx="445" cy="395" r="6" fill="#4A6B50"/>
+
+  <!-- Calendar (right side) -->
+  <rect x="780" y="200" width="140" height="140" rx="10" fill="#E0D8CF"/>
+  <rect x="780" y="200" width="140" height="32" rx="10" fill="#6B8F71"/>
+  <rect x="780" y="220" width="140" height="12" fill="#6B8F71"/>
+  <text x="850" y="222" text-anchor="middle" fill="#FAF7F2" font-size="12" font-family="system-ui" font-weight="700">THIS WEEK</text>
+  <!-- Day grid -->
+  <g fill="#4A6B50" font-size="10" font-family="system-ui" text-anchor="middle">
+    <text x="802" y="258">M</text><text x="822" y="258">T</text><text x="842" y="258">W</text><text x="862" y="258">T</text><text x="882" y="258">F</text><text x="902" y="258">S</text>
+  </g>
+  <!-- Checkmarks -->
+  <circle cx="802" cy="278" r="8" fill="#6B8F71"/>
+  <path d="M797 278 L801 282 L808 274" stroke="#FAF7F2" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="822" cy="278" r="8" fill="#6B8F71"/>
+  <path d="M817 278 L821 282 L828 274" stroke="#FAF7F2" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="842" cy="278" r="8" fill="#6B8F71"/>
+  <path d="M837 278 L841 282 L848 274" stroke="#FAF7F2" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="862" cy="278" r="8" fill="#E0D8CF" stroke="#6B8F71" stroke-width="1.5"/>
+  <circle cx="882" cy="278" r="8" fill="#E0D8CF" stroke="#6B8F71" stroke-width="1.5"/>
+
+  <circle cx="180" cy="185" r="6" fill="#C4622D" opacity="0.45"/>
+  <circle cx="950" cy="195" r="5" fill="#6B8F71" opacity="0.4"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

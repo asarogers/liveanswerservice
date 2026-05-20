@@ -1,0 +1,76 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="150" cy="300" r="270" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1060" cy="230" r="225" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="700" cy="525" r="158" fill="#E0D8CF" opacity="0.3"/>
+
+  <!-- Bay Area map outline (simplified) -->
+  <path d="M520 180 Q540 170 570 175 Q610 168 650 178 Q690 172 720 185 Q745 195 750 220 Q755 245 740 265 Q725 285 710 300 Q695 315 680 335 Q660 355 640 368 Q615 382 595 378 Q572 373 555 358 Q535 340 520 318 Q502 292 498 262 Q494 232 510 208 Q515 192 520 180 Z" fill="#B5D4BB" opacity="0.25"/>
+  <path d="M520 180 Q540 170 570 175 Q610 168 650 178 Q690 172 720 185 Q745 195 750 220 Q755 245 740 265 Q725 285 710 300 Q695 315 680 335 Q660 355 640 368 Q615 382 595 378 Q572 373 555 358 Q535 340 520 318 Q502 292 498 262 Q494 232 510 208 Q515 192 520 180 Z" fill="none" stroke="#6B8F71" stroke-width="2" opacity="0.4"/>
+
+  <!-- Location pins on map -->
+  <circle cx="595" cy="238" r="12" fill="#6B8F71" opacity="0.9"/>
+  <path d="M595 252 L595 265" stroke="#6B8F71" stroke-width="2.5" opacity="0.7"/>
+  <circle cx="595" cy="238" r="5" fill="#FAF7F2"/>
+
+  <circle cx="553" cy="278" r="10" fill="#C4622D" opacity="0.85"/>
+  <path d="M553 290 L553 300" stroke="#C4622D" stroke-width="2" opacity="0.7"/>
+  <circle cx="553" cy="278" r="4" fill="#FAF7F2"/>
+
+  <circle cx="643" cy="264" r="10" fill="#C4622D" opacity="0.85"/>
+  <path d="M643 276 L643 286" stroke="#C4622D" stroke-width="2" opacity="0.7"/>
+  <circle cx="643" cy="264" r="4" fill="#FAF7F2"/>
+
+  <circle cx="580" cy="318" r="9" fill="#C4622D" opacity="0.8"/>
+  <path d="M580 329 L580 338" stroke="#C4622D" stroke-width="2" opacity="0.6"/>
+
+  <circle cx="624" cy="342" r="9" fill="#C4622D" opacity="0.8"/>
+
+  <!-- Left panel: provider comparison -->
+  <rect x="148" y="180" width="310" height="270" rx="12" fill="#FAF7F2" opacity="0.9"/>
+  <rect x="148" y="180" width="310" height="42" rx="12" fill="#6B8F71"/>
+  <rect x="148" y="208" width="310" height="14" fill="#6B8F71"/>
+  <text x="303" y="206" text-anchor="middle" fill="#FAF7F2" font-size="12" font-family="system-ui, sans-serif" font-weight="700">BAY AREA OPTIONS</text>
+
+  <rect x="165" y="240" width="275" height="36" rx="7" fill="#6B8F71" opacity="0.12"/>
+  <rect x="172" y="250" width="140" height="7" rx="2.5" fill="#4A6B50" opacity="0.6"/>
+  <circle cx="420" cy="254" r="8" fill="#6B8F71" opacity="0.7"/>
+  <path d="M416 254 L419 258 L426 249" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="165" y="284" width="275" height="36" rx="7" fill="#E0D8CF" opacity="0.25"/>
+  <rect x="172" y="294" width="155" height="7" rx="2.5" fill="#5A5A5A" opacity="0.45"/>
+  <circle cx="420" cy="298" r="8" fill="#C4622D" opacity="0.6"/>
+  <rect x="416" y="294" width="8" height="8" rx="1" fill="#FAF7F2" opacity="0.8"/>
+
+  <rect x="165" y="328" width="275" height="36" rx="7" fill="#E0D8CF" opacity="0.25"/>
+  <rect x="172" y="338" width="130" height="7" rx="2.5" fill="#5A5A5A" opacity="0.45"/>
+  <circle cx="420" cy="342" r="8" fill="#C4622D" opacity="0.6"/>
+  <rect x="416" y="338" width="8" height="8" rx="1" fill="#FAF7F2" opacity="0.8"/>
+
+  <rect x="165" y="372" width="275" height="36" rx="7" fill="#E0D8CF" opacity="0.25"/>
+  <rect x="172" y="382" width="148" height="7" rx="2.5" fill="#5A5A5A" opacity="0.45"/>
+  <circle cx="420" cy="386" r="8" fill="#C4622D" opacity="0.6"/>
+  <rect x="416" y="382" width="8" height="8" rx="1" fill="#FAF7F2" opacity="0.8"/>
+
+  <!-- Right panel: Well Prepped Life highlight -->
+  <rect x="820" y="200" width="240" height="210" rx="12" fill="#6B8F71" opacity="0.12"/>
+  <rect x="820" y="200" width="240" height="210" rx="12" fill="none" stroke="#6B8F71" stroke-width="2" opacity="0.5"/>
+  <text x="940" y="232" text-anchor="middle" fill="#4A6B50" font-size="13" font-family="system-ui, sans-serif" font-weight="700">Well Prepped Life</text>
+  <rect x="836" y="242" width="208" height="6" rx="2.5" fill="#6B8F71" opacity="0.4"/>
+  <circle cx="848" cy="265" r="7" fill="#6B8F71" opacity="0.75"/>
+  <path d="M844 265 L847 269 L854 260" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="862" y="261" width="180" height="6" rx="2.5" fill="#4A6B50" opacity="0.45"/>
+  <circle cx="848" cy="287" r="7" fill="#6B8F71" opacity="0.75"/>
+  <path d="M844 287 L847 291 L854 282" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="862" y="283" width="168" height="6" rx="2.5" fill="#4A6B50" opacity="0.45"/>
+  <circle cx="848" cy="309" r="7" fill="#6B8F71" opacity="0.75"/>
+  <path d="M844 309 L847 313 L854 304" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="862" y="305" width="175" height="6" rx="2.5" fill="#4A6B50" opacity="0.45"/>
+  <circle cx="848" cy="331" r="7" fill="#6B8F71" opacity="0.75"/>
+  <path d="M844 331 L847 335 L854 326" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="862" y="327" width="162" height="6" rx="2.5" fill="#4A6B50" opacity="0.45"/>
+  <rect x="836" y="360" width="208" height="34" rx="7" fill="#6B8F71"/>
+  <text x="940" y="382" text-anchor="middle" fill="#FAF7F2" font-size="12" font-family="system-ui, sans-serif" font-weight="600">Free Consultation</text>
+
+  <rect x="430" y="508" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="143" cy="293" r="283" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1063" cy="233" r="243" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="923" cy="523" r="143" fill="#E0D8CF" opacity="0.3"/>
+  
+  <!-- Jar with electric opener (left) -->
+  <rect x="180" y="240" width="110" height="150" rx="12" fill="#D8D0C8"/>
+  <rect x="172" y="228" width="126" height="36" rx="10" fill="#6B8F71"/>
+  <!-- Rubber grip on lid -->
+  <rect x="168" y="222" width="134" height="12" rx="6" fill="#C4622D" opacity="0.7"/>
+  <!-- Jar contents -->
+  <ellipse cx="235" cy="340" rx="38" ry="28" fill="#B5D4BB" opacity="0.5"/>
+  <!-- Electric opener arm -->
+  <path d="M296 240 Q340 230 348 252 Q342 272 296 262 Z" fill="#4A6B50"/>
+  <circle cx="346" cy="251" r="14" fill="#6B8F71"/>
+  <circle cx="346" cy="251" r="8" fill="#FAF7F2" opacity="0.5"/>
+  <!-- Power indicator -->
+  <path d="M342 251 L354 251 M348 245 L354 252 L348 259" stroke="#FAF7F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Ergonomic knife (center) -->
+  <!-- Blade -->
+  <path d="M520 280 Q650 262 740 310 Q680 332 520 338 Z" fill="#A0A0A0"/>
+  <path d="M526 288 Q640 274 725 310 Q665 324 526 328 Z" fill="#D0D0D0" opacity="0.6"/>
+  <!-- Bolster -->
+  <rect x="504" y="272" width="20" height="72" rx="5" fill="#3A3A3A"/>
+  <!-- Ergonomic handle -->
+  <path d="M370 268 Q440 256 504 272 L504 344 Q440 358 370 348 Q320 340 318 310 Q318 280 370 268 Z" fill="#6B8F71"/>
+  <!-- Grip grooves -->
+  <line x1="400" y1="262" x2="400" y2="352" stroke="#4A6B50" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+  <line x1="435" y1="260" x2="435" y2="354" stroke="#4A6B50" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+  <line x1="470" y1="259" x2="470" y2="355" stroke="#4A6B50" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+  <!-- End cap -->
+  <ellipse cx="332" cy="310" rx="26" ry="38" fill="#4A6B50"/>
+
+  <!-- Easy-pull tab containers (right) -->
+  <rect x="810" y="250" width="100" height="70" rx="8" fill="#E0D8CF"/>
+  <path d="M810 260 Q795 248 790 260 Q785 272 800 272 L810 268" fill="#C4622D" opacity="0.6"/>
+  <rect x="820" y="258" width="30" height="5" rx="2.5" fill="#D8D0C8" opacity="0.5"/>
+  <rect x="810" y="340" width="100" height="70" rx="8" fill="#E8F0E9"/>
+  <path d="M810 350 Q795 338 790 350 Q785 362 800 362 L810 358" fill="#6B8F71" opacity="0.6"/>
+  <rect x="820" y="348" width="30" height="5" rx="2.5" fill="#B5D4BB" opacity="0.5"/>
+
+  <circle cx="160" cy="190" r="6" fill="#C4622D" opacity="0.45"/>
+  <circle cx="950" cy="200" r="5" fill="#6B8F71" opacity="0.4"/>
+  <circle cx="600" cy="195" r="4" fill="#C4622D" opacity="0.3"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

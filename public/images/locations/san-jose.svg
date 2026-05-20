@@ -1,0 +1,67 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="160" cy="300" r="260" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1050" cy="200" r="220" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="900" cy="490" r="150" fill="#E0D8CF" opacity="0.3"/>
+  
+  <!-- Sky gradient hint -->
+  <rect x="0" y="380" width="1200" height="4" rx="2" fill="#D8D0C8" opacity="0.5"/>
+
+  <!-- Tech campus buildings (center) -->
+  <!-- Building 1 - tall glass -->
+  <rect x="460" y="220" width="70" height="160" rx="4" fill="#D8D0C8"/>
+  <rect x="468" y="228" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="496" y="228" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="468" y="258" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="496" y="258" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="468" y="288" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="496" y="288" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="468" y="318" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <rect x="496" y="318" width="18" height="22" rx="2" fill="#E8F0E9"/>
+  <!-- Building 2 - wide modern -->
+  <rect x="545" y="260" width="110" height="120" rx="4" fill="#E0D8CF"/>
+  <rect x="555" y="270" width="30" height="25" rx="3" fill="#E8F0E9"/>
+  <rect x="595" y="270" width="30" height="25" rx="3" fill="#E8F0E9"/>
+  <rect x="635" y="270" width="10" height="25" rx="2" fill="#E8F0E9"/>
+  <rect x="555" y="305" width="30" height="25" rx="3" fill="#E8F0E9"/>
+  <rect x="595" y="305" width="30" height="25" rx="3" fill="#E8F0E9"/>
+  <!-- Building 3 - curved roof tech -->
+  <rect x="670" y="280" width="80" height="100" rx="4" fill="#D8D0C8"/>
+  <path d="M670 280 Q710 260 750 280" fill="#E0D8CF"/>
+  <rect x="682" y="295" width="18" height="20" rx="2" fill="#E8F0E9"/>
+  <rect x="712" y="295" width="18" height="20" rx="2" fill="#E8F0E9"/>
+  <rect x="682" y="325" width="18" height="20" rx="2" fill="#E8F0E9"/>
+  <rect x="712" y="325" width="18" height="20" rx="2" fill="#E8F0E9"/>
+  <!-- Entry door -->
+  <rect x="580" y="345" width="30" height="35" rx="3" fill="#4A6B50" opacity="0.4"/>
+
+  <!-- Palm tree 1 (left) -->
+  <rect x="278" y="280" width="8" height="100" rx="4" fill="#8A7858"/>
+  <path d="M282 280 Q248 255 225 272" stroke="#6B8F71" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M282 280 Q310 255 340 270" stroke="#6B8F71" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M282 284 Q252 270 238 285" stroke="#4A6B50" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M282 284 Q315 268 332 282" stroke="#4A6B50" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M282 278 Q270 260 258 268" stroke="#6B8F71" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Palm tree 2 (far left) -->
+  <rect x="178" y="300" width="7" height="80" rx="3.5" fill="#8A7858"/>
+  <path d="M181 300 Q155 282 140 295" stroke="#6B8F71" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M181 300 Q205 282 220 293" stroke="#6B8F71" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M181 303 Q160 290 150 302" stroke="#4A6B50" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Palm tree 3 (right) -->
+  <rect x="868" y="290" width="7" height="90" rx="3.5" fill="#8A7858"/>
+  <path d="M871 290 Q845 272 832 285" stroke="#6B8F71" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <path d="M871 290 Q898 272 912 284" stroke="#6B8F71" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <path d="M871 293 Q850 280 840 292" stroke="#4A6B50" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M871 293 Q895 280 905 290" stroke="#4A6B50" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Location pin -->
+  <path d="M600 120 Q575 120 565 142 Q555 162 575 195 L600 230 L625 195 Q645 162 635 142 Q625 120 600 120 Z" fill="#C4622D" opacity="0.55"/>
+  <circle cx="600" cy="152" r="14" fill="#FAF7F2"/>
+
+  <circle cx="400" cy="180" r="5" fill="#C4622D" opacity="0.4"/>
+  <circle cx="950" cy="200" r="6" fill="#6B8F71" opacity="0.35"/>
+  <circle cx="150" cy="220" r="4" fill="#6B8F71" opacity="0.3"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

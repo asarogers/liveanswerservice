@@ -1,0 +1,51 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="114" cy="264" r="274" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1034" cy="224" r="214" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="894" cy="514" r="154" fill="#E0D8CF" opacity="0.3"/>
+  
+  <!-- Seated person (senior) -->
+  <!-- Chair -->
+  <rect x="280" y="290" width="120" height="10" rx="4" fill="#D8D0C8"/>
+  <rect x="280" y="300" width="10" height="80" rx="3" fill="#D8D0C8"/>
+  <rect x="390" y="300" width="10" height="80" rx="3" fill="#D8D0C8"/>
+  <rect x="385" y="235" width="12" height="65" rx="4" fill="#D8D0C8"/>
+  <rect x="280" y="230" width="120" height="10" rx="4" fill="#D8D0C8"/>
+  <!-- Person sitting -->
+  <circle cx="340" cy="215" r="28" fill="#E0D8CF"/>
+  <!-- Hair -->
+  <path d="M315 205 Q340 185 365 205" fill="#B0A090" opacity="0.5"/>
+  <!-- Body -->
+  <path d="M312 248 Q340 240 368 248 L372 295 L308 295 Z" fill="#E8F0E9"/>
+  <!-- Arms -->
+  <path d="M312 260 Q290 275 305 290" stroke="#E0D8CF" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M368 260 Q400 270 420 260" stroke="#E0D8CF" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- Standing person (caregiver) -->
+  <circle cx="750" cy="180" r="30" fill="#B5D4BB"/>
+  <!-- Body -->
+  <path d="M718 215 Q750 205 782 215 L790 350 L710 350 Z" fill="#6B8F71"/>
+  <!-- Apron -->
+  <path d="M725 250 Q750 245 775 250 L778 350 L722 350 Z" fill="#E8F0E9" opacity="0.6"/>
+  <!-- Arms reaching forward with bowl -->
+  <path d="M718 235 Q680 260 660 270" stroke="#B5D4BB" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M782 235 Q800 255 790 280" stroke="#B5D4BB" stroke-width="9" fill="none" stroke-linecap="round"/>
+
+  <!-- Steaming bowl between them (center) -->
+  <path d="M480 330 Q490 390 570 390 Q650 390 660 330 Z" fill="#D8D0C8"/>
+  <ellipse cx="570" cy="330" rx="90" ry="28" fill="#E0D8CF"/>
+  <ellipse cx="570" cy="327" rx="75" ry="22" fill="#B5D4BB" opacity="0.5"/>
+  <!-- Food contents -->
+  <circle cx="545" cy="322" r="10" fill="#6B8F71" opacity="0.4"/>
+  <circle cx="575" cy="320" r="8" fill="#4A6B50" opacity="0.4"/>
+  <circle cx="595" cy="324" r="9" fill="#C4622D" opacity="0.3"/>
+  <path d="M545 298 Q550 276 547 290 Q542 260 549 254" stroke="#6B8F71" stroke-width="2.5" fill="none" opacity="0.35" stroke-linecap="round"/><path d="M570 298 Q575 276 572 290 Q567 260 574 254" stroke="#6B8F71" stroke-width="2.5" fill="none" opacity="0.35" stroke-linecap="round"/><path d="M595 298 Q600 276 597 290 Q592 260 599 254" stroke="#6B8F71" stroke-width="2.5" fill="none" opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Warm heart accent -->
+  <path d="M555 410 Q555 398 565 398 Q575 398 575 410 Q575 398 585 398 Q595 398 595 410 Q595 425 575 435 Q555 425 555 410 Z" fill="#C4622D" opacity="0.35"/>
+
+  <circle cx="180" cy="170" r="6" fill="#C4622D" opacity="0.4"/>
+  <circle cx="880" cy="180" r="5" fill="#6B8F71" opacity="0.4"/>
+  <circle cx="850" cy="350" r="4" fill="#C4622D" opacity="0.3"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

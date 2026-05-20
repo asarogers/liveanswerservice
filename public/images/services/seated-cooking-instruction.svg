@@ -1,0 +1,38 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="116" cy="254" r="267" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1026" cy="237" r="207" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="877" cy="511" r="133" fill="#E0D8CF" opacity="0.3"/>
+  <!-- Counter / table surface -->
+  <rect x="200" y="340" width="800" height="16" rx="4" fill="#D8D0C8"/>
+  <rect x="200" y="354" width="800" height="60" rx="0" fill="#C8C0B8" opacity="0.4"/>
+  <!-- Seated figure (simplified) -->
+  <!-- Chair -->
+  <rect x="280" y="380" width="100" height="10" rx="4" fill="#8A7868" opacity="0.5"/>
+  <rect x="290" y="388" width="8" height="50" rx="3" fill="#8A7868" opacity="0.4"/>
+  <rect x="362" y="388" width="8" height="50" rx="3" fill="#8A7868" opacity="0.4"/>
+  <rect x="270" y="310" width="10" height="72" rx="3" fill="#8A7868" opacity="0.4"/>
+  <!-- Person body -->
+  <circle cx="330" cy="260" r="24" fill="#D8D0C8" stroke="#C8C0B8" stroke-width="1.5"/>
+  <rect x="308" y="283" width="44" height="60" rx="8" fill="#D8E8DA" stroke="#B8D0BA" stroke-width="1.5"/>
+  <!-- Arms reaching to counter -->
+  <path d="M308 300 Q270 315 250 340" stroke="#D8D0C8" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M352 300 Q380 315 400 340" stroke="#D8D0C8" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- Instructor figure -->
+  <circle cx="700" cy="255" r="24" fill="#6B8F71" opacity="0.5"/>
+  <rect x="678" y="278" width="44" height="65" rx="8" fill="#6B8F71" opacity="0.4"/>
+  <path d="M678 295 Q645 310 620 340" stroke="#6B8F71" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M722 295 Q755 310 780 340" stroke="#6B8F71" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Mixing bowl on counter -->
+  <ellipse cx="500" cy="338" rx="55" ry="14" fill="#D8E8DA" stroke="#B8D0BA" stroke-width="1.5"/>
+  <path d="M445 338 Q445 385 500 385 Q555 385 555 338" fill="#EAF2EB" stroke="#B8D0BA" stroke-width="1.5"/>
+  <ellipse cx="500" cy="338" rx="55" ry="14" fill="none" stroke="#B8D0BA" stroke-width="1.5"/>
+  <!-- Recipe card -->
+  <rect x="580" y="255" width="100" height="80" rx="6" fill="#FAF7F2" stroke="#D8D0C8" stroke-width="1.5" transform="rotate(5 580 255)"/>
+  <rect x="592" y="267" width="70" height="5" rx="2.5" fill="#6B8F71" opacity="0.3" transform="rotate(5 592 267)"/>
+  <rect x="592" y="278" width="56" height="5" rx="2.5" fill="#6B8F71" opacity="0.2" transform="rotate(5 592 278)"/>
+  <rect x="592" y="289" width="65" height="5" rx="2.5" fill="#6B8F71" opacity="0.2" transform="rotate(5 592 289)"/>
+  <circle cx="148" cy="196" r="6" fill="#C4622D" opacity="0.45"/>
+  <circle cx="932" cy="192" r="5" fill="#6B8F71" opacity="0.35"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

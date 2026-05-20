@@ -1,0 +1,26 @@
+{
+  "reviews": [
+    {
+      "author": "Ace Rogers",
+      "authorUri": "https://www.google.com/maps/contrib/107063418389753402536/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV-1FtSvgcUjs5AR-c_retgCPxLMri1msd0e8_IGHKINyl7mHkI=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "After my dad's stroke, I was flying in from Denver every few weeks trying to figure out meals. He needs soft foods now and he's diabetic. I had no idea who to trust or where to start. I found Justine after weeks of dead ends. She came to the house for a consultation first, which immediately put my dad at ease. After every single visit she sends me a quick note: what she cooked, how he seemed, anything she noticed. He's been eating better than he has in years, and for the first time since his diagnosis I'm not panicking every time I board a plane home. I finally feel like he's taken care of.",
+      "relativeTime": "a week ago",
+      "publishTime": "2026-05-05T07:16:25.142034953Z"
+    },
+    {
+      "author": "Angel Reed",
+      "authorUri": "https://www.google.com/maps/contrib/107498528008937560017/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUl-nPKthA80gDrSAQ0LEO4DcFPoJk-VCoqsgGRq7JuPH9YW2TX=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "I’ve been managing diabetes for years!  I’ve tried every “diabetic friendly” option out there but it taste terrible.  Nutrisystem was awful. The frozen diabetic meals from the grocery store are worse. I almost gave up on meal delivery entirely until a friend of mine told me about Justine at Live Answer. The food tasted amazon, not some diabetic meal. My blood sugar didn’t spike after a single meal. I’ve been ordering every week for four months now and I’ve lost 18 pounds without even trying, If you have diabetes and you think eating well means eating boring, please try this. It changed my whole outlook.",
+      "relativeTime": "a month ago",
+      "publishTime": "2026-04-03T17:14:58.625094533Z"
+    }
+  ],
+  "rating": 5,
+  "userRatingCount": 2,
+  "googleMapsUri": "https://maps.google.com/?cid=8611157451037066694&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+  "fetchedAt": "2026-05-12T08:07:00.326Z"
+}

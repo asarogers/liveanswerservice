@@ -1,0 +1,92 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="140" cy="290" r="270" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1060" cy="240" r="210" fill="#E8F0E9" opacity="0.4"/>
+
+  <!-- ── KITCHEN TABLE ── -->
+  <!-- Table top -->
+  <ellipse cx="600" cy="400" rx="310" ry="40" fill="#D4A848" opacity="0.75"/>
+  <ellipse cx="600" cy="394" rx="304" ry="36" fill="#E0B855" opacity="0.6"/>
+  <ellipse cx="600" cy="388" rx="296" ry="32" fill="#E8C060" opacity="0.55"/>
+  <!-- Table legs -->
+  <rect x="320" y="418" width="20" height="80" rx="8" fill="#C09040"/>
+  <rect x="860" y="418" width="20" height="80" rx="8" fill="#C09040"/>
+  <rect x="390" y="425" width="18" height="75" rx="7" fill="#C09040" opacity="0.7"/>
+  <rect x="792" y="425" width="18" height="75" rx="7" fill="#C09040" opacity="0.7"/>
+
+  <!-- ── MUG OF TEA on table ── -->
+  <rect x="562" y="340" width="76" height="82" rx="10" fill="#D0C8BE"/>
+  <rect x="568" y="346" width="64" height="70" rx="7" fill="#FAF7F2"/>
+  <!-- Tea surface -->
+  <ellipse cx="600" cy="346" rx="32" ry="6" fill="#D4904A" opacity="0.65"/>
+  <!-- Steam from mug -->
+  <path d="M585 330 Q578 310 586 292" stroke="#E0D8CF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M600 326 Q593 306 601 288" stroke="#E0D8CF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M615 330 Q622 310 614 292" stroke="#E0D8CF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Handle -->
+  <path d="M638 356 Q660 354 662 368 Q662 382 638 380" stroke="#C0B0A0" stroke-width="9" fill="none" stroke-linecap="round"/>
+
+  <!-- ── PERSON 1 — Adult child (left, leaning forward) ── -->
+  <!-- Head -->
+  <circle cx="345" cy="250" r="38" fill="#C8A880"/>
+  <!-- Hair -->
+  <path d="M313 235 Q345 212 377 235 Q377 218 345 214 Q313 218 313 235 Z" fill="#2C1808" opacity="0.85"/>
+  <!-- Body -->
+  <path d="M310 288 Q298 340 295 395 Q340 400 380 395 Q390 340 380 288 Q368 278 360 275 Q350 272 340 275 Q328 278 310 288 Z" fill="#6B8F71" opacity="0.9"/>
+  <!-- Arm leaning on table -->
+  <path d="M380 310 Q420 330 460 360 Q490 375 530 380" stroke="#C8A880" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <!-- Left arm down -->
+  <path d="M310 310 Q292 345 288 390" stroke="#C8A880" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+  <!-- ── SPEECH BUBBLE from adult child ── -->
+  <rect x="155" y="155" width="195" height="80" rx="14" fill="#6B8F71" opacity="0.9"/>
+  <path d="M310 215 Q320 230 340 235 Q320 225 308 234 Z" fill="#6B8F71" opacity="0.9"/>
+  <!-- Text lines in bubble -->
+  <rect x="170" y="174" width="162" height="8" rx="3" fill="#FAF7F2" opacity="0.7"/>
+  <rect x="170" y="188" width="148" height="8" rx="3" fill="#FAF7F2" opacity="0.7"/>
+  <rect x="170" y="202" width="130" height="8" rx="3" fill="#FAF7F2" opacity="0.65"/>
+
+  <!-- ── PERSON 2 — Aging parent (right) ── -->
+  <!-- Head -->
+  <circle cx="855" cy="248" r="38" fill="#D8C0A0"/>
+  <!-- White/grey hair -->
+  <path d="M823 234 Q855 210 887 234 Q887 216 855 212 Q823 216 823 234 Z" fill="#B0A898" opacity="0.9"/>
+  <!-- Hair sides -->
+  <path d="M823 234 Q816 252 820 270" stroke="#B0A898" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M887 234 Q894 252 890 270" stroke="#B0A898" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <!-- Body -->
+  <path d="M820 286 Q808 338 806 393 Q850 398 892 393 Q900 338 888 286 Q876 276 866 274 Q855 271 844 274 Q832 276 820 286 Z" fill="#C4622D" opacity="0.8"/>
+  <!-- Arm on table -->
+  <path d="M820 312 Q780 332 740 355 Q710 370 670 378" stroke="#D8C0A0" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <!-- Right arm down -->
+  <path d="M888 312 Q906 346 910 390" stroke="#D8C0A0" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+  <!-- ── SPEECH BUBBLE from parent (thinking/cautious) ── -->
+  <rect x="852" y="150" width="195" height="80" rx="14" fill="#E0D8CF" opacity="0.95"/>
+  <path d="M892 220 Q880 235 862 238 Q882 228 878 238 Z" fill="#E0D8CF" opacity="0.95"/>
+  <!-- Text lines in bubble — shorter/hesitant -->
+  <rect x="868" y="169" width="162" height="8" rx="3" fill="#9A9A9A" opacity="0.45"/>
+  <rect x="868" y="183" width="130" height="8" rx="3" fill="#9A9A9A" opacity="0.45"/>
+  <rect x="868" y="197" width="90" height="8" rx="3" fill="#9A9A9A" opacity="0.45"/>
+
+  <!-- ── SMALL RECIPE CARD (on table) ── -->
+  <rect x="480" y="350" width="80" height="60" rx="5" fill="#FAF7F2" opacity="0.9"/>
+  <rect x="480" y="350" width="80" height="14" rx="5" fill="#6B8F71" opacity="0.5"/>
+  <rect x="486" y="372" width="68" height="4" rx="2" fill="#9A9A9A" opacity="0.4"/>
+  <rect x="486" y="380" width="58" height="4" rx="2" fill="#9A9A9A" opacity="0.4"/>
+  <rect x="486" y="388" width="62" height="4" rx="2" fill="#9A9A9A" opacity="0.4"/>
+  <rect x="486" y="396" width="48" height="4" rx="2" fill="#9A9A9A" opacity="0.4"/>
+
+  <!-- ── HEART (connection / warmth) ── -->
+  <path d="M600 100 Q600 76 618 76 Q636 76 636 96 Q636 114 600 128 Q564 114 564 96 Q564 76 582 76 Q600 76 600 100 Z" fill="#C4622D" opacity="0.3"/>
+
+  <!-- ── SPARKLE ACCENTS ── -->
+  <circle cx="730" cy="230" r="7" fill="#C4622D" opacity="0.5"/>
+  <circle cx="750" cy="248" r="4.5" fill="#C4622D" opacity="0.35"/>
+  <circle cx="490" cy="210" r="6" fill="#6B8F71" opacity="0.4"/>
+  <circle cx="1040" cy="440" r="5" fill="#C4622D" opacity="0.4"/>
+
+  <!-- Bottom accent line -->
+  <rect x="430" y="505" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.25"/>
+</svg>

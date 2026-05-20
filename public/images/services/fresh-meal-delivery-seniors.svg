@@ -1,0 +1,34 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="115" cy="255" r="268" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1022" cy="238" r="208" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="878" cy="512" r="132" fill="#E0D8CF" opacity="0.3"/>
+  <!-- Delivery bag -->
+  <rect x="340" y="230" width="160" height="180" rx="12" fill="#D8E8DA" stroke="#B8D0BA" stroke-width="2"/>
+  <rect x="348" y="240" width="144" height="160" rx="8" fill="#EAF2EB" opacity="0.7"/>
+  <!-- Bag handles -->
+  <path d="M380 230 Q380 200 420 200 Q460 200 460 230" fill="none" stroke="#6B8F71" stroke-width="5" stroke-linecap="round"/>
+  <!-- Fresh label on bag -->
+  <rect x="365" y="300" width="110" height="36" rx="6" fill="#6B8F71" opacity="0.8"/>
+  <text x="420" y="324" text-anchor="middle" fill="#FAF7F2" font-size="13" font-family="system-ui" font-weight="700">FRESH TODAY</text>
+  <!-- Food items peeking out -->
+  <circle cx="390" cy="258" r="16" fill="#C4622D" opacity="0.5"/>
+  <ellipse cx="430" cy="252" rx="20" ry="12" fill="#6B8F71" opacity="0.5" transform="rotate(-15 430 252)"/>
+  <ellipse cx="460" cy="260" rx="14" ry="9" fill="#D4B882" opacity="0.6"/>
+  <!-- House/door icon -->
+  <rect x="720" y="265" width="140" height="130" rx="6" fill="#E8E0D8" stroke="#D8D0C8" stroke-width="2"/>
+  <path d="M700 270 L790 205 L880 270" fill="#D8D0C8" stroke="#C8C0B8" stroke-width="2"/>
+  <rect x="760" y="330" width="60" height="65" rx="4" fill="#8A7868" opacity="0.4"/>
+  <circle cx="815" cy="364" r="5" fill="#8A7868" opacity="0.6"/>
+  <!-- Arrow from bag to house -->
+  <path d="M510 310 Q600 260 710 295" fill="none" stroke="#6B8F71" stroke-width="2.5" stroke-dasharray="8,5" stroke-linecap="round"/>
+  <path d="M703 288 L713 295 L705 303" fill="none" stroke="#6B8F71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stars/freshness indicators -->
+  <circle cx="580" cy="200" r="8" fill="#6B8F71" opacity="0.35"/>
+  <circle cx="600" cy="185" r="5" fill="#C4622D" opacity="0.3"/>
+  <circle cx="560" cy="188" r="6" fill="#6B8F71" opacity="0.25"/>
+  <text x="600" y="480" text-anchor="middle" fill="#6B8F71" font-size="11" font-family="system-ui" font-weight="600" opacity="0.65">FRESHLY PREPARED · DELIVERED TO YOUR DOOR</text>
+  <circle cx="148" cy="198" r="6" fill="#C4622D" opacity="0.45"/>
+  <circle cx="932" cy="192" r="5" fill="#6B8F71" opacity="0.35"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

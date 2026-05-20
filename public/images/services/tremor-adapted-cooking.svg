@@ -1,0 +1,48 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="114" cy="256" r="268" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1022" cy="238" r="209" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="874" cy="510" r="135" fill="#E0D8CF" opacity="0.3"/>
+  <!-- Weighted cup with grip bands -->
+  <rect x="440" y="250" width="100" height="140" rx="10" fill="#D8E8DA" stroke="#B8D0BA" stroke-width="2"/>
+  <rect x="444" y="258" width="92" height="124" rx="8" fill="#EAF2EB" opacity="0.7"/>
+  <!-- Grip bands -->
+  <rect x="436" y="280" width="108" height="16" rx="3" fill="#6B8F71" opacity="0.45"/>
+  <rect x="436" y="316" width="108" height="16" rx="3" fill="#6B8F71" opacity="0.45"/>
+  <rect x="436" y="352" width="108" height="16" rx="3" fill="#6B8F71" opacity="0.45"/>
+  <!-- Handle -->
+  <path d="M540 295 Q585 295 585 325 Q585 355 540 355" fill="none" stroke="#6B8F71" stroke-width="18" stroke-linecap="round" opacity="0.5"/>
+  <!-- Stability mat -->
+  <ellipse cx="490" cy="395" rx="80" ry="14" fill="#D8D0C8" opacity="0.7"/>
+  <ellipse cx="490" cy="392" rx="70" ry="8" fill="#C8C0B8" opacity="0.5"/>
+  <!-- Non-slip surface dots -->
+  <g fill="#8A7868" opacity="0.35">
+    <circle cx="460" cy="400" r="3"/>
+    <circle cx="476" cy="400" r="3"/>
+    <circle cx="492" cy="400" r="3"/>
+    <circle cx="508" cy="400" r="3"/>
+    <circle cx="524" cy="400" r="3"/>
+    <circle cx="468" cy="410" r="3"/>
+    <circle cx="484" cy="410" r="3"/>
+    <circle cx="500" cy="410" r="3"/>
+    <circle cx="516" cy="410" r="3"/>
+  </g>
+  <!-- Steady hands icon -->
+  <!-- Left hand reaching toward cup -->
+  <path d="M290 310 Q340 290 390 300 Q410 305 420 315" fill="none" stroke="#D8D0C8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="420" cy="315" r="12" fill="#D8D0C8" opacity="0.7"/>
+  <!-- Stability arrows (curved, calming) -->
+  <path d="M655 270 Q700 240 745 270" fill="none" stroke="#6B8F71" stroke-width="2.5" stroke-dasharray="6,4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M655 310 Q700 280 745 310" fill="none" stroke="#6B8F71" stroke-width="2.5" stroke-dasharray="6,4" stroke-linecap="round" opacity="0.4"/>
+  <!-- Weighted utensil set -->
+  <rect x="720" y="240" width="40" height="160" rx="20" fill="#D8E8DA" stroke="#B8D0BA" stroke-width="2"/>
+  <rect x="724" y="248" width="32" height="32" rx="16" fill="#6B8F71" opacity="0.4"/>
+  <rect x="780" y="240" width="40" height="160" rx="20" fill="#E8DDD8" stroke="#D8CEC8" stroke-width="2"/>
+  <rect x="784" y="248" width="32" height="32" rx="16" fill="#C4622D" opacity="0.3"/>
+  <rect x="840" y="240" width="40" height="160" rx="20" fill="#E8E0D8" stroke="#D8D0C8" stroke-width="2"/>
+  <rect x="844" y="248" width="32" height="32" rx="16" fill="#8A7868" opacity="0.3"/>
+  <text x="600" y="468" text-anchor="middle" fill="#6B8F71" font-size="11" font-family="system-ui" font-weight="600" opacity="0.65">WEIGHTED · NON-SLIP · STABILITY-FOCUSED TOOLS</text>
+  <circle cx="148" cy="198" r="6" fill="#C4622D" opacity="0.45"/>
+  <circle cx="932" cy="192" r="5" fill="#6B8F71" opacity="0.35"/>
+  <rect x="430" y="510" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.22"/>
+</svg>

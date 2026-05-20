@@ -1,0 +1,93 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="560" fill="#FAF7F2"/>
+  <circle cx="140" cy="280" r="270" fill="#E8F0E9" opacity="0.5"/>
+  <circle cx="1050" cy="250" r="220" fill="#E8F0E9" opacity="0.4"/>
+  <circle cx="700" cy="520" r="140" fill="#E0D8CF" opacity="0.3"/>
+
+  <!-- ── SIMPLE PLATE (center) — high contrast, plain ── -->
+  <ellipse cx="600" cy="400" rx="175" ry="25" fill="#2C2C2C" opacity="0.1"/>
+  <circle cx="600" cy="350" r="170" fill="#E8E0D8"/>
+  <circle cx="600" cy="350" r="155" fill="#FAF7F2"/>
+  <circle cx="600" cy="350" r="140" fill="#F5F0EA"/>
+  <!-- Three distinct finger foods on plate -->
+  <!-- Banana slice -->
+  <ellipse cx="545" cy="330" rx="38" ry="28" fill="#E8C840" opacity="0.9"/>
+  <ellipse cx="545" cy="330" rx="30" ry="21" fill="#F0D055" opacity="0.7"/>
+  <!-- Turkey meatball -->
+  <circle cx="635" cy="330" r="30" fill="#C4622D" opacity="0.85"/>
+  <circle cx="625" cy="322" r="8" fill="#D4724D" opacity="0.5"/>
+  <!-- Broccoli floret -->
+  <circle cx="590" cy="385" r="24" fill="#4A6B50"/>
+  <circle cx="590" cy="375" r="15" fill="#6B8F71"/>
+  <circle cx="578" cy="382" r="10" fill="#4A6B50"/>
+  <circle cx="603" cy="380" r="10" fill="#5A7F60"/>
+  <!-- Plate rim decoration -->
+  <circle cx="600" cy="350" r="155" fill="none" stroke="#E0D8CF" stroke-width="2"/>
+
+  <!-- ── SOUP BOWL (left) — comfort food ── -->
+  <ellipse cx="290" cy="445" rx="100" ry="15" fill="#2C2C2C" opacity="0.08"/>
+  <!-- Bowl body -->
+  <path d="M195 370 Q195 450 290 460 Q385 450 385 370 Z" fill="#D0C8BE"/>
+  <path d="M205 372 Q205 445 290 454 Q375 445 375 372 Z" fill="#FAF7F2"/>
+  <!-- Soup surface -->
+  <ellipse cx="290" cy="372" rx="85" ry="14" fill="#C4622D" opacity="0.7"/>
+  <ellipse cx="270" cy="368" rx="18" ry="6" fill="#D4724D" opacity="0.5"/>
+  <ellipse cx="310" cy="370" rx="14" ry="5" fill="#D4724D" opacity="0.45"/>
+  <!-- Steam -->
+  <path d="M260 355 Q252 334 260 315 Q268 297 260 278" stroke="#E0D8CF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M290 350 Q282 328 290 308" stroke="#E0D8CF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M320 355 Q328 334 320 315" stroke="#E0D8CF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Saucer -->
+  <ellipse cx="290" cy="456" rx="115" ry="12" fill="#D0C0B0"/>
+
+  <!-- ── SOFT TOAST FINGERS (right) ── -->
+  <g transform="translate(820, 320)">
+    <!-- Toast slice 1 -->
+    <rect x="0" y="0" width="80" height="110" rx="8" fill="#D4A848" opacity="0.9"/>
+    <rect x="6" y="6" width="68" height="98" rx="5" fill="#E8B855" opacity="0.7"/>
+    <!-- Crust edges -->
+    <rect x="0" y="0" width="80" height="12" rx="8" fill="#B88830"/>
+    <rect x="0" y="98" width="80" height="12" rx="8" fill="#B88830"/>
+    <!-- Spread (cream cheese) -->
+    <rect x="10" y="16" width="60" height="75" rx="3" fill="#FAF7F2" opacity="0.55"/>
+    <!-- Toast slice 2 (behind) -->
+    <rect x="90" y="-10" width="80" height="110" rx="8" fill="#C89838" opacity="0.7"/>
+    <rect x="96" y="-4" width="68" height="98" rx="5" fill="#D8A845" opacity="0.6"/>
+  </g>
+
+  <!-- ── STICKY NOTE / LOG reminder ── -->
+  <rect x="900" y="160" width="155" height="130" rx="6" fill="#E8D870" opacity="0.9"/>
+  <rect x="900" y="160" width="155" height="18" rx="6" fill="#D8C860"/>
+  <!-- Lines on note -->
+  <line x1="916" y1="196" x2="1040" y2="196" stroke="#B8A840" stroke-width="2" opacity="0.6"/>
+  <line x1="916" y1="212" x2="1040" y2="212" stroke="#B8A840" stroke-width="2" opacity="0.6"/>
+  <line x1="916" y1="228" x2="1028" y2="228" stroke="#B8A840" stroke-width="2" opacity="0.6"/>
+  <line x1="916" y1="244" x2="1035" y2="244" stroke="#B8A840" stroke-width="2" opacity="0.6"/>
+  <!-- Pencil icon -->
+  <text x="978" y="174" text-anchor="middle" fill="#8A7820" font-size="11" font-family="system-ui, sans-serif" font-weight="700">FOOD LOG</text>
+  <!-- Checkmark on first line -->
+  <path d="M920 192 L924 197 L931 188" stroke="#6B8F71" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M920 208 L924 213 L931 204" stroke="#6B8F71" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ── HEART ACCENT (warmth / familiar food) ── -->
+  <path d="M600 140 Q600 110 625 110 Q650 110 650 135 Q650 158 600 185 Q550 158 550 135 Q550 110 575 110 Q600 110 600 140 Z" fill="#C4622D" opacity="0.22"/>
+  <path d="M600 148 Q600 124 620 124 Q640 124 640 144 Q640 163 600 184 Q560 163 560 144 Q560 124 580 124 Q600 124 600 148 Z" fill="#C4622D" opacity="0.35"/>
+
+  <!-- ── HERB SPRIG ── -->
+  <g transform="translate(460, 460)">
+    <line x1="0" y1="0" x2="8" y2="-70" stroke="#6B8F71" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="-8" cy="-22" rx="11" ry="6" fill="#6B8F71" opacity="0.55" transform="rotate(-40 -8 -22)"/>
+    <ellipse cx="14" cy="-42" rx="10" ry="6" fill="#6B8F71" opacity="0.55" transform="rotate(25 14 -42)"/>
+    <ellipse cx="4" cy="-60" rx="9" ry="5" fill="#6B8F71" opacity="0.5" transform="rotate(-15 4 -60)"/>
+  </g>
+
+  <!-- ── SPARKLE ACCENTS ── -->
+  <circle cx="200" cy="190" r="7" fill="#C4622D" opacity="0.45"/>
+  <circle cx="222" cy="208" r="4.5" fill="#C4622D" opacity="0.3"/>
+  <circle cx="760" cy="280" r="6" fill="#6B8F71" opacity="0.4"/>
+  <circle cx="1060" cy="400" r="5" fill="#C4622D" opacity="0.4"/>
+
+  <!-- Bottom accent line -->
+  <rect x="430" y="505" width="340" height="3" rx="1.5" fill="#6B8F71" opacity="0.25"/>
+</svg>

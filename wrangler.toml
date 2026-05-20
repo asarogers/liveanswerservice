@@ -1,0 +1,29 @@
+# wrangler.toml — Cloudflare Workers configuration for Live Answer Service
+# Local deploy:  npm run deploy
+
+name = "liveanswerservice"
+main = ".open-next/worker.js"
+compatibility_date = "2026-03-15"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+preview_urls = false
+
+account_id = "ff1652fb9eaa4d149d6f7ac54dc77b84"
+
+routes = [
+  { pattern = "liveanswerservice.com/*",     zone_name = "liveanswerservice.com" },
+  { pattern = "www.liveanswerservice.com/*", zone_name = "liveanswerservice.com" },
+]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://liveanswerservice.com"
+NEXT_PUBLIC_GA_MEASUREMENT_ID = ""
+
+# Secrets (set via: wrangler secret put SECRET_NAME)
+#   RESEND_API_KEY
+#   RESEND_FROM_EMAIL
+#   CONTACT_FORM_TO_EMAIL

@@ -1,0 +1,46 @@
+{
+  "name": "liveanswerservice",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node scripts/generate-blog-manifest.mjs && node scripts/generate-image-manifest.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "deploy": "node scripts/deploy.mjs",
+    "postdeploy": "node scripts/request-indexing.mjs",
+    "index": "node scripts/request-indexing.mjs",
+    "index:all": "node scripts/request-indexing.mjs --all",
+    "index:priority": "node scripts/request-indexing.mjs --all --priority",
+    "index:dry": "node scripts/request-indexing.mjs --dry",
+    "index:ping": "node scripts/request-indexing.mjs --ping",
+    "fallbacks": "node scripts/find-fallback-locations.mjs",
+    "fallbacks:json": "node scripts/find-fallback-locations.mjs --json",
+    "fallbacks:queue": "node scripts/find-fallback-locations.mjs --queue"
+  },
+  "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
+    "@fortawesome/free-regular-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.2.0",
+    "@opennextjs/cloudflare": "^1.17.1",
+    "gray-matter": "^4.0.3",
+    "marked": "^17.0.4",
+    "next": "16.1.6",
+    "next-mdx-remote": "^6.0.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "resend": "^6.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
