@@ -20,11 +20,13 @@
   --color-border-1:    #E2E8F0;
   --color-border-2:    #CBD5E1;
 
-  /* Brand */
-  --color-accent:      #0F172A;
-  --color-accent-hover:#000000;
-  --color-accent-soft: #F1F5F9;
-  --color-accent-ink:  #0F172A;
+  /* Brand — Live Answer burgundy + cream (locked 2026-05-20) */
+  --color-accent:        #8E2138; /* Burgundy — primary brand */
+  --color-accent-hover:  #5A1424; /* Burgundy Deep */
+  --color-accent-light:  #B23A4E; /* Burgundy Light (highlights/pulse) */
+  --color-accent-soft:   #FCEEF1; /* Faint burgundy tint for soft chips */
+  --color-accent-ink:    #5A1424; /* Text-on-soft-burgundy */
+  --color-cream:         #F5EFE3; /* Warm off-white */
 
   /* Status (kept light-themed) */
   --color-success:     #16A34A;
@@ -126,9 +128,9 @@
   --themed-box-padding-mobile: 36px 24px;
 
   /* ── LEGACY (do not use — kept for back-compat) ────────── */
-  --accent:      #0F172A;
-  --accent-soft: #F1F5F9;
-  --accent-ink:  #0F172A;
+  --accent:      #8E2138; /* Burgundy */
+  --accent-soft: #FCEEF1;
+  --accent-ink:  #5A1424;
 }
 
 /* ============================================================
@@ -2650,4 +2652,433 @@ img, svg { display: block; max-width: 100%; }
   background: #ffffff !important;
   border: 1px solid #e8dec5 !important;
   color: #5c5147 !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   LIVE ANSWER BRAND OVERRIDES (2026-05-20)
+   Replaces the B&W placeholder palette with brand burgundy + cream.
+   ───────────────────────────────────────────────────────── */
+
+/* Plain hero (non-vertical pages like /pricing, /about): warm cream wash */
+.la-hero:not(.la-hero--cream) {
+  background:
+    radial-gradient(1100px 480px at 100% -10%, #FCEEF1 0%, transparent 55%),
+    linear-gradient(180deg, #FFFFFF 0%, var(--color-cream, #F5EFE3) 100%) !important;
+}
+/* Vertical landing hero (.la-hero--cream): KEEP the burgundy → ink-brown
+   diagonal gradient defined earlier in this file. Do not override. */
+
+.la-hero:not(.la-hero--cream) h1 em {
+  color: #8E2138 !important;
+  border-bottom: 3px solid #8E2138 !important;
+  font-style: italic;
+}
+
+/* Pricing em italic stays burgundy */
+.pricing-section .h2 em,
+.pricing-head .h2 em {
+  color: #8E2138 !important;
+  font-style: italic;
+}
+
+/* Primary CTA buttons — burgundy fill */
+.phone-btn {
+  background: #8E2138 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #8E2138 !important;
+}
+.phone-btn:hover { background: #5A1424 !important; border-color: #5A1424 !important; }
+
+.la-nav-cta {
+  background: #8E2138 !important;
+  color: #FFFFFF !important;
+}
+.la-nav-cta:hover { background: #5A1424 !important; }
+
+/* Secondary buttons — burgundy outline */
+.btn-secondary {
+  background: #FFFFFF !important;
+  color: #8E2138 !important;
+  border: 2px solid #8E2138 !important;
+}
+.btn-secondary:hover {
+  background: #8E2138 !important;
+  color: #FFFFFF !important;
+}
+
+/* Pricing featured card — burgundy border + badge */
+.price-card.featured {
+  border-color: #8E2138 !important;
+  border-width: 2px !important;
+}
+.price-card.featured .badge {
+  background: #8E2138 !important;
+  color: #FFFFFF !important;
+}
+.price-card .price { color: #8E2138 !important; }
+
+/* Hero call form — burgundy input border + button */
+.hero-call-form input[type="tel"] {
+  border-color: #8E2138 !important;
+}
+.hero-call-form input[type="tel"]:focus {
+  box-shadow: 0 0 0 3px rgba(142, 33, 56, 0.15) !important;
+}
+.hero-call-form button {
+  background: #8E2138 !important;
+  border-color: #8E2138 !important;
+  color: #FFFFFF !important;
+}
+.hero-call-form button:hover {
+  background: #5A1424 !important;
+  border-color: #5A1424 !important;
+}
+
+/* Plan-step numbers — burgundy circles */
+.plan-step .num {
+  background: #8E2138 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+/* Authority items — keep neutral; nums get burgundy */
+.authority-num { color: #8E2138 !important; }
+
+/* Voice avatars — burgundy bubble */
+.voice-avatar { background: #8E2138 !important; }
+
+/* Testimonial avatar */
+.testimonial-card .avatar { background: #8E2138 !important; }
+.testimonial-outcome { color: #8E2138 !important; }
+.testimonial-stars { color: #8E2138 !important; }
+
+/* Stakes inverted section: cream-accent stat numbers (kept white) */
+/* No changes — black background with white nums is intentional */
+
+/* Final CTA — burgundy gradient instead of pure black */
+.final-cta {
+  background: linear-gradient(180deg, #5A1424 0%, #8E2138 100%) !important;
+  color: #FFFFFF !important;
+}
+.final-cta h2 { color: #FFFFFF !important; }
+.final-cta .sub { color: rgba(255, 255, 255, 0.85) !important; }
+.final-cta .phone-btn {
+  background: #FFFFFF !important;
+  color: #8E2138 !important;
+  border-color: #FFFFFF !important;
+}
+.final-cta .phone-btn:hover {
+  background: #F5EFE3 !important;
+  border-color: #F5EFE3 !important;
+}
+
+/* Hero eyebrow is a transparent label (display:block, no background) — don't
+   re-add a background here; just tint the text burgundy.
+   The .dot is hidden by the earlier rule, so no color override is needed. */
+.hero-eyebrow {
+  color: #8E2138 !important;
+}
+
+/* Pulse dot keyframes already exist — color picks up from .dot bg */
+
+/* Vertical bar (top of vertical pages) — burgundy soft */
+.vertical-bar {
+  background: #FCEEF1 !important;
+  color: #5A1424 !important;
+  border-bottom-color: #F5C9D2 !important;
+}
+
+/* Live call bar (if used) — burgundy instead of black */
+.live-call-bar {
+  background: #5A1424 !important;
+}
+
+/* CA Map — burgundy outline + pin */
+.ca-map-visual path {
+  fill: #FCEEF1 !important;
+  stroke: #5A1424 !important;
+}
+.ca-map-visual circle:last-of-type {
+  fill: #8E2138 !important;
+}
+
+/* Phone mockup call-bar — burgundy */
+.phone-callbar {
+  background: #8E2138 !important;
+}
+.chat-bubble.user {
+  background: #8E2138 !important;
+}
+
+/* Compare table — "us" row burgundy */
+.compare-us {
+  background: #8E2138 !important;
+}
+
+/* Unlimited differentiator — "good" card burgundy */
+.unlimited-good {
+  background: #8E2138 !important;
+  border-color: #8E2138 !important;
+}
+
+/* Calculator output — burgundy "you're leaking" panel */
+.calc-output {
+  background: linear-gradient(180deg, #5A1424 0%, #8E2138 100%) !important;
+}
+
+/* Setup-info section — cream subtle background */
+.setup-info {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FCEEF1 100%) !important;
+}
+
+/* VOC pull-out — cream surface */
+.voc-pullout {
+  background: var(--color-cream, #F5EFE3) !important;
+}
+.voc-quote {
+  color: #5A1424 !important;
+}
+
+/* Brand wordmark in nav (override .la-brand .brand-dot to use burgundy) */
+.la-brand .brand-dot {
+  background: #8E2138 !important;
+}
+.la-brand {
+  color: #5A1424 !important;
+}
+
+/* Brand wordmark in nav */
+.la-brand {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.la-brand-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.la-brand-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-serif, "Fraunces", serif);
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: #5A1424;
+  line-height: 1;
+}
+.la-brand-sub {
+  font-family: var(--font-sans, "Geist", system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #8E2138;
+  text-transform: uppercase;
+  margin-left: 2px;
+}
+@media (max-width: 540px) {
+  .la-brand-sub { display: none; }
+  .la-brand-text { font-size: 17px; }
+}
+
+/* Pricing card CTAs — filled burgundy (primary conversion buttons) */
+.price-card .btn-secondary {
+  background: #8E2138 !important;
+  color: #FFFFFF !important;
+  border-color: #8E2138 !important;
+  padding: 12px 22px !important;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  display: block !important;
+  width: 100%;
+  text-decoration: none;
+}
+.price-card .btn-secondary:hover {
+  background: #5A1424 !important;
+  border-color: #5A1424 !important;
+  color: #FFFFFF !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   /brand-kit — visual brand identity card (noindex)
+   ───────────────────────────────────────────────────────── */
+.bk-page {
+  min-height: 100vh;
+  background: #0F0F10;
+  padding: 48px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans, "Geist", system-ui, sans-serif);
+  color: #fff;
+}
+.bk-card {
+  width: 100%;
+  max-width: 980px;
+  background: #0F0F10;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  overflow: hidden;
+}
+.bk-cell {
+  border-right: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 36px 32px;
+  display: flex;
+  align-items: center;
+}
+.bk-cell:nth-child(2n) { border-right: none; }
+.bk-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+@media (max-width: 720px) {
+  .bk-card { grid-template-columns: 1fr; }
+  .bk-cell { border-right: none; padding: 28px 22px; }
+}
+
+.bk-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.02em;
+  margin-right: 18px;
+  white-space: nowrap;
+}
+
+/* Row 1 — Mark */
+.bk-cell-mark {
+  gap: 28px;
+  justify-content: center;
+}
+.bk-mark-lg {
+  object-fit: contain;
+}
+.bk-mark-variants {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bk-mini-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bk-mini-icon--filled {
+  background: #F5EFE3;
+}
+.bk-mini-icon--outlined {
+  background: #0F0F10;
+  border: 1.5px solid #F5EFE3;
+}
+.bk-mini-icon img { object-fit: contain; }
+
+/* Row 1/2/3 — Wordmark cells */
+.bk-cell-wordmark-lg,
+.bk-cell-wordmark-sm,
+.bk-cell-wordmark-gradient {
+  justify-content: center;
+}
+
+.bk-wordmark-lg {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.bk-wordmark-text {
+  font-family: var(--font-serif, "Fraunces", serif);
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: -0.015em;
+  color: #fff;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bk-wordmark-sub {
+  font-family: var(--font-sans, "Geist", system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: #B23A4E;
+}
+
+.bk-wordmark-sm {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-serif, "Fraunces", serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+}
+.bk-wordmark-sm span { display: inline-flex; flex-direction: column; gap: 3px; letter-spacing: -0.01em; }
+.bk-wordmark-sm small {
+  font-family: var(--font-sans, "Geist", system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: #B23A4E;
+}
+
+.bk-cell-wordmark-gradient {
+  background: linear-gradient(135deg, #5A1424 0%, #B23A4E 100%);
+}
+.bk-wordmark-sm--dark span { color: #fff; }
+.bk-wordmark-sm--dark small { color: rgba(255,255,255,0.85); }
+
+/* Row 2 — Colors */
+.bk-cell-colors { gap: 10px; flex-wrap: wrap; }
+.bk-swatch-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.bk-swatch {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.04em;
+  min-width: 90px;
+  text-align: center;
+}
+.bk-swatch--light { color: #5A1424; }
+
+/* Row 3 — Font */
+.bk-cell-font { align-items: flex-start; gap: 14px; }
+.bk-font-block { display: flex; flex-direction: column; gap: 6px; }
+.bk-font-headline {
+  font-family: var(--font-serif, "Fraunces", serif);
+  font-weight: 600;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.bk-font-body {
+  font-family: var(--font-sans, "Geist", system-ui, sans-serif);
+  font-size: 12px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.02em;
+}
+.bk-font-meta {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
 }
