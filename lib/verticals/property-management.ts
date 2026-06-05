@@ -15,6 +15,9 @@ export const propertyManagementConfig: VerticalConfig = {
     label: "Built for California property management",
   },
 
+  oneLiner:
+    "Property managers lose prospects the moment the leasing office closes at 5. We answer every call 24/7 in English and Spanish, route leasing, maintenance, and emergencies, and book tours into your PMS — so you stop losing qualified renters.",
+
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Never miss another {italicWord}.",

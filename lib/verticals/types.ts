@@ -23,6 +23,13 @@ export type VerticalConfig = {
     label: string;
   };
 
+  /**
+   * The StoryBrand one-liner — a single memorable sentence repeated everywhere:
+   * [character] + [problem] + [solution/plan] + [success]. Rendered as a band
+   * directly under the hero. Keep it to one or two sentences, customer's words.
+   */
+  oneLiner: string;
+
   /** Hero section */
   hero: {
     eyebrow: string; // small line above H1

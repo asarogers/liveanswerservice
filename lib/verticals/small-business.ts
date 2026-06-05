@@ -20,6 +20,9 @@ export const smallBusinessConfig: VerticalConfig = {
     label: "Built for California small business",
   },
 
+  oneLiner:
+    "Small businesses lose customers every time the owner can't pick up. We answer every call 24/7 in English and Spanish and book it into your calendar — so you stop losing business and get to run the company instead of the phone.",
+
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Every customer reaches you. Even when you {italicWord}.",

@@ -20,6 +20,9 @@ export const legalConfig: VerticalConfig = {
     label: "Built for California law firms",
   },
 
+  oneLiner:
+    "Most law firms lose potential clients who call after hours, on weekends, or in Spanish. We answer every one 24/7, run the conflict check, and book the consult — so you stop losing retainers to the firm that picked up first.",
+
   hero: {
     eyebrow: "AI intake specialist · 24/7 · Bilingual EN/ES",
     headline: "Never miss another {italicWord}.",

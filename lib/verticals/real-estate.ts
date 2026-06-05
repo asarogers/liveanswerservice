@@ -15,6 +15,9 @@ export const realEstateConfig: VerticalConfig = {
     label: "Built for California real estate",
   },
 
+  oneLiner:
+    "Real estate leads go to the first agent who answers. We answer every Zillow lead, sign call, and referral 24/7 in English and Spanish and book the showing into your CRM — so you stop losing commissions to whoever picked up first.",
+
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Never miss another {italicWord}.",

@@ -15,6 +15,9 @@ export const salonConfig: VerticalConfig = {
     label: "Built for California salons & spas",
   },
 
+  oneLiner:
+    "Salons and spas lose bookings every time the phone rings mid-service. We answer every call 24/7 in English and Spanish and book the right service with the right stylist — so you stop losing appointments and every chair stays earning.",
+
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Every {italicWord}. Captured.",

@@ -68,6 +68,13 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
         </section>
       )}
 
+      {/* ── ONE-LINER ──────────────────────────────────────── */}
+      <section className="oneliner-band" aria-label="What Live Answer does">
+        <div className="wrap-narrow">
+          <p className="oneliner">{c.oneLiner}</p>
+        </div>
+      </section>
+
       {/* ── STAKES ─────────────────────────────────────────── */}
       <section className="stakes" aria-label="The cost of missed calls">
         <div className="wrap">
@@ -467,10 +474,16 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
         <div className="wrap">
           <h2>{c.finalCta.headline}</h2>
           <div className="sub">{c.finalCta.sub}</div>
-          <a href={siteConfig.phone.href} className="phone-btn">
-            <i className="ti ti-phone-call" aria-hidden="true" />
-            <span>{siteConfig.phone.display}</span>
-          </a>
+          {/* Direct CTA — same button repeated from the hero & pricing */}
+          <Link href="/start-trial" className="phone-btn">
+            <i className="ti ti-rocket" aria-hidden="true" />
+            <span>Start your free 7-day trial</span>
+          </Link>
+          {/* Transitional CTA — lower-risk: talk to a human */}
+          <div className="final-cta-alt">
+            Prefer to talk first?{" "}
+            <a href={siteConfig.phone.href}>Call {siteConfig.phone.display}</a>
+          </div>
         </div>
       </section>
     </>

@@ -15,6 +15,9 @@ export const restaurantConfig: VerticalConfig = {
     label: "Built for California restaurants",
   },
 
+  oneLiner:
+    "Restaurants lose reservations every time the host is seating a table. We answer every call 24/7 in English and Spanish and book the reservation — so you stop losing covers and your team stays on the floor.",
+
   hero: {
     eyebrow: "AI host · 24/7 · Bilingual EN/ES",
     headline: "Every {italicWord}. Captured.",

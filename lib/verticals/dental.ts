@@ -20,6 +20,9 @@ export const dentalConfig: VerticalConfig = {
     label: "Built for California dental practices",
   },
 
+  oneLiner:
+    "Most dental practices miss new-patient calls at lunch, after 5, and in Spanish. We answer every one 24/7 and book it straight into your practice software — so you stop losing $850 new patients and your chairs stay full.",
+
   hero: {
     eyebrow: "AI front desk · 24/7 · Bilingual EN/ES",
     headline: "Never lose another {italicWord}.",

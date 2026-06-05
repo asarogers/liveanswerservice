@@ -15,6 +15,9 @@ export const hvacConfig: VerticalConfig = {
     label: "Built for California HVAC contractors",
   },
 
+  oneLiner:
+    "California HVAC contractors lose up to 6 of every 10 after-hours calls to voicemail. We answer every one 24/7 in English and Spanish and book it straight into your dispatch software — so you stop losing emergency jobs and your trucks stay full.",
+
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Never lose another {italicWord}.",

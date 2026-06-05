@@ -19,6 +19,9 @@ export const medicalConfig: VerticalConfig = {
     label: "Built for California medical practices",
   },
 
+  oneLiner:
+    "Most medical offices miss new-patient calls when the front desk is busy, at lunch, or closed for the day. We answer every one 24/7 and book it straight into your EHR — so you stop losing referrals and your schedule stays full.",
+
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Never lose another {italicWord}.",
