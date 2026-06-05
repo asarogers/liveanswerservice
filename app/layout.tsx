@@ -87,8 +87,12 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: "/icon.svg",
+    icon: [
+      { url: "/brand-favicon-1780112772.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand-icon-512-1780112772.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/brand-apple-1780112772.png",
+    shortcut: "/brand-favicon-1780112772.png",
   },
 };
 
@@ -110,7 +114,7 @@ const localBusinessSchema = {
   image: `${siteConfig.url}/opengraph-image.png`,
   logo: {
     "@type": "ImageObject",
-    url: `${siteConfig.url}/icon.svg`,
+    url: `${siteConfig.url}/icon-512.png`,
     width: 512,
     height: 512,
   },

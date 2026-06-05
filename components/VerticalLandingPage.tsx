@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import type { VerticalConfig } from "@/lib/verticals/types";
+import HeroLogoVideo from "@/components/HeroLogoVideo";
 
 /**
  * VerticalLandingPage — renders the full StoryBrand HVAC-style landing for any
  * vertical. All copy comes from the config; layout/design is centralized here.
  *
- * Update this file to change every vertical at once. Update lib/verticals/<slug>.tsunlimited
+ * Update this file to change every vertical at once. Update lib/verticals/<slug>.ts
  * to change one vertical's copy.
  */
 export default function VerticalLandingPage({ config }: { config: VerticalConfig }) {
@@ -47,28 +48,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
           </div>
 
           <div className="hero-phone-wrap">
-            <div className="phone-mockup" role="img" aria-label="Sample AI receptionist conversation">
-              <div className="phone-notch" aria-hidden="true" />
-              <div className="phone-screen">
-                <div className="phone-status">
-                  <span>9:41</span>
-                  <span aria-hidden="true">
-                    <i className="ti ti-signal-4g" /> <i className="ti ti-wifi" /> <i className="ti ti-battery" />
-                  </span>
-                </div>
-                <div className="phone-callbar">
-                  <i className="ti ti-phone-call" aria-hidden="true" />
-                  <span>Live Answer · 0:34</span>
-                </div>
-                <div className="chat-thread">
-                  {c.hero.chat.map((msg, i) => (
-                    <div key={i} className={`chat-bubble ${msg.speaker}`}>
-                      {msg.text}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <HeroLogoVideo />
           </div>
         </div>
       </section>

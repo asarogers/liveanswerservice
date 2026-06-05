@@ -14,10 +14,9 @@ export default function Navigation() {
           <Image
             src="/brand/mark-light.png"
             alt=""
-            width={36} fdas dsa fdfasf dasdsafwf 
-            height={36}
+            width={50}
+            height={50}
             priority
-            className="la-brand-mark"
           />
           <span className="la-brand-text">
             Live Answer<span className="la-brand-sub">SERVICE</span>

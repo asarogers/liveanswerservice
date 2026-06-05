@@ -53,3 +53,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large video assets (hosted out-of-band)
+/public/video/
+*.mp4
