@@ -8,8 +8,6 @@ import { realEstateConfig } from "./real-estate";
 import { propertyManagementConfig } from "./property-management";
 import { salonConfig } from "./salon";
 import { smallBusinessConfig } from "./small-business";
-import { veterinaryConfig } from "./veterinary";
-import { plumbingConfig } from "./plumbing";
 
 /**
  * Registry of all vertical configs. Add new verticals by importing the config
@@ -25,8 +23,6 @@ export const VERTICALS: Record<string, VerticalConfig> = {
   "property-management-answering-service": propertyManagementConfig,
   "salon-and-spa-answering-service": salonConfig,
   "small-business-answering-service": smallBusinessConfig,
-  "veterinary-answering-service": veterinaryConfig,
-  "plumbing-answering-service": plumbingConfig,
 };
 
 export function getVertical(slug: string): VerticalConfig | undefined {
