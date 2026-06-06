@@ -17,6 +17,12 @@
  */
 import { readFileSync } from 'fs';
 import { join } from 'path';
+// Static import — bundled into the worker so the publishing-schedule gates
+// work in RUNTIME renders too. readFileSync(process.cwd()) fails silently on
+// Cloudflare Workers, which made loadSitePlan() return null on any non-
+// prerendered request and dropped every noindex gate. Same pattern as
+// lib/guides.ts. [guides-migration 2026-06-06]
+import bundledPlan from '../site-plan.json';
 
 export type SitePlanLink = {
   url: string;
@@ -55,24 +61,23 @@ let _cached: SitePlan | null | undefined = undefined;
  * callers should branch on null and fall back to their hardcoded defaults.
  */
 export function loadSitePlan(): SitePlan | null {
-  // In dev, re-read on every call so edits to site-plan.json show up on
-  // refresh (the module-level cache otherwise pins the file's load-time
-  // contents until the next recompile). Production builds keep the cache.
-  if (_cached !== undefined && process.env.NODE_ENV !== 'development') return _cached;
-  try {
-    const path = join(process.cwd(), 'site-plan.json');
-    const raw = readFileSync(path, 'utf-8');
-    const plan = JSON.parse(raw) as SitePlan;
-    if (!plan?.sitemaps || !plan?.internal_linking) {
-      _cached = null;
+  // In dev, re-read from disk on every call so edits to site-plan.json show
+  // up on refresh (the static import otherwise pins the file's load-time
+  // contents until the next recompile).
+  if (process.env.NODE_ENV === 'development') {
+    try {
+      const raw = readFileSync(join(process.cwd(), 'site-plan.json'), 'utf-8');
+      const plan = JSON.parse(raw) as SitePlan;
+      return plan?.sitemaps && plan?.internal_linking ? plan : null;
+    } catch {
       return null;
     }
-    _cached = plan;
-    return plan;
-  } catch {
-    _cached = null;
-    return null;
   }
+  // Build + worker runtime: use the statically bundled copy (no fs needed).
+  if (_cached !== undefined) return _cached;
+  const plan = bundledPlan as unknown as SitePlan;
+  _cached = plan?.sitemaps && plan?.internal_linking ? plan : null;
+  return _cached;
 }
 
 /**

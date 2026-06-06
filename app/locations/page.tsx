@@ -1,6 +1,3 @@
-Here’s the enhanced version of the locations page with additional content:
-
-```typescript
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
@@ -246,4 +243,3 @@ export default function LocationsIndexPage() {
     </>
   );
 }
-```
