@@ -128,33 +128,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ── INDUSTRIES ─────────────────────────────────────── */}
-      <section className="plan" aria-label="Per-industry pages">
-        <div className="wrap">
-          <div style={{ textAlign: "center", marginBottom: 32 }}>
-            <span className="section-num">Per industry</span>
-            <h2 className="section-title" style={{ margin: 0 }}>Same price. Different scripts.</h2>
-          </div>
-          <div className="plan-grid">
-            <Link href="/services/hvac-answering-service" className="plan-step" style={{ textDecoration: "none" }}>
-              <div className="num">H</div>
-              <h3>HVAC contractors</h3>
-              <p>Books into Jobber, ServiceTitan, HousecallPro, FieldEdge. Emergency triage built in.</p>
-            </Link>
-            <Link href="/services/attorney-answering-service" className="plan-step" style={{ textDecoration: "none" }}>
-              <div className="num">L</div>
-              <h3>Law firms</h3>
-              <p>Conflict check at the call. Books into Clio, MyCase, PracticePanther, Lawmatics.</p>
-            </Link>
-            <Link href="/services" className="plan-step" style={{ textDecoration: "none" }}>
-              <div className="num">+</div>
-              <h3>More verticals</h3>
-              <p>Dental, medical, real estate, restaurants, property management, salon &amp; spa.</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section className="final-cta">
         <div className="wrap">
           <h2>Less than one captured customer pays for the year.</h2>

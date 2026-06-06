@@ -6,7 +6,7 @@ excerpt: "The real differences between AI and human answering services in 2026 â
 description: "Comparing AI receptionists and human answering services for small business â€” coverage, cost, bilingual, integrations, and where each is the right call."
 category: "Comparison"
 readTime: "6 min"
-author: "Asa Rogers"
+author: "Ace Rodgers"
 featured: false
 keywords: "AI receptionist vs human answering service, virtual receptionist comparison"
 heroImage: "/images/blog/ai-vs-human-answering-service-comparison.svg"

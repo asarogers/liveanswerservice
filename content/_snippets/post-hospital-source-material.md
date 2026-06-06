@@ -2,7 +2,7 @@
 
 **Source:** `content/blog/_archive/meal-prep-for-elderly-after-surgery-recovery.md`
 **Original date:** 2026-03-25
-**Original author:** Asa Rogers
+**Original author:** Ace Rodgers
 **Lifted:** 2026-05-08 — for use rewriting `/services/post-hospital-meal-recovery`.
 
 Reusable specific advice and condition detail. Generic intros, soft CTAs, and cross-links to other blog posts have been excluded.

@@ -11,6 +11,9 @@ export interface FAQItem { q: string; a: string }
  *
  * Renders a visible accordion so the schema corresponds to real content
  * (Google flags hidden-only FAQPage as spam).
+ *
+ * All panels open by default — user can collapse. [src: 2026-05-04 call]
+ * Uses `collapsed: Set<number>` invariant (empty Set = everything visible).
  */
 export default function FAQSection({
   faqs,
@@ -21,9 +24,16 @@ export default function FAQSection({
   headingId?: string;
   heading?: string;
 }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // Empty set = all panels open. User collapses by adding an index.
+  const [collapsed, setCollapsed] = useState<ReadonlySet<number>>(new Set());
+
   const handleToggle = useCallback((i: number) => {
-    setOpenIndex((prev) => (prev === i ? null : i));
+    setCollapsed((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
   }, []);
 
   const faqSchema = {
@@ -56,7 +66,7 @@ export default function FAQSection({
           {faqs.map((item, i) => {
             const panelId = `${headingId}-panel-${i}`;
             const triggerId = `${headingId}-trigger-${i}`;
-            const isOpen = openIndex === i;
+            const isOpen = !collapsed.has(i);
             return (
               <div key={i} className="border border-[#E0D8CF] rounded-xl overflow-hidden bg-white">
                 <h3>

@@ -10,7 +10,7 @@ export const siteConfig = {
   // ── Brand ─────────────────────────────────────────────────
   name: "Live Answer",
   tagline: "Never miss another booking.",
-  founder: "Asa Rogers",
+  founder: "Ace Rodgers",
   url: "https://liveanswerservice.com",
 
   // ── Contact ───────────────────────────────────────────────

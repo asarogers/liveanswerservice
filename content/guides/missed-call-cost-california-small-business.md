@@ -1,15 +1,11 @@
 ---
 title: "What a Missed Call Actually Costs a California Small Business"
-slug: "missed-call-cost-california-small-business"
-date: "2026-05-13"
-excerpt: "The average California small business loses $126,000 a year to missed calls. Here's the math, vertical by vertical."
 description: "Missed-call cost data for California small business — HVAC, legal, dental, restaurants. The 62% miss rate and what to do about it."
-category: "Strategy"
-readTime: "5 min"
+h1: "What a Missed Call Actually Costs a California Small Business"
+targetKeyword: "missed call cost small business california"
+datePublished: "2026-05-13"
+dateModified: "2026-05-13"
 author: "Ace Rodgers"
-featured: true
-keywords: "missed call cost, small business, california, answering service ROI"
-heroImage: "/images/blog/missed-call-cost-california-small-business.svg"
 ---
 
 Most California small business owners don't believe their phone is bleeding revenue. They know it rings. They know they don't always pick up. They assume voicemail catches what they miss, and that customers who really want them will call back.
@@ -51,7 +47,7 @@ The fix isn't a better voicemail. It's actually answering.
 
 A California receptionist runs $38,000–$48,000/yr fully loaded, plus 60+ days to replace when they quit. Live answering services charge $245–$400/mo base plus per-minute fees, or $4,000+/mo for full coverage. Both are expensive enough that the math becomes a tradeoff: ration the cost or eat the missed-call loss.
 
-AI receptionists like Live Answer reframe the math entirely. Flat $299–$499/mo, unlimited calls, 24/7, bilingual. One captured customer pays for the year in legal or real estate. Three captured jobs in HVAC. Ten new patients in dental. The decision to actually answer your phone stops being a budget question.
+AI receptionists like Live Answer reframe the math entirely. Flat $500/mo, unlimited calls, 24/7, bilingual. One captured customer pays for the year in legal or real estate. Three captured jobs in HVAC. Ten new patients in dental. The decision to actually answer your phone stops being a budget question.
 
 ## What to measure
 
@@ -62,3 +58,17 @@ If you're considering whether to do something about missed calls, three numbers 
 3. **The multiplication.** Misses times value. Divide by 12 to get the monthly loss. Compare to the cost of fixing it.
 
 The math usually closes itself.
+
+## Frequently Asked Questions
+
+### What is the average miss rate for small businesses?
+
+Industry data puts the average small-business miss rate at 62% across all inbound calls — including business hours. Fewer than 15% of voicemails left actually convert to a booking, so the effective capture rate on missed calls is under 10%.
+
+### How much does a missed call cost an HVAC contractor?
+
+A missed HVAC call costs between $275 (routine service) and $4,000+ (emergency install) in direct lost revenue. An HVAC contractor missing 60% of calls during a summer heatwave can lose $25,000–$120,000 per year depending on call volume and average job value.
+
+### Does an AI answering service actually pay for itself?
+
+For most California service verticals — legal, HVAC, dental, real estate — one or two captured calls per month covers the cost of the service. At $500/mo flat, the breakeven is typically 1–3 jobs for a trade business or a single consultation for a legal practice.

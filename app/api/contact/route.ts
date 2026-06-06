@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
             </p>
             <hr style="border: none; border-top: 1px solid #E0D8CF; margin: 32px 0;" />
             <p style="font-size: 13px; color: #888; margin: 0; font-family: sans-serif;">
-              — Asa Rogers<br />
+              — Ace Rodgers<br />
               Live Answer · Bay Area, CA<br />
               <a href="https://liveanswerservice.com" style="color: #1A1A17;">liveanswerservice.com</a>
             </p>

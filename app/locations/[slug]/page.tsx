@@ -7,8 +7,11 @@ import {
   getLocationBySlug,
   getAllLocationSlugs,
   getAllLocations,
+  getLandmarkPageBySlug,
+  getAllLocationAndLandmarkSlugs,
+  type LandmarkPage,
 } from "@/lib/locations-data";
-import { getAllServices } from "@/lib/services-data";
+import { getServiceBySlug, getAllServices } from "@/lib/services-data";
 import { LOCATION_FAQS, resolveFAQ } from "@/lib/common-faqs";
 import { locationLocalFaqs } from "@/lib/locations-faqs";
 import { locationEnrichments } from "@/lib/locations-enrichment";
@@ -18,13 +21,33 @@ import { tintForLocation, tintStyleVars } from "@/lib/vertical-tints";
 const NOINDEX_SLUGS = noindexSlugs(loadSitePlan());
 
 export function generateStaticParams() {
-  return getAllLocationSlugs().map((slug) => ({ slug }));
+  // Includes both regular location slugs and published (non-draft) landmark slugs.
+  return getAllLocationAndLandmarkSlugs().map((slug) => ({ slug }));
 }
 
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+
+  // Landmark page overrides regular location page
+  const landmark = getLandmarkPageBySlug(slug);
+  if (landmark && !landmark.draft) {
+    return {
+      title: landmark.title,
+      description: landmark.metaDescription,
+      alternates: { canonical: `/locations/${slug}` },
+      openGraph: {
+        title: landmark.title,
+        description: landmark.metaDescription,
+        url: `${siteConfig.url}/locations/${slug}`,
+        siteName: siteConfig.name,
+        type: "website",
+        images: [{ url: `${siteConfig.url}/opengraph-image.png`, width: 1200, height: 630, alt: landmark.title }],
+      },
+    };
+  }
+
   const location = getLocationBySlug(slug);
   if (!location) return {};
 
@@ -57,6 +80,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocationDetailPage({ params }: PageProps) {
   const { slug } = await params;
+
+  // Landmark pages render with their own component
+  const landmark = getLandmarkPageBySlug(slug);
+  if (landmark && !landmark.draft) {
+    return <LandmarkPageContent landmark={landmark} />;
+  }
+
   const location = getLocationBySlug(slug);
   if (!location) notFound();
 
@@ -440,6 +470,160 @@ export default async function LocationDetailPage({ params }: PageProps) {
         </div>
       </section>
     </div>
+  );
+}
+
+/* ============================================================
+   LANDMARK PAGE COMPONENT
+   Renders "[Service] near [Landmark], [City]" pages.
+   Only reached when draft !== true (enforced above).
+   ============================================================ */
+function LandmarkPageContent({ landmark }: { landmark: LandmarkPage }) {
+  const service = getServiceBySlug(landmark.targetService);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${siteConfig.url}/locations/${landmark.slug}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home",      item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Locations", item: `${siteConfig.url}/locations` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${landmark.city}, ${landmark.state}`,
+        item: `${siteConfig.url}/locations/${landmark.city.toLowerCase().replace(/\s+/g, "-")}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: landmark.h1,
+        item: `${siteConfig.url}/locations/${landmark.slug}`,
+      },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${siteConfig.url}/locations/${landmark.slug}#business`,
+    name: `${siteConfig.name} — near ${landmark.landmark}, ${landmark.city}`,
+    url: `${siteConfig.url}/locations/${landmark.slug}`,
+    telephone: siteConfig.phone.schema,
+    description: landmark.metaDescription,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: landmark.city,
+      addressRegion: landmark.state,
+      addressCountry: "US",
+    },
+    geo: { "@type": "GeoCoordinates", latitude: landmark.latitude, longitude: landmark.longitude },
+    serviceType: ["AI Receptionist", "Answering Service", "24/7 Call Answering"],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" style={{ background: "#f7f2e7", padding: "12px 0", borderBottom: "1px solid #d9cdb1" }}>
+        <div className="wrap">
+          <ol style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 4, listStyle: "none", padding: 0, margin: 0, fontSize: 13, color: "#5c5147" }}>
+            <li><Link href="/" style={{ color: "#5c5147" }}>Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/locations" style={{ color: "#5c5147" }}>Locations</Link></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" style={{ color: "#1a1611", fontWeight: 500 }}>{landmark.h1}</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="la-hero" style={{ paddingBottom: 32 }}>
+        <div className="wrap-narrow">
+          <h1>{landmark.h1}</h1>
+          <p className="sub">{landmark.intro}</p>
+          <a href={siteConfig.phone.href} className="phone-btn" style={{ marginTop: 24 }}>
+            <i className="ti ti-phone-call" aria-hidden="true" />
+            <span>{siteConfig.phone.display}</span>
+          </a>
+        </div>
+      </section>
+
+      {/* Job stories */}
+      {landmark.jobStories.length > 0 && (
+        <section className="section-pad" aria-labelledby="job-stories-heading" style={{ background: "#f7f2e7" }}>
+          <div className="wrap" style={{ maxWidth: 880 }}>
+            <h2 id="job-stories-heading" style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 400, letterSpacing: "-0.015em", color: "#1a1611", margin: "0 0 32px" }}>
+              How it works near {landmark.landmark}
+            </h2>
+            <div style={{ display: "grid", gap: 24 }}>
+              {landmark.jobStories.map((story, i) => (
+                <div key={i} style={{ padding: 24, background: "#fdfaf3", border: "1px solid #d9cdb1", borderRadius: 12 }}>
+                  <h3 style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, color: "#1a1611", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                    {story.heading}
+                  </h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.65, color: "#5c5147", margin: 0 }}>{story.content}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Driving / nearby */}
+      <section className="section-pad" aria-label="Location details" style={{ background: "#f7f2e7" }}>
+        <div className="wrap" style={{ maxWidth: 880 }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(20px, 2.4vw, 28px)", fontWeight: 400, letterSpacing: "-0.015em", color: "#1a1611", margin: "0 0 16px" }}>
+            Getting here
+          </h2>
+          <p style={{ fontSize: 15, lineHeight: 1.65, color: "#5c5147", margin: "0 0 24px" }}>
+            {landmark.drivingDirections}
+          </p>
+          {landmark.nearbyLandmarks.length > 0 && (
+            <>
+              <h3 style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 600, color: "#1a1611", textTransform: "uppercase", letterSpacing: "0.06em", margin: "0 0 12px" }}>
+                Nearby landmarks
+              </h3>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {landmark.nearbyLandmarks.map((n) => (
+                  <span key={n} style={{ padding: "5px 12px", background: "#f7f2e7", borderRadius: 999, fontSize: 13, color: "#5c5147", border: "1px solid #d9cdb1" }}>
+                    {n}
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      {/* Link back to service + city pages */}
+      <section className="section-pad" style={{ background: "#f7f2e7" }}>
+        <div className="wrap" style={{ maxWidth: 880, display: "flex", gap: 12, flexWrap: "wrap" }}>
+          {service && (
+            <Link href={`/services/${service.slug}`} style={{ padding: "8px 16px", border: "1px solid #d9cdb1", borderRadius: 8, fontSize: 14, color: "#1a1611" }}>
+              {service.name} →
+            </Link>
+          )}
+          <Link href={`/locations/${landmark.city.toLowerCase().replace(/\s+/g, "-")}`} style={{ padding: "8px 16px", border: "1px solid #d9cdb1", borderRadius: 8, fontSize: 14, color: "#1a1611" }}>
+            {landmark.city} answering service →
+          </Link>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="final-cta">
+        <div className="wrap">
+          <h2>Ready to answer every call near {landmark.landmark}?</h2>
+          <div className="sub">7-day free trial. No card. Live in 24 hours.</div>
+          <a href={siteConfig.phone.href} className="phone-btn">
+            <i className="ti ti-phone-call" aria-hidden="true" />
+            <span>{siteConfig.phone.display}</span>
+          </a>
+        </div>
+      </section>
+    </>
   );
 }
 

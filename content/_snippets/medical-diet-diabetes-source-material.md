@@ -2,7 +2,7 @@
 
 **Source:** `content/blog/_archive/meal-prep-for-seniors-with-diabetes.md`
 **Original date:** 2026-03-25
-**Original author:** Asa Rogers
+**Original author:** Ace Rodgers
 **Lifted:** 2026-05-08 — for use rewriting `/services/medical-diet-meal-prep` (diabetes umbrella content).
 
 Reusable specific advice and condition detail. Generic intros and soft CTAs excluded.

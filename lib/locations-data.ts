@@ -230,6 +230,105 @@ export const locationDetails: LocationDetail[] = [
 ];
 
 /* ============================================================
+   LANDMARK PAGES
+   ────────────────────────────────────────────────────────────
+   LandmarkPage powers "[Service] near [Landmark], [City]" pages.
+   These are a step below full location pages in the content hierarchy:
+   one service + one named landmark + one city.
+
+   ONLY create a LandmarkPage when the rank map shows position 4–6 for
+   the target keyword in that grid cell (see rankMapTrigger). Creating
+   landmark pages without rank-map justification wastes crawl budget and
+   dilutes topical authority. Set draft: true until the page is ready to
+   index — draft pages are excluded from generateStaticParams and sitemap.
+
+   ── CONTENT MODEL ─────────────────────────────────────────────────────
+   Good landmark pages for an AI receptionist service look like:
+     • Named hospital / medical center anchors (dental/medical verticals)
+     • Named courthouse / law firm cluster (legal vertical)
+     • Named arena / event venue (restaurant vertical — pre/post event)
+     • Named business park / tech campus (any vertical)
+   They should contain: real driving context, vertical-specific job stories
+   anchored to that location, nearby business names where possible.
+   ─────────────────────────────────────────────────────────────────────
+   ============================================================ */
+export interface LandmarkPage {
+  slug: string;            // e.g. "dental-answering-service-near-good-samaritan-hospital-san-jose"
+  landmark: string;        // e.g. "Good Samaritan Hospital"
+  city: string;            // e.g. "San Jose"
+  state: string;           // e.g. "CA"
+  targetService: string;   // must match a ServiceDetail.slug
+  title: string;
+  metaDescription: string;
+  h1: string;
+  intro: string;
+  jobStories: { heading: string; content: string }[];
+  drivingDirections: string;
+  nearbyLandmarks: string[];
+  latitude: number;
+  longitude: number;
+  /**
+   * Required field: the rank-map position and grid date that triggered
+   * this page's creation. Only create when position is 4–6.
+   * Example: { position: 5, gridDate: "2026-07-01" }
+   */
+  rankMapTrigger: {
+    position: number;
+    gridDate: string; // ISO date of the rank-map snapshot
+  };
+  draft?: boolean; // true = excluded from generateStaticParams and sitemap
+}
+
+export const landmarkPages: LandmarkPage[] = [
+  /* ── DRAFT EXAMPLE ─────────────────────────────────────────────────
+     Adapt this entry when the rank map shows position 4–6 for
+     "dental answering service near Good Samaritan Hospital San Jose".
+     Remove draft: true when content is reviewed and ready to index.
+     ──────────────────────────────────────────────────────────────── */
+  {
+    slug: "dental-answering-service-near-good-samaritan-hospital-san-jose",
+    landmark: "Good Samaritan Hospital",
+    city: "San Jose",
+    state: "CA",
+    targetService: "dental-answering-service",
+    title: "Dental Answering Service near Good Samaritan Hospital, San Jose | Live Answer",
+    metaDescription:
+      "AI receptionist for dental offices near Good Samaritan Hospital in San Jose. 24/7 bilingual EN/ES, books into Dentrix/Open Dental, flat $500/mo. Call (669) 365-6533.",
+    h1: "AI Receptionist for Dental Offices near Good Samaritan Hospital, San Jose",
+    intro:
+      "Good Samaritan Hospital anchors a dense healthcare corridor along Bascom Avenue between San Jose and Campbell. Dental practices within a half-mile — from Bascom south to Hamilton, and east through the Cambrian Park neighborhoods — serve a patient base that skews toward families with active insurance, making every missed new-patient call a measurable lifetime-value loss. Live Answer answers every call 24/7, books directly into Dentrix, Open Dental, Eaglesoft, or Curve, and handles Spanish-speaking patients automatically. Flat $500/mo, no per-minute fees.",
+    jobStories: [
+      {
+        heading: "After-hours new-patient intake",
+        content:
+          "A patient was referred by their primary care doctor at Good Sam after a checkup. They called the dental practice at 7:30 PM — after front desk hours. Live Answer's dental AI qualified the referral, collected insurance information, and booked a new-patient exam in the first available morning slot. The practice received an SMS summary within 60 seconds. The patient confirmed via text. No callback loop.",
+      },
+      {
+        heading: "Spanish-speaking emergency call",
+        content:
+          "A Spanish-speaking patient from the Cambrian Park area called with tooth pain on a Sunday morning. Live Answer detected Spanish in the first three seconds, switched language automatically, triaged the emergency, and booked a same-day emergency slot. The dentist was notified via SMS with the patient's name, contact, pain description, and insurance info. No missed call. No language barrier.",
+      },
+    ],
+    drivingDirections:
+      "Good Samaritan Hospital is at 2425 Samaritan Drive, San Jose, CA 95124, at the intersection of Samaritan Drive and Bascom Avenue. Dental practices in this corridor are accessible via Bascom Ave (north–south) and Camden Ave / Hamilton Ave (east–west). From Highway 17, take the Camden Ave exit east; from 85, take Samaritan Drive north.",
+    nearbyLandmarks: [
+      "O'Connor Hospital",
+      "Valley Medical Center",
+      "Cambrian Park Plaza",
+      "Pruneyard Shopping Center, Campbell",
+    ],
+    latitude: 37.2682,
+    longitude: -121.9393,
+    rankMapTrigger: {
+      // Replace with actual rank-map data before removing draft: true.
+      position: 5,
+      gridDate: "2026-07-01",
+    },
+    draft: true,
+  },
+];
+
+/* ============================================================
    HELPERS — stable export shape
    ============================================================ */
 export function getLocationBySlug(slug: string): LocationDetail | null {
@@ -242,4 +341,24 @@ export function getAllLocationSlugs(): string[] {
 
 export function getAllLocations(): LocationDetail[] {
   return locationDetails;
+}
+
+/** Returns only landmark pages where draft !== true. */
+export function getPublishedLandmarkPages(): LandmarkPage[] {
+  return landmarkPages.filter((p) => !p.draft);
+}
+
+/** Looks up a landmark page by slug regardless of draft status. */
+export function getLandmarkPageBySlug(slug: string): LandmarkPage | undefined {
+  return landmarkPages.find((p) => p.slug === slug);
+}
+
+/**
+ * Returns all slugs for both regular location pages and published landmark
+ * pages, for use in generateStaticParams on the [slug] route.
+ */
+export function getAllLocationAndLandmarkSlugs(): string[] {
+  const locationSlugs = locationDetails.map((l) => l.slug);
+  const landmarkSlugs = getPublishedLandmarkPages().map((p) => p.slug);
+  return [...locationSlugs, ...landmarkSlugs];
 }

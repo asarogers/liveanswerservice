@@ -31,6 +31,23 @@ export interface ServiceDetail {
   sections: { heading: string; content: string }[];
   relatedServices: string[];
   relatedLocations: string[];
+  /**
+   * Hub/child silo fields — Core-30 architecture.
+   *
+   * isHub:    true if this page is the root of a silo cluster.
+   *           Hub pages collect child pages into a "Related services" section.
+   * hubSlug:  slug of the hub page this child belongs to. Set on child pages.
+   *           A child must NOT appear in relatedServices for a different hub —
+   *           the dev-time silo guard below enforces this at module load.
+   *
+   * NOTE: The 10 current service verticals are NOT restructured into hubs.
+   * These fields are here to add the capability for future silos without
+   * breaking any existing page. Simply set isHub: true on a future aggregator
+   * page and hubSlug on its children.
+   */
+  isHub?: boolean;
+  hubSlug?: string;
+  name?: string; // Short display name used in nav/breadcrumbs (optional)
 }
 
 export const serviceDetails: ServiceDetail[] = [
@@ -361,6 +378,33 @@ export const serviceDetails: ServiceDetail[] = [
 ];
 
 /* ============================================================
+   DEV-TIME SILO GUARD
+   ────────────────────────────────────────────────────────────
+   At module load, warn if a service's relatedServices list
+   includes a child that belongs to a DIFFERENT hub. Cross-hub
+   internal links undermine silo authority and confuse crawlers.
+   This runs only in development builds (NODE_ENV !== 'production')
+   so there is zero production overhead.
+   ============================================================ */
+if (process.env.NODE_ENV !== "production") {
+  const hubMap: Record<string, string> = {};
+  for (const s of serviceDetails) {
+    if (s.hubSlug) hubMap[s.slug] = s.hubSlug;
+  }
+  for (const s of serviceDetails) {
+    const myHub = s.isHub ? s.slug : s.hubSlug;
+    for (const rel of s.relatedServices) {
+      const relHub = hubMap[rel];
+      if (relHub && myHub && relHub !== myHub) {
+        console.warn(
+          `[services-data] silo violation: "${s.slug}" (hub: ${myHub}) has relatedServices entry "${rel}" which belongs to hub "${relHub}". Cross-hub links fragment topical authority.`,
+        );
+      }
+    }
+  }
+}
+
+/* ============================================================
    HELPERS — stable export shape for [slug] route + sitemap
    ============================================================ */
 export function getServiceBySlug(slug: string): ServiceDetail | null {
@@ -373,4 +417,22 @@ export function getAllServiceSlugs(): string[] {
 
 export function getAllServices(): ServiceDetail[] {
   return serviceDetails;
+}
+
+/**
+ * Returns all child services for a given hub slug.
+ * Children are services where hubSlug === the given slug.
+ */
+export function getChildServices(hubSlug: string): ServiceDetail[] {
+  return serviceDetails.filter((s) => s.hubSlug === hubSlug);
+}
+
+/**
+ * Returns the hub service for a given child slug, or undefined if the
+ * child has no hubSlug or the hub page doesn't exist in serviceDetails.
+ */
+export function getHubService(childSlug: string): ServiceDetail | undefined {
+  const child = serviceDetails.find((s) => s.slug === childSlug);
+  if (!child?.hubSlug) return undefined;
+  return serviceDetails.find((s) => s.slug === child.hubSlug) ?? undefined;
 }

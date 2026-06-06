@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "About Live Answer — AI Receptionist Built for California",
   description:
-    "Live Answer is an AI-powered answering service built in San Jose for California small business. Founded by Asa Rogers. Bilingual EN/ES, 24/7, $500/mo flat.",
+    "Live Answer is an AI-powered answering service built in San Jose for California small business. Founded by Ace Rodgers. Bilingual EN/ES, 24/7, $500/mo flat.",
   alternates: { canonical: "/about" },
 };
 

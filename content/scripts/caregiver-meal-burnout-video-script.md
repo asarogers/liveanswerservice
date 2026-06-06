@@ -2,7 +2,7 @@
 
 **Format:** Short-form video (Instagram Reels / TikTok / YouTube Shorts)
 **Duration:** ~30–40 seconds when spoken at a natural pace
-**Speaker:** Asa Rogers, Live Answer
+**Speaker:** Ace Rodgers, Live Answer
 
 ---
 

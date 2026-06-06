@@ -1,0 +1,2226 @@
+{
+  "project": "liveanswerservice",
+  "generated": "2026-06-06T16:23:48.419181Z",
+  "scored_date": "2026-06-05",
+  "total_keywords": 161,
+  "sitemaps": {
+    "priority": {
+      "filename": "sitemap-priority.xml",
+      "description": "Target-now + target-soon URLs. Include with recent <lastmod>. Link prominently from homepage + hub pages.",
+      "urls": [
+        {
+          "url": "/services/live-answering-service-pricing-per-call",
+          "keyword": "live answering service pricing per call",
+          "tier": "F",
+          "archetype": "forum_fallback",
+          "opportunity": 0.64,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/247-answering-service-cost-bay-area",
+          "keyword": "24/7 answering service cost bay area",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.63,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/what-is-call-overflow-handling",
+          "keyword": "what is call overflow handling",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.59,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/how-does-after-hours-answering-work-for-hvac",
+          "keyword": "how does after hours answering work for HVAC",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/cheapest-virtual-receptionist-service",
+          "keyword": "cheapest virtual receptionist service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/do-i-need-an-answering-service-for-my-small-business",
+          "keyword": "do I need an answering service for my small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/virtual-receptionist-cost-per-month",
+          "keyword": "virtual receptionist cost per month",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/virtual-receptionist-vs-hiring-receptionist",
+          "keyword": "virtual receptionist vs hiring receptionist",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-san-mateo",
+          "keyword": "answering service San Mateo",
+          "tier": "E",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "aggregator_fortress \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/how-does-a-247-answering-service-work",
+          "keyword": "how does a 24/7 answering service work",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/after-hours-call-answering-service",
+          "keyword": "after hours call answering service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/veterinary-answering-service",
+          "keyword": "veterinary answering service near me",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.57,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/restaurant-answering-service-bay-area",
+          "keyword": "restaurant answering service Bay Area",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.57,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-san-leandro",
+          "keyword": "answering service San Leandro",
+          "tier": "E",
+          "archetype": "mixed_strong",
+          "opportunity": 0.56,
+          "action": "target_soon",
+          "reason": "achievable within 2-3 months once lower tiers win"
+        },
+        {
+          "url": "/services/best-ai-receptionist-for-small-business",
+          "keyword": "best AI receptionist for small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.55,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-cost-per-month",
+          "keyword": "answering service cost per month",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/best-answering-service-for-small-business",
+          "keyword": "best answering service for small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-cost-per-minute",
+          "keyword": "answering service cost per minute",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/after-hours-answering-service-pricing",
+          "keyword": "after hours answering service pricing",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/what-does-a-virtual-receptionist-do",
+          "keyword": "what does a virtual receptionist do",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/attorney-answering-service",
+          "keyword": "attorney answering service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/restaurant-answering-service",
+          "keyword": "restaurant answering service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.53,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/ai-receptionist-vs-live-answering-service",
+          "keyword": "AI receptionist vs live answering service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.53,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/small-business-missing-calls",
+          "keyword": "small business missing calls",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.53,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-el-cerrito",
+          "keyword": "answering service El Cerrito",
+          "tier": "E",
+          "archetype": "mixed_strong",
+          "opportunity": 0.52,
+          "action": "target_soon",
+          "reason": "achievable within 2-3 months once lower tiers win"
+        },
+        {
+          "url": "/services/247-call-answering-small-business",
+          "keyword": "24/7 call answering small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.51,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-hayward",
+          "keyword": "answering service Hayward",
+          "tier": "E",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.5,
+          "action": "target_now",
+          "reason": "aggregator_fortress \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/is-an-answering-service-worth-it",
+          "keyword": "is an answering service worth it",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.5,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/plumber-answering-service-san-jose",
+          "keyword": "plumber answering service San Jose",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.5,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/spam-call-filtering-service-for-business",
+          "keyword": "spam call filtering service for business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.5,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/how-much-does-an-answering-service-cost",
+          "keyword": "how much does an answering service cost",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.47,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-cupertino",
+          "keyword": "answering service Cupertino",
+          "tier": "E",
+          "archetype": "mixed_strong",
+          "opportunity": 0.47,
+          "action": "target_soon",
+          "reason": "achievable within 2-3 months once lower tiers win"
+        },
+        {
+          "url": "/services/ai-vs-human-receptionist",
+          "keyword": "AI vs human receptionist",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.47,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        }
+      ]
+    },
+    "longtail": {
+      "filename": "sitemap-longtail.xml",
+      "description": "Lower-tier pages. Include but don't promote in internal linking yet.",
+      "urls": [
+        {
+          "url": "/services/answering-service-sunnyvale",
+          "keyword": "answering service Sunnyvale",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.53,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-san-ramon",
+          "keyword": "answering service San Ramon",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.52,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-sunnyvale",
+          "keyword": "answering service sunnyvale",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.52,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-fremont",
+          "keyword": "answering service Fremont",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.52,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/benefits-of-a-bilingual-answering-service",
+          "keyword": "benefits of a bilingual answering service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.52,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-pleasanton",
+          "keyword": "answering service Pleasanton",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.49,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/dental-answering-service-bay-area",
+          "keyword": "dental answering service bay area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.49,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/how-does-a-hipaa-compliant-answering-service-work",
+          "keyword": "how does a HIPAA compliant answering service work",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.49,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/small-business-answering-service-silicon-valley",
+          "keyword": "small business answering service silicon valley",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.49,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/outbound-appointment-reminder-call-service",
+          "keyword": "outbound appointment reminder call service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.49,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-san-rafael",
+          "keyword": "answering service San Rafael",
+          "tier": "D",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.49,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-millbrae",
+          "keyword": "answering service Millbrae",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.48,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/veterinary-answering-service-bay-area",
+          "keyword": "veterinary answering service Bay Area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.48,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-los-altos",
+          "keyword": "answering service Los Altos",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.48,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-east-palo-alto",
+          "keyword": "answering service East Palo Alto",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.48,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-mountain-view",
+          "keyword": "answering service mountain view",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.48,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-milpitas",
+          "keyword": "answering service Milpitas",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.48,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/what-is-lead-qualification-in-an-answering-service",
+          "keyword": "what is lead qualification in an answering service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.47,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-sacramento",
+          "keyword": "answering service Sacramento",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.47,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/best-legal-answering-service",
+          "keyword": "best legal answering service",
+          "tier": "D",
+          "archetype": "forum_fallback",
+          "opportunity": 0.47,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/plumber-answering-service",
+          "keyword": "plumber answering service",
+          "tier": "D",
+          "archetype": "forum_fallback",
+          "opportunity": 0.47,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-saratoga",
+          "keyword": "answering service Saratoga",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.45,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-gilroy",
+          "keyword": "answering service Gilroy",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.45,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-burlingame",
+          "keyword": "answering service Burlingame",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/after-hours-answering-service",
+          "keyword": "after hours answering service near me",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-mountain-view",
+          "keyword": "answering service Mountain View",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/attorney-answering-service-bay-area",
+          "keyword": "attorney answering service Bay Area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/appointment-scheduling-answering-service",
+          "keyword": "appointment scheduling answering service near me",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/ai-receptionist-sacramento",
+          "keyword": "AI receptionist Sacramento",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/call-answering-service-santa-clara",
+          "keyword": "call answering service Santa Clara",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/property-management-answering-service-cost",
+          "keyword": "property management answering service cost",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/restaurant-reservation-answering-service",
+          "keyword": "restaurant reservation answering service near me",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/virtual-receptionist-san-jose",
+          "keyword": "virtual receptionist san jose",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-palo-alto",
+          "keyword": "answering service Palo Alto",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.44,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/spanish-answering-service-bay-area",
+          "keyword": "spanish answering service bay area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.43,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-half-moon-bay",
+          "keyword": "answering service Half Moon Bay",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.43,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-union-city",
+          "keyword": "answering service Union City",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.43,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/247-answering-service-bay-area",
+          "keyword": "24/7 answering service bay area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.43,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/ai-receptionist-san-diego",
+          "keyword": "AI receptionist San Diego",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.43,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/missed-call-answering-service",
+          "keyword": "missed call answering service",
+          "tier": "D",
+          "archetype": "forum_fallback",
+          "opportunity": 0.43,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-livermore",
+          "keyword": "answering service Livermore",
+          "tier": "D",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.42,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/ai-receptionist-los-angeles",
+          "keyword": "AI receptionist Los Angeles",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.42,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/hvac-answering-service",
+          "keyword": "hvac answering service near me",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.42,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/what-is-legal-intake-answering-service",
+          "keyword": "what is legal intake answering service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.41,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/hvac-answering-service-bay-area",
+          "keyword": "HVAC answering service Bay Area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.41,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/dental-answering-service-bay-area",
+          "keyword": "dental answering service Bay Area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.41,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-campbell",
+          "keyword": "answering service Campbell",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/property-management-answering-service-san-jose",
+          "keyword": "property management answering service San Jose",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/real-estate-answering-service-san-jose",
+          "keyword": "real estate answering service san jose",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/virtual-receptionist-bay-area",
+          "keyword": "virtual receptionist Bay Area",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/lead-capture-answering-service",
+          "keyword": "lead capture answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-south-san-francisco",
+          "keyword": "answering service South San Francisco",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-for-contractors",
+          "keyword": "answering service for contractors near me",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/medical-answering-service-pricing",
+          "keyword": "medical answering service pricing",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/appointment-scheduling-answering-service",
+          "keyword": "appointment scheduling answering service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-walnut-creek",
+          "keyword": "answering service Walnut Creek",
+          "tier": "D",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-with-crm-integration",
+          "keyword": "answering service with crm integration",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/live-chat-answering-service",
+          "keyword": "live chat answering service near me",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.4,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/virtual-receptionist-los-angeles",
+          "keyword": "virtual receptionist Los Angeles",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.39,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-orange-county",
+          "keyword": "answering service Orange County",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.39,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/dental-office-answering-service",
+          "keyword": "dental office answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.39,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-san-diego",
+          "keyword": "answering service San Diego",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.39,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-oakland",
+          "keyword": "answering service Oakland",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.38,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service",
+          "keyword": "answering service near me",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.38,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-capitola",
+          "keyword": "answering service Capitola",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.38,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/medical-office-answering-service",
+          "keyword": "medical office answering service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.37,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-los-gatos",
+          "keyword": "answering service Los Gatos",
+          "tier": "D",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.37,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/medical-answering-service-san-jose",
+          "keyword": "medical answering service san jose",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/virtual-receptionist-san-jose",
+          "keyword": "virtual receptionist San Jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/missed-call-answering-service-bay-area",
+          "keyword": "missed call answering service Bay Area",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/spanish-answering-service-bay-area",
+          "keyword": "Spanish answering service Bay Area",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/contractor-answering-service-bay-area",
+          "keyword": "contractor answering service Bay Area",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/law-firm-answering-service-san-jose",
+          "keyword": "law firm answering service San Jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/medical-answering-service-bay-area",
+          "keyword": "medical answering service Bay Area",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-berkeley",
+          "keyword": "answering service Berkeley",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-menlo-park",
+          "keyword": "answering service Menlo Park",
+          "tier": "C",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/hire-receptionist-or-answering-service",
+          "keyword": "hire receptionist or answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/best-hvac-answering-service",
+          "keyword": "best HVAC answering service",
+          "tier": "D",
+          "archetype": "mixed_strong",
+          "opportunity": 0.36,
+          "action": "target_later",
+          "reason": "tier D \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-pleasant-hill",
+          "keyword": "answering service Pleasant Hill",
+          "tier": "C",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.35,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/ai-receptionist-san-jose",
+          "keyword": "AI receptionist San Jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.35,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-redwood-city",
+          "keyword": "answering service Redwood City",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.34,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/veterinary-answering-service",
+          "keyword": "veterinary answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.34,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/salon-answering-service-san-jose",
+          "keyword": "salon answering service San Jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.34,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/property-management-answering-service",
+          "keyword": "property management answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.34,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/law-firm-answering-service",
+          "keyword": "law firm answering service near me",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.33,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/smithai-alternatives",
+          "keyword": "smith.ai alternatives",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.33,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-long-beach",
+          "keyword": "answering service Long Beach",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.32,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-tracy",
+          "keyword": "answering service Tracy",
+          "tier": "C",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.32,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/bilingual-answering-service-pricing",
+          "keyword": "bilingual answering service pricing",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.32,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/attorney-answering-service-san-jose",
+          "keyword": "attorney answering service San Jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.31,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/virtual-receptionist-palo-alto",
+          "keyword": "virtual receptionist palo alto",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.3,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/bilingual-answering-service-san-jose",
+          "keyword": "bilingual answering service san jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.29,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-santa-clara",
+          "keyword": "answering service Santa Clara",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.29,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-morgan-hill",
+          "keyword": "answering service Morgan Hill",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.29,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/contractor-answering-service",
+          "keyword": "contractor answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.29,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/real-estate-answering-service-bay-area",
+          "keyword": "real estate answering service Bay Area",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.29,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-santa-cruz",
+          "keyword": "answering service Santa Cruz",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.28,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/hvac-answering-service",
+          "keyword": "HVAC answering service",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.28,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/legal-intake-answering-service-california",
+          "keyword": "legal intake answering service California",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.26,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-dublin",
+          "keyword": "answering service Dublin",
+          "tier": "B",
+          "archetype": "mixed_strong",
+          "opportunity": 0.25,
+          "action": "target_later",
+          "reason": "tier B \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-santa-clara",
+          "keyword": "answering service santa clara",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.25,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/live-answering-service-san-jose",
+          "keyword": "live answering service san jose",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.24,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-riverside",
+          "keyword": "answering service Riverside",
+          "tier": "B",
+          "archetype": "mixed_strong",
+          "opportunity": 0.24,
+          "action": "target_later",
+          "reason": "tier B \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-fresno",
+          "keyword": "answering service Fresno",
+          "tier": "B",
+          "archetype": "mixed_strong",
+          "opportunity": 0.24,
+          "action": "target_later",
+          "reason": "tier B \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-san-francisco",
+          "keyword": "answering service San Francisco",
+          "tier": "B",
+          "archetype": "mixed_strong",
+          "opportunity": 0.24,
+          "action": "target_later",
+          "reason": "tier B \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-richmond",
+          "keyword": "answering service Richmond",
+          "tier": "B",
+          "archetype": "mixed_strong",
+          "opportunity": 0.24,
+          "action": "target_later",
+          "reason": "tier B \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/answering-service-concord",
+          "keyword": "answering service Concord",
+          "tier": "C",
+          "archetype": "mixed_strong",
+          "opportunity": 0.24,
+          "action": "target_later",
+          "reason": "tier C \u2014 build authority via lower tiers first"
+        },
+        {
+          "url": "/services/real-estate-answering-service",
+          "keyword": "real estate answering service",
+          "tier": "B",
+          "archetype": "mixed_strong",
+          "opportunity": 0.19,
+          "action": "target_later",
+          "reason": "tier B \u2014 build authority via lower tiers first"
+        }
+      ]
+    }
+  },
+  "orphans": {
+    "description": "Built pages that should NOT yet appear in internal links. Still indexable (in sitemap) but no link equity flow. Revisit monthly.",
+    "urls": [
+      {
+        "url": "/services/legal-intake-answering-service-california",
+        "keyword": "legal intake answering service california",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.55,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/dental-office-answering-service-san-jose",
+        "keyword": "dental office answering service San Jose",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.51,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/after-hours-answering-service-san-jose",
+        "keyword": "after hours answering service San Jose",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.51,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/law-firm-answering-service-california",
+        "keyword": "law firm answering service California",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.5,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/missed-call-recovery-service-bay-area",
+        "keyword": "missed call recovery service Bay Area",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.49,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/best-dental-office-answering-service",
+        "keyword": "best dental office answering service",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.46,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/hvac-answering-service-california",
+        "keyword": "HVAC answering service California",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.46,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/small-business-answering-service-san-jose",
+        "keyword": "small business answering service San Jose",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.46,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/telephone-answering-service-san-jose",
+        "keyword": "telephone answering service San Jose",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.45,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/answering-service-that-books-appointments",
+        "keyword": "answering service that books appointments",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.45,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/real-estate-answering-service-reviews",
+        "keyword": "real estate answering service reviews",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.45,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/emergency-dispatch-answering-service-for-plumbers",
+        "keyword": "emergency dispatch answering service for plumbers",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.42,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/247-answering-service-bay-area",
+        "keyword": "24/7 answering service Bay Area",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.42,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/bilingual-answering-service-san-jose",
+        "keyword": "bilingual answering service San Jose",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.42,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/what-is-a-live-answering-service",
+        "keyword": "what is a live answering service",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.41,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/ai-phone-answering-service-california",
+        "keyword": "AI phone answering service California",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.41,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/answering-service-vs-virtual-receptionist",
+        "keyword": "answering service vs virtual receptionist",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.38,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/salon-answering-service",
+        "keyword": "salon answering service",
+        "tier": "D",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.38,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/answering-service-los-angeles",
+        "keyword": "answering service Los Angeles",
+        "tier": "C",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.37,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      },
+      {
+        "url": "/services/answering-service-san-jose",
+        "keyword": "answering service San Jose",
+        "tier": "C",
+        "archetype": "local_pack_dominated",
+        "opportunity": 0.36,
+        "action": "gbp_only",
+        "reason": "organic is competitive; focus on GBP/local pack for this query"
+      }
+    ]
+  },
+  "exclude": {
+    "description": "Do NOT build these as dedicated pages. Either unwinnable (S-tier) or need a reframed keyword target.",
+    "urls": []
+  },
+  "internal_linking": {
+    "homepage": {
+      "description": "Prominent blocks on the homepage. Top 5 target-now opportunities \u2014 the pages we're actively pushing up this month.",
+      "links": [
+        {
+          "url": "/services/live-answering-service-pricing-per-call",
+          "keyword": "live answering service pricing per call",
+          "tier": "F",
+          "archetype": "forum_fallback",
+          "opportunity": 0.64,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/247-answering-service-cost-bay-area",
+          "keyword": "24/7 answering service cost bay area",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.63,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/what-is-call-overflow-handling",
+          "keyword": "what is call overflow handling",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.59,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/how-does-after-hours-answering-work-for-hvac",
+          "keyword": "how does after hours answering work for HVAC",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/cheapest-virtual-receptionist-service",
+          "keyword": "cheapest virtual receptionist service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        }
+      ]
+    },
+    "hub": {
+      "description": "Services hub / category pages. Next 15 priority URLs after homepage picks.",
+      "links": [
+        {
+          "url": "/services/do-i-need-an-answering-service-for-my-small-business",
+          "keyword": "do I need an answering service for my small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/virtual-receptionist-cost-per-month",
+          "keyword": "virtual receptionist cost per month",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/virtual-receptionist-vs-hiring-receptionist",
+          "keyword": "virtual receptionist vs hiring receptionist",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-san-mateo",
+          "keyword": "answering service San Mateo",
+          "tier": "E",
+          "archetype": "aggregator_fortress",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "aggregator_fortress \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/how-does-a-247-answering-service-work",
+          "keyword": "how does a 24/7 answering service work",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/after-hours-call-answering-service",
+          "keyword": "after hours call answering service",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.58,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/veterinary-answering-service",
+          "keyword": "veterinary answering service near me",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.57,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/restaurant-answering-service-bay-area",
+          "keyword": "restaurant answering service Bay Area",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.57,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-san-leandro",
+          "keyword": "answering service San Leandro",
+          "tier": "E",
+          "archetype": "mixed_strong",
+          "opportunity": 0.56,
+          "action": "target_soon",
+          "reason": "achievable within 2-3 months once lower tiers win"
+        },
+        {
+          "url": "/services/best-ai-receptionist-for-small-business",
+          "keyword": "best AI receptionist for small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.55,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-cost-per-month",
+          "keyword": "answering service cost per month",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/best-answering-service-for-small-business",
+          "keyword": "best answering service for small business",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/answering-service-cost-per-minute",
+          "keyword": "answering service cost per minute",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/after-hours-answering-service-pricing",
+          "keyword": "after hours answering service pricing",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        },
+        {
+          "url": "/services/what-does-a-virtual-receptionist-do",
+          "keyword": "what does a virtual receptionist do",
+          "tier": "E",
+          "archetype": "forum_fallback",
+          "opportunity": 0.54,
+          "action": "target_now",
+          "reason": "forum_fallback \u2014 weak SERP, a focused local page can break in"
+        }
+      ]
+    },
+    "footer": {
+      "description": "Footer reinforcement for GBP-only queries \u2014 helps local pack signals without taking homepage real estate.",
+      "links": [
+        {
+          "url": "/services/legal-intake-answering-service-california",
+          "keyword": "legal intake answering service california",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.55,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/dental-office-answering-service-san-jose",
+          "keyword": "dental office answering service San Jose",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.51,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/after-hours-answering-service-san-jose",
+          "keyword": "after hours answering service San Jose",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.51,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/law-firm-answering-service-california",
+          "keyword": "law firm answering service California",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.5,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/missed-call-recovery-service-bay-area",
+          "keyword": "missed call recovery service Bay Area",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.49,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/best-dental-office-answering-service",
+          "keyword": "best dental office answering service",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.46,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/hvac-answering-service-california",
+          "keyword": "HVAC answering service California",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.46,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/small-business-answering-service-san-jose",
+          "keyword": "small business answering service San Jose",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.46,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/telephone-answering-service-san-jose",
+          "keyword": "telephone answering service San Jose",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.45,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        },
+        {
+          "url": "/services/answering-service-that-books-appointments",
+          "keyword": "answering service that books appointments",
+          "tier": "D",
+          "archetype": "local_pack_dominated",
+          "opportunity": 0.45,
+          "action": "gbp_only",
+          "reason": "organic is competitive; focus on GBP/local pack for this query"
+        }
+      ]
+    }
+  },
+  "clusters": {
+    "b4f8decf-1925-b5a1-5d1f-8d2953ed4e19": {
+      "size": 3,
+      "primary": "/services/247-answering-service-cost-bay-area",
+      "members": [
+        {
+          "url": "/services/247-answering-service-cost-bay-area",
+          "keyword": "24/7 answering service cost bay area",
+          "tier": "E",
+          "action": "target_now"
+        },
+        {
+          "url": "/services/247-answering-service-bay-area",
+          "keyword": "24/7 answering service bay area",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/247-answering-service-bay-area",
+          "keyword": "24/7 answering service Bay Area",
+          "tier": "D",
+          "action": "gbp_only"
+        }
+      ]
+    },
+    "8932140e-a1c4-eccd-d5ff-4be01c5fdc6e": {
+      "size": 2,
+      "primary": "/services/how-does-a-247-answering-service-work",
+      "members": [
+        {
+          "url": "/services/how-does-a-247-answering-service-work",
+          "keyword": "how does a 24/7 answering service work",
+          "tier": "E",
+          "action": "target_now"
+        },
+        {
+          "url": "/services/how-does-a-hipaa-compliant-answering-service-work",
+          "keyword": "how does a HIPAA compliant answering service work",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "e5b0f60f-2118-8220-30f2-5c8c5458154a": {
+      "size": 2,
+      "primary": "/services/after-hours-call-answering-service",
+      "members": [
+        {
+          "url": "/services/after-hours-call-answering-service",
+          "keyword": "after hours call answering service",
+          "tier": "E",
+          "action": "target_now"
+        },
+        {
+          "url": "/services/after-hours-answering-service",
+          "keyword": "after hours answering service near me",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "1d9d64f7-f8bf-2d99-6981-0533739566f2": {
+      "size": 2,
+      "primary": "/services/veterinary-answering-service",
+      "members": [
+        {
+          "url": "/services/veterinary-answering-service",
+          "keyword": "veterinary answering service near me",
+          "tier": "E",
+          "action": "target_now"
+        },
+        {
+          "url": "/services/veterinary-answering-service",
+          "keyword": "veterinary answering service",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "e1493dd1-0a97-e35e-7d5e-0048ce539eaf": {
+      "size": 2,
+      "primary": "/services/legal-intake-answering-service-california",
+      "members": [
+        {
+          "url": "/services/legal-intake-answering-service-california",
+          "keyword": "legal intake answering service california",
+          "tier": "D",
+          "action": "gbp_only"
+        },
+        {
+          "url": "/services/legal-intake-answering-service-california",
+          "keyword": "legal intake answering service California",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "feab9648-3728-e6bc-aa29-7c9533d193a6": {
+      "size": 2,
+      "primary": "/services/best-ai-receptionist-for-small-business",
+      "members": [
+        {
+          "url": "/services/best-ai-receptionist-for-small-business",
+          "keyword": "best AI receptionist for small business",
+          "tier": "E",
+          "action": "target_now"
+        },
+        {
+          "url": "/services/best-answering-service-for-small-business",
+          "keyword": "best answering service for small business",
+          "tier": "E",
+          "action": "target_now"
+        }
+      ]
+    },
+    "081c87fe-804a-c98e-fd91-0a16957bb6a2": {
+      "size": 2,
+      "primary": "/services/answering-service-sunnyvale",
+      "members": [
+        {
+          "url": "/services/answering-service-sunnyvale",
+          "keyword": "answering service Sunnyvale",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/answering-service-sunnyvale",
+          "keyword": "answering service sunnyvale",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "edca2123-b6c7-39df-008d-18fbcfa22ee5": {
+      "size": 2,
+      "primary": "/services/restaurant-answering-service",
+      "members": [
+        {
+          "url": "/services/restaurant-answering-service",
+          "keyword": "restaurant answering service",
+          "tier": "E",
+          "action": "target_now"
+        },
+        {
+          "url": "/services/restaurant-reservation-answering-service",
+          "keyword": "restaurant reservation answering service near me",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "7b2586ad-5818-0d9a-515a-a01f61917b23": {
+      "size": 2,
+      "primary": "/services/dental-answering-service-bay-area",
+      "members": [
+        {
+          "url": "/services/dental-answering-service-bay-area",
+          "keyword": "dental answering service bay area",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/dental-answering-service-bay-area",
+          "keyword": "dental answering service Bay Area",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "75ca9aee-3323-9429-2ad8-d453dcf2d111": {
+      "size": 2,
+      "primary": "/services/missed-call-recovery-service-bay-area",
+      "members": [
+        {
+          "url": "/services/missed-call-recovery-service-bay-area",
+          "keyword": "missed call recovery service Bay Area",
+          "tier": "D",
+          "action": "gbp_only"
+        },
+        {
+          "url": "/services/missed-call-answering-service-bay-area",
+          "keyword": "missed call answering service Bay Area",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "ac71fb88-de59-2169-bda3-a391d358b7a8": {
+      "size": 2,
+      "primary": "/services/answering-service-east-palo-alto",
+      "members": [
+        {
+          "url": "/services/answering-service-east-palo-alto",
+          "keyword": "answering service East Palo Alto",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/answering-service-palo-alto",
+          "keyword": "answering service Palo Alto",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "dbb328c3-df68-8cce-8c07-996513599e11": {
+      "size": 2,
+      "primary": "/services/answering-service-mountain-view",
+      "members": [
+        {
+          "url": "/services/answering-service-mountain-view",
+          "keyword": "answering service mountain view",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/answering-service-mountain-view",
+          "keyword": "answering service Mountain View",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "70310b52-4179-bc52-4760-a059d98341da": {
+      "size": 3,
+      "primary": "/services/what-is-lead-qualification-in-an-answering-service",
+      "members": [
+        {
+          "url": "/services/what-is-lead-qualification-in-an-answering-service",
+          "keyword": "what is lead qualification in an answering service",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/what-is-legal-intake-answering-service",
+          "keyword": "what is legal intake answering service",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/what-is-a-live-answering-service",
+          "keyword": "what is a live answering service",
+          "tier": "D",
+          "action": "gbp_only"
+        }
+      ]
+    },
+    "473ff51e-e3de-dedc-5c40-77a6720c598b": {
+      "size": 3,
+      "primary": "/services/best-legal-answering-service",
+      "members": [
+        {
+          "url": "/services/best-legal-answering-service",
+          "keyword": "best legal answering service",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/best-dental-office-answering-service",
+          "keyword": "best dental office answering service",
+          "tier": "D",
+          "action": "gbp_only"
+        },
+        {
+          "url": "/services/best-hvac-answering-service",
+          "keyword": "best HVAC answering service",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "0bf7ae34-1543-c03d-7519-721781397cac": {
+      "size": 2,
+      "primary": "/services/appointment-scheduling-answering-service",
+      "members": [
+        {
+          "url": "/services/appointment-scheduling-answering-service",
+          "keyword": "appointment scheduling answering service near me",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/appointment-scheduling-answering-service",
+          "keyword": "appointment scheduling answering service",
+          "tier": "D",
+          "action": "target_later"
+        }
+      ]
+    },
+    "4d2b7bdc-2e0e-5a06-4df8-12b4f80c41cf": {
+      "size": 2,
+      "primary": "/services/virtual-receptionist-san-jose",
+      "members": [
+        {
+          "url": "/services/virtual-receptionist-san-jose",
+          "keyword": "virtual receptionist san jose",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/virtual-receptionist-san-jose",
+          "keyword": "virtual receptionist San Jose",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "cfe4b738-bbfb-7483-00c0-9f5bd3543a0d": {
+      "size": 2,
+      "primary": "/services/spanish-answering-service-bay-area",
+      "members": [
+        {
+          "url": "/services/spanish-answering-service-bay-area",
+          "keyword": "spanish answering service bay area",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/spanish-answering-service-bay-area",
+          "keyword": "Spanish answering service Bay Area",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "37d7cb37-8dc8-78a8-73dd-673f54f852ea": {
+      "size": 2,
+      "primary": "/services/hvac-answering-service",
+      "members": [
+        {
+          "url": "/services/hvac-answering-service",
+          "keyword": "hvac answering service near me",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/hvac-answering-service",
+          "keyword": "HVAC answering service",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "412ef129-9e27-dbda-c469-1d0673ee1978": {
+      "size": 2,
+      "primary": "/services/bilingual-answering-service-san-jose",
+      "members": [
+        {
+          "url": "/services/bilingual-answering-service-san-jose",
+          "keyword": "bilingual answering service San Jose",
+          "tier": "D",
+          "action": "gbp_only"
+        },
+        {
+          "url": "/services/bilingual-answering-service-san-jose",
+          "keyword": "bilingual answering service san jose",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    },
+    "856e1e1f-5ee9-39a0-47d2-8d20a0a42d39": {
+      "size": 2,
+      "primary": "/services/answering-service-south-san-francisco",
+      "members": [
+        {
+          "url": "/services/answering-service-south-san-francisco",
+          "keyword": "answering service South San Francisco",
+          "tier": "D",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/answering-service-san-francisco",
+          "keyword": "answering service San Francisco",
+          "tier": "B",
+          "action": "target_later"
+        }
+      ]
+    },
+    "7254d7b3-1043-4e5e-da0f-f1ab8198c755": {
+      "size": 2,
+      "primary": "/services/answering-service-santa-clara",
+      "members": [
+        {
+          "url": "/services/answering-service-santa-clara",
+          "keyword": "answering service Santa Clara",
+          "tier": "C",
+          "action": "target_later"
+        },
+        {
+          "url": "/services/answering-service-santa-clara",
+          "keyword": "answering service santa clara",
+          "tier": "C",
+          "action": "target_later"
+        }
+      ]
+    }
+  },
+  "lastmod_schedule": [
+    {
+      "week": 0,
+      "target_date": "2026-06-06",
+      "count": 10,
+      "urls": [
+        "/services/live-answering-service-pricing-per-call",
+        "/services/247-answering-service-cost-bay-area",
+        "/services/what-is-call-overflow-handling",
+        "/services/how-does-after-hours-answering-work-for-hvac",
+        "/services/cheapest-virtual-receptionist-service",
+        "/services/do-i-need-an-answering-service-for-my-small-business",
+        "/services/virtual-receptionist-cost-per-month",
+        "/services/virtual-receptionist-vs-hiring-receptionist",
+        "/services/answering-service-san-mateo",
+        "/services/how-does-a-247-answering-service-work"
+      ]
+    },
+    {
+      "week": 1,
+      "target_date": "2026-06-13",
+      "count": 10,
+      "urls": [
+        "/services/after-hours-call-answering-service",
+        "/services/veterinary-answering-service",
+        "/services/restaurant-answering-service-bay-area",
+        "/services/answering-service-san-leandro",
+        "/services/best-ai-receptionist-for-small-business",
+        "/services/answering-service-cost-per-month",
+        "/services/best-answering-service-for-small-business",
+        "/services/answering-service-cost-per-minute",
+        "/services/after-hours-answering-service-pricing",
+        "/services/what-does-a-virtual-receptionist-do"
+      ]
+    },
+    {
+      "week": 2,
+      "target_date": "2026-06-20",
+      "count": 10,
+      "urls": [
+        "/services/attorney-answering-service",
+        "/services/restaurant-answering-service",
+        "/services/ai-receptionist-vs-live-answering-service",
+        "/services/small-business-missing-calls",
+        "/services/answering-service-el-cerrito",
+        "/services/247-call-answering-small-business",
+        "/services/answering-service-hayward",
+        "/services/is-an-answering-service-worth-it",
+        "/services/plumber-answering-service-san-jose",
+        "/services/spam-call-filtering-service-for-business"
+      ]
+    },
+    {
+      "week": 3,
+      "target_date": "2026-06-27",
+      "count": 3,
+      "urls": [
+        "/services/how-much-does-an-answering-service-cost",
+        "/services/answering-service-cupertino",
+        "/services/ai-vs-human-receptionist"
+      ]
+    }
+  ]
+}

@@ -7,6 +7,8 @@ import { siteConfig } from "@/lib/siteConfig";
 import {
   getServiceBySlug,
   getAllServiceSlugs,
+  getChildServices,
+  getHubService,
 } from "@/lib/services-data";
 import { getLocationBySlug } from "@/lib/locations-data";
 import { SERVICE_FAQS } from "@/lib/common-faqs";
@@ -88,6 +90,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   const tint = tintForService(service.slug);
   const tintStyle = tintStyleVars(tint);
+
+  // Hub / child silo context
+  const hubService = service.hubSlug ? getHubService(service.slug) : null;
+  const childServices = service.isHub ? getChildServices(service.slug) : [];
 
   /* Build labels for related services and locations */
   const relatedServiceItems = service.relatedServices.map((rs) => {
@@ -233,6 +239,79 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </section>
         );
       })}
+
+      {/* Hub: list child services when this page IS a hub */}
+      {service.isHub && childServices.length > 0 && (
+        <section className="plan" aria-labelledby="hub-children-heading">
+          <div className="wrap" style={{ maxWidth: 880 }}>
+            <div className="section-eyebrow">In this category</div>
+            <h2 id="hub-children-heading" className="section-title">
+              Specific services in this category.
+            </h2>
+            <ul
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+                gap: 16,
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+              }}
+            >
+              {childServices.map((child) => (
+                <li key={child.slug}>
+                  <Link
+                    href={`/services/${child.slug}`}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "16px 20px",
+                      background: "#fdfaf3",
+                      border: "1px solid #d9cdb1",
+                      borderRadius: 10,
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span style={{ fontWeight: 600, color: "#1a1611", fontSize: 15 }}>
+                      {child.name ?? child.h1}
+                    </span>
+                    <span style={{ fontSize: 13, color: "#5c5147", marginTop: 6, lineHeight: 1.5 }}>
+                      {child.metaDescription}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Child: link back to hub when this page IS a child */}
+      {hubService && (
+        <section className="plan" aria-label="Part of">
+          <div className="wrap" style={{ maxWidth: 880 }}>
+            <div className="section-eyebrow">Part of</div>
+            <Link
+              href={`/services/${hubService.slug}`}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 20px",
+                background: "#fdfaf3",
+                border: "1px solid #d9cdb1",
+                borderRadius: 8,
+                fontSize: 14,
+                fontWeight: 500,
+                color: "var(--accent)",
+                textDecoration: "none",
+              }}
+            >
+              {hubService.name ?? hubService.h1} →
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Related links */}
       <section className="plan" aria-labelledby="related-heading">

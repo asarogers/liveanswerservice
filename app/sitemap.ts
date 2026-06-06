@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/lib/blog';
+import { getAllGuideSlugs } from '@/lib/guides';
 import { getAllServiceSlugs } from '@/lib/services-data';
 import { getAllLocationSlugs } from '@/lib/locations-data';
 import { loadSitePlan, priorityServiceSlugs, noindexSlugs, urlToSlug } from '@/lib/site-plan';
@@ -28,10 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Top-level page slugs that may be gated by site-plan
   const topLevelGated = (slug: string) => !noindex.has(slug);
 
-  const posts = getAllPosts();
-  const blogUrls = posts.map((post) => ({
-    url: `${ORIGIN}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+  const guideUrls = getAllGuideSlugs().map((slug) => ({
+    url: `${ORIGIN}/guides/${slug}`,
+    lastModified: SITE_LAST_MODIFIED,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
@@ -105,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${ORIGIN}/blog`,
+      url: `${ORIGIN}/guides`,
       lastModified: SITE_LAST_MODIFIED,
       changeFrequency: 'weekly',
       priority: 0.7,
@@ -137,6 +136,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...topLevelUrls,
     ...serviceUrls,
     ...locationUrls,
-    ...blogUrls,
+    ...guideUrls,
   ];
 }

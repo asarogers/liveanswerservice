@@ -50,6 +50,7 @@ const faqs: { q: string; a: string }[] = [
 
 /* ============================================================
    SUB-COMPONENT: Single FAQ Item
+   All panels open by default — user can collapse. [src: 2026-05-04 call]
    ============================================================ */
 function FAQItem({
   item,
@@ -128,12 +129,20 @@ function FAQItem({
 
 /* ============================================================
    MAIN EXPORT: FAQ Accordion
+   Uses `collapsed: Set<number>` — all panels open in initial HTML.
+   [src: 2026-05-04 call]
    ============================================================ */
 export default function FAQAccordion() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // Empty set = all panels open. User collapses by adding an index.
+  const [collapsed, setCollapsed] = useState<ReadonlySet<number>>(new Set());
 
   const handleToggle = useCallback((index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
+    setCollapsed((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
   }, []);
 
   const faqSchema = {
@@ -158,7 +167,7 @@ export default function FAQAccordion() {
             <FAQItem
               item={item}
               index={i}
-              isOpen={openIndex === i}
+              isOpen={!collapsed.has(i)}
               onToggle={handleToggle}
             />
           </div>

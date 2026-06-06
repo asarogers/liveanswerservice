@@ -7,6 +7,7 @@ import {
   archivedBlogSlugs,
   archivedCategorySlugs,
   archivedGBPCategorySlugs,
+  blogToGuideRedirects,
 } from "@/lib/redirects";
 
 /**
@@ -63,29 +64,44 @@ export function middleware(request: NextRequest) {
   if (locationMatch) {
     const slug = locationMatch[1];
     if (archivedLocationSlugs.includes(slug)) {
-      const target = new URL("/service-areas", request.url);
+      const target = new URL("/locations", request.url);
       return NextResponse.redirect(target, 301);
     }
   }
 
-  // Archived blog posts
+  // Blog → Guides: 301 entire /blog index to /guides index
+  if (pathname === "/blog" || pathname === "/blog/") {
+    const target = new URL("/guides", request.url);
+    return NextResponse.redirect(target, 301);
+  }
+
+  // Blog → Guides: 301 individual blog posts to /guides/<slug>
   const blogMatch = pathname.match(/^\/blog\/([^\/]+)\/?$/);
-  if (blogMatch && archivedBlogSlugs.includes(blogMatch[1])) {
-    return new Response(null, {
-      status: 410,
-      headers: { "Cache-Control": "no-store" },
-    });
+  if (blogMatch) {
+    const slug = blogMatch[1];
+    // Archived blog slugs return 410 Gone (currently empty, but checked first)
+    if (archivedBlogSlugs.includes(slug)) {
+      return new Response(null, {
+        status: 410,
+        headers: { "Cache-Control": "no-store" },
+      });
+    }
+    // All 3 migrated blog posts 301 → /guides/<slug>
+    if (blogToGuideRedirects[slug]) {
+      const target = new URL(`/guides/${blogToGuideRedirects[slug]}`, request.url);
+      return NextResponse.redirect(target, 301);
+    }
   }
 
   // --- Existing hreflang Link header injection ---
-  const pageUrl = `https://wellpreppedlife.com${pathname}`;
+  const pageUrl = `https://liveanswerservice.com${pathname}`;
 
   const response = NextResponse.next();
 
   // Per-page hreflang — points to the exact canonical URL of this page
   response.headers.set(
     "Link",
-    `<${pageUrl}>; rel="alternate"; hreflang="en-US", <${pageUrl}>; rel="alternate"; hreflang="x-default"`
+    `<${pageUrl}>; rel="alternate"; hreflang="en-US", <${pageUrl}>; rel="alternate"; hreflang="x-default"`,
   );
 
   return response;

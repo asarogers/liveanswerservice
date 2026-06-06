@@ -45,7 +45,7 @@ export default function Footer() {
               <li><Link href="/calculator">Calculator</Link></li>
               <li><Link href="/comparison">Compare</Link></li>
               <li><Link href="/how-it-works">How it works</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/guides">Guides</Link></li>
             </ul>
           </div>
 

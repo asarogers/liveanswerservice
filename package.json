@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-blog-manifest.mjs && node scripts/generate-image-manifest.mjs",
+    "prebuild": "node scripts/generate-blog-manifest.mjs && node scripts/generate-image-manifest.mjs && node scripts/generate-guides-manifest.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
