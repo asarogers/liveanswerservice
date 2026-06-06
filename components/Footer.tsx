@@ -32,6 +32,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/services/hvac-answering-service">HVAC</Link></li>
               <li><Link href="/services/attorney-answering-service">Legal</Link></li>
+              <li><Link href="/services/dental-answering-service">Dental</Link></li>
               <li><Link href="/services/small-business-answering-service">Small business</Link></li>
               <li><Link href="/services">All industries</Link></li>
             </ul>
@@ -42,6 +43,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/calculator">Calculator</Link></li>
+              <li><Link href="/comparison">Compare</Link></li>
               <li><Link href="/how-it-works">How it works</Link></li>
               <li><Link href="/guides">Guides</Link></li>
             </ul>
@@ -50,6 +52,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Legal</h4>
             <ul>
+              <li><Link href="/ccpa-compliance-call-recording">CCPA</Link></li>
               <li><Link href="/terms">Terms</Link></li>
               <li><Link href="/privacy">Privacy</Link></li>
               <li><Link href="/accessibility">Accessibility</Link></li>
