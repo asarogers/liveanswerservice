@@ -163,10 +163,11 @@ export default function DevNavPage() {
     const inPriority = priorityUrls.get(path);
     const inExclude = excludeUrls.get(path);
     const built = path === "/" ? true : existsInRepo(path);
-    // not built + wave has a branch → the code is held on that branch (by design);
-    // not built + no branch → genuinely missing content (MC guide queue or TODO)
+    // not built + wave has a branch → the CODE is held on that branch (by design).
+    // Guides are never on branches — their content lives in the MC publisher
+    // queue until publish day, so they stay "needs-content" regardless.
     const status: PageStatus = !built
-      ? (branch ? "branch-held" : "needs-content")
+      ? (branch && !path.startsWith("/guides/") ? "branch-held" : "needs-content")
       : inExclude ? "gated" : "live";
     return {
       path,
