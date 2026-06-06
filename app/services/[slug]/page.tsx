@@ -36,13 +36,20 @@ type PageProps = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  /* New StoryBrand template for registered verticals — use the config's meta. */
+  /* New StoryBrand template for registered verticals — use the config's meta.
+     Must still honor the site-plan exclude bucket (publishing schedule): this
+     branch previously bypassed NOINDEX_SLUGS, leaking week-gated verticals
+     (e.g. dental) into the index ahead of schedule. */
   const vertical = getVertical(slug);
   if (vertical) {
+    const isNoindex = NOINDEX_SLUGS.has(slug);
     return {
       title: vertical.meta.title,
       description: vertical.meta.description,
       alternates: { canonical: vertical.meta.canonical },
+      ...(isNoindex
+        ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
+        : {}),
     };
   }
 
