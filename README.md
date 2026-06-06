@@ -2,6 +2,8 @@
 
 Marketing site for Live Answer — AI receptionist for California small business.
 
+> **Business brain / single source of truth:** `../important/business/liveanswerservice/LIVEANSWERSERVICE.md` (strategy, pricing intent, roadmap, and a map of all LAS docs, reports, and DB sources). This README stays scoped to the codebase.
+
 ## Stack
 
 - Next.js 16 App Router
