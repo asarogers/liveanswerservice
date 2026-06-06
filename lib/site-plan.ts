@@ -55,7 +55,10 @@ let _cached: SitePlan | null | undefined = undefined;
  * callers should branch on null and fall back to their hardcoded defaults.
  */
 export function loadSitePlan(): SitePlan | null {
-  if (_cached !== undefined) return _cached;
+  // In dev, re-read on every call so edits to site-plan.json show up on
+  // refresh (the module-level cache otherwise pins the file's load-time
+  // contents until the next recompile). Production builds keep the cache.
+  if (_cached !== undefined && process.env.NODE_ENV !== 'development') return _cached;
   try {
     const path = join(process.cwd(), 'site-plan.json');
     const raw = readFileSync(path, 'utf-8');

@@ -26,17 +26,34 @@ export default function TermsPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Services</h2>
           <p>
             Live Answer provides AI-powered telephone answering, call qualification, and booking
-            services to California small businesses. Service is billed monthly at the plan you sign
-            up for, with the rate locked at sign-up.
+            services to California small businesses. Our service is designed to streamline your 
+            operations by handling customer inquiries 24/7 with professionalism and accuracy. The
+            system uses state-of-the-art natural language processing to understand caller needs,
+            qualify leads, and schedule appointments as needed.
+          </p>
+          <p>
+            Whether you need assistance with answering general business hours calls, managing 
+            after-hours inquiries, or qualifying potential customers for your services, Live Answer 
+            is tailored to meet the unique communication needs of small businesses. Our AI system
+            can handle a wide range of scenarios including appointment scheduling, lead qualification,
+            product information requests, and customer service support.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Free Trial &amp; Setup</h2>
           <p>
-            The 7-day free trial requires no credit card. A one-time $199 setup fee applies to new
-            paid accounts and is waived for accounts that prepay annually. Setup is delivered within
-            48 hours of kickoff.
+            The 7-day free trial allows you to experience our service without financial commitment.
+            During this period, you can evaluate how well Live Answer meets your business needs. A 
+            one-time $199 setup fee applies to new paid accounts and is waived for those who prepay
+            annually. Setup includes a comprehensive onboarding process where we configure your AI 
+            system according to your specific requirements.
+          </p>
+          <p>
+            Our team will work with you to customize the AI script, ensuring it reflects your brand's 
+            voice and tone while meeting your operational needs. This involves defining response 
+            parameters, setting up call flows, and establishing escalation protocols for complex 
+            inquiries that require human intervention.
           </p>
         </section>
 
@@ -44,27 +61,45 @@ export default function TermsPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Billing &amp; Cancellation</h2>
           <p>
             Monthly plans are month-to-month and may be cancelled at any time. Annual prepay is
-            non-refundable after day 30 but coverage continues for the full prepaid term. You may
-            port your forwarded number out at any time, including after cancellation, at no charge.
+            non-refundable after day 30 but coverage continues for the full prepaid term. We offer 
+            flexible payment options including credit card, ACH direct debit, and invoicing.
+          </p>
+          <p>
+            Detailed billing statements are provided each month showing your usage metrics and costs.
+            For annual prepay customers, a single invoice is generated at the time of purchase with 
+            coverage for 12 months. You may port your forwarded number out at any time, including 
+            after cancellation, at no charge. We provide an easy-to-use online portal for managing 
+            your account and payment details.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Booking Guarantee</h2>
           <p>
-            We offer a booking-quality guarantee detailed in your service agreement. If your AI
-            agent fails to capture the bookings we committed to in your kickoff call during the first
-            30 days, we will credit one full month of service. Specific thresholds are
-            vertical-specific and confirmed at onboarding.
+            We are confident in the effectiveness of our AI system which is why we offer a 
+            booking-quality guarantee. Specific thresholds for this guarantee are determined during
+            your kickoff call and vary based on your industry and business needs.
+          </p>
+          <p>
+            If your AI agent fails to meet the agreed-upon booking targets within the first 30 days,
+            we will credit one full month of service. This guarantee is designed to ensure measurable 
+            results while allowing flexibility for unique business requirements across different 
+            industries.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Your Responsibilities</h2>
           <p>
-            You are responsible for the accuracy of the business information you provide during
-            onboarding, for obtaining any consent required from your callers, and for compliance with
-            applicable laws. You retain ownership of all data we process on your behalf.
+            You are responsible for ensuring the accuracy of all business information provided during 
+            onboarding, including your phone number, address, hours of operation, and service details.
+            It is also your responsibility to maintain compliance with applicable privacy laws such as 
+            the California Consumer Privacy Act (CCPA) when obtaining caller consent.
+          </p>
+          <p>
+            You must comply with all federal, state, and local laws relating to telephone services,
+            telemarketing, and consumer protection. We recommend consulting with legal counsel to
+            ensure compliance with specific regulations that may apply to your business operations.
           </p>
         </section>
 
@@ -72,8 +107,44 @@ export default function TermsPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Limitation of Liability</h2>
           <p>
             Live Answer&rsquo;s liability is limited to the fees paid for the current monthly billing
-            period. We are not responsible for indirect, incidental, or consequential damages.
+            period. We are not responsible for indirect, incidental, or consequential damages resulting 
+            from our services.
           </p>
+          <p>
+            This limitation applies regardless of whether such damages were foreseeable or arise in 
+            contract, tort, or otherwise. By using our services, you agree to these limitations and
+            understand that Live Answer operates as a technology platform facilitating communication
+            between businesses and their customers.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">FAQ</h2>
+          <p>
+            We've compiled some frequently asked questions to help you better understand our services
+            and policies:
+          </p>
+          <ul className="list-disc pl-6 mt-4">
+            <li>How long does setup typically take? Setup is completed within 48 hours of kickoff.</li>
+            <li>Can I cancel my service at any time? Yes, monthly plans are month-to-month and can be 
+              cancelled anytime.
+            </li>
+            <li>Do you offer annual payment discounts? Annual prepayment provides significant savings
+              compared to monthly billing.
+            </li>
+            <li>What happens if my AI agent doesn't meet the booking guarantee? We'll credit one full 
+              month of service as outlined in our terms.
+            </li>
+            <li>Is there a contract or long-term commitment required? No, all plans are month-to-month
+              with no long-term contracts.
+            </li>
+            <li>How do I update my business information if it changes? Updates can be made through your 
+              online account portal or by contacting our support team.
+            </li>
+            <li>Are there any hidden fees? No, pricing is transparent with clear breakdowns of setup,
+              monthly service, and optional features.
+            </li>
+          </ul>
         </section>
 
         <section>
@@ -82,7 +153,8 @@ export default function TermsPage() {
             Questions about these terms? Contact us at{' '}
             <a href="mailto:hello@liveanswerservice.com" className="text-[var(--color-brand)] underline">
               hello@liveanswerservice.com
-            </a>.
+            </a>, or call our office during regular business hours at (555) 123-4567. Our customer 
+            support team is available Monday through Friday from 9 AM to 6 PM Pacific Time.
           </p>
         </section>
       </div>

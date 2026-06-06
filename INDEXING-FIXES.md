@@ -1,3 +1,5 @@
+> ⚠️ **TEMPLATE-INHERITED DOCUMENT — WELLPREPPEDLIFE, NOT LIVE ANSWER.** This file came along with the wellpreppedlife site template and describes that client's indexing tracker. Nothing in it reflects liveanswerservice.com state. Kept only as a reference playbook. [flagged 2026-06-06 doc audit]
+
 # WellPreparedLife — Indexing Fix Tracker
 _Started: 2026-05-05_
 

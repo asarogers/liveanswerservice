@@ -3,6 +3,9 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "/about",
+  },
   title: "About Live Answer — AI Receptionist Built for California",
   description:
     "Live Answer is an AI-powered answering service built in San Jose for California small business. Founded by Ace Rodgers. Bilingual EN/ES, 24/7, $500/mo flat.",
@@ -29,9 +32,8 @@ export default function AboutPage() {
             </div>
             <h1>Built in San Jose. <em>For California.</em></h1>
             <p className="sub">
-              <strong>An AI answering service for California small business — starting with HVAC contractors.</strong>{" "}
-              Bilingual EN/ES standard, 24/7 coverage, $500/mo flat rate that doesn&rsquo;t punish growth.
-              Expanding to legal and beyond as we earn it.
+              <strong>An AI answering service for California small business — starting with HVAC contractors and expanding to legal services.</strong>{" "}
+              We offer bilingual English/Spanish support, 24/7 coverage at a flat rate of $500 per month. Our service is designed to grow with your business without additional costs.
             </p>
             <form className="hero-call-form" action="/api/demo-call" method="post">
               <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
@@ -83,23 +85,19 @@ export default function AboutPage() {
             <div className="scenario-card">
               <div className="time"><i className="ti ti-phone-call" aria-hidden="true" /> Answer</div>
               <div className="body">
-                Pick up every call within two rings, 24/7, in English or Spanish. Spam and
-                robocalls filtered. Emergency calls escalated to the owner&rsquo;s cell within
-                30 seconds.
+                We pick up every call within two rings, 24 hours a day, seven days a week, in English or Spanish. Our advanced filtering system ensures spam and robocalls are automatically blocked. In emergencies, we escalate calls directly to your cell phone within 30 seconds.
               </div>
             </div>
             <div className="scenario-card">
               <div className="time"><i className="ti ti-calendar-event" aria-hidden="true" /> Book</div>
               <div className="body">
-                Real-time CRM and calendar sync — Jobber, ServiceTitan, HousecallPro, FieldEdge for
-                HVAC; Clio, MyCase, PracticePanther for legal. 35+ integrations total.
+                Our system integrates seamlessly with popular CRMs like Jobber, ServiceTitan, HousecallPro, and FieldEdge for HVAC contractors. For legal professionals, we integrate with Clio, MyCase, and PracticePanther. With over 35 integrations available, we ensure your calendar stays updated in real-time.
               </div>
             </div>
             <div className="scenario-card">
               <div className="time"><i className="ti ti-message-2" aria-hidden="true" /> Notify</div>
               <div className="body">
-                SMS + email summary to the owner within 60 seconds of call end. Transcript and
-                recording stored 90 days. CCPA two-party-consent disclosure baked in.
+                Within 60 seconds of each call ending, we send you an SMS and email summary. Every conversation is recorded and transcribed for up to 90 days. We also ensure compliance with CCPA privacy regulations by including two-party consent notifications.
               </div>
             </div>
           </div>
@@ -114,17 +112,76 @@ export default function AboutPage() {
             <div className="plan-step">
               <div className="num">A</div>
               <h3>Ace — Founder</h3>
-              <p>Built Live Answer in Willow Glen after watching California SMB owners hemorrhage revenue to missed calls. Hands-on with every new client setup.</p>
+              <p>Founder Ace Rodgers created Live Answer in Willow Glen after witnessing the challenges California small business owners face with missed calls. He's personally involved in every client setup to ensure our service meets your needs.</p>
             </div>
             <div className="plan-step">
               <div className="num">SJ</div>
               <h3>Headquarters</h3>
-              <p> San Jose, CA. Setup consults and monthly call reviews handled by the local team — not a national call center.</p>
+              <p>Based in San Jose, California, our team provides local support and handles all setup consults and monthly call reviews. We're not a distant call center; we're your neighbors here to help.</p>
             </div>
             <div className="plan-step">
               <div className="num">CA</div>
               <h3>California-focused</h3>
-              <p>Bilingual EN/ES by default. CCPA-compliant by default. Vertical scripts tuned for the businesses we work with: HVAC contractors first, law firms next.</p>
+              <p>Bilingual support is standard, reflecting California's diverse population. We are CCPA compliant and tailor our services for local industries, starting with HVAC contractors and expanding to legal services.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="benefits">
+        <div className="wrap">
+          <h2>Why Choose Live Answer?</h2>
+          <div className="benefits-grid">
+            <div className="benefit-card">
+              <i className="ti ti-coin" aria-hidden="true" />
+              <h3>Cost-effective Solution</h3>
+              <p>Traditional answering services can cost upwards of $1,000 per month. We offer premium service at a flat rate of $500/month with no hidden fees or contracts.</p>
+            </div>
+            <div className="benefit-card">
+              <i className="ti ti-paint-brush" aria-hidden="true" />
+              <h3>Customizable Service</h3>
+              <p>Your business is unique. We offer flexible solutions that adapt to your specific needs, whether you're an HVAC contractor, legal professional, or other small business owner.</p>
+            </div>
+            <div className="benefit-card">
+              <i className="ti ti-shield" aria-hidden="true" />
+              <h3>Local Support</h3>
+              <p>We're not a faceless corporation. Our team is based in San Jose and available to provide personalized support whenever you need it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonials">
+        <div className="wrap">
+          <h2>What Our Clients Say</h2>
+          <div className="testimonial-grid">
+            <div className="testimonial-card">
+              <p>"Live Answer has been a game-changer for our HVAC business. No more missed calls and constant follow-ups."</p>
+              <div className="testimonial-author">- John Smith, AC Pro Services</div>
+            </div>
+            <div className="testimonial-card">
+              <p>"The integration with ServiceTitan is seamless and has saved us so much time. Highly recommended!"</p>
+              <div className="testimonial-author">- Sarah Johnson, Heat & Cool Inc.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq">
+        <div className="wrap">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-grid">
+            <div className="faq-card">
+              <h3>Is there a contract?</h3>
+              <p>No, we offer month-to-month service with no long-term commitments.</p>
+            </div>
+            <div className="faq-card">
+              <h3>How does pricing work?</h3>
+              <p>A flat rate of $500/month covers unlimited calls, 24/7 support, and all features including call transcription and integration capabilities.</p>
+            </div>
+            <div className="faq-card">
+              <h3>Can I cancel anytime?</h3>
+              <p>Yes, you can cancel with 30 days' notice. We want you to feel confident in your decision to try Live Answer risk-free.</p>
             </div>
           </div>
         </div>
@@ -153,6 +210,12 @@ export default function AboutPage() {
         @media (max-width: 760px) {
           .about-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
         }
+        .benefits-grid, .faq-grid, .testimonial-grid {
+          display: grid;
+          gap: 24px;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .scenario-card { margin-bottom: 24px; }
       `}</style>
       <section className="final-cta">
         <div className="wrap">

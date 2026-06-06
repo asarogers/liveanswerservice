@@ -67,6 +67,30 @@ export default function GuidesIndexPage() {
             Missed-call economics, bilingual coverage, and AI vs. human comparisons for California
             small business owners. Written by practitioners, not content farms.
           </p>
+          <p style={{ color: "#5c5147", marginTop: 16 }}>
+            Effective call management is the backbone of customer relations for any local business. 
+            Our comprehensive guides provide actionable insights to help you optimize operations,
+            reduce missed opportunities, and enhance overall caller experience. In today's fast-paced
+            market, poor call handling can lead to significant revenue loss and damaged brand reputation.
+            We've compiled these resources to empower you with the knowledge needed to make informed decisions
+            and improve your business's communication strategies.
+          </p>
+        </div>
+      </section>
+
+      {/* Guide introduction */}
+      <section className="section-pad" aria-labelledby="guide-intro-heading">
+        <div className="wrap-narrow">
+          <h2 id="guide-intro-heading">Why These Guides?</h2>
+          <p>As a small business owner, you know how critical it is to manage customer interactions effectively. Every missed call could mean lost opportunities and dissatisfied customers. That's why we've created these in-depth guides to help you:</p>
+          <ul className="list-disc">
+            <li>Understand the true cost of missed calls: Learn how every unanswered call translates to potential revenue loss</li>
+            <li>Learn how bilingual services can expand your customer reach: Discover why offering service in multiple languages is crucial for success in diverse markets</li>
+            <li>Compare AI vs human answering systems objectively: Explore the pros and cons of each option based on real-world data</li>
+            <li>Discover best practices for handling overflow call volume: Implement strategies to manage high traffic without losing customers</li>
+            <li>Implement strategies to improve caller experience: Find out how better service leads to increased customer satisfaction and loyalty</li>
+            <li>Optimize your call handling流程 to match business needs: Tailor your approach based on specific industry challenges and goals</li>
+          </ul>
         </div>
       </section>
 
@@ -147,6 +171,21 @@ export default function GuidesIndexPage() {
         </div>
       </section>
 
+      {/* Guide benefits */}
+      <section className="section-pad" aria-labelledby="benefits-heading">
+        <div className="wrap-narrow">
+          <h2 id="benefits-heading">Why Read Our Guides?</h2>
+          <p>Our guides are written by experienced professionals who have managed thousands of calls for California small businesses. Unlike generic content, our insights come from real-world experience:</p>
+          <ol className="list-decimal">
+            <li>Data-driven insights on call handling: We analyze real data to show what works and why</li>
+            <li>Actionable strategies to reduce missed calls: Specific tactics you can implement today</li>
+            <li>Expert advice on choosing the right answering solution: Pro tips for selecting AI vs human services</li>
+            <li>Case studies showing measurable improvements: Real-world examples of businesses that succeeded</li>
+            <li>Tips for improving customer satisfaction scores: How better call handling improves retention</li>
+          </ol>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="final-cta">
         <div className="wrap">
@@ -156,6 +195,43 @@ export default function GuidesIndexPage() {
             <i className="ti ti-phone-call" aria-hidden="true" />
             <span>{siteConfig.phone.display}</span>
           </a>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-pad" aria-labelledby="faq-heading">
+        <div className="wrap-narrow">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <dl className="faq-list">
+            <div className="faq-item">
+              <dt>How often should I review my call handling?</dt>
+              <dd>We recommend at least quarterly reviews to adjust for business growth and seasonality.</dd>
+            </div>
+            <div className="faq-item">
+              <dt>What's the ideal call abandonment rate?</dt>
+              <dd>Aim for less than 5%. Anything above that indicates potential missed opportunities.</dd>
+            </div>
+            <div className="faq-item">
+              <dt>Do I need bilingual service?</dt>
+              <dd>If your customer base includes Spanish speakers, it's strongly recommended to improve satisfaction and conversion rates.</dd>
+            </div>
+            <div className="faq-item">
+              <dt>How much does call handling impact retention?</dt>
+              <dd>Poor call handling can lead to 30-40% higher churn rates. Good service improves retention significantly.</dd>
+            </div>
+            <div className="faq-item">
+              <dt>Is AI better than human operators?</dt>
+              <dd>Depends on your needs. AI is great for simple routing but humans excel in complex situations requiring empathy.</dd>
+            </div>
+            <div className="faq-item">
+              <dt>How can I measure the effectiveness of my call handling?</dt>
+              <dd>Track key metrics like call abandonment rate, average handle time, and customer satisfaction scores to gauge performance.</dd>
+            </div>
+            <div className="faq-item">
+              <dt>What tools do you recommend for managing call overflow?</dt>
+              <dd>We suggest implementing a combination of caller ID, voicemail-to-text services, and live monitoring to ensure no calls go unanswered.</dd>
+            </div>
+          </dl>
         </div>
       </section>
     </>

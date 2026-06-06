@@ -7,6 +7,9 @@ const SLUG = "bilingual-answering-service-california";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "https://liveanswerservice.com/bilingual-answering-service-california",
+  },
   robots: gatedRobots("/bilingual-answering-service-california"),
   title: "Bilingual Answering Service in California — Native EN/ES",
   description:

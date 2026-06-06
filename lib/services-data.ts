@@ -5,12 +5,9 @@
  *  Each vertical landing page from BUSINESS.md is represented as a
  *  ServiceDetail entry consumed by app/services/[slug]/page.tsx.
  *
- *  Publishing schedule (see site-plan.json):
- *    Week 1 (indexed):   hvac, attorney, small-business
- *    Week 2 (noindex):   dental
- *    Week 3 (noindex):   restaurant
- *    Week 5 (noindex):   real-estate, property-management, salon-and-spa
- *    Week 7 (noindex):   medical, live-answering-service
+ *  Publishing schedule: site-plan.json `lastmod_schedule` is canonical
+ *  (9 weekly waves from 2026-06-08) — do not duplicate the week map here;
+ *  it drifted once already. Gating is automatic via noindexSlugs().
  *
  *  Phone: (669) 365-6533 | liveanswerservice.com
  * ============================================================
@@ -40,7 +37,7 @@ export interface ServiceDetail {
    *           A child must NOT appear in relatedServices for a different hub —
    *           the dev-time silo guard below enforces this at module load.
    *
-   * NOTE: The 10 current service verticals are NOT restructured into hubs.
+   * NOTE: The 11 current service verticals are NOT restructured into hubs.
    * These fields are here to add the capability for future silos without
    * breaking any existing page. Simply set isHub: true on a future aggregator
    * page and hubSlug on its children.

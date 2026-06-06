@@ -7,6 +7,9 @@ const SLUG = "24-7-answering-service";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "https://liveanswerservice.com/24-7-answering-service",
+  },
   robots: gatedRobots("/24-7-answering-service"),
   title: "24/7 Answering Service — Genuine Round-the-Clock Coverage",
   description:

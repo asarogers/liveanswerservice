@@ -5,13 +5,15 @@ import { getAllServices } from "@/lib/services-data";
 import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "/services",
+  },
   title: "Industries We Serve — Live Answer AI Receptionist",
   description:
     "Live Answer is built for California HVAC contractors and law firms — with dental, medical, real estate, restaurants, salons, and property management coming next. Bilingual EN/ES, 24/7, $500/mo flat.",
   alternates: { canonical: "/services" },
 };
 
-// Map vertical icon — kept inline so the index doesn't need a separate data file.
 const ICON_FOR: Record<string, string> = {
   "hvac-answering-service":              "ti-flame",
   "attorney-answering-service":          "ti-scale",
@@ -26,8 +28,6 @@ const ICON_FOR: Record<string, string> = {
 };
 
 export default function ServicesIndexPage() {
-  // Surface gated services in a separate "coming soon" rail so the page
-  // reflects the actual publishing schedule.
   const noindex = noindexSlugs(loadSitePlan());
   const all = getAllServices();
   const live    = all.filter((s) => !noindex.has(s.slug));
@@ -39,8 +39,10 @@ export default function ServicesIndexPage() {
         <div className="wrap-narrow">
           <h1>Built for <em>your industry</em>.</h1>
           <p className="sub">
-            Vertical-specific intake scripts. Real CRM and calendar sync. Bilingual EN/ES.
-            Flat rate, unlimited calls, locked at sign-up.
+            We specialize in providing tailored answering services that meet the unique needs of various industries. Our solutions are designed to enhance communication, improve customer satisfaction, and streamline your operations.
+          </p>
+          <p className="sub">
+            Whether you're a California HVAC contractor needing round-the-clock support or a law firm requiring compliance-focused messaging, Live Answer is here to provide professional, reliable service that helps you grow and stand out in your industry.
           </p>
         </div>
       </section>
@@ -62,6 +64,35 @@ export default function ServicesIndexPage() {
                   {s.h1.replace(/^Never (lose|miss) another /i, "").replace(/\.$/, "")}
                 </div>
                 <div className="body">{s.metaDescription}</div>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  {
+                    s.slug === "hvac-answering-service" && [
+                      <li key="1">24/7 bilingual support</li>,
+                      <li key="2">Priority scheduling for emergency calls</li>,
+                      <li key="3">Integrated appointment reminders</li>,
+                      <li key="4">Custom HVAC-specific greetings and hold messages</li>,
+                      <li key="5">Real-time call status updates via text or email</li>
+                    ]
+                  }
+                  {
+                    s.slug === "attorney-answering-service" && [
+                      <li key="1">Compliance-focused messaging templates</li>,
+                      <li key="2">After-hours voicemail management</li>,
+                      <li key="3">Client intake form integration</li>,
+                      <li key="4">Confidentiality and data protection measures</li>,
+                      <li key="5">Discreet handling of sensitive information</li>
+                    ]
+                  }
+                  {
+                    s.slug === "small-business-answering-service" && [
+                      <li key="1">Customizable greetings and scripts</li>,
+                      <li key="2">Call recording and analytics</li>,
+                      <li key="3">Mobile app access for call management</li>,
+                      <li key="4">Multiple phone number support</li>,
+                      <li key="5">Flexible payment plans</li>
+                    ]
+                  }
+                </ul>
               </Link>
             ))}
           </div>
@@ -122,6 +153,47 @@ export default function ServicesIndexPage() {
           </a>
         </div>
       </section>
+
+      <section className="faq" aria-label="Frequently Asked Questions">
+        <div className="wrap">
+          <h2>FAQ: Common Questions About Our Services</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li>
+              <h3>How much does your service cost?</h3>
+              <p>Our pricing is simple and transparent: $500 per month for unlimited calls, inclusive of all features and support. No hidden fees or contracts.</p>
+            </li>
+            <li>
+              <h3>Can you customize the scripts for my business?</h3>
+              <p>Yes! We offer full customization of greetings, intake questions, and after-hours messages to match your brand voice and specific needs. Our team works with you to create a seamless experience for your customers.</p>
+            </li>
+            <li>
+              <h3>Do you offer technical support?</h3>
+              <p>Absolutely. We provide 24/7 technical support to ensure your system runs smoothly at all times. If you encounter any issues, our team is available to assist immediately.</p>
+            </li>
+            <li>
+              <h3>Can I integrate this with my existing CRM?</h3>
+              <p>We offer direct integration with popular CRMs and calendar systems, streamlining your workflow and improving efficiency. Let us know which system you use, and we'll handle the setup for you.</p>
+            </li>
+            <li>
+              <h3>What about call handling capacity?</h3>
+              <p>Our system is designed to handle high volumes of calls simultaneously without any delay or dropped connections. You can trust us to manage your busiest days with ease.</p>
+            </li>
+            <li>
+              <h3>Do you provide data security and compliance?</h3>
+              <p>Data security is our top priority. We use enterprise-grade encryption and comply with all relevant regulations to protect your customers' information. Our systems are regularly audited for security and performance.</p>
+            </li>
+            <li>
+              <h3>How long does it take to set up?</h3>
+              <p>We can have your account set up and ready to go in as little as 24 hours. We work quickly without compromising on quality to get you started as soon as possible.</p>
+            </li>
+            <li>
+              <h3>What kind of training is available?</h3>
+              <p>We provide comprehensive training resources, including video tutorials and a dedicated support team to help you make the most of our services. We're here to ensure your transition is smooth and successful.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </>
   );
 }

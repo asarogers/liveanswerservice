@@ -198,7 +198,7 @@ AI: Sending now. [SMS: price sheet + booking link · CRM lead created · tagged 
 
 ## What every script has in common (booking system)
 
-1. **Consent disclosure** in the first sentence (CCPA §632).
+1. **Consent disclosure** in the first sentence (CA Penal Code §632 two-party consent; CCPA disclosure).
 2. **One qualifying question** to route urgency (emergency vs shopping vs existing).
 3. **Anchor price stated proactively** — kills the "how much?" objection before it derails.
 4. **Two time options, not "what works for you?"** — choice architecture, higher conversion.

@@ -1,3 +1,5 @@
+> ⚠️ **TEMPLATE-INHERITED DOCUMENT — WELLPREPPEDLIFE, NOT LIVE ANSWER.** This file came along with the wellpreppedlife site template and describes that client's Cloudflare AI-bot fix as applied to wellpreppedlife.com. Nothing in it reflects liveanswerservice.com state. Kept only as a reference playbook. [flagged 2026-06-06 doc audit]
+
 # Cloudflare Dashboard — AI Crawler Unblock (MANUAL ACTION REQUIRED)
 
 ## Problem

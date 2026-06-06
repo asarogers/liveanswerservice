@@ -7,6 +7,9 @@ const SLUG = "ccpa-compliance-call-recording";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "https://liveanswerservice.com/ccpa-compliance-call-recording",
+  },
   robots: gatedRobots("/ccpa-compliance-call-recording"),
   title: "CCPA Compliance for Call Recording — Live Answer",
   description:

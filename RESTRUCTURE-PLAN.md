@@ -1,3 +1,5 @@
+> ⚠️ **TEMPLATE-INHERITED DOCUMENT — WELLPREPPEDLIFE, NOT LIVE ANSWER.** This file came along with the wellpreppedlife site template and describes that client's 2026-05-08 site restructure. Nothing in it reflects liveanswerservice.com state. Kept only as a reference playbook. [flagged 2026-06-06 doc audit]
+
 # WellPreppedLife Restructure Plan
 
 **Created:** 2026-05-08

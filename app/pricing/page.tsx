@@ -7,6 +7,9 @@ const SLUG = "pricing";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "https://liveanswerservice.com/pricing",
+  },
   title: "Pricing — $500/mo flat. Unlimited calls. No per-minute fees.",
   description:
     "Live Answer pricing — $500/mo flat for unlimited calls, bilingual EN/ES, no overages, locked rate at sign-up. 7-day free trial, no credit card. $199 setup waived with annual prepay.",
@@ -23,6 +26,9 @@ export default function PricingPage() {
           <p className="sub">
             <strong>$500/mo. Unlimited calls. Bilingual EN/ES. Locked rate at sign-up.</strong>{" "}
             No per-minute fees. No overages. Ever.
+          </p>
+          <p className="hero-text">
+            At LiveAnswerService, we understand that your business needs a reliable, consistent phone service that doesn't break the bank or leave you guessing about costs. That's why we've designed our pricing to be transparent, predictable, and worry-free. With our flat-rate pricing model, you get all the features you need to grow your business without any hidden fees or surprise charges.
           </p>
         </div>
       </section>
@@ -45,6 +51,8 @@ export default function PricingPage() {
                 <li><i className="ti ti-check" aria-hidden="true" />Spam &amp; robocall filtering</li>
                 <li><i className="ti ti-check" aria-hidden="true" />Call recordings + 90-day history</li>
                 <li><i className="ti ti-check" aria-hidden="true" />No-show + follow-up SMS automation</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Real-time analytics and reporting tools</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Multi-device call forwarding options</li>
               </ul>
               <div className="setup-fee">
                 $199 one-time setup · <em>waived with annual prepay</em>
@@ -66,6 +74,9 @@ export default function PricingPage() {
                 <li><i className="ti ti-check" aria-hidden="true" />Dedicated success manager</li>
                 <li><i className="ti ti-check" aria-hidden="true" />SLA-backed uptime guarantee</li>
                 <li><i className="ti ti-check" aria-hidden="true" />Volume discount on annual plans</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Customizable call scripts and workflows</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Advanced reporting and analytics</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Priority support and maintenance</li>
               </ul>
               <div className="annual">15-minute discovery call · custom quote in 24 hours</div>
               <a href={siteConfig.phone.href} className="btn-secondary" style={{ marginTop: 16, display: "inline-block" }}>
@@ -123,6 +134,31 @@ export default function PricingPage() {
               <div><strong>LiveAnswerService</strong></div>
               <div><strong>$500/mo flat</strong></div>
               <div>24/7 · bilingual · unlimited · locked rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ─────────────────────────────────────── */}
+      <section className="faq-section" aria-label="Frequently Asked Questions">
+        <div className="wrap-narrow">
+          <h2>FAQ: Your Questions Answered</h2>
+          <div className="faq-list">
+            <div className="faq-item">
+              <h3>What's included in the $500/mo flat rate?</h3>
+              <p className="answer">Our flat-rate includes unlimited calls, 24/7 bilingual support, call recording, SMS notifications, integration with popular CRMs, spam filtering, and more. All features are included with no additional costs.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Is there a contract or long-term commitment?</h3>
+              <p className="answer">No contracts required! You can cancel anytime without any termination fees. We offer a 7-day free trial so you can experience our service risk-free.</p>
+            </div>
+            <div className="faq-item">
+              <h3>How does the setup work?</h3>
+              <p className="answer">Our team will guide you through a simple onboarding process to set up your account, integrate with your existing systems, and ensure everything runs smoothly. We offer white-glove service for custom setups.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Can I upgrade or downgrade my plan later?</h3>
+              <p className="answer">Yes! We offer flexible plans to accommodate your growing needs. Simply contact our support team, and we'll adjust your plan accordingly with no hassle.</p>
             </div>
           </div>
         </div>

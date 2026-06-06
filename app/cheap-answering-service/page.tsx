@@ -7,6 +7,9 @@ const SLUG = "cheap-answering-service";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "https://liveanswerservice.com/cheap-answering-service",
+  },
   robots: gatedRobots("/cheap-answering-service"),
   title: "Affordable Answering Service — Flat $500/mo, No Per-Minute Fees",
   description:

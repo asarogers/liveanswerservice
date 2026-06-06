@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getAllGuideSlugs } from '@/lib/guides';
 import { getAllServiceSlugs } from '@/lib/services-data';
+import { VERTICALS } from '@/lib/verticals';
 import { getAllLocationSlugs } from '@/lib/locations-data';
 import { loadSitePlan, priorityServiceSlugs, noindexSlugs, urlToSlug } from '@/lib/site-plan';
 
@@ -8,7 +9,7 @@ const ORIGIN = 'https://liveanswerservice.com';
 
 // Static date — avoids every build re-stamping pages as "modified today".
 // Update manually when you make meaningful content changes.
-const SITE_LAST_MODIFIED = new Date("2026-05-13");
+const SITE_LAST_MODIFIED = new Date("2026-06-08");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Tier data from site-plan.json (optional — sitemap still works without it).
@@ -35,7 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const serviceUrls = getAllServiceSlugs()
+  // Union legacy services-data slugs with the VERTICALS registry — newer
+  // verticals (e.g. veterinary) exist only in the registry.
+  const serviceUrls = Array.from(new Set([...getAllServiceSlugs(), ...Object.keys(VERTICALS)]))
     .filter((slug) => !noindex.has(slug))
     .map((slug) => ({
       url: `${ORIGIN}/services/${slug}`,
@@ -67,6 +70,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: '24-7-answering-service',        priority: 0.85, freq: 'monthly' },
     { slug: 'bilingual-answering-service-california', priority: 0.85, freq: 'monthly' },
     { slug: 'vs-hiring-a-receptionist',      priority: 0.8,  freq: 'monthly' },
+    { slug: 'ai-receptionist',               priority: 0.85, freq: 'monthly' },
+    { slug: 'missed-call-recovery',          priority: 0.8,  freq: 'monthly' },
+    { slug: 'spam-call-filtering',           priority: 0.75, freq: 'monthly' },
   ];
 
   const topLevelUrls = topLevel

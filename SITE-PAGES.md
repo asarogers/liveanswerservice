@@ -40,6 +40,9 @@ Theme tokens live at `:root` in `app/globals.css` — single source of truth. An
 - [ ] `/cheap-answering-service` (`app/cheap-answering-service/page.tsx`) · theme ✅ · mobile audit needed
 - [ ] `/vs-hiring-a-receptionist` (`app/vs-hiring-a-receptionist/page.tsx`) · theme ✅ · mobile audit needed
 - [ ] `/comparison` (`app/comparison/page.tsx`) · theme ✅ · mobile audit needed
+- [ ] `/ai-receptionist` (`app/ai-receptionist/page.tsx`) — added 2026-06-06 (Wave 6) · theme audit needed · mobile audit needed
+- [ ] `/missed-call-recovery` (`app/missed-call-recovery/page.tsx`) — added 2026-06-06 (Wave 6) · theme audit needed · mobile audit needed
+- [ ] `/spam-call-filtering` (`app/spam-call-filtering/page.tsx`) — added 2026-06-06 (Wave 8) · theme audit needed · mobile audit needed
 
 ### Locations
 - [ ] `/locations` (`app/locations/page.tsx`) — index · theme ✅ · mobile audit needed
@@ -49,9 +52,10 @@ Theme tokens live at `:root` in `app/globals.css` — single source of truth. An
 - [ ] `/services` (`app/services/page.tsx`) — index · theme ✅ · mobile audit needed
 - [ ] `/services/[slug]` (`app/services/[slug]/page.tsx`) — detail template · theme ✅ · mobile audit needed
 
-### Blog
-- [ ] `/blog` (`app/blog/page.tsx`) — index · theme ✅ · mobile audit needed
-- [ ] `/blog/[slug]` (`app/blog/[slug]/page.tsx`) — article · theme ✅ · mobile audit needed
+### Guides (content hub — blog 301s here since 2026-06-05)
+- [ ] `/guides` (`app/guides/[slug]` + index) — article hub · theme ✅ · mobile audit needed
+- [ ] `/guides/[slug]` (`app/guides/[slug]/page.tsx`) — article · theme ✅ · mobile audit needed
+- `/blog` + `/blog/[slug]` — **301 → /guides** (middleware.ts) · do not theme; kept only for redirects
 
 ### Conversion / info
 - [ ] `/about` (`app/about/page.tsx`) · theme ✅ · mobile audit needed
@@ -69,6 +73,9 @@ Theme tokens live at `:root` in `app/globals.css` — single source of truth. An
 
 ### Internal (do NOT touch)
 - `app/dev-nav/**` — internal lab pages, never indexed, can use any styling
+- `app/brand-kit/**` — internal brand asset page, not indexed
+
+> Note: `/services/[slug]` renders all **11** vertical configs from `lib/verticals/` (veterinary + plumbing added 2026-06-06) plus legacy services-data fallbacks — new verticals need no inventory row, the template covers them.
 
 ---
 
