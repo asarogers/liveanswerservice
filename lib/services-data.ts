@@ -213,8 +213,101 @@ export const serviceDetails: ServiceDetail[] = [
     relatedLocations: ["san-jose", "san-francisco-bay-area", "los-angeles"],
   },
 
+  /* ──────────────────────────────────────────────────────────
+     WEEK 5 — REAL ESTATE
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "real-estate-answering-service",
+    title: "Real Estate Answering Service — AI Receptionist for California Agents",
+    metaDescription:
+      "AI receptionist for California real estate agents and brokerages. Captures buyer/seller leads 24/7, books showings into your calendar, bilingual EN/ES. Flat $500/mo flat.",
+    h1: "Every Lead. Captured Before They Call the Next Agent.",
+    intro:
+      "California real estate runs on speed-to-lead — a buyer or seller calling on a Zillow listing at 9 PM on a Tuesday has three or four other agents in mind, and the agent who picks up wins the contact. Industry-standard buyer/seller commissions in California are $15,000–$60,000 per closed deal, so a missed call isn't a $50 mistake — it's a $20,000 one. Live Answer's real estate configuration answers every inbound call 24/7, qualifies the lead by type (buyer / seller / renter / inquiry), pulls the listing if a caller references a specific MLS number, and books the showing or callback into your calendar before the caller dials anyone else. Bilingual English-Spanish standard.",
+    sections: [
+      {
+        heading: "Lead Qualification That Goes Beyond \"Take a Message\"",
+        content:
+          "The AI is scripted to qualify every inbound call by lead type: is this a buyer (in which case: price range, timeline, financing pre-approval status, neighborhoods of interest, currently working with another agent), a seller (current property address, motivation, timeline, current loan, comparable sales they're aware of), a renter (budget, move-in date, pet status, employment), or an investor (cash or financed, target return, property type). Specific MLS or address references get logged in the summary so you walk into the callback already knowing what they were looking at. Anything ambiguous gets escalated to your cell. Bookings push to your team calendar — showings as appointments, callbacks as 15-minute slots — and the AI confirms by SMS to the lead before you ever see the message.",
+      },
+      {
+        heading: "Bilingual In Markets Where It Decides the Deal",
+        content:
+          "Across the Central Valley, the Inland Empire, and large parts of LA County, Spanish-speaking buyers and sellers are a meaningful share of the market — and they are the most likely to hang up on English-only voicemail and call the next agent. The standard real estate answering services on the market either don't offer Spanish at all or charge extra for a transfer-to-Spanish-line that runs business hours only. Live Answer is bilingual standard on Better and Best, with native voice modeling and the same lead qualification flow regardless of language. For a brokerage in LA, Riverside, or Fresno, this single feature usually pays for the service in the first month.",
+      },
+      {
+        heading: "Booking Guarantee Tied to the Math That Closes Deals",
+        content:
+          "Our booking guarantee for real estate is concrete: capture five qualified buyer or seller leads in your first 30 days — defined as full intake plus contact info plus follow-up booked — or you get a full refund. At California commission averages, one closed transaction from those five leads pays for the service for several years. Flat rate, unlimited calls, no per-minute fees, no overages, locked rate at sign-up. The phone is the front door of a real estate practice; missing calls there is missing the entire business. Live Answer makes the front door always answered.",
+      },
+    ],
+    relatedServices: ["property-management-answering-service", "small-business-answering-service"],
+    relatedLocations: ["san-jose", "los-angeles", "san-francisco-bay-area", "sacramento"],
+  },
 
+  /* ──────────────────────────────────────────────────────────
+     WEEK 5 — PROPERTY MANAGEMENT
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "property-management-answering-service",
+    title: "Property Management Answering Service — California AI Receptionist",
+    metaDescription:
+      "24/7 AI receptionist for California property managers. Handles maintenance requests, leasing inquiries, tenant calls. Bilingual EN/ES. Books into AppFolio, Buildium, Yardi. Flat $500/mo flat.",
+    h1: "Every Tenant Call. Logged, Triaged, Routed.",
+    intro:
+      "Property management is the call-volume problem in concentrated form: maintenance requests at 2 AM, leasing inquiries during business hours, lease renewals, complaints, vendor coordination — all flowing through one phone line, and most of it after-hours or while staff is in the field. Industry-standard property management answering services charge per minute and treat maintenance triage as a premium feature. Live Answer's property management configuration handles all of it on a flat rate: 24/7 maintenance request intake with urgency triage, leasing inquiry qualification, tenant complaint logging, and direct sync into AppFolio, Buildium, or Yardi.",
+    sections: [
+      {
+        heading: "Maintenance Triage That Actually Distinguishes Urgency",
+        content:
+          "The AI is scripted to classify every maintenance call by urgency category: emergency (flooding, gas leak, no heat in winter, no AC during a heat advisory, security/lockout, sewage backup), urgent (no hot water, partial HVAC failure, electrical issue with safety risk, major appliance failure), and routine (cosmetic, low-priority repair, general request). Emergencies trigger an immediate SMS to the on-call manager and an outbound text to your preferred vendor. Urgent items go into the dispatch queue with a same-day or next-business-day SLA tag. Routine items are logged as work orders directly in AppFolio, Buildium, or Yardi with photos requested via follow-up SMS to the tenant. The AI never auto-dispatches vendors without confirmation; that's a policy decision your team makes per property, not something we automate around you.",
+      },
+      {
+        heading: "Leasing Inquiries Without the Showing-Coordination Headache",
+        content:
+          "Inbound leasing calls get qualified the same way: bedrooms, budget, move-in timeline, pet status, household size, employment / income, current housing status. The AI pulls the inquired-about unit's availability and pricing from your PMS in real time. If the unit is available and the lead qualifies for self-tour, the AI offers the next three available slots and books directly. If the unit requires an agent-led showing, the AI books with your on-site team and confirms via SMS. Anything that needs human judgment — credit-challenged applicants, voucher holders, non-standard accommodations — gets escalated. The 7-day free trial is structured around exactly this: forward your leasing line at it for two weeks, count the leads it qualifies that you wouldn't have caught otherwise.",
+      },
+      {
+        heading: "Bilingual Tenant Communication, By Default",
+        content:
+          "A significant share of California tenants are Spanish-speaking, and tenant satisfaction (which feeds renewal rates) is strongly correlated with whether they can communicate maintenance issues in their primary language. Most property management answering services offer English-only or upcharge for bilingual. Live Answer includes native English-Spanish on Better and Best, with the same triage logic and PMS sync in either language. The AI also handles the routine but important details that tenants want consistency on — confirming what time the plumber is coming, whether they need to be home, what entry procedures apply — in the language the tenant called in.",
+      },
+    ],
+    relatedServices: ["real-estate-answering-service", "small-business-answering-service"],
+    relatedLocations: ["san-jose", "los-angeles", "san-francisco-bay-area", "sacramento"],
+  },
 
+  /* ──────────────────────────────────────────────────────────
+     WEEK 5 — SALON & SPA
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "salon-and-spa-answering-service",
+    title: "Salon & Spa Answering Service — AI Receptionist for California",
+    metaDescription:
+      "AI receptionist for California salons and spas. Books appointments 24/7 into Vagaro, Mindbody, Booker, Square Appointments. Bilingual EN/ES. Flat $500/mo flat.",
+    h1: "Every Booking. While Your Stylists Are With Clients.",
+    intro:
+      "Salons and spas miss calls during exactly the hours they most need to be answering them — when every stylist is with a client, when reception is checking someone out, when the phone is ringing through to voicemail because there are three chairs and two phone lines. Industry-typical missed-call rates for salons run 25–40%, and a missed new-client call is usually a $150–$400 service plus the lifetime value of a recurring client. Live Answer's salon configuration is an AI receptionist that books directly into Vagaro, Mindbody, Booker, or Square Appointments — 24/7, bilingual, in the voice and brand your salon already has.",
+    sections: [
+      {
+        heading: "Booking Logic That Respects Your Stylists' Schedules",
+        content:
+          "The AI handles the standard salon booking flow: service type (cut, color, balayage, blowout, treatment, etc.), preferred stylist by name, preferred time, new client versus existing. The AI looks at your booking software in real time to find genuine availability — not slots that look open but are blocked for prep — and offers the next three valid options. New-client intake includes contact info, hair type or relevant skin condition, allergies (relevant for color and chemical services), and how they heard about you. Existing clients are recognized by phone number when possible and the AI greets them by name. Cancellations and reschedules are handled inline; no-show fees and deposit policies are explained per your salon's rules. Last-minute fill-ins for a same-day cancellation can be offered to a waitlist your AI maintains.",
+      },
+      {
+        heading: "After-Hours and Weekend Bookings That Actually Convert",
+        content:
+          "A significant share of salon bookings get researched on weeknights and weekends — when the prospective client has time to think about it, and your salon is closed. The standard market response is voicemail, which converts at single digits because the prospect has already moved on by Monday morning. Live Answer answers those calls in real time: a Tuesday-night caller can have a Saturday appointment booked, confirmed by SMS, and added to your calendar before they hang up. That single behavior shift — from \"left a voicemail\" to \"booked an appointment\" — is the entire ROI case for the service. Rosie's salon-specific competitor charges $49–$999/mo with similar features; we bracket them with flat $500 and bilingual standard.",
+      },
+      {
+        heading: "Bilingual That Captures the Walk-In Demographic",
+        content:
+          "Walk-in and call-in salon clients in much of California — LA, Inland Empire, Central Valley, Sacramento, parts of the Bay — are heavily Spanish-speaking. Most salon booking platforms have English-only phone integration even if their app supports Spanish. Live Answer answers calls in native Spanish when the caller speaks Spanish — the AI detects the language in the first three seconds — and handles the same booking flow with the same software sync. For a salon serving a Spanish-speaking neighborhood, the captured-revenue math from bilingual alone usually exceeds the cost of the service.",
+      },
+    ],
+    relatedServices: ["small-business-answering-service", "restaurant-answering-service"],
+    relatedLocations: ["los-angeles", "san-jose", "sacramento", "san-francisco-bay-area"],
+  },
 
 
   /* ──────────────────────────────────────────────────────────
