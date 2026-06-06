@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "comparison";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/comparison"),
   title: "Live Answer vs Ruby, Smith.ai, AnswerConnect — Comparison",
   description:
     "How Live Answer compares to Ruby, Smith.ai, AnswerConnect, Posh, and other answering services. Coverage, cost, bilingual depth, CRM integrations.",

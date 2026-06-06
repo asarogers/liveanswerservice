@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "how-it-works";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/how-it-works"),
   title: "How It Works — Live Answer AI receptionist setup",
   description:
     "How Live Answer works — forward your phone in 60 seconds, we answer every call 24/7, you get the booking. Plus the engineering behind it.",

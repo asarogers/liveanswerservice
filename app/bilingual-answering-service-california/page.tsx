@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "bilingual-answering-service-california";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/bilingual-answering-service-california"),
   title: "Bilingual Answering Service in California — Native EN/ES",
   description:
     "Native bilingual English-Spanish answering service for California small business. AI detects caller language in 3 seconds. Included standard, not an upcharge.",

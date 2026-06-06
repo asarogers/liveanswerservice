@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "vs-hiring-a-receptionist";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/vs-hiring-a-receptionist"),
   title: "AI Receptionist vs Hiring a Human — California Cost Comparison",
   description:
     "California receptionist costs $38K–$48K/yr loaded vs. Live Answer at $500/mo flat. Coverage, bilingual, sick days, turnover — the honest comparison.",

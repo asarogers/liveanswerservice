@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "ccpa-compliance-call-recording";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/ccpa-compliance-call-recording"),
   title: "CCPA Compliance for Call Recording — Live Answer",
   description:
     "How Live Answer handles California CCPA two-party-consent for call recording. Disclosure script, encryption, retention, deletion requests, BAA availability.",

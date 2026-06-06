@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "24-7-answering-service";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/24-7-answering-service"),
   title: "24/7 Answering Service — Genuine Round-the-Clock Coverage",
   description:
     "Live Answer is genuinely 24/7 — 3 AM Sunday gets the same answer as 10 AM Tuesday. No queues, no after-hours degradation. Flat $500/mo unlimited.",

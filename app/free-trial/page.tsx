@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "free-trial";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/free-trial"),
   title: "Free Trial — Live Answer AI Receptionist · No Credit Card",
   description:
     "Free 7-day trial of Live Answer. No credit card. AI answers your calls within 24 hours of setup. Cancel anytime, keep your phone number.",

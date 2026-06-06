@@ -36,19 +36,19 @@
       { "url": "/services/restaurant-answering-service",        "tier": "G", "action": "exclude", "reason": "Week 3 launch" },
       { "url": "/comparison",                                   "tier": "F", "action": "exclude", "reason": "Week 3 launch" },
       { "url": "/ccpa-compliance-call-recording",               "tier": "F", "action": "exclude", "reason": "Week 3 launch" },
-      { "url": "/locations/sacramento",                         "tier": "G", "action": "exclude", "reason": "Week 4 launch — local SEO" },
-      { "url": "/locations/los-angeles",                        "tier": "G", "action": "exclude", "reason": "Week 4 launch — local SEO" },
-      { "url": "/locations/san-francisco-bay-area",             "tier": "G", "action": "exclude", "reason": "Week 4 launch — local SEO" },
-      { "url": "/services/real-estate-answering-service",       "tier": "F", "action": "exclude", "reason": "Week 5 launch" },
-      { "url": "/services/property-management-answering-service", "tier": "F", "action": "exclude", "reason": "Week 5 launch" },
-      { "url": "/services/salon-and-spa-answering-service",     "tier": "F", "action": "exclude", "reason": "Week 5 launch" },
-      { "url": "/24-7-answering-service",                       "tier": "G", "action": "exclude", "reason": "Week 6 launch" },
-      { "url": "/bilingual-answering-service-california",       "tier": "G", "action": "exclude", "reason": "Week 6 launch" },
-      { "url": "/cheap-answering-service",                      "tier": "G", "action": "exclude", "reason": "Week 6 launch — highest-trending kw" },
-      { "url": "/services/medical-office-answering-service",    "tier": "F", "action": "exclude", "reason": "Week 7 launch" },
-      { "url": "/services/live-answering-service",              "tier": "F", "action": "exclude", "reason": "Week 7 launch" },
-      { "url": "/vs-hiring-a-receptionist",                     "tier": "F", "action": "exclude", "reason": "Week 7 launch" },
-      { "url": "/free-trial",                                   "tier": "F", "action": "exclude", "reason": "Week 7 launch — paid-ad LP" }
+      { "url": "/24-7-answering-service",                       "tier": "G", "action": "exclude", "reason": "Week 4 launch — '24/7 answering service cost bay area' opp 0.63, diff 30 (forum_fallback easy win)" },
+      { "url": "/vs-hiring-a-receptionist",                     "tier": "F", "action": "exclude", "reason": "Week 4 launch — 'virtual receptionist vs hiring receptionist' opp 0.58, diff 34 (forum_fallback easy win)" },
+      { "url": "/cheap-answering-service",                      "tier": "G", "action": "exclude", "reason": "Week 4 launch — +130% YoY trend + 'cheapest virtual receptionist service' opp 0.58, diff 35" },
+      { "url": "/bilingual-answering-service-california",       "tier": "G", "action": "exclude", "reason": "Week 6 launch — CA whitespace (only Reliable Receptionist competes)" },
+      { "url": "/services/live-answering-service",              "tier": "F", "action": "exclude", "reason": "Week 6 launch" },
+      { "url": "/services/real-estate-answering-service",       "tier": "F", "action": "exclude", "reason": "Week 7 launch — verticals pushed back 2 weeks to make room for forum_fallback guide wins" },
+      { "url": "/services/property-management-answering-service", "tier": "F", "action": "exclude", "reason": "Week 7 launch — verticals pushed back 2 weeks to make room for forum_fallback guide wins" },
+      { "url": "/services/salon-and-spa-answering-service",     "tier": "F", "action": "exclude", "reason": "Week 7 launch — verticals pushed back 2 weeks to make room for forum_fallback guide wins" },
+      { "url": "/services/medical-office-answering-service",    "tier": "F", "action": "exclude", "reason": "Week 8 launch — Wave 3 vertical (HIPAA, multi-stakeholder)" },
+      { "url": "/free-trial",                                   "tier": "F", "action": "exclude", "reason": "Week 8 launch — paid-ad LP" },
+      { "url": "/locations/sacramento",                         "tier": "G", "action": "exclude", "reason": "Week 9 launch — generic geo head term, conceded to GBP/local pack per 2026-06-05 report §G; pages exist so ship last" },
+      { "url": "/locations/los-angeles",                        "tier": "G", "action": "exclude", "reason": "Week 9 launch — generic geo head term, conceded to GBP/local pack per 2026-06-05 report §G; pages exist so ship last" },
+      { "url": "/locations/san-francisco-bay-area",             "tier": "G", "action": "exclude", "reason": "Week 9 launch — generic geo head term, conceded to GBP/local pack per 2026-06-05 report §G; pages exist so ship last" }
     ]
   },
   "internal_linking": {
@@ -71,12 +71,14 @@
   },
   "clusters": {},
   "lastmod_schedule": [
-    { "week": 1, "target_date": "2026-05-18", "count": 7,  "urls": ["/", "/services/hvac-answering-service", "/services/attorney-answering-service", "/services/small-business-answering-service", "/locations/san-jose", "/pricing", "/calculator"] },
-    { "week": 2, "target_date": "2026-05-25", "count": 3,  "urls": ["/services/dental-answering-service", "/how-it-works", "/start-trial"] },
-    { "week": 3, "target_date": "2026-06-01", "count": 3,  "urls": ["/services/restaurant-answering-service", "/comparison", "/ccpa-compliance-call-recording"] },
-    { "week": 4, "target_date": "2026-06-08", "count": 3,  "urls": ["/locations/sacramento", "/locations/los-angeles", "/locations/san-francisco-bay-area"] },
-    { "week": 5, "target_date": "2026-06-15", "count": 3,  "urls": ["/services/real-estate-answering-service", "/services/property-management-answering-service", "/services/salon-and-spa-answering-service"] },
-    { "week": 6, "target_date": "2026-06-22", "count": 3,  "urls": ["/24-7-answering-service", "/bilingual-answering-service-california", "/cheap-answering-service"] },
-    { "week": 7, "target_date": "2026-06-29", "count": 4,  "urls": ["/services/medical-office-answering-service", "/services/live-answering-service", "/vs-hiring-a-receptionist", "/free-trial"] }
+    { "week": 1, "target_date": "2026-06-08", "count": 7,  "urls": ["/", "/services/hvac-answering-service", "/services/attorney-answering-service", "/services/small-business-answering-service", "/locations/san-jose", "/pricing", "/calculator"] },
+    { "week": 2, "target_date": "2026-06-15", "count": 3,  "urls": ["/services/dental-answering-service", "/how-it-works", "/start-trial"] },
+    { "week": 3, "target_date": "2026-06-22", "count": 3,  "urls": ["/services/restaurant-answering-service", "/comparison", "/ccpa-compliance-call-recording"] },
+    { "week": 4, "target_date": "2026-06-29", "count": 3,  "urls": ["/24-7-answering-service", "/vs-hiring-a-receptionist", "/cheap-answering-service"] },
+    { "week": 5, "target_date": "2026-07-06", "count": 3,  "urls": ["/guides/how-much-does-an-answering-service-cost", "/guides/do-i-need-an-answering-service", "/guides/what-is-call-overflow-handling"] },
+    { "week": 6, "target_date": "2026-07-13", "count": 3,  "urls": ["/guides/after-hours-answering-service", "/bilingual-answering-service-california", "/services/live-answering-service"] },
+    { "week": 7, "target_date": "2026-07-20", "count": 3,  "urls": ["/services/real-estate-answering-service", "/services/property-management-answering-service", "/services/salon-and-spa-answering-service"] },
+    { "week": 8, "target_date": "2026-07-27", "count": 3,  "urls": ["/services/medical-office-answering-service", "/services/veterinary-answering-service", "/free-trial"] },
+    { "week": 9, "target_date": "2026-08-03", "count": 3,  "urls": ["/locations/sacramento", "/locations/los-angeles", "/locations/san-francisco-bay-area"] }
   ]
 }

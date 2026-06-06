@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
 
 const SLUG = "cheap-answering-service";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  robots: gatedRobots("/cheap-answering-service"),
   title: "Affordable Answering Service — Flat $500/mo, No Per-Minute Fees",
   description:
     "Affordable answering service for California small business — flat $500/mo for unlimited calls, bilingual EN/ES, no per-minute fees, no overages. 7-day free trial.",

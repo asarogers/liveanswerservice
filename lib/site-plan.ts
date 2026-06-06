@@ -73,6 +73,30 @@ export function loadSitePlan(): SitePlan | null {
 }
 
 /**
+ * robots metadata for a top-level route gated by the publishing schedule.
+ * Returns the noindex object while the path sits in site-plan.json's
+ * `exclude` (or `orphans`) bucket; undefined once promoted. Wire into each
+ * top-level page's static metadata: `robots: gatedRobots("/how-it-works")`.
+ * [guides-migration 2026-06-06: gated verticals/top-level pages were leaking
+ * into the index because only the dynamic routes consumed noindexSlugs.]
+ */
+export function gatedRobots(
+  path: string,
+):
+  | { index: false; follow: true; googleBot: { index: false; follow: true } }
+  | undefined {
+  const plan = loadSitePlan();
+  if (!plan) return undefined;
+  const gated = new Set([
+    ...(plan.exclude?.urls?.map((u) => u.url) ?? []),
+    ...(plan.orphans?.urls?.map((u) => u.url) ?? []),
+  ]);
+  return gated.has(path)
+    ? { index: false, follow: true, googleBot: { index: false, follow: true } }
+    : undefined;
+}
+
+/**
  * Extract the slug (last path segment) from any URL — "/services/foo-bar" → "foo-bar".
  */
 export function urlToSlug(url: string): string {
