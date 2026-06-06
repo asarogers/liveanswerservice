@@ -285,7 +285,7 @@
     }
   },
   "clusters": {},
-  "_schedule_comment": "WEEKLY WAVES per WEBSITE-GROWTH-TIMING.md: ship batches 1-2 weeks apart (weekly = lower bound of the rule). Each wave is GATED ON GSC: before promoting, confirm the prior wave is indexing (3-14 day window) and has no 'Crawled - not indexed' rows (those suppress crawl of NEW pages domain-wide) — if Wave 1 hasn't started indexing yet, SLIP the next wave a week rather than ship into a stalled domain. Every promoted URL needs >=1 external backlink (Mission Control warns on promote). Geo pages (sacramento/LA/SF-bay) are ON HOLD — not scheduled — until rank map shows >=25-35% top-3 coverage and the 30-URL backlink floor is met; city-list pages are a spam flag since Aug 2025.",
+  "_schedule_comment": "WEEKLY WAVES per WEBSITE-GROWTH-TIMING.md: ship batches 1-2 weeks apart (weekly = lower bound of the rule). Each wave is GATED ON GSC: before promoting, confirm the prior wave is indexing (3-14 day window) and has no 'Crawled - not indexed' rows (those suppress crawl of NEW pages domain-wide) — if Wave 1 hasn't started indexing yet, SLIP the next wave a week rather than ship into a stalled domain. Every promoted URL needs >=1 external backlink (Mission Control warns on promote). Geo pages (sacramento/LA/SF-bay) are ON HOLD — not scheduled — until rank map shows >=25-35% top-3 coverage and the 30-URL backlink floor is met; city-list pages are a spam flag since Aug 2025. CODE PAGES FOR FUTURE WAVES live on stacked git branches (wave-5 -> wave-6 -> wave-8 -> wave-9, each containing its predecessors): on a wave's Monday, Mission Control's publish-week action merges `branch` into main, promotes the wave's URLs, and deploys. Merge IN ORDER — branches are stacked, so merging a later wave brings earlier waves' pages too (their URLs stay noindexed until promoted, so it's safe, but order keeps the repo matching the schedule).",
   "lastmod_schedule": [
     {
       "week": 1,
@@ -348,7 +348,8 @@
         "/services/salon-and-spa-answering-service",
         "/services/veterinary-answering-service",
         "/free-trial"
-      ]
+      ],
+      "branch": "wave-5"
     },
     {
       "week": 6,
@@ -358,7 +359,8 @@
         "/services/medical-office-answering-service",
         "/ai-receptionist",
         "/missed-call-recovery"
-      ]
+      ],
+      "branch": "wave-6"
     },
     {
       "week": 7,
@@ -376,7 +378,8 @@
       "urls": [
         "/spam-call-filtering",
         "/guides/is-an-answering-service-worth-it"
-      ]
+      ],
+      "branch": "wave-8"
     },
     {
       "week": 9,
@@ -384,7 +387,8 @@
       "count": 1,
       "urls": [
         "/services/plumbing-answering-service"
-      ]
+      ],
+      "branch": "wave-9"
     }
   ]
 }
