@@ -217,6 +217,37 @@ export const serviceDetails: ServiceDetail[] = [
 
 
 
+  /* ──────────────────────────────────────────────────────────
+     WEEK 7 — LIVE ANSWERING SERVICE (generic + brand-anchor SEO)
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "live-answering-service",
+    title: "Live Answering Service — 24/7 AI Receptionist for California",
+    metaDescription:
+      "Live answering service that picks up every call 24/7 — never voicemail. Bilingual EN/ES, books into your calendar, flat $500/mo flat. 7-day free trial, no credit card.",
+    h1: "A Live Answering Service That Actually Answers — Every Call",
+    intro:
+      "\"Live answering service\" used to mean a person at a call center reading from your script. It worked, but it cost $245–$400/mo on the low end and $4,000/mo on the high end, with per-minute fees on top and limited hours in the practical reality of human staffing. Live Answer is the next version of that promise: an answering service that's genuinely live — picks up every call, in under two rings, 24/7, in English or Spanish — at a flat rate that doesn't punish you for growing. The mechanism is AI, but the experience the caller has is the experience a great human receptionist would give them: warmth, competence, fast booking, and a real summary to the business owner within minutes of the call.",
+    sections: [
+      {
+        heading: "What \"Live\" Means When the Receptionist Is AI",
+        content:
+          "The bar is simple: a caller should not be able to tell within ten seconds that they're talking to a system rather than a person. We hit that bar by using best-in-class voice models tuned for phone-quality audio (Inworld TTS 1.5 Max, Cartesia, ElevenLabs depending on the use case), real-time speech recognition with under 300ms latency (Deepgram Nova), and a script discipline that explicitly forbids the AI from faking confidence on anything it isn't sure about. Combine that with vertical-specific intake — HVAC, legal, dental, restaurant, real estate, salon, medical — and the caller's experience is closer to talking to a competent specialist receptionist than to a generic robot. The AI is also bilingual by default and answers in native Spanish if the caller starts in Spanish.",
+      },
+      {
+        heading: "Why a 24/7 AI Beats a Live Human Service on Real Calls",
+        content:
+          "Human answering services are excellent at being personable; they are not good at being available. After-hours coverage is either expensive or not actually live (the \"24/7\" plan often routes after-hours to voicemail or to a smaller skeleton staff). Industry-standard miss rates for human services during peak hours run 8–15%, because there's a queue and at some point the queue overflows. Live Answer doesn't have a queue. Every call is answered in parallel. There's no after-hours degradation — 3 AM Saturday gets the same answer as 10 AM Tuesday. For most California small businesses, the cost-and-coverage math closes immediately: flat $500 a month, every call, every hour, every language we support, no overages.",
+      },
+      {
+        heading: "Tested by Calling the Demo Line Yourself",
+        content:
+          "The strongest proof we can offer is the demo line. Call (669) 365-6533 and the actual AI receptionist answers — try to break it, ask it to book an appointment, switch to Spanish mid-call, throw it edge cases. The AI in the demo line is the same engine that handles production calls; the only difference is that the demo-mode prompt knows the caller is likely evaluating the service and can pivot to booking a setup consult or texting a Stripe payment link if the caller wants to sign up on the same call. No competitor we found offers this — Smith.ai, Ruby, AnswerConnect all require a sales call or a credit-card-required trial before you can experience the product. Live Answer is the experience.",
+      },
+    ],
+    relatedServices: ["small-business-answering-service", "hvac-answering-service", "attorney-answering-service"],
+    relatedLocations: ["san-jose", "san-francisco-bay-area", "los-angeles", "sacramento"],
+  },
 ];
 
 /* ============================================================
