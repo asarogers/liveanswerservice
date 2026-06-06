@@ -83,10 +83,19 @@ async function main() {
     } catch {
       log('Healthcheck found issues — review output above.');
     }
-    try {
-      run(`${PYTHON} ${ATLAS_ROUTE} --results "${AUDIT_JSON}" --site "${SITEMAP.split('/')[2]}" --sitemap "${SITEMAP}"`);
-    } catch {
-      log('Atlas routing failed — review output above.');
+    // Audit-route is OPT-IN (--with-audit-route): its child agents
+    // (expand_content / fix-seo) write LLM output directly into source files
+    // and corrupted app/book, app/locations, app/terms, app/about and
+    // app/services on 2026-06-06 (raw "Here's the enhanced..." dumps).
+    // Re-enable per-run only after those writers validate their output parses.
+    if (argv.includes('--with-audit-route')) {
+      try {
+        run(`${PYTHON} ${ATLAS_ROUTE} --results "${AUDIT_JSON}" --site "${SITEMAP.split('/')[2]}" --sitemap "${SITEMAP}"`);
+      } catch {
+        log('Atlas routing failed — review output above.');
+      }
+    } else {
+      log('Skipping audit-route (opt in with --with-audit-route).');
     }
 
     if (!SKIP_AUTOFIX) {
