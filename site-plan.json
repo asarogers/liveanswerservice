@@ -312,7 +312,8 @@
         "/services/restaurant-answering-service",
         "/comparison",
         "/ccpa-compliance-call-recording"
-      ]
+      ],
+      "branch": "wave-2"
     },
     {
       "week": 3,
@@ -325,7 +326,8 @@
         "/guides/how-much-does-an-answering-service-cost",
         "/guides/do-i-need-an-answering-service",
         "/guides/what-is-call-overflow-handling"
-      ]
+      ],
+      "branch": "wave-3"
     },
     {
       "week": 4,
@@ -336,7 +338,8 @@
         "/bilingual-answering-service-california",
         "/services/live-answering-service",
         "/guides/virtual-receptionist-cost"
-      ]
+      ],
+      "branch": "wave-4"
     },
     {
       "week": 5,

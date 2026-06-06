@@ -9,6 +9,7 @@ const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 export const metadata: Metadata = {
   openGraph: {
   url: "https://liveanswerservice.com/pricing",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   title: "Pricing — $500/mo flat. Unlimited calls. No per-minute fees.",
   description:

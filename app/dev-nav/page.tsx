@@ -7,6 +7,8 @@ import { getAllPosts } from "@/lib/blog";
 import { getAllGuideSlugs } from "@/lib/guides";
 import { VERTICALS } from "@/lib/verticals";
 import { loadSitePlan, type SitePlanLink } from "@/lib/site-plan";
+import { existsSync } from "fs";
+import { join } from "path";
 
 /**
  * PRIVATE nav index — for the team's use, not for visitors.
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 
-type PageStatus = "live" | "gated" | "needs-content";
+type PageStatus = "live" | "gated" | "needs-content" | "branch-held";
 
 type PageEntry = {
   path: string;
@@ -123,6 +125,7 @@ const STATUS_STYLE: Record<PageStatus, { bg: string; color: string; label: strin
   live:            { bg: "#000",    color: "#fff",    label: "LIVE / INDEXED" },
   gated:           { bg: "#FEF3C7", color: "#7A4F00", label: "GATED · NOINDEX" },
   "needs-content": { bg: "#FEE2E2", color: "#9B1F12", label: "NEEDS CONTENT" },
+  "branch-held":   { bg: "#ECE4F7", color: "#5B3A8E", label: "ON WAVE BRANCH" },
 };
 
 export default function DevNavPage() {
@@ -148,14 +151,23 @@ export default function DevNavPage() {
     if (path.startsWith("/services/"))  return serviceSlugs.has(slug);
     if (path.startsWith("/locations/")) return locationSlugs.has(slug);
     if (path.startsWith("/guides/"))    return guideSlugs.has(slug);
-    return true; // top-level routes are statically built — assume present
+    // top-level route — check the app dir (build-time fs is fine; this page is static)
+    try {
+      return existsSync(join(process.cwd(), "app", slug, "page.tsx"));
+    } catch {
+      return true;
+    }
   };
 
-  const toEntry = (path: string): PageEntry => {
+  const toEntry = (path: string, branch?: string): PageEntry => {
     const inPriority = priorityUrls.get(path);
     const inExclude = excludeUrls.get(path);
-    const built = existsInRepo(path);
-    const status: PageStatus = !built ? "needs-content" : inExclude ? "gated" : "live";
+    const built = path === "/" ? true : existsInRepo(path);
+    // not built + wave has a branch → the code is held on that branch (by design);
+    // not built + no branch → genuinely missing content (MC guide queue or TODO)
+    const status: PageStatus = !built
+      ? (branch ? "branch-held" : "needs-content")
+      : inExclude ? "gated" : "live";
     return {
       path,
       label: LABELS[path] ?? prettify(path),
@@ -167,8 +179,8 @@ export default function DevNavPage() {
   const weekSections: Section[] = (plan?.lastmod_schedule ?? []).map((w, i) => ({
     key: `week-${w.week}`,
     title: `Wave ${i + 1} (week ${w.week})`,
-    when: `Mon ${w.target_date} · ${w.count} URLs`,
-    pages: w.urls.map(toEntry),
+    when: `Mon ${w.target_date} · ${w.count} URLs${w.branch ? ` · ⎇ ${w.branch}` : ""}`,
+    pages: w.urls.map((u) => toEntry(u, w.branch)),
   }));
 
   // Excluded pages that appear in no wave — deliberately unscheduled (e.g.
