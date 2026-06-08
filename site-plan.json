@@ -251,6 +251,102 @@
         "tier": "E",
         "action": "exclude",
         "reason": "Wave 9 (wk 9, Aug 3) — NEW plumbing vertical: 'plumber answering service San Jose' opp 0.50, diff 42, target_now; the brief's gap ('no HVAC competitor owns a San Jose page'); split out of the HVAC config"
+      },
+      {
+        "url": "/services/appointment-scheduling-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 3 (2026-06-22) — service-expansion feature, opp 0.45. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/emergency-dispatch-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 3 (2026-06-22) — service-expansion feature, opp 0.42. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/lead-capture-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 2 (2026-06-15) — service-expansion feature, opp 0.47. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/live-chat-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 4 (2026-06-29) — service-expansion feature, opp 0.40. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/crm-integration-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 4 (2026-06-29) — service-expansion feature, opp 0.40. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/outbound-reminder-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 2 (2026-06-15) — service-expansion feature, opp 0.49. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/insurance-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 5 (2026-07-06) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/accounting-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 7 (2026-07-20) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/it-msp-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 8 (2026-07-27) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/roofing-construction-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 6 (2026-07-13) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/cleaning-landscaping-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 7 (2026-07-20) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/towing-roadside-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 6 (2026-07-13) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/chiropractic-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 5 (2026-07-06) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/mental-health-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 9 (2026-08-03) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/med-spa-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 8 (2026-07-27) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/nonprofit-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 9 (2026-08-03) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
       }
     ]
   },
@@ -304,94 +400,142 @@
     {
       "week": 2,
       "target_date": "2026-06-15",
-      "count": 6,
+      "count": 8,
       "urls": [
         "/services/dental-answering-service",
         "/how-it-works",
         "/start-trial",
         "/services/restaurant-answering-service",
         "/comparison",
-        "/ccpa-compliance-call-recording"
+        "/ccpa-compliance-call-recording",
+        "/services/outbound-reminder-answering-service",
+        "/services/lead-capture-answering-service"
       ],
-      "branch": "wave-2"
+      "branch": "wave-2",
+      "expansion_added": [
+        "/services/outbound-reminder-answering-service",
+        "/services/lead-capture-answering-service"
+      ]
     },
     {
       "week": 3,
       "target_date": "2026-06-22",
-      "count": 6,
+      "count": 8,
       "urls": [
         "/24-7-answering-service",
         "/vs-hiring-a-receptionist",
         "/cheap-answering-service",
         "/guides/how-much-does-an-answering-service-cost",
         "/guides/do-i-need-an-answering-service",
-        "/guides/what-is-call-overflow-handling"
+        "/guides/what-is-call-overflow-handling",
+        "/services/appointment-scheduling-answering-service",
+        "/services/emergency-dispatch-answering-service"
       ],
-      "branch": "wave-3"
+      "branch": "wave-3",
+      "expansion_added": [
+        "/services/appointment-scheduling-answering-service",
+        "/services/emergency-dispatch-answering-service"
+      ]
     },
     {
       "week": 4,
       "target_date": "2026-06-29",
-      "count": 4,
+      "count": 6,
       "urls": [
         "/guides/after-hours-answering-service",
         "/bilingual-answering-service-california",
         "/services/live-answering-service",
-        "/guides/virtual-receptionist-cost"
+        "/guides/virtual-receptionist-cost",
+        "/services/live-chat-answering-service",
+        "/services/crm-integration-answering-service"
       ],
-      "branch": "wave-4"
+      "branch": "wave-4",
+      "expansion_added": [
+        "/services/live-chat-answering-service",
+        "/services/crm-integration-answering-service"
+      ]
     },
     {
       "week": 5,
       "target_date": "2026-07-06",
-      "count": 5,
+      "count": 7,
       "urls": [
         "/services/real-estate-answering-service",
         "/services/property-management-answering-service",
         "/services/salon-and-spa-answering-service",
         "/services/veterinary-answering-service",
-        "/free-trial"
+        "/free-trial",
+        "/services/insurance-answering-service",
+        "/services/chiropractic-answering-service"
       ],
-      "branch": "wave-5"
+      "branch": "wave-5",
+      "expansion_added": [
+        "/services/insurance-answering-service",
+        "/services/chiropractic-answering-service"
+      ]
     },
     {
       "week": 6,
       "target_date": "2026-07-13",
-      "count": 3,
+      "count": 5,
       "urls": [
         "/services/medical-office-answering-service",
         "/ai-receptionist",
-        "/missed-call-recovery"
+        "/missed-call-recovery",
+        "/services/roofing-construction-answering-service",
+        "/services/towing-roadside-answering-service"
       ],
-      "branch": "wave-6"
+      "branch": "wave-6",
+      "expansion_added": [
+        "/services/roofing-construction-answering-service",
+        "/services/towing-roadside-answering-service"
+      ]
     },
     {
       "week": 7,
       "target_date": "2026-07-20",
-      "count": 2,
+      "count": 4,
       "urls": [
         "/guides/what-does-a-virtual-receptionist-do",
-        "/guides/best-answering-service-for-small-business"
+        "/guides/best-answering-service-for-small-business",
+        "/services/accounting-answering-service",
+        "/services/cleaning-landscaping-answering-service"
+      ],
+      "expansion_added": [
+        "/services/accounting-answering-service",
+        "/services/cleaning-landscaping-answering-service"
       ]
     },
     {
       "week": 8,
       "target_date": "2026-07-27",
-      "count": 2,
+      "count": 4,
       "urls": [
         "/spam-call-filtering",
-        "/guides/is-an-answering-service-worth-it"
+        "/guides/is-an-answering-service-worth-it",
+        "/services/med-spa-answering-service",
+        "/services/it-msp-answering-service"
       ],
-      "branch": "wave-8"
+      "branch": "wave-8",
+      "expansion_added": [
+        "/services/med-spa-answering-service",
+        "/services/it-msp-answering-service"
+      ]
     },
     {
       "week": 9,
       "target_date": "2026-08-03",
-      "count": 1,
+      "count": 3,
       "urls": [
-        "/services/plumbing-answering-service"
+        "/services/plumbing-answering-service",
+        "/services/mental-health-answering-service",
+        "/services/nonprofit-answering-service"
       ],
-      "branch": "wave-9"
+      "branch": "wave-9",
+      "expansion_added": [
+        "/services/mental-health-answering-service",
+        "/services/nonprofit-answering-service"
+      ]
     }
   ]
 }

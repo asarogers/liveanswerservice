@@ -14,6 +14,9 @@
  */
 
 import { resolveImagePath } from "./image-path";
+// Waves 2–9 service-page expansion ServiceDetails — isolated in ./verticals/expansion
+// so wave-branch merges don't collide. Spec: important/business/liveanswerservice/SERVICE-PAGE-EXPANSION.md
+import { EXPANSION_DETAILS } from "./verticals/expansion";
 
 export function serviceImagePath(slug: string): string {
   return resolveImagePath("services", slug);
@@ -153,12 +156,8 @@ export const serviceDetails: ServiceDetail[] = [
     relatedLocations: ["san-jose", "sacramento", "los-angeles", "san-francisco-bay-area"],
   },
 
-
-
-
-
-
-
+  // Waves 2–9 service-page expansion (16 verticals, noindex until promoted)
+  ...EXPANSION_DETAILS,
 ];
 
 /* ============================================================
