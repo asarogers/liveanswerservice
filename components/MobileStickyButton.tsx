@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Events } from "@/lib/analytics";
 
 /* ============================================================
    MobileStickyButton
@@ -42,6 +43,7 @@ export default function MobileStickyButton() {
       <Link
         href="/book"
         aria-label="Book a free consultation call"
+        onClick={() => Events.bookClick("mobile_sticky")}
         className={[
           // Layout
           "flex items-center gap-2",
