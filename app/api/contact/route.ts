@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// Info-level logging only outside production — console noise in the Worker
+// logs is an audit flag. Errors always log.
+const DEV = process.env.NODE_ENV !== 'production';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -13,7 +17,8 @@ export async function POST(request: NextRequest) {
     }
 
     if (!process.env.RESEND_API_KEY) {
-      console.warn('RESEND_API_KEY not set — skipping email');
+      // Always log — in production this means the form is silently dropping leads.
+      console.error('RESEND_API_KEY not set — skipping email');
       return NextResponse.json({ success: true });
     }
 
@@ -50,7 +55,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: notifyError.message }, { status: 500 });
     }
 
-    console.log('Notification sent to', to);
+    if (DEV) console.log('Notification sent to', to);
 
     // ── 2. Confirmation to submitter (best-effort) ──────────────
     // NOTE: Requires liveanswerservice.com to be verified in Resend dashboard.
@@ -94,9 +99,9 @@ export async function POST(request: NextRequest) {
 
     if (confirmError) {
       // Non-critical — log but don't fail the request
-      console.warn('Confirmation email failed (domain likely not yet verified):', confirmError.message);
+      if (DEV) console.warn('Confirmation email failed (domain likely not yet verified):', confirmError.message);
     } else {
-      console.log('Confirmation sent to', email);
+      if (DEV) console.log('Confirmation sent to', email);
     }
 
     return NextResponse.json({ success: true });

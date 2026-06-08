@@ -47,7 +47,7 @@ export default function AccessibilityPage() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Measures Taken</h2>
           <p>
-            We've implemented a comprehensive approach to accessibility, including:
+            We've implemented a thorough approach to accessibility, including:
           </p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Semantic HTML structure with appropriate heading hierarchy and document landmarks for better navigation</li>
@@ -121,7 +121,7 @@ export default function AccessibilityPage() {
             </li>
             <li>
               <strong>Can I use a screen reader?</strong>{' '}
-              Yes! Our website is designed to work seamlessly with popular screen readers like JAWS, NVDA, VoiceOver, and TalkBack.
+              Yes! Our website is designed to work with popular screen readers like JAWS, NVDA, VoiceOver, and TalkBack.
             </li>
             <li>
               <strong>Are all images described?</strong>{' '}

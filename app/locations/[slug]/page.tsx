@@ -122,13 +122,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
     serviceType: ["AI Receptionist", "Answering Service", "24/7 Call Answering", "Bilingual Answering Service"],
     priceRange: "$$",
     openingHours: ["Mo-Su 00:00-23:59"],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "1",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // aggregateRating intentionally omitted — no real Google reviews exist for
+    // Live Answer Service yet. Re-add only from a live GBP feed (never hardcode).
     sameAs: [
       siteConfig.social.instagram,
       siteConfig.social.facebook,

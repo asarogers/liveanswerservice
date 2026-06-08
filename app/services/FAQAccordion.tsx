@@ -20,7 +20,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Will it sound robotic?",
-    a: "Call our demo line and judge for yourself. We use the best-in-class TTS and STT stack tuned for phone audio, with vertical-specific scripting that sounds like a person who knows your business — not a phone tree.",
+    a: "Call our demo line and judge for yourself. We use a modern TTS and STT stack tuned for phone audio, with vertical-specific scripting that sounds like a person who knows your business — not a phone tree.",
   },
   {
     q: "Can it handle Spanish-speaking callers?",

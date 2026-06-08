@@ -55,6 +55,8 @@ export const smallBusinessConfig: VerticalConfig = {
       { num: "$126K", label: "average yearly cost of missed calls per small business (Aira)" },
       { num: "60 sec", label: "before they call your competitor instead" },
     ],
+    rankingNote:
+      "Google sees roughly half of US phone calls through Android — whether you answered, how long the call lasted, and whether the caller dialed a competitor next. Your answer rate is a ranking signal: businesses that stop answering measurably drop on the map. Answering every call protects the ranking that brings the next one.",
   },
 
   vocQuote: {

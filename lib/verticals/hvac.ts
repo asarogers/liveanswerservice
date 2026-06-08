@@ -20,7 +20,7 @@ export const hvacConfig: VerticalConfig = {
 
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
-    headline: "Never lose another {italicWord}.",
+    headline: "Never lose another {italicWord} to a missed call.",
     italicWord: "job",
     subhead: {
       seoBold: "24/7 bilingual AI answering service for California HVAC contractors.",
@@ -50,6 +50,8 @@ export const hvacConfig: VerticalConfig = {
       { num: "$275–$1,200", label: "value of each emergency job walking to your competitor" },
       { num: "3–5×", label: "summer call spike during heat waves — most go to voicemail" },
     ],
+    rankingNote:
+      "Google sees roughly half of US phone calls through Android — whether you answered, how long you talked, and whether the homeowner dialed another contractor next. Shops that stop answering measurably drop in local rank. A 100% answer rate protects the Maps position your emergency calls come from.",
   },
 
   vocQuote: {
@@ -145,6 +147,33 @@ export const hvacConfig: VerticalConfig = {
   },
 
   pricingAudience: "For HVAC shops that lose $1,200 every time a Saturday emergency hits voicemail",
+
+  // Homepage-only cross-vertical editorial links — one H2 + in-content link per
+  // live Wave-1 vertical. Grow per wave (cap 7–8).
+  crossVerticals: {
+    sectionNum: "13 · Beyond HVAC",
+    title: "The same receptionist, other phones.",
+    items: [
+      {
+        heading: "California law firms lose retainers, not service calls",
+        body:
+          "A missed call to a California solo or small firm averages $3,000–$10,000 in lost retainer value, and Spanish-speaking PI and immigration clients usually call three or four firms in one sitting — the first one to answer signs the case. Our ",
+        href: "/services/attorney-answering-service",
+        linkText: "attorney answering service",
+        after:
+          " runs a conflict check during the call, qualifies the matter by practice area, and books the consult into Clio, MyCase, or PracticePanther before the caller dials the next firm.",
+      },
+      {
+        heading: "Owner-operators answering their own phone",
+        body:
+          "If you are the receptionist, you already know the math: roughly 62% of calls go unanswered while you're doing the actual work, and most callers won't wait a minute before trying a competitor. Our ",
+        href: "/services/small-business-answering-service",
+        linkText: "small business answering service",
+        after:
+          " picks up within two rings, books straight into your calendar, and texts you a summary — same flat $500/mo, no per-minute fees, English and Spanish on every account.",
+      },
+    ],
+  },
 
   faqs: [
     {

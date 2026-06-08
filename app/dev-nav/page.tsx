@@ -3,7 +3,6 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { getAllServices, getAllServiceSlugs } from "@/lib/services-data";
 import { getAllLocations, getAllLocationSlugs } from "@/lib/locations-data";
-import { getAllPosts } from "@/lib/blog";
 import { getAllGuideSlugs } from "@/lib/guides";
 import { VERTICALS } from "@/lib/verticals";
 import { loadSitePlan, type SitePlanLink } from "@/lib/site-plan";
@@ -102,7 +101,7 @@ const ALWAYS_LIVE: PageEntry[] = [
   { path: "/book",          label: "Book a consult",           status: "live", notes: "7-day trial" },
   { path: "/services",      label: "Industries index",         status: "live" },
   { path: "/locations",     label: "Locations index",          status: "live" },
-  { path: "/blog",          label: "Blog index",               status: "live", notes: "301s post slugs to /guides" },
+  { path: "/blog",          label: "Blog (removed)",           status: "live", notes: "route deleted 2026-06-06 — middleware 301s /blog and post slugs to /guides" },
   { path: "/guides/missed-call-cost-california-small-business", label: "Guide: missed-call cost CA", status: "live", notes: "ships with Week 1 — guides are not gated" },
   { path: "/guides/ai-vs-human-answering-service-comparison",   label: "Guide: AI vs human",         status: "live", notes: "ships with Week 1 — covers 'AI receptionist vs live answering service' (opp 0.53)" },
   { path: "/guides/bilingual-answering-service-california",     label: "Guide: bilingual CA",        status: "live", notes: "ships with Week 1" },
@@ -131,7 +130,6 @@ const STATUS_STYLE: Record<PageStatus, { bg: string; color: string; label: strin
 export default function DevNavPage() {
   const services = getAllServices();
   const locations = getAllLocations();
-  const posts = getAllPosts();
   const plan = loadSitePlan();
 
   // Union legacy services-data with the VERTICALS registry (vet et al. are registry-only)
@@ -191,7 +189,7 @@ export default function DevNavPage() {
   );
   const onHold: PageEntry[] = [...excludeUrls.keys()]
     .filter((url) => !scheduledPaths.has(url))
-    .map(toEntry);
+    .map((url) => toEntry(url));
 
   const sections: Section[] = [
     ...weekSections,
@@ -243,7 +241,7 @@ export default function DevNavPage() {
         </p>
         <p style={{ marginTop: 12, fontSize: 13, color: "#94A3B8" }}>
           <strong style={{ color: "#0F172A" }}>{liveCount}/{scheduled.length}</strong> scheduled pages live ·{" "}
-          {services.length} service routes · {locations.length} location routes · {posts.length} guides/posts ·{" "}
+          {services.length} service routes · {locations.length} location routes · {guideSlugs.size} guides ·{" "}
           Phone: <a href={siteConfig.phone.href} style={{ color: "#0F172A" }}>{siteConfig.phone.display}</a>
         </p>
       </header>

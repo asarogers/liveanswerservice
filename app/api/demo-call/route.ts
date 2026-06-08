@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
 
   // Until the Retell/Twilio integration is live, just log + email Justine
   // so we capture demo intent without dropping leads.
-  console.log('[demo-call] requested for', phone);
+  if (process.env.NODE_ENV !== 'production') console.log('[demo-call] requested for', phone);
 
   if (process.env.RESEND_API_KEY) {
     try {

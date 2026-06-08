@@ -34,7 +34,7 @@ export default function TermsPage() {
           <p>
             Whether you need assistance with answering general business hours calls, managing 
             after-hours inquiries, or qualifying potential customers for your services, Live Answer 
-            is tailored to meet the unique communication needs of small businesses. Our AI system
+            is built around how small businesses actually handle calls. Our AI system
             can handle a wide range of scenarios including appointment scheduling, lead qualification,
             product information requests, and customer service support.
           </p>
@@ -46,7 +46,7 @@ export default function TermsPage() {
             The 7-day free trial allows you to experience our service without financial commitment.
             During this period, you can evaluate how well Live Answer meets your business needs. A 
             one-time $199 setup fee applies to new paid accounts and is waived for those who prepay
-            annually. Setup includes a comprehensive onboarding process where we configure your AI 
+            annually. Setup includes an onboarding call where we configure your AI
             system according to your specific requirements.
           </p>
           <p>

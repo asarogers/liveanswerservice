@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllGuideSlugs } from '@/lib/guides';
 import { getAllServiceSlugs } from '@/lib/services-data';
 import { VERTICALS } from '@/lib/verticals';
-import { getAllLocationSlugs } from '@/lib/locations-data';
+import { getAllLocationAndLandmarkSlugs } from '@/lib/locations-data';
 import { loadSitePlan, priorityServiceSlugs, noindexSlugs, urlToSlug } from '@/lib/site-plan';
 
 const ORIGIN = 'https://liveanswerservice.com';
@@ -47,7 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: prioritySlugs.has(slug) ? 0.95 : 0.8,
     }));
 
-  const locationUrls = getAllLocationSlugs()
+  // Landmark slugs included — getAllLocationSlugs() alone would silently omit
+  // landmark pages from the sitemap when they publish.
+  const locationUrls = getAllLocationAndLandmarkSlugs()
     .filter((slug) => !noindex.has(slug))
     .map((slug) => ({
       url: `${ORIGIN}/locations/${slug}`,

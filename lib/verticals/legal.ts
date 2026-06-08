@@ -55,6 +55,8 @@ export const legalConfig: VerticalConfig = {
       { num: "$3K–$10K+", label: "value of each retainer walking to the next firm on Google" },
       { num: "60 sec", label: "before a PI lead calls the next listing — they don't wait" },
     ],
+    rankingNote:
+      "Google sees roughly half of US phone calls through Android — whether your firm answered, how long the intake lasted, and whether the caller dialed the next firm. Firms that stop answering measurably drop in local rank. A 100% answer rate protects the Maps position your case leads come from.",
   },
 
   vocQuote: {

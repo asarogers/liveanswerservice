@@ -170,13 +170,8 @@ const localBusinessSchema = {
       closes: "23:59",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "1",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // aggregateRating intentionally omitted — no real Google reviews exist for
+  // Live Answer Service yet. Re-add only from a live GBP feed (never hardcode).
   sameAs: [
     siteConfig.social.instagram,
     siteConfig.social.facebook,

@@ -91,7 +91,7 @@ export default function AboutPage() {
             <div className="scenario-card">
               <div className="time"><i className="ti ti-calendar-event" aria-hidden="true" /> Book</div>
               <div className="body">
-                Our system integrates seamlessly with popular CRMs like Jobber, ServiceTitan, HousecallPro, and FieldEdge for HVAC contractors. For legal professionals, we integrate with Clio, MyCase, and PracticePanther. With over 35 integrations available, we ensure your calendar stays updated in real-time.
+                Our system integrates directly with popular CRMs like Jobber, ServiceTitan, HousecallPro, and FieldEdge for HVAC contractors. For legal professionals, we integrate with Clio, MyCase, and PracticePanther. With over 35 integrations available, your calendar stays updated in real time.
               </div>
             </div>
             <div className="scenario-card">
@@ -151,21 +151,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="testimonials">
-        <div className="wrap">
-          <h2>What Our Clients Say</h2>
-          <div className="testimonial-grid">
-            <div className="testimonial-card">
-              <p>"Live Answer has been a game-changer for our HVAC business. No more missed calls and constant follow-ups."</p>
-              <div className="testimonial-author">- John Smith, AC Pro Services</div>
-            </div>
-            <div className="testimonial-card">
-              <p>"The integration with ServiceTitan is seamless and has saved us so much time. Highly recommended!"</p>
-              <div className="testimonial-author">- Sarah Johnson, Heat & Cool Inc.</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials removed 2026-06-06 — they were fabricated (pre-launch,
+          zero customers). Re-add only with real, verifiable customer quotes. */}
 
       <section className="faq">
         <div className="wrap">

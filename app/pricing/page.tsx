@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   url: "https://liveanswerservice.com/pricing",
   images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
-  title: "Pricing — $500/mo flat. Unlimited calls. No per-minute fees.",
+  title: "Pricing — $500/mo Flat, Unlimited Calls, No Overages",
   description:
     "Live Answer pricing — $500/mo flat for unlimited calls, bilingual EN/ES, no overages, locked rate at sign-up. 7-day free trial, no credit card. $199 setup waived with annual prepay.",
   alternates: { canonical: `/${SLUG}` },
