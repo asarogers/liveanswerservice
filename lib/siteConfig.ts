@@ -22,7 +22,8 @@ export const siteConfig = {
   email: "hello@liveanswerservice.com",
 
   // ── Scheduling ────────────────────────────────────────────
-  // TODO: Replace placeholder once Cal.com handle is created.
+  // Live Cal.com handle (verified 2026-06-08). Booking embedded on /book via CalEmbed.
+  // Books onto the founder's Google Calendar. cal.com/liveanswerservice/{30min,15min}.
   calcom: {
     username: "liveanswerservice",
     consultationSlug: "30min",

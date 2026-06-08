@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import CalEmbed from "@/components/CalEmbed";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const dynamic = "force-static";
@@ -41,8 +42,12 @@ export default function BookPage() {
         </div>
       </section>
 
+      <section aria-label="Book your setup consult" className="wrap" style={{ maxWidth: 900, margin: "0 auto", padding: "0 16px 16px" }}>
+        <CalEmbed />
+      </section>
+
       <section className="phone-cta">
-        <div className="eyebrow">Fastest way to book — call the demo line.</div>
+        <div className="eyebrow">Prefer to talk first? Call the demo line.</div>
         <a href={siteConfig.phone.href} className="phone-btn">
           <i className="ti ti-phone-call" aria-hidden="true" />
           <span>{siteConfig.phone.display}</span>
