@@ -23,7 +23,33 @@ binding = "ASSETS"
 NEXT_PUBLIC_SITE_URL = "https://liveanswerservice.com"
 NEXT_PUBLIC_GA_MEASUREMENT_ID = "G-0HLJXJTSL3"
 
+# ── Demo-call (outbound AI) non-secret config ─────────────────────
+# Master gate. While "false", /api/demo-call captures the lead + emails the
+# owner but DOES NOT place a call. Flip to "true" only after D1 is provisioned
+# and the Retell secrets below are set. (DEMO-CALL-FLOW.md Phase 1.)
+DEMO_CALL_LIVE = "false"
+RETELL_FROM_NUMBER = "+16693161742"
+RETELL_OUTBOUND_AGENT_ID = "agent_0ad6f3400c9549a0837a048594"
+# Optional rate-limit overrides (defaults: 3 / 10 / 50 per 24h — see lib/rate-limit.ts)
+# DEMO_CALL_NUMBER_LIMIT = "3"
+# DEMO_CALL_IP_LIMIT = "10"
+# DEMO_CALL_GLOBAL_DAILY_CAP = "50"
+
+# ── D1: rate-limit / abuse store for /api/demo-call (lib/rate-limit.ts) ──
+# Provisioned 2026-06-08 (`wrangler d1 create liveanswerservice-demo`).
+# Schema applied from migrations/0001_demo_call_attempts.sql via:
+#   wrangler d1 migrations apply liveanswerservice-demo --remote
+[[d1_databases]]
+binding = "DEMO_DB"
+database_name = "liveanswerservice-demo"
+database_id = "5ae70b90-486d-4838-b20a-03204d6b4830"
+
 # Secrets (set via: wrangler secret put SECRET_NAME)
 #   RESEND_API_KEY
 #   RESEND_FROM_EMAIL
 #   CONTACT_FORM_TO_EMAIL
+#   RETELL_API_KEY            — outbound create-phone-call (Bearer)
+#   RETELL_WEBHOOK_API_KEY    — webhook signature verify (the key with the
+#                               "webhook" badge; falls back to RETELL_API_KEY)
+#   LEADS_INGEST_URL          — Hetzner base, e.g. https://audit.assurgit.com
+#   LEADS_INGEST_TOKEN        — bearer for the Hetzner /api/leads endpoint
