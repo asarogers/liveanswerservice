@@ -27,7 +27,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID = "G-0HLJXJTSL3"
 # Master gate. While "false", /api/demo-call captures the lead + emails the
 # owner but DOES NOT place a call. Flip to "true" only after D1 is provisioned
 # and the Retell secrets below are set. (DEMO-CALL-FLOW.md Phase 1.)
-DEMO_CALL_LIVE = "false"
+DEMO_CALL_LIVE = "true"
 RETELL_FROM_NUMBER = "+16693161742"
 RETELL_OUTBOUND_AGENT_ID = "agent_0ad6f3400c9549a0837a048594"
 # Optional rate-limit overrides (defaults: 3 / 10 / 50 per 24h — see lib/rate-limit.ts)
