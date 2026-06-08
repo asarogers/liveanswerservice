@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
+import { Events } from "@/lib/analytics";
 
 /* ============================================================
    Props
@@ -65,6 +68,7 @@ export default function CTABlock({
           <Link
             href="/book"
             aria-label={ctaText}
+            onClick={() => Events.bookClick("cta_block")}
             className={[
               "inline-flex items-center justify-center gap-2",
               "px-10 py-4 rounded-xl",
@@ -112,6 +116,7 @@ export default function CTABlock({
               <a
                 href={PHONE_HREF}
                 aria-label={`Call us at ${PHONE_DISPLAY}`}
+                onClick={() => Events.phoneClick("cta_block")}
                 className="font-bold text-[#FAF9F5] underline underline-offset-2 hover:text-[#F2F0E8] transition-colors"
               >
                 {PHONE_DISPLAY}

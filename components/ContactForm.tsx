@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Events } from '@/lib/analytics';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
@@ -23,10 +23,15 @@ export default function ContactForm() {
     message: '',
   });
   const [status, setStatus] = useState<SubmitStatus>('idle');
+  const started = useRef(false);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
+    if (!started.current) {
+      started.current = true;
+      Events.formStart();
+    }
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
