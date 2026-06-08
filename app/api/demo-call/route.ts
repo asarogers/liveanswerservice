@@ -3,6 +3,7 @@ import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { normalizeE164 } from '@/lib/phone';
 import { createPhoneCall } from '@/lib/retell';
 import { persistLead } from '@/lib/leads';
+import { verifyRecaptcha } from '@/lib/recaptcha';
 import {
   checkRateLimit,
   recordAttempt,
@@ -80,19 +81,25 @@ async function notifyOwner(phone: string, note: string): Promise<void> {
   }
 }
 
-async function readPhone(request: NextRequest): Promise<string | undefined> {
+async function readBody(
+  request: NextRequest,
+): Promise<{ phone?: string; recaptchaToken?: string; isJson: boolean }> {
   const contentType = request.headers.get('content-type') || '';
   if (contentType.includes('application/json')) {
-    const body = await request.json().catch(() => ({}));
-    return typeof body.phone === 'string' ? body.phone : undefined;
+    const body = (await request.json().catch(() => ({}))) as Record<string, unknown>;
+    return {
+      phone: typeof body.phone === 'string' ? body.phone : undefined,
+      recaptchaToken: typeof body.recaptchaToken === 'string' ? body.recaptchaToken : undefined,
+      isJson: true,
+    };
   }
   const form = await request.formData();
   const value = form.get('phone');
-  return typeof value === 'string' ? value : undefined;
+  return { phone: typeof value === 'string' ? value : undefined, isJson: false };
 }
 
 export async function POST(request: NextRequest) {
-  const rawPhone = await readPhone(request);
+  const { phone: rawPhone, recaptchaToken, isJson } = await readBody(request);
   const phone = normalizeE164(rawPhone);
   // US-only by design: this is a CA SMB demo, and restricting to +1 closes the
   // IRSF abuse vector (paid calls to non-US premium numbers) at the app layer —
@@ -106,6 +113,21 @@ export async function POST(request: NextRequest) {
   }
 
   const ip = clientIp(request);
+
+  // Bot guard for the hero form (JSON submissions). Native form posts skip this
+  // and rely on the rate-limit + US-only guards. No-op until RECAPTCHA_SECRET_KEY
+  // is set (verifyRecaptcha returns ok when unconfigured).
+  if (isJson) {
+    const rc = await verifyRecaptcha(recaptchaToken, ip);
+    if (!rc.ok) {
+      if (DEV) console.log('[demo-call] recaptcha rejected', rc.reason, rc.score);
+      return NextResponse.json(
+        { success: false, error: "Couldn't verify you're human — please try again." },
+        { status: 400 },
+      );
+    }
+  }
+
   const leadId = crypto.randomUUID();
   const live = (process.env.DEMO_CALL_LIVE || '').toLowerCase() === 'true';
 

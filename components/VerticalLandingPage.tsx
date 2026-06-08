@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { getAllGuides } from "@/lib/guides";
 import type { VerticalConfig } from "@/lib/verticals/types";
 import HeroLogoVideo from "@/components/HeroLogoVideo";
+import HeroCallForm from "@/components/HeroCallForm";
 
 /**
  * VerticalLandingPage — renders the full StoryBrand HVAC-style landing for any
@@ -123,13 +124,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
             <p className="sub">
               <strong>{c.hero.subhead.seoBold}</strong> {c.hero.subhead.body}
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
             <div className="hero-foot-note">
               Have one of our AI agents call you now · no credit card · cancel anytime
             </div>

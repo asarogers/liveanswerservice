@@ -34,6 +34,10 @@ RETELL_OUTBOUND_AGENT_ID = "agent_0ad6f3400c9549a0837a048594"
 # DEMO_CALL_NUMBER_LIMIT = "3"
 # DEMO_CALL_IP_LIMIT = "10"
 # DEMO_CALL_GLOBAL_DAILY_CAP = "50"
+# reCAPTCHA v3 site key (PUBLIC). Read server-side and passed to HeroCallForm.
+# Paste the site key after creating keys at google.com/recaptcha/admin (v3).
+# Empty = reCAPTCHA off (form still works). The matching secret is a Worker secret.
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY = ""
 
 # ── D1: rate-limit / abuse store for /api/demo-call (lib/rate-limit.ts) ──
 # Provisioned 2026-06-08 (`wrangler d1 create liveanswerservice-demo`).
@@ -51,5 +55,6 @@ database_id = "5ae70b90-486d-4838-b20a-03204d6b4830"
 #   RETELL_API_KEY            — outbound create-phone-call (Bearer)
 #   RETELL_WEBHOOK_API_KEY    — webhook signature verify (the key with the
 #                               "webhook" badge; falls back to RETELL_API_KEY)
-#   LEADS_INGEST_URL          — Hetzner base, e.g. https://audit.assurgit.com
-#   LEADS_INGEST_TOKEN        — bearer for the Hetzner /api/leads endpoint
+#   LEADS_INGEST_URL          — Hetzner base, e.g. https://audit.assurgit.com  [SET]
+#   LEADS_INGEST_TOKEN        — bearer for the Hetzner /api/leads endpoint     [SET]
+#   RECAPTCHA_SECRET_KEY      — reCAPTCHA v3 secret (server verify); unset = reCAPTCHA skipped
