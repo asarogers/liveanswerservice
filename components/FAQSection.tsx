@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { Events } from "@/lib/analytics";
 
 export interface FAQItem { q: string; a: string }
 
@@ -30,11 +31,15 @@ export default function FAQSection({
   const handleToggle = useCallback((i: number) => {
     setCollapsed((prev) => {
       const next = new Set(prev);
-      if (next.has(i)) next.delete(i);
-      else next.add(i);
+      if (next.has(i)) {
+        next.delete(i); // re-opening a collapsed panel
+        Events.faqOpen(faqs[i]?.q ?? String(i));
+      } else {
+        next.add(i);
+      }
       return next;
     });
-  }, []);
+  }, [faqs]);
 
   const faqSchema = {
     "@context": "https://schema.org",
