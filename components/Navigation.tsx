@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
+import { Events } from "@/lib/analytics";
 
 /**
  * Sticky top navigation. Brand mark + wordmark on the left, links + CTA on the right.
@@ -26,7 +29,11 @@ export default function Navigation() {
           <Link href="/pricing" className="la-hide-mobile">Pricing</Link>
           <Link href="/services" className="la-hide-mobile">Industries</Link>
           <Link href="/#how" className="la-hide-mobile">How it works</Link>
-          <a href={siteConfig.phone.href} className="la-nav-cta">
+          <a
+            href={siteConfig.phone.href}
+            className="la-nav-cta"
+            onClick={() => Events.phoneClick("nav")}
+          >
             <i className="ti ti-phone-call" aria-hidden="true" />
             Call to test
           </a>
