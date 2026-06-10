@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FAQSection from "@/components/FAQSection";
+import HeroCallForm from "@/components/HeroCallForm";
+import HeroLogoVideo from "@/components/HeroLogoVideo";
 import { siteConfig } from "@/lib/siteConfig";
 import {
   getLocationBySlug,
@@ -186,13 +188,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             </div>
             <h1>{location.h1}</h1>
             <p className="sub">{splitFirstSentence(location.intro).lead}</p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               7-day free trial · no card · cancel anytime
             </div>
@@ -202,26 +198,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
           </div>
 
           <div className="hero-phone-wrap">
-            <div className="phone-mockup" role="img" aria-label={`Sample ${location.city} call`}>
-              <div className="phone-notch" aria-hidden="true" />
-              <div className="phone-screen">
-                <div className="phone-status">
-                  <span>9:41</span>
-                  <span aria-hidden="true"><i className="ti ti-signal-4g" /> <i className="ti ti-wifi" /> <i className="ti ti-battery" /></span>
-                </div>
-                <div className="phone-callbar">
-                  <i className="ti ti-phone-call" aria-hidden="true" />
-                  <span>Live Answer · {location.city}</span>
-                </div>
-                <div className="chat-thread">
-                  <div className="chat-bubble ai">Thanks for calling — how can I help?</div>
-                  <div className="chat-bubble caller">My AC&rsquo;s out and it&rsquo;s 96 inside.</div>
-                  <div className="chat-bubble ai">I&rsquo;m sorry — what part of {location.city}?</div>
-                  <div className="chat-bubble caller">{location.neighborhoods[0]}.</div>
-                  <div className="chat-bubble ai">Booked for 4:30 PM. Text confirmation sent.</div>
-                </div>
-              </div>
-            </div>
+            <HeroLogoVideo />
           </div>
         </div>
       </section>

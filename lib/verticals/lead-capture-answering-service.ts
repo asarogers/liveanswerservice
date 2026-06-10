@@ -147,11 +147,6 @@ export const leadCaptureConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Hi, this is Sarah at Pacific Home Solutions..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Pacific Home Solutions." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hey, Pacific Home — how can I help?" },
-    ],
   },
 
   compare: {

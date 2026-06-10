@@ -83,13 +83,14 @@ async function notifyOwner(phone: string, note: string): Promise<void> {
 
 async function readBody(
   request: NextRequest,
-): Promise<{ phone?: string; recaptchaToken?: string; isJson: boolean }> {
+): Promise<{ phone?: string; recaptchaToken?: string; clientId?: string; isJson: boolean }> {
   const contentType = request.headers.get('content-type') || '';
   if (contentType.includes('application/json')) {
     const body = (await request.json().catch(() => ({}))) as Record<string, unknown>;
     return {
       phone: typeof body.phone === 'string' ? body.phone : undefined,
       recaptchaToken: typeof body.recaptchaToken === 'string' ? body.recaptchaToken : undefined,
+      clientId: typeof body.clientId === 'string' ? body.clientId : undefined,
       isJson: true,
     };
   }
@@ -99,7 +100,7 @@ async function readBody(
 }
 
 export async function POST(request: NextRequest) {
-  const { phone: rawPhone, recaptchaToken, isJson } = await readBody(request);
+  const { phone: rawPhone, recaptchaToken, clientId, isJson } = await readBody(request);
   const phone = normalizeE164(rawPhone);
   // US-only by design: this is a CA SMB demo, and restricting to +1 closes the
   // IRSF abuse vector (paid calls to non-US premium numbers) at the app layer —
@@ -183,7 +184,7 @@ export async function POST(request: NextRequest) {
       overrideAgentId: agentId,
       metadata: { lead_id: leadId, source: 'homepage_outbound' },
     });
-    await recordAttempt(db, { id: leadId, phoneE164: phone, ip, callId: call.call_id });
+    await recordAttempt(db, { id: leadId, phoneE164: phone, ip, callId: call.call_id, clientId });
     await persistLead({
       leadId,
       phoneE164: phone,

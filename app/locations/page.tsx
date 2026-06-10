@@ -7,6 +7,7 @@ import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
 export const metadata: Metadata = {
   openGraph: {
     url: "/locations",
+    images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   title: "Service Areas — Live Answer Across California",
   description:

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { trackEvent } from '@/lib/analytics';
+import { trackEvent, getGaClientId } from '@/lib/analytics';
 
 /**
  * Homepage "type your number → get a call" form.
@@ -28,6 +28,13 @@ export default function HeroCallForm({ recaptchaSiteKey }: { recaptchaSiteKey?: 
   const [phone, setPhone] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  // GA4 client_id — captured once gtag is ready so the Worker can replay the
+  // demo-call funnel server-side (Measurement Protocol) stitched to this user.
+  const [clientId, setClientId] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    getGaClientId().then(setClientId);
+  }, []);
 
   // Load the reCAPTCHA v3 script once, only if configured.
   useEffect(() => {
@@ -60,11 +67,12 @@ export default function HeroCallForm({ recaptchaSiteKey }: { recaptchaSiteKey?: 
     trackEvent('demo_call_request', { method: 'hero_form' });
 
     const recaptchaToken = await getToken();
+    const cid = clientId ?? (await getGaClientId());
     try {
       const res = await fetch('/api/demo-call', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone, recaptchaToken }),
+        body: JSON.stringify({ phone, recaptchaToken, clientId: cid }),
       });
       const data = (await res.json().catch(() => ({}))) as { success?: boolean; message?: string; error?: string };
       if (res.ok && data.success) {

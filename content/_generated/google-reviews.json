@@ -2,7 +2,6 @@
   "reviews": [],
   "rating": null,
   "userRatingCount": 0,
-  "googleMapsUri": null,
-  "fetchedAt": null,
-  "skipped": "missing-place-id (no live GBP yet)"
+  "googleMapsUri": "https://maps.google.com/?cid=15117030440393634516&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+  "fetchedAt": "2026-06-09T02:18:51.393Z"
 }

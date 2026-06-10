@@ -22,6 +22,10 @@ binding = "ASSETS"
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://liveanswerservice.com"
 NEXT_PUBLIC_GA_MEASUREMENT_ID = "G-0HLJXJTSL3"
+# Microsoft Clarity project ID (PUBLIC). Create a project at clarity.microsoft.com
+# (sign in as ace@liveanswerservice.com), Settings → Overview → copy the 10-char
+# project ID. Empty = Clarity off (layout.tsx no-ops). Redeploy after setting.
+NEXT_PUBLIC_CLARITY_ID = "x428bvg5r1"
 
 # ── Demo-call (outbound AI) non-secret config ─────────────────────
 # Master gate. While "false", /api/demo-call captures the lead + emails the
@@ -37,7 +41,7 @@ RETELL_OUTBOUND_AGENT_ID = "agent_0ad6f3400c9549a0837a048594"
 # reCAPTCHA v3 site key (PUBLIC). Read server-side and passed to HeroCallForm.
 # Paste the site key after creating keys at google.com/recaptcha/admin (v3).
 # Empty = reCAPTCHA off (form still works). The matching secret is a Worker secret.
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY = ""
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY = "6LdLmhQtAAAAAGcCgHX8cDHGPyqGwFSVfDajx8oI"
 
 # ── D1: rate-limit / abuse store for /api/demo-call (lib/rate-limit.ts) ──
 # Provisioned 2026-06-08 (`wrangler d1 create liveanswerservice-demo`).

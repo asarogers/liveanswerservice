@@ -147,11 +147,6 @@ export const medSpaConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Hi, this is Sarah at Luminary Aesthetics..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Luminary Aesthetics." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hey, Luminary Aesthetics — how can I help?" },
-    ],
   },
 
   compare: {

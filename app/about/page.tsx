@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
+import HeroCallForm from "@/components/HeroCallForm";
+import HeroLogoVideo from "@/components/HeroLogoVideo";
 
 export const metadata: Metadata = {
   openGraph: {
   url: "/about",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   title: "About Live Answer — AI Receptionist Built for California",
   description:
     "Live Answer is an AI-powered answering service built in San Jose for California small business. Founded by Ace Rodgers. Bilingual EN/ES, 24/7, $500/mo flat.",
   alternates: { canonical: "/about" },
 };
-
-const DEMO_CHAT: Array<{ speaker: "ai" | "caller"; text: string }> = [
-  { speaker: "ai", text: "Live Answer — this is Sarah. How can I help?" },
-  { speaker: "caller", text: "Hi, my AC stopped blowing cold air. It's 96 inside." },
-  { speaker: "ai", text: "I'm sorry — let's get a tech out today. What's the address?" },
-  { speaker: "caller", text: "1240 Lincoln Ave, San Jose." },
-  { speaker: "ai", text: "Booked for 4:30 PM with Mike. Confirmation texted to your phone." },
-];
 
 export default function AboutPage() {
   return (
@@ -35,13 +30,7 @@ export default function AboutPage() {
               <strong>An AI answering service for California small business — starting with HVAC contractors and expanding to legal services.</strong>{" "}
               We offer bilingual English/Spanish support, 24/7 coverage at a flat rate of $500 per month. Our service is designed to grow with your business without additional costs.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               Have one of our AI agents call you now · no credit card · cancel anytime
             </div>
@@ -51,28 +40,7 @@ export default function AboutPage() {
           </div>
 
           <div className="hero-phone-wrap">
-            <div className="phone-mockup" role="img" aria-label="Sample AI receptionist conversation">
-              <div className="phone-notch" aria-hidden="true" />
-              <div className="phone-screen">
-                <div className="phone-status">
-                  <span>9:41</span>
-                  <span aria-hidden="true">
-                    <i className="ti ti-signal-4g" /> <i className="ti ti-wifi" /> <i className="ti ti-battery" />
-                  </span>
-                </div>
-                <div className="phone-callbar">
-                  <i className="ti ti-phone-call" aria-hidden="true" />
-                  <span>Live Answer · 0:34</span>
-                </div>
-                <div className="chat-thread">
-                  {DEMO_CHAT.map((msg, i) => (
-                    <div key={i} className={`chat-bubble ${msg.speaker}`}>
-                      {msg.text}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <HeroLogoVideo />
           </div>
         </div>
       </section>

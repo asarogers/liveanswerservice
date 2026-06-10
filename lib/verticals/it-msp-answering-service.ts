@@ -155,11 +155,6 @@ export const itMspConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Hi, this is Sarah at BayTech Managed IT..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling BayTech Managed IT." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hey, BayTech IT — how can I help?" },
-    ],
   },
 
   compare: {

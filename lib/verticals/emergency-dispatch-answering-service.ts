@@ -183,23 +183,6 @@ export const emergencyDispatchConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      {
-        name: "Professional Sarah",
-        label: "Warm & friendly",
-        sampleLine: "Hi, this is Sarah at Bay Area Plumbing...",
-      },
-      {
-        name: "Executive Marcus",
-        label: "Authoritative",
-        sampleLine: "Thank you for calling Bay Area Plumbing & Restoration.",
-      },
-      {
-        name: "Casual Jamie",
-        label: "Conversational",
-        sampleLine: "Hey, Bay Area Plumbing — how can I help?",
-      },
-    ],
   },
 
   compare: {

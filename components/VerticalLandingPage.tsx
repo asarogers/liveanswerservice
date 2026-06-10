@@ -1,4 +1,6 @@
 import Link from "next/link";
+import VoiceSampleCard from "@/components/VoiceSampleCard";
+import { VOICE_AGENTS } from "@/lib/voiceAgents";
 import { siteConfig } from "@/lib/siteConfig";
 import { getAllGuides } from "@/lib/guides";
 import type { VerticalConfig } from "@/lib/verticals/types";
@@ -366,29 +368,9 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
             <p className="voices-sub">{c.voices.sub}</p>
           </div>
           <div className="voices-grid">
-            {c.voices.cards.map((v, i) => {
-              const seed = i * 1.3;
-              return (
-                <div key={i} className="voice-card">
-                  <span className="voice-pill">{v.label}</span>
-                  <div className="voice-name">{v.name}</div>
-                  <button type="button" className="voice-play" aria-label={`Play ${v.name}`}>
-                    <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true" style={{ display: "block" }}>
-                      <polygon points="5,3 13,8 5,13" fill="#1a1611" stroke="#1a1611" strokeLinejoin="round" strokeWidth="0.5" />
-                    </svg>
-                  </button>
-                  <div className="voice-wave" aria-hidden="true">
-                    <div className="voice-wave-bars">
-                      {Array.from({ length: 64 }).map((_, j) => {
-                        const h = 18 + (Math.sin(j * 0.45 + seed) + 1) * 30 + (Math.sin(j * 0.13 + seed * 2) + 1) * 18;
-                        return <span key={j} style={{ height: `${Math.min(100, h)}%` }} />;
-                      })}
-                    </div>
-                    <span className="voice-wave-scrub" />
-                  </div>
-                </div>
-              );
-            })}
+            {VOICE_AGENTS.map((a, i) => (
+              <VoiceSampleCard key={a.name} index={i} name={a.name} env={a.env} src={a.src} />
+            ))}
           </div>
         </div>
       </section>
@@ -415,7 +397,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
               </div>
             ))}
             <div className="compare-row compare-us">
-              <div><strong>LiveAnswerService</strong></div>
+              <div><strong>Live Answer Service</strong></div>
               <div><strong>$500/mo flat</strong></div>
               <div>24/7 · bilingual · unlimited</div>
             </div>
@@ -438,7 +420,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
             ))}
             <div className="unlimited-good">
               <span className="check">✓</span>
-              <strong>LiveAnswerService $500/mo</strong>
+              <strong>Live Answer Service $500/mo</strong>
               <span>Unlimited, flat-rate, locked in</span>
             </div>
           </div>

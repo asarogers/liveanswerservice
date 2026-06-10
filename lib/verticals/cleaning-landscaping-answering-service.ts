@@ -175,11 +175,6 @@ export const cleaningLandscapingConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Hi, this is Sarah at Verde Clean & Landscape..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Verde Clean & Landscape." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hey, Verde Clean — how can I help?" },
-    ],
   },
 
   compare: {

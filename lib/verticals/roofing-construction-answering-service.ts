@@ -156,11 +156,6 @@ export const roofingConstructionConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Hi, this is Sarah at Bay Area Roofing..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Bay Area Roofing Co." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hey, Bay Area Roofing — how can I help?" },
-    ],
   },
 
   compare: {

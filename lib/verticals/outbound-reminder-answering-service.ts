@@ -176,23 +176,6 @@ export const outboundReminderConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      {
-        name: "Professional Sarah",
-        label: "Warm & friendly",
-        sampleLine: "Hi, this is Sarah calling to confirm your appointment...",
-      },
-      {
-        name: "Executive Marcus",
-        label: "Authoritative",
-        sampleLine: "Thank you for booking — I'm calling to confirm your upcoming visit.",
-      },
-      {
-        name: "Casual Jamie",
-        label: "Conversational",
-        sampleLine: "Hey! Just a quick reminder about your appointment tomorrow...",
-      },
-    ],
   },
 
   compare: {

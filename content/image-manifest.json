@@ -1,7 +1,15 @@
 {
   "services": {
+    "24-7-answering-service": ".png",
+    "accessibility": ".png",
     "attorney-answering-service": ".png",
+    "calculator": ".png",
+    "ccpa-compliance-call-recording": ".png",
+    "cheap-answering-service": ".png",
+    "comparison": ".png",
     "dental-answering-service": ".png",
+    "free-trial": ".png",
+    "how-it-works": ".png",
     "hvac-answering-service": ".png",
     "live-answering-service": ".png",
     "medical-office-answering-service": ".png",
@@ -9,11 +17,14 @@
     "real-estate-answering-service": ".png",
     "restaurant-answering-service": ".png",
     "salon-and-spa-answering-service": ".png",
-    "small-business-answering-service": ".png"
+    "small-business-answering-service": ".png",
+    "start-trial": ".png",
+    "vs-hiring-a-receptionist": ".png"
   },
   "blog": {
     "ai-vs-human-answering-service-comparison": ".png",
     "bilingual-answering-service-california": ".png",
+    "guides": ".png",
     "missed-call-cost-california-small-business": ".png"
   }
 }

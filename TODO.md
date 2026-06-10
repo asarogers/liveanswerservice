@@ -7,11 +7,11 @@
 - [ ] **Commit the working tree** — all fixes are uncommitted on `main` (already 11 ahead of origin). Decide: one commit or split P0/cleanup.
 - [ ] **Re-run wave-merge rehearsal** — edits to shared files (`VerticalLandingPage.tsx`, `types.ts`, `services-data.ts`, `sitemap.ts`) may conflict when promote-week merges wave-2…wave-9. Re-rehearse or rebase the wave branches.
 - [ ] **Create the LAS Google Business Profile** — none exists. (Gaps #3 was wrong: CID 8611157451037066694 is Well Prepped Life's listing, not LAS's. `gbp_status='none'` in the DB is correct — do not write that CID anywhere.)
-- [ ] **Set real `PLACE_ID`** in `fetch-google-reviews.mjs` once the LAS GBP exists (currently a placeholder; prebuild fails safe without it).
+- [x] **Set real `PLACE_ID`** in `fetch-google-reviews.mjs` — DONE 2026-06-08 (`ChIJuT9VP8QzjoAR1PJtkhd7ytE`); fetch runs clean, 0 reviews today, auto-fills when reviews land.
 
 ## 🟡 External setup / credentials needed
 - [ ] **#8 Bing Places** — requires OAuth login.
-- [ ] **#25 Microsoft Clarity ID + Cal.com handle** — provision and wire in.
+- [x] **#25 Microsoft Clarity** — DONE 2026-06-08: project `x428bvg5r1`, wired in `wrangler.toml` + `layout.tsx`, deployed + verified live in prod HTML. *(Cal.com handle already live via `/book` embed.)*
 - [ ] **email_aliases** — DNS zone isn't even linked yet; link the zone first, then seed the DB row (seeding first would fake out preflight).
 
 ## 🟢 Post-launch / content

@@ -2,9 +2,11 @@
 // Fetches Google reviews via Places API (New) and writes them to
 // content/_generated/google-reviews.json for the site to consume.
 //
-// IMPORTANT (2026-06-06): Live Answer Service has NO live GBP listing yet.
-// PLACE_ID below is a placeholder — set it to the real place ID once the GBP
-// is created + verified. Until then this script writes an empty manifest.
+// PLACE_ID set 2026-06-08 to the live LAS listing (place ID
+// ChIJuT9VP8QzjoAR1PJtkhd7ytE / CID 15117030440393634516 — derived from the
+// CID via Places Text Search, googleMapsUri cid matched exactly). The listing
+// is brand-new with 0 reviews, so this currently writes an empty manifest
+// (rating null) until real reviews land — that's expected, not an error.
 // (The previous manifest in this repo was Well Prepped Life review data
 // cloned from the template donor — CID 8611157451037066694 is WPL's, do not
 // reuse it here.)
@@ -19,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const PLACE_ID = 'PASTE_LIVE_ANSWER_SERVICE_PLACE_ID';
+const PLACE_ID = 'ChIJuT9VP8QzjoAR1PJtkhd7ytE';
 const KEY_FILE = path.join(ROOT, 'google-places-key.txt');
 const OUT_DIR = path.join(ROOT, 'content', '_generated');
 const OUT_FILE = path.join(OUT_DIR, 'google-reviews.json');

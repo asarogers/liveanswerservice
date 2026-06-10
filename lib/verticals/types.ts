@@ -105,12 +105,12 @@ export type VerticalConfig = {
     before?: { icon: string; text: string }[];
   };
 
-  /** Voice agents — 3 sample voices (kept identical across verticals) */
+  /** Voice agents section header. The voice cards themselves are brand-fixed
+   *  and identical across verticals — see lib/voiceAgents.ts (VOICE_AGENTS). */
   voices: {
     sectionNum: string;
     title: string;
     sub: string;
-    cards: { name: string; label: string; sampleLine: string }[]; // 3
   };
 
   /** Comparison table — anchors $500 against "what you'd pay otherwise" */

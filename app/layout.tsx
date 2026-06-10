@@ -271,7 +271,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
 
-        {/* Microsoft Clarity — TODO: replace project ID once provisioned for Live Answer */}
+        {/* Microsoft Clarity (project x428bvg5r1) — gated on NEXT_PUBLIC_CLARITY_ID (wrangler.toml) */}
         {process.env.NEXT_PUBLIC_CLARITY_ID && (
           <Script
             id="microsoft-clarity"

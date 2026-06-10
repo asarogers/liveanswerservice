@@ -1,6 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { verifyRetellSignature } from '@/lib/retell';
 import { updateLeadAnalysis } from '@/lib/leads';
+import { getClientId, type D1Database } from '@/lib/rate-limit';
+import { sendGaEvents, funnelEvents } from '@/lib/ga-mp';
+
+/** D1 binding (env.DEMO_DB) for the client_id lookup — same as /api/demo-call. */
+function getDemoDb(): D1Database | undefined {
+  try {
+    const { env } = getCloudflareContext();
+    return (env as Record<string, unknown>).DEMO_DB as D1Database | undefined;
+  } catch {
+    return undefined;
+  }
+}
 
 /**
  * POST /api/retell-webhook — receive Retell call events (DEMO-CALL-FLOW.md §3, §5.3).
@@ -36,13 +49,31 @@ interface RetellCall {
   };
 }
 
+/**
+ * Derive the lead's pipeline status from a Retell webhook (DEMO-CALL-FLOW §6).
+ * Progresses: calling → (no_answer | voicemail | failed | hung_up | demo_completed)
+ * → qualification on `call_analyzed` (meeting_booked | wants_to_buy | not_interested
+ * | just_testing | interested). The owner then advances the SALE manually in the
+ * Google Sheet (follow_up → contacted → … → won/lost) — those statuses are never
+ * set by this webhook, so they won't be overwritten.
+ */
 function statusFromCall(event: string, call: RetellCall): string {
-  if (event === 'call_started') return 'in_progress';
+  if (event === 'call_started') return 'calling';
   const reason = call.disconnection_reason || '';
   if (['dial_no_answer', 'dial_busy', 'dial_failed', 'no_answer'].includes(reason)) return 'no_answer';
   if (reason === 'voicemail_reached') return 'voicemail';
   if (reason.startsWith('error')) return 'failed';
-  return 'completed';
+  // Connected call. On call_analyzed the qualification fields are populated — prefer them.
+  const a = (call.call_analysis?.custom_analysis_data || {}) as Record<string, unknown>;
+  if (a.wants_to_buy === true) return 'wants_to_buy';
+  if (a.wants_meeting === true) return 'meeting_booked';
+  if (a.outcome === 'not_interested') return 'not_interested';
+  if (a.outcome === 'just_testing') return 'just_testing';
+  if (a.outcome === 'callback_later' || a.user_reached === true) return 'interested';
+  // Connected but very short with no engagement signal = they hung up early.
+  const durS = typeof call.duration_ms === 'number' ? call.duration_ms / 1000 : undefined;
+  if (durS !== undefined && durS < 15) return 'hung_up';
+  return 'demo_completed';
 }
 
 function str(v: unknown): string | undefined {
@@ -104,6 +135,23 @@ export async function POST(request: NextRequest) {
     durationS: typeof call.duration_ms === 'number' ? Math.round(call.duration_ms / 1000) : undefined,
     costUsd: typeof call.call_cost?.combined_cost === 'number' ? call.call_cost.combined_cost / 100 : undefined,
   });
+
+  // Server-side GA4 funnel replay (TRACKING-PLAN.md §2c) — no-ops without
+  // GA_API_SECRET. Stitched to the web user via the client_id captured at submit
+  // (D1 demo_call_attempts), looked up by lead_id.
+  if (leadId) {
+    const db = getDemoDb();
+    const clientId = db ? await getClientId(db, leadId) : undefined;
+    await sendGaEvents(
+      clientId,
+      funnelEvents(event, status, leadId, {
+        wantsMeeting: bool(custom.wants_meeting),
+        wantsToBuy: bool(custom.wants_to_buy),
+        outcome: str(custom.outcome),
+        durationS: typeof call.duration_ms === 'number' ? Math.round(call.duration_ms / 1000) : undefined,
+      }),
+    );
+  }
 
   return new NextResponse(null, { status: 204 });
 }

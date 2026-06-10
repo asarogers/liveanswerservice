@@ -119,11 +119,6 @@ export const smallBusinessConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Garcia Consulting — how can I help?" },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Garcia Consulting." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Garcia Consulting — what's going on?" },
-    ],
   },
 
   compare: {

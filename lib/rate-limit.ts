@@ -80,17 +80,35 @@ export async function checkRateLimit(
 /** Record a placed call so it counts against future windows. Never throws. */
 export async function recordAttempt(
   db: D1Database,
-  attempt: { id: string; phoneE164: string; ip: string | null; callId?: string },
+  attempt: { id: string; phoneE164: string; ip: string | null; callId?: string; clientId?: string },
   nowMs: number = Date.now(),
 ): Promise<void> {
   try {
     await db
       .prepare(
-        'INSERT INTO demo_call_attempts (id, phone_e164, ip, call_id, created_at) VALUES (?, ?, ?, ?, ?)',
+        'INSERT INTO demo_call_attempts (id, phone_e164, ip, call_id, client_id, created_at) VALUES (?, ?, ?, ?, ?, ?)',
       )
-      .bind(attempt.id, attempt.phoneE164, attempt.ip, attempt.callId ?? null, nowMs)
+      .bind(attempt.id, attempt.phoneE164, attempt.ip, attempt.callId ?? null, attempt.clientId ?? null, nowMs)
       .run();
   } catch (err) {
     console.error('[rate-limit] recordAttempt failed', err);
+  }
+}
+
+/**
+ * Look up the GA4 client_id captured for a placed call, by lead_id — lets
+ * /api/retell-webhook replay the demo_call_* funnel into GA4 stitched to the
+ * same web user. Never throws; returns undefined if absent.
+ */
+export async function getClientId(db: D1Database, leadId: string): Promise<string | undefined> {
+  try {
+    const row = await db
+      .prepare('SELECT client_id FROM demo_call_attempts WHERE id = ? LIMIT 1')
+      .bind(leadId)
+      .first<{ client_id: string | null }>();
+    return row?.client_id ?? undefined;
+  } catch (err) {
+    console.error('[rate-limit] getClientId failed', err);
+    return undefined;
   }
 }

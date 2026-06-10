@@ -119,11 +119,6 @@ export const legalConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & empathetic", sampleLine: "Anderson Law Firm — I'm so sorry to hear that..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Anderson Law Firm." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Anderson Law — how can we help you today?" },
-    ],
   },
 
   compare: {
