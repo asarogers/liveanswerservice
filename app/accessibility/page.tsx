@@ -102,8 +102,8 @@ export default function AccessibilityPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Feedback and Contact</h2>
           <p>
             If you experience difficulty accessing any part of our website, please contact us at{' '}
-            <a href="mailto:hello@liveanswerservice.com" className="text-[var(--color-brand)] underline">
-              hello@liveanswerservice.com
+            <a href="mailto:ace@liveanswerservice.com" className="text-[var(--color-brand)] underline">
+              ace@liveanswerservice.com
             </a>{' '}
             or call{' '}
             <a href="tel:+16693656533" className="text-[var(--color-brand)] underline">

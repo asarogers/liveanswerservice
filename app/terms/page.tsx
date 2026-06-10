@@ -151,8 +151,8 @@ export default function TermsPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Contact</h2>
           <p>
             Questions about these terms? Contact us at{' '}
-            <a href="mailto:hello@liveanswerservice.com" className="text-[var(--color-brand)] underline">
-              hello@liveanswerservice.com
+            <a href="mailto:ace@liveanswerservice.com" className="text-[var(--color-brand)] underline">
+              ace@liveanswerservice.com
             </a>, or call our office during regular business hours at (555) 123-4567. Our customer 
             support team is available Monday through Friday from 9 AM to 6 PM Pacific Time.
           </p>

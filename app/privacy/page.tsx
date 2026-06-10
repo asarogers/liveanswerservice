@@ -76,8 +76,8 @@ export default function PrivacyPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Contact Us</h2>
           <p>
             If you have any questions about this privacy policy, please reach out to us at{' '}
-            <a href="mailto:hello@liveanswerservice.com" className="text-[var(--color-brand)] underline">
-              hello@liveanswerservice.com
+            <a href="mailto:ace@liveanswerservice.com" className="text-[var(--color-brand)] underline">
+              ace@liveanswerservice.com
             </a>{' '}
             or call{' '}
             <a href="tel:+16693656533" className="text-[var(--color-brand)] underline">

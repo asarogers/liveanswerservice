@@ -19,7 +19,7 @@ export const siteConfig = {
     href: "tel:+16693656533",
     schema: "+1-669-365-6533",
   },
-  email: "hello@liveanswerservice.com",
+  email: "ace@liveanswerservice.com",
 
   // ── Scheduling ────────────────────────────────────────────
   // Live Cal.com handle (verified 2026-06-08). Booking embedded on /book via CalEmbed.
