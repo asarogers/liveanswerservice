@@ -346,29 +346,32 @@ export default async function LocationDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Local context (enrichment) */}
+      {/* Local context (enrichment) — scannable reference columns only.
+          The prose localParagraph is intentionally NOT rendered: it restated the
+          HQ address + vertical breakdown already covered in the hero intro and the
+          content sections above. The columns below are unique, scannable, and add
+          information rather than repeating it. */}
       {enrichment && (
         <section className="plan" aria-labelledby="local-heading">
           <div className="wrap" style={{ maxWidth: 880 }}>
             <div className="section-eyebrow">On the ground</div>
-            <h2 id="local-heading" className="section-title">{location.city} at a glance.</h2>
-            <p style={{ maxWidth: 640, margin: "0 auto 32px", fontSize: 15, lineHeight: 1.7, color: "#5c5147" }}>
-              {enrichment.localParagraph}
-            </p>
+            <h2 id="local-heading" className="section-title" style={{ marginBottom: 32 }}>{location.city} at a glance.</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24, textAlign: "left" }}>
               <Column title="Districts" items={enrichment.hospitals} />
-              <Column title="Industries we serve" items={enrichment.seniorCenters} />
+              <Column title="What we handle" items={enrichment.seniorCenters} />
               <Column title="Landmarks" items={enrichment.landmarks} />
             </div>
           </div>
         </section>
       )}
 
-      {/* Industries we serve here */}
+      {/* Service navigation cards — links to the per-vertical service pages.
+          Heading deliberately distinct from the prose "Industries We Serve"
+          content section above so the two don't read as duplicates. */}
       <section className="scenarios" aria-labelledby="services-here">
         <div className="wrap">
-          <div className="section-eyebrow">Verticals</div>
-          <h2 id="services-here" className="section-title">Industries we serve in {location.city}.</h2>
+          <div className="section-eyebrow">Services</div>
+          <h2 id="services-here" className="section-title">See the service built for your industry.</h2>
           <div className="scenarios-grid">
             {indexedServices.slice(0, 6).map((s) => (
               <Link key={s.slug} href={`/services/${s.slug}`} className="scenario-card" style={{ display: "block", textDecoration: "none" }}>
