@@ -178,10 +178,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
         {tint.label}
       </div>
 
-      {/* ── HERO (StoryBrand: character + problem) ─────────── */}
+      {/* ── HERO (StoryBrand: character + problem) ───────────
+          Mirrors the homepage hero exactly: la-hero--cream is a dark
+          burgundy→ink gradient section, and the text MUST sit inside a
+          .hero-card (the cream panel) — without it the dark default h1/.sub
+          colors render dark-on-dark and become unreadable. */}
       <section className="la-hero la-hero--cream">
-        <div className="wrap la-hero-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 48, alignItems: "center" }}>
-          <div>
+        <div className="wrap hero-wrap">
+          <div className="hero-card">
             <div className="hero-eyebrow">
               <span className="dot" aria-hidden="true" />
               <span>{location.city} · always answering</span>
@@ -189,7 +193,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <h1>{location.h1}</h1>
             <p className="sub">{splitFirstSentence(location.intro).lead}</p>
             <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
-            <div style={{ fontSize: 13, color: "#94867a" }}>
+            <div className="hero-foot-note">
               7-day free trial · no card · cancel anytime
             </div>
             <div className="hero-transitional">
@@ -421,7 +425,6 @@ export default async function LocationDetailPage({ params }: PageProps) {
       {/* Final CTA */}
       <style>{`
         @media (max-width: 760px) {
-          .la-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           .loc-section-split { grid-template-columns: 1fr !important; gap: 24px !important; }
         }
       `}</style>
