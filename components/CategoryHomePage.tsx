@@ -58,6 +58,10 @@ const FAQS = [
     q: "How fast can it go live?",
     a: "Days, not weeks. We build and manage everything for you — your greeting, your services, your booking calendar. The 7-day trial runs on your real calls with no credit card.",
   },
+  {
+    q: "How do I know my calls are actually being answered?",
+    a: "You get a text summary within 60 seconds of every call — who called, what they wanted, and what was booked — plus a recording and transcript you can pull up any time. You see every answered call, booking, and transfer, so nothing happens on your line you can't verify.",
+  },
 ];
 
 export default function CategoryHomePage() {
@@ -248,23 +252,84 @@ export default function CategoryHomePage() {
         </div>
       </section>
 
-      {/* ── VOC PULL-OUT ───────────────────────────────────── */}
-      <section className="voc-pullout" aria-label="What we hear from owners">
+      {/* ── VOC PULL-OUT (real missed-call reviews) ────────────
+          Honest framing: these are real one-star reviews of OTHER California
+          service businesses that didn't answer — evidence of the problem, NOT
+          Live Answer testimonials. Verbatims (anonymized) from the 36k-review
+          VOC dataset, research.prospect_reviews. See COPY-REWORK Fix 4. */}
+      <section className="voc-pullout" aria-label="What a missed call costs">
         <div className="wrap-narrow">
-          <div className="voc-card">
-            <div className="voc-bar-row">
-              <div className="voc-bar" aria-hidden="true" />
-              <div>
-                <p style={{ margin: 0, fontSize: 19, lineHeight: 1.6 }}>
-                  &ldquo;We used to let calls go to voicemail. We definitely lost customers
-                  over it.&rdquo;
-                </p>
-                <p style={{ margin: "10px 0 0", fontSize: 15, color: "#5c5147" }}>
-                  — What we hear from California business owners every week
-                </p>
-              </div>
-            </div>
+          <div style={{ textAlign: "center", marginBottom: 28 }}>
+            <span className="section-num">— In their own words</span>
+            <h2 className="section-title" style={{ margin: "6px 0 8px" }}>
+              This is what a missed call sounds like.
+            </h2>
+            <p style={{ margin: "0 auto", maxWidth: 640, fontSize: 16, lineHeight: 1.55, color: "#5c5147" }}>
+              Real one-star reviews of California service businesses. Every one started
+              with a call that went unanswered — and ended with the customer telling the
+              world.
+            </p>
           </div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 18,
+              maxWidth: 920,
+              margin: "0 auto",
+            }}
+          >
+            {[
+              {
+                quote:
+                  "We had a leak coming into our master bedroom. We called and left a message. Two weeks later, someone finally called back.",
+                who: "Roofing customer · ★☆☆☆☆",
+              },
+              {
+                quote:
+                  "Takes your money then no call back or response to emails. WARNING — do not waste your time.",
+                who: "Home-services customer · ★☆☆☆☆",
+              },
+              {
+                quote:
+                  "I've been trying to book for a month. I keep calling the number on the card and the website — no answer.",
+                who: "Dental patient · ★☆☆☆☆",
+              },
+            ].map((r, i) => (
+              <figure
+                key={i}
+                style={{
+                  margin: 0,
+                  padding: "22px 22px",
+                  background: "#fff",
+                  border: "1px solid #e8e0d2",
+                  borderLeft: "3px solid #5a1f2e",
+                  borderRadius: 12,
+                }}
+              >
+                <blockquote style={{ margin: 0, fontSize: 16.5, lineHeight: 1.55, color: "#1a1611" }}>
+                  &ldquo;{r.quote}&rdquo;
+                </blockquote>
+                <figcaption style={{ margin: "12px 0 0", fontSize: 13.5, color: "#8a7d6f" }}>
+                  {r.who}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p
+            style={{
+              textAlign: "center",
+              margin: "26px auto 0",
+              maxWidth: 660,
+              fontSize: 16,
+              lineHeight: 1.55,
+              color: "#5c5147",
+            }}
+          >
+            <strong style={{ color: "#5a1f2e" }}>Live Answer picks up on the first ring — every time.</strong>{" "}
+            24/7, in English and Spanish, so the call that would have become a one-star
+            review becomes a booked appointment instead.
+          </p>
         </div>
       </section>
 

@@ -23,7 +23,7 @@ export const LOCATION_FAQS: FAQ[] = [
   },
   {
     q: "Is the answering service bilingual English-Spanish in {city}?",
-    a: "Yes. Native English-Spanish is included standard on Better and Best tiers. The AI detects the caller's language in the first three seconds and switches automatically — same intake, same calendar booking, same SMS summary to the business owner, in either language.",
+    a: "Yes. Native English-Spanish is included standard at no extra cost. The AI detects the caller's language in the first three seconds and switches automatically — same intake, same calendar booking, same SMS summary to the business owner, in either language.",
   },
   {
     q: "How quickly can a {city} business get started with Live Answer?",
@@ -31,7 +31,7 @@ export const LOCATION_FAQS: FAQ[] = [
   },
   {
     q: "What CRMs and calendars does Live Answer integrate with?",
-    a: "Pro tier integrates directly with Jobber, ServiceTitan, Housecall Pro, FieldEdge (HVAC), Clio, MyCase, PracticePanther (legal), Dentrix, Open Dental, Eaglesoft, Curve, NexHealth (dental/medical), OpenTable, Resy, Toast (restaurants), Vagaro, Mindbody, Square Appointments (salons), AppFolio, Buildium, Yardi (property mgmt), and any Google Calendar / iCal-compatible system.",
+    a: "Live Answer integrates directly with Jobber, ServiceTitan, Housecall Pro, FieldEdge (HVAC), Clio, MyCase, PracticePanther (legal), Dentrix, Open Dental, Eaglesoft, Curve, NexHealth (dental/medical), OpenTable, Resy, Toast (restaurants), Vagaro, Mindbody, Square Appointments (salons), AppFolio, Buildium, Yardi (property mgmt), and any Google Calendar / iCal-compatible system.",
   },
 ];
 
@@ -39,7 +39,7 @@ export const LOCATION_FAQS: FAQ[] = [
 export const SERVICE_FAQS: FAQ[] = [
   {
     q: "How much does Live Answer cost?",
-    a: "Flat $500/mo Unlimited for most verticals (legal is $349/$599). No per-minute fees, no overage charges, no minute caps on Pro. Setup is free for the first 30 customers per vertical and the rate is locked at sign-up.",
+    a: "Flat $500/mo Unlimited — same price for every vertical. No per-minute fees, no overage charges, no minute caps. Setup is free for the first 30 customers per vertical and the rate is locked at sign-up.",
   },
   {
     q: "Is there a free trial?",
@@ -51,11 +51,19 @@ export const SERVICE_FAQS: FAQ[] = [
   },
   {
     q: "Is it bilingual English-Spanish?",
-    a: "Yes — native bilingual is included standard on Better and Best tiers. The AI detects the caller's language in the first three seconds and switches to native Spanish automatically. Same intake, same booking, same CRM sync in either language.",
+    a: "Yes — native bilingual is included standard at no extra cost. The AI detects the caller's language in the first three seconds and switches to native Spanish automatically. Same intake, same booking, same CRM sync in either language.",
   },
   {
     q: "What happens if the AI doesn't capture bookings?",
-    a: "Every vertical has a concrete booking guarantee — for HVAC it's 10 booked jobs in 30 days, for legal it's 5 qualified intakes, for dental it's 30 booked appointments. Miss the guarantee and you get a full refund. The 7-day free trial itself is no-card, no-commitment.",
+    a: "Every vertical has a concrete booking guarantee — for HVAC it's 10 booked appointments in 30 days, for legal it's 5 qualified intakes, for dental it's 30 booked appointments. Miss the guarantee and you get a full refund. The 7-day free trial itself is no-card, no-commitment.",
+  },
+  {
+    q: "How do I know my calls are actually being answered?",
+    a: "Every call gives you a text summary within 60 seconds — caller name, number, what they wanted, and what the AI booked — plus a full recording and transcript you can pull up any time. You see every answered call, every booking, and every transfer, so nothing happens to your phone line that you can't verify.",
+  },
+  {
+    q: "I don't get many calls yet — is the flat rate still worth it?",
+    a: "Most owners ask this, and the math usually answers it: one captured customer call typically pays for the month. You're not buying minutes, you're buying never missing the call that matters — the after-hours emergency, the Spanish-speaking caller, the new patient — at a rate that's locked whether you take 5 calls a month or 500. There are no per-minute fees, so a quiet month costs you the same flat $500 and a busy one never surprises you.",
   },
 ];
 
