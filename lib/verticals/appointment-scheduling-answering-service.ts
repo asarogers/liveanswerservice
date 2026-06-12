@@ -5,7 +5,7 @@ export const appointmentSchedulingConfig: VerticalConfig = {
   slug: "appointment-scheduling-answering-service",
 
   meta: {
-    title: "Answering Service That Books Appointments — Live 24/7",
+    title: "AI Appointment Setter — Answering Service That Books Appointments 24/7",
     description:
       "An answering service that books appointments directly into your calendar in real time — not just a message taken. Bilingual EN/ES, 24/7, flat $500/mo. Works with Calendly, Acuity, Google Calendar, Clio, Jobber, Dentrix, and more. 7-day free trial.",
     canonical: "/services/appointment-scheduling-answering-service",
@@ -21,8 +21,8 @@ export const appointmentSchedulingConfig: VerticalConfig = {
 
   hero: {
     eyebrow: "AI receptionist · Books live into your calendar · Bilingual EN/ES",
-    headline: "The answering service that {italicWord} your appointments.",
-    italicWord: "books",
+    headline: "The AI appointment setter that {italicWord} your calendar.",
+    italicWord: "fills",
     subhead: {
       seoBold: "An answering service that books appointments directly into your calendar, 24/7.",
       body:
