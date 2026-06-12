@@ -132,6 +132,10 @@ export default function ComparisonPage() {
               <p>Our $500/mo fee includes unlimited calls, 24/7 coverage, standard bilingual support (EN/ES), and direct CRM integrations. There are no hidden fees for additional features or services.</p>
             </div>
             <div className="faq-item">
+              <h3>Do you provide disaster recovery and call failover?</h3>
+              <p>Yes. Because Live Answer runs in the cloud and answers in parallel, it doubles as business-continuity call failover: if your office line, power, or internet goes down, calls still get answered, triaged, and logged — no busy signal, no dropped lead. For multi-location and B2B operations we route overflow and after-hours traffic to the AI automatically, so an outage or a volume spike never turns into a missed call.</p>
+            </div>
+            <div className="faq-item">
               <h3>Can I test your service before committing?</h3>
               <p>Absolutely! We offer a demo line so you can experience our service firsthand and compare it to competitors. Simply call the number below and see the difference live.</p>
             </div>
