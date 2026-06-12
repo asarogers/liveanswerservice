@@ -17,7 +17,7 @@ export const emergencyDispatchConfig: VerticalConfig = {
   },
 
   oneLiner:
-    "Every after-hours burst pipe, no-heat, or flood call is a $750–$2,500 job — and the first contractor to answer wins 78% of them. We answer every call 24/7, triage urgent vs. routine, and text your on-call tech within 30 seconds so the job never bleeds to whoever picked up next.",
+    "Every after-hours burst pipe, no-heat, or flood call is a $750–$2,500 job — and the first contractor to answer wins 78% of them. We answer every call 24/7, triage urgent vs. routine, and text your on-call tech within 30 seconds so the call never bleeds to whoever picked up next.",
 
   hero: {
     eyebrow: "AI emergency dispatch · 24/7 · Bilingual EN/ES",
@@ -27,7 +27,7 @@ export const emergencyDispatchConfig: VerticalConfig = {
       seoBold:
         "24/7 bilingual emergency dispatch answering service for California plumbers, HVAC, electrical, and restoration contractors.",
       body:
-        "You shouldn't lose a $1,500 burst-pipe job because you were elbow-deep in another call or asleep at 2 AM. We answer every call, triage the urgency, escalate to the right on-call tech, and get the job booked before the homeowner dials the next contractor.",
+        "You shouldn't lose a $1,500 burst-pipe job because you were elbow-deep in another call or asleep at 2 AM. We answer every call, triage the urgency, escalate to the right on-call tech, and get the visit booked before the homeowner dials the next contractor.",
     },
     sampleBusinessName: "Bay Area Plumbing & Restoration",
     chat: [
@@ -91,7 +91,7 @@ export const emergencyDispatchConfig: VerticalConfig = {
       },
       {
         time: "Saturday night, January",
-        body: "No heat. 38°F outside. Elderly couple. They Google HVAC and call the top four. You had the job — until the third ring, when they moved on to the guy below you.",
+        body: "No heat. 38°F outside. Elderly couple. They Google HVAC and call the top four. You had the customer — until the third ring, when they moved on to the guy below you.",
       },
       {
         time: "3:45 AM, flooded basement",
@@ -104,7 +104,7 @@ export const emergencyDispatchConfig: VerticalConfig = {
     sectionNum: "03 · We get it",
     title: "You can't run an emergency dispatch on willpower alone.",
     empathy:
-      "You set up the on-call rotation. You gave your techs your cell. You tried an answering service that put callers on hold and never triaged urgency. The result: emergencies sit in a queue, your best tech gets woken up for a $90 drain snake job, and the real emergencies — the ones worth $1,500–$7,500 — still slip through to a competitor. You didn't start this business to lose the highest-margin calls of the week to whoever happened to be awake.",
+      "You set up the on-call rotation. You gave your techs your cell. You tried an answering service that put callers on hold and never triaged urgency. The result: emergencies sit in a queue, your best tech gets woken up for a $90 drain snake call, and the real emergencies — the ones worth $1,500–$7,500 — still slip through to a competitor. You didn't start this business to lose the highest-margin calls of the week to whoever happened to be awake.",
     authority: [
       { num: "24/7", label: "Every call answered, every hour — including 2 AM pipe bursts" },
       { num: "30 sec", label: "From emergency triage to on-call tech text — address + one-line summary" },
@@ -151,7 +151,7 @@ export const emergencyDispatchConfig: VerticalConfig = {
     sectionNum: "05 · Imagine this",
     title: "A month from now.",
     lead:
-      "It's 2 AM. A pipe burst call comes in. You're asleep. The AI answers in two rings, triages the emergency, texts your on-call plumber the address and a one-line summary within 30 seconds, and books the job. You wake up to a notification: job captured, $1,600 ticket, five-star review pending. You never touched your phone.",
+      "It's 2 AM. A pipe burst call comes in. You're asleep. The AI answers in two rings, triages the emergency, texts your on-call plumber the address and a one-line summary within 30 seconds, and books the visit. You wake up to a notification: job captured, $1,600 ticket, five-star review pending. You never touched your phone.",
     items: [
       {
         icon: "alarm-off",
@@ -217,7 +217,7 @@ export const emergencyDispatchConfig: VerticalConfig = {
   },
 
   pricingAudience:
-    "For trade contractors who lose $1,500 emergency jobs every time the after-hours line hits voicemail",
+    "For trade contractors who lose $1,500 emergencies every time the after-hours line hits voicemail",
 
   faqs: [
     {
@@ -263,7 +263,7 @@ export const emergencyDispatchDetail: ServiceDetail = {
     "AI emergency dispatch answering service for California plumbers, HVAC, electrical, and restoration contractors. Urgent/routine triage, 30-second on-call SMS escalation, and native sync with ServiceTitan, Jobber, Housecall Pro, Dispatch, and FieldEdge. Flat $500/mo, no overages, bilingual EN/ES.",
   h1: "Never Lose an After-Hours Emergency to Voicemail Again",
   intro:
-    "When a pipe bursts at 2 AM, the homeowner doesn't leave a voicemail. They call down the Google list until someone picks up — and the first contractor to answer wins 78% of those jobs. Industry data puts the after-hours miss rate at 62% for small-to-medium trade businesses, and every missed emergency call is somewhere between $750 for a standard urgent repair and $7,500 for a full water-damage restoration project. We built Live Answer's emergency dispatch answering service specifically for California plumbers, HVAC contractors, electricians, and restoration companies who are losing their highest-margin calls to voicemail while they're on another job, asleep, or simply not monitoring a second phone. Our AI answers every call in under two rings, triages emergency vs. routine using trade-specific vocabulary, and texts the right on-call tech within 30 seconds — address plus a one-line summary — so the job gets dispatched before the homeowner dials the next contractor on the list.",
+    "When a pipe bursts at 2 AM, the homeowner doesn't leave a voicemail. They call down the Google list until someone picks up — and the first contractor to answer wins 78% of those calls. Industry data puts the after-hours miss rate at 62% for small-to-medium trade businesses, and every missed emergency call is somewhere between $750 for a standard urgent repair and $7,500 for a full water-damage restoration project. We built Live Answer's emergency dispatch answering service specifically for California plumbers, HVAC contractors, electricians, and restoration companies who are losing their highest-margin calls to voicemail while they're on another call, asleep, or simply not monitoring a second phone. Our AI answers every call in under two rings, triages emergency vs. routine using trade-specific vocabulary, and texts the right on-call tech within 30 seconds — address plus a one-line summary — so the work gets dispatched before the homeowner dials the next contractor on the list.",
   sections: [
     {
       heading: "How the Emergency Triage Actually Works",
@@ -273,7 +273,7 @@ export const emergencyDispatchDetail: ServiceDetail = {
     {
       heading: "Why On-Call Escalation Trees Matter More Than Call Answering",
       content:
-        "Most generic answering services answer the phone and take a message. That is not emergency dispatch — that is a voicemail with a human voice. The gap that costs trade contractors $45,000–$120,000 per year in missed revenue is not that no one answers the call. It is that no one gets the right person the right information fast enough to close the job before the homeowner moves on. Our escalation trees are configurable to your actual staffing reality: first plumber on rotation, backup plumber, then owner. Weekly or daily rotation schedules mean the correct on-call person is always first in the chain without you manually updating it. For multi-crew shops, you can configure different escalation trees by trade or by service area. The goal is not just to answer — it is to put a qualified tech on the job within the response window before the competitor two slots below you on Google does.",
+        "Most generic answering services answer the phone and take a message. That is not emergency dispatch — that is a voicemail with a human voice. The gap that costs trade contractors $45,000–$120,000 per year in missed revenue is not that no one answers the call. It is that no one gets the right person the right information fast enough to close the sale before the homeowner moves on. Our escalation trees are configurable to your actual staffing reality: first plumber on rotation, backup plumber, then owner. Weekly or daily rotation schedules mean the correct on-call person is always first in the chain without you manually updating it. For multi-crew shops, you can configure different escalation trees by trade or by service area. The goal is not just to answer — it is to put a qualified tech on-site within the response window before the competitor two slots below you on Google does.",
     },
     {
       heading: "Integrations Built for the Trades Dispatch Stack",
@@ -283,7 +283,7 @@ export const emergencyDispatchDetail: ServiceDetail = {
     {
       heading: "The Done-for-You Setup and Booking Guarantee",
       content:
-        "We are a done-for-you managed service, not a self-serve tool you configure yourself. The 30-minute kickoff call covers your trade mix, service area, after-hours emergency rules, on-call rotation structure, escalation windows, dispatch software credentials, and the triage vocabulary specific to your jobs. We build and test the agent in 48 hours. You go live by day three of your 7-day free trial — no credit card required, no setup fee. Our booking guarantee is concrete: capture ten booked jobs in your first 30 days or receive a full refund. At an average emergency ticket of $1,200, that is $12,000 in recovered revenue against a sub-$500 monthly service. One prevented emergency bleed to a competitor pays for the month.",
+        "We are a done-for-you managed service, not a self-serve tool you configure yourself. The 30-minute kickoff call covers your trade mix, service area, after-hours emergency rules, on-call rotation structure, escalation windows, dispatch software credentials, and the triage vocabulary specific to your work. We build and test the agent in 48 hours. You go live by day three of your 7-day free trial — no credit card required, no setup fee. Our booking guarantee is concrete: capture ten booked visits in your first 30 days or receive a full refund. At an average emergency ticket of $1,200, that is $12,000 in recovered revenue against a sub-$500 monthly service. One prevented emergency bleed to a competitor pays for the month.",
     },
   ],
   relatedServices: [],

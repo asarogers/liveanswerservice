@@ -16,7 +16,7 @@ export const hvacConfig: VerticalConfig = {
   },
 
   oneLiner:
-    "California HVAC contractors lose up to 6 of every 10 after-hours calls to voicemail. We answer every one 24/7 in English and Spanish and book it straight into your dispatch software — so you stop losing emergency jobs and your trucks stay full.",
+    "California HVAC contractors lose up to 6 of every 10 after-hours calls to voicemail. We answer every one 24/7 in English and Spanish and book it straight into your dispatch software — so you stop losing emergencies and your trucks stay full.",
 
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
@@ -25,7 +25,7 @@ export const hvacConfig: VerticalConfig = {
     subhead: {
       seoBold: "24/7 bilingual AI answering service for California HVAC contractors.",
       body:
-        "You shouldn't lose a $1,200 emergency because you were on a roof, in a crawlspace, or asleep. We answer every call, qualify the job, and text you the details.",
+        "You shouldn't lose a $1,200 emergency because you were on a roof, in a crawlspace, or asleep. We answer every call, qualify the call, and text you the details.",
     },
     sampleBusinessName: "Sunrise Heating & Air",
     chat: [
@@ -47,7 +47,7 @@ export const hvacConfig: VerticalConfig = {
     title: "The math behind every missed call.",
     stats: [
       { num: "62%", label: "of after-hours HVAC calls go unanswered" },
-      { num: "$275–$1,200", label: "value of each emergency job walking to your competitor" },
+      { num: "$275–$1,200", label: "value of each emergency call walking to your competitor" },
       { num: "3–5×", label: "summer call spike during heat waves — most go to voicemail" },
     ],
     rankingNote:
