@@ -176,6 +176,29 @@ export default function AIReceptionistPage() {
                 every month. You never open a dashboard.
               </div>
             </div>
+            <div className="scenario-card">
+              <div className="time"><i className="ti ti-shield-half" aria-hidden="true" /> Screens calls &amp; takes messages</div>
+              <div className="body">
+                Filters spam and robocalls, screens unknown callers, and takes a proper message when
+                that&rsquo;s all a call needs — name, number, reason, urgency — instead of a half-empty
+                voicemail you have to decode later.
+              </div>
+            </div>
+            <div className="scenario-card">
+              <div className="time"><i className="ti ti-file-text" aria-hidden="true" /> Voicemail-to-text transcription</div>
+              <div className="body">
+                Any voicemail that does come in is transcribed and texted to you in plain text within
+                a minute — read it at a glance and triage it without dialing into a mailbox.
+              </div>
+            </div>
+            <div className="scenario-card">
+              <div className="time"><i className="ti ti-arrows-transfer-right" aria-hidden="true" /> Warm transfer &amp; call routing</div>
+              <div className="body">
+                Routes each caller to the right place and warm-transfers live to the on-call person
+                when a call needs a human — announcing who&rsquo;s calling and why before connecting,
+                so nobody gets dumped cold.
+              </div>
+            </div>
           </div>
         </div>
       </section>
