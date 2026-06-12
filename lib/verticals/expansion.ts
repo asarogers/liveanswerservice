@@ -21,15 +21,9 @@ import { liveChatConfig, liveChatDetail } from "./live-chat-answering-service";
 import { crmIntegrationConfig, crmIntegrationDetail } from "./crm-integration-answering-service";
 import { outboundReminderConfig, outboundReminderDetail } from "./outbound-reminder-answering-service";
 import { insuranceConfig, insuranceDetail } from "./insurance-answering-service";
-import { accountingConfig, accountingDetail } from "./accounting-answering-service";
-import { itMspConfig, itMspDetail } from "./it-msp-answering-service";
-import { roofingConstructionConfig, roofingConstructionDetail } from "./roofing-construction-answering-service";
-import { cleaningLandscapingConfig, cleaningLandscapingDetail } from "./cleaning-landscaping-answering-service";
-import { towingRoadsideConfig, towingRoadsideDetail } from "./towing-roadside-answering-service";
 import { chiropracticConfig, chiropracticDetail } from "./chiropractic-answering-service";
 import { mentalHealthConfig, mentalHealthDetail } from "./mental-health-answering-service";
 import { medSpaConfig, medSpaDetail } from "./med-spa-answering-service";
-import { nonprofitConfig, nonprofitDetail } from "./nonprofit-answering-service";
 
 export const EXPANSION_VERTICALS: Record<string, VerticalConfig> = {
   "appointment-scheduling-answering-service": appointmentSchedulingConfig,
@@ -39,15 +33,9 @@ export const EXPANSION_VERTICALS: Record<string, VerticalConfig> = {
   "crm-integration-answering-service": crmIntegrationConfig,
   "outbound-reminder-answering-service": outboundReminderConfig,
   "insurance-answering-service": insuranceConfig,
-  "accounting-answering-service": accountingConfig,
-  "it-msp-answering-service": itMspConfig,
-  "roofing-construction-answering-service": roofingConstructionConfig,
-  "cleaning-landscaping-answering-service": cleaningLandscapingConfig,
-  "towing-roadside-answering-service": towingRoadsideConfig,
   "chiropractic-answering-service": chiropracticConfig,
   "mental-health-answering-service": mentalHealthConfig,
   "med-spa-answering-service": medSpaConfig,
-  "nonprofit-answering-service": nonprofitConfig,
 };
 
 export const EXPANSION_DETAILS: ServiceDetail[] = [
@@ -58,13 +46,7 @@ export const EXPANSION_DETAILS: ServiceDetail[] = [
   crmIntegrationDetail,
   outboundReminderDetail,
   insuranceDetail,
-  accountingDetail,
-  itMspDetail,
-  roofingConstructionDetail,
-  cleaningLandscapingDetail,
-  towingRoadsideDetail,
   chiropracticDetail,
   mentalHealthDetail,
   medSpaDetail,
-  nonprofitDetail,
 ];
