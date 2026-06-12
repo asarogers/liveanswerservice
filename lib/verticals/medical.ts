@@ -8,7 +8,7 @@ export const medicalConfig: VerticalConfig = {
   slug: "medical-office-answering-service",
 
   meta: {
-    title: "Live Answer for Medical Offices — Never lose another new patient",
+    title: "Medical Answer Service for California Practices — 24/7, HIPAA-Aware",
     description:
       "24/7 bilingual AI receptionist for California medical practices. Books new patients into Athena, eClinicalWorks, NextGen, Practice Fusion. HIPAA-aware, CCPA-compliant.",
     canonical: "/services/medical-office-answering-service",
@@ -20,14 +20,14 @@ export const medicalConfig: VerticalConfig = {
   },
 
   oneLiner:
-    "Most medical offices miss new-patient calls when the front desk is busy, at lunch, or closed for the day. We answer every one 24/7 and book it straight into your EHR — so you stop losing referrals and your schedule stays full.",
+    "Most medical offices miss new-patient calls when the front desk is busy, at lunch, or closed for the day. Our medical answer service picks up every one 24/7 and books it straight into your EHR — so you stop losing referrals and your schedule stays full.",
 
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Never lose another {italicWord}.",
     italicWord: "new patient",
     subhead: {
-      seoBold: "24/7 bilingual AI receptionist for California medical practices.",
+      seoBold: "A 24/7 medical answer service and bilingual AI receptionist for California practices.",
       body:
         "You shouldn't lose new-patient referrals because the front desk is on lunch, on another call, or already gone for the day. We answer every call, qualify the patient, and book straight into your EHR.",
     },
