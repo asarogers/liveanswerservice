@@ -523,11 +523,11 @@ function LandmarkPageContent({ landmark }: { landmark: LandmarkPage }) {
         </div>
       </section>
 
-      {/* Job stories */}
+      {/* Field stories */}
       {landmark.jobStories.length > 0 && (
-        <section className="section-pad" aria-labelledby="job-stories-heading" style={{ background: "#f7f2e7" }}>
+        <section className="section-pad" aria-labelledby="field-stories-heading" style={{ background: "#f7f2e7" }}>
           <div className="wrap" style={{ maxWidth: 880 }}>
-            <h2 id="job-stories-heading" style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 400, letterSpacing: "-0.015em", color: "#1a1611", margin: "0 0 32px" }}>
+            <h2 id="field-stories-heading" style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 400, letterSpacing: "-0.015em", color: "#1a1611", margin: "0 0 32px" }}>
               How it works near {landmark.landmark}
             </h2>
             <div style={{ display: "grid", gap: 24 }}>

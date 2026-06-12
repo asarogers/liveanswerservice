@@ -98,7 +98,7 @@ export default function HowItWorksPage() {
             <div className="stakes-stat">
               <div className="num">&lt;2 rings</div>
               <div className="label">average pick-up time, 24/7</div>
-              <p>Callers reach a voice before they reach for the next listing — the 60-second window where most missed calls become a competitor&rsquo;s job.</p>
+              <p>Callers reach a voice before they reach for the next listing — the 60-second window where most missed calls become a competitor&rsquo;s customer.</p>
             </div>
             <div className="stakes-stat">
               <div className="num">60 sec</div>

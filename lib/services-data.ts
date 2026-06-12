@@ -59,7 +59,7 @@ export const serviceDetails: ServiceDetail[] = [
     title: "HVAC Answering Service — 24/7 AI Dispatcher for California",
     metaDescription:
       "AI receptionist for California HVAC contractors. Answers every call 24/7, books straight into Jobber, ServiceTitan, or Housecall Pro. Bilingual EN/ES. Flat $500/mo flat, no overages.",
-    h1: "Never Lose Another HVAC Job to Voicemail",
+    h1: "Never Lose Another HVAC Call to Voicemail",
     intro:
       "When a homeowner's AC dies at 11 PM in July, they don't leave a voicemail and wait until morning. They Google the next contractor on the list and call them. Industry data puts the HVAC miss rate at 27–62% — and every missed call is somewhere between $275 for a routine service and $4,000 for an install. We built Live Answer specifically for the California HVAC owner who is still answering the phone between jobs, watching emergencies bleed to whichever shop happened to pick up. Our AI dispatcher answers in under two rings, qualifies the job, triages emergency vs. routine, and books it directly into Jobber, ServiceTitan, or Housecall Pro — in English or Spanish, 24/7, for less than one day of a California dispatcher's pay per month.",
     sections: [

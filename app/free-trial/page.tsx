@@ -28,7 +28,7 @@ export default function FreeTrialPage() {
             <strong>7 days. AI live within 24 hours. No credit card required.</strong> If our system doesn't meet your expectations, you can cancel anytime and keep your phone number.
           </p>
           <div className="intro-text">
-            <p>Live Answer is an AI receptionist that answers your business line while you&rsquo;re on a job, in a meeting, or asleep. Letting software talk to your customers is a trust decision — so the trial is free, runs on your real calls, and requires no credit card.</p>
+            <p>Live Answer is an AI receptionist that answers your business line while you&rsquo;re on a service call, in a meeting, or asleep. Letting software talk to your customers is a trust decision — so the trial is free, runs on your real calls, and requires no credit card.</p>
             <p>Forward your line, let the AI take a week of real calls, and judge it on what lands in your inbox: bookings, messages, and call summaries. If it doesn&rsquo;t earn the $500/mo, cancel and keep your number.</p>
           </div>
         </div>

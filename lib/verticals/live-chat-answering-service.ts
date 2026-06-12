@@ -221,7 +221,7 @@ export const liveChatConfig: VerticalConfig = {
   ],
 
   finalCta: {
-    headline: "Your website should book jobs, not lose visitors.",
+    headline: "Your website should book customers, not lose visitors.",
     sub: "Three minutes to know if this is for you.",
   },
 };
@@ -231,7 +231,7 @@ export const liveChatDetail: ServiceDetail = {
   title: "Live Chat Answering Service — 24/7 AI Chat + Phone for California SMBs",
   metaDescription:
     "One AI agent covers your website chat widget and your phones 24/7 — bilingual EN/ES, flat $500/mo, no caps. Captures leads who won't call, qualifies them, and books them. 7-day free trial.",
-  h1: "Live Chat Answering Service: Turn Every Website Visitor Into a Booked Job",
+  h1: "Live Chat Answering Service: Turn Every Website Visitor Into a Booked Appointment",
   intro:
     "Website visitors who open a chat widget and hear nothing back don't wait — they click away and book with whoever answered. Forrester research puts the conversion lift for chatted visitors at 2.8× over visitors who don't chat, and industry data shows 82% of chat inquiries go unanswered at most SMBs. // source: https://www.intercom.com/blog/why-live-chat/ Live Answer Service closes that gap with a single AI agent that covers your chat widget and your phones from one inbox — 24/7, in English and Spanish — for less than the cost of one part-time California chat agent per month. Every lead that comes through chat, phone, or contact form gets an instant response, a qualification conversation, and a booked appointment. You see everything in a 60-second SMS summary.",
   sections: [

@@ -100,7 +100,7 @@ export const outboundReminderConfig: VerticalConfig = {
 
   guide: {
     sectionNum: "03 · We get it",
-    title: "You already did the hard part — you booked the job.",
+    title: "You already did the hard part — you booked the appointment.",
     empathy:
       "Winning a new customer and booking the appointment is the hard part. Losing that booked job to a no-show — because no one remembered to call them — is a different kind of pain. You've already sold it. You just didn't keep it. Most service businesses absorb no-shows as a cost of doing business when the real fix is a single outbound call placed 24–48 hours before the appointment.",
     authority: [
@@ -244,7 +244,7 @@ export const outboundReminderConfig: VerticalConfig = {
   ],
 
   finalCta: {
-    headline: "You already booked the job. Let's make sure it actually happens.",
+    headline: "You already booked the appointment. Let's make sure it actually happens.",
     sub: "Three minutes to know if this is for you.",
   },
 };

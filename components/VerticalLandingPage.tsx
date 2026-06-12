@@ -192,7 +192,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
                 }}
               >
                 <strong style={{ color: "#5a1f2e" }}>
-                  Missed calls don&rsquo;t just lose the job — they lower your Google Maps ranking.
+                  Missed calls don&rsquo;t just lose the customer — they lower your Google Maps ranking.
                 </strong>{" "}
                 {c.stakes.rankingNote}
               </p>
