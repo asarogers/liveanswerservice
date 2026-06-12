@@ -80,8 +80,8 @@ export default function PrivacyPage() {
               ace@liveanswerservice.com
             </a>{' '}
             or call{' '}
-            <a href="tel:+16693656533" className="text-[var(--color-brand)] underline">
-              (669) 365-6533
+            <a href="tel:+16693161742" className="text-[var(--color-brand)] underline">
+              (669) 316-1742
             </a>.
           </p>
           <p>

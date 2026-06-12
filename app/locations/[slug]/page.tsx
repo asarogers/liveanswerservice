@@ -334,7 +334,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <div className="plan-step">
               <div className="num">1</div>
               <h3>Forward your phone</h3>
-              <p>60 seconds with any carrier. Test the line first — call (669) 365-6533 and try to break it.</p>
+              <p>60 seconds with any carrier. Test the line first — call (669) 316-1742 and try to break it.</p>
             </div>
             <div className="plan-step">
               <div className="num">2</div>

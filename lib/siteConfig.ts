@@ -15,9 +15,9 @@ export const siteConfig = {
 
   // ── Contact ───────────────────────────────────────────────
   phone: {
-    display: "(669) 365-6533",
-    href: "tel:+16693656533",
-    schema: "+1-669-365-6533",
+    display: "(669) 316-1742",
+    href: "tel:+16693161742",
+    schema: "+1-669-316-1742",
   },
   email: "ace@liveanswerservice.com",
 

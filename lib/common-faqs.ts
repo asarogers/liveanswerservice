@@ -47,7 +47,7 @@ export const SERVICE_FAQS: FAQ[] = [
   },
   {
     q: "Does the AI sound robotic?",
-    a: "No. The voice models are tuned for phone-quality audio (Inworld TTS 1.5 Max, Cartesia, ElevenLabs) and the AI is scripted not to fake confidence on anything it isn't sure about. Call (669) 365-6533 to hear the actual production engine — it's the same one that handles paying customer calls.",
+    a: "No. The voice models are tuned for phone-quality audio (Inworld TTS 1.5 Max, Cartesia, ElevenLabs) and the AI is scripted not to fake confidence on anything it isn't sure about. Call (669) 316-1742 to hear the actual production engine — it's the same one that handles paying customer calls.",
   },
   {
     q: "Is it bilingual English-Spanish?",

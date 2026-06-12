@@ -84,7 +84,7 @@ export async function POST(request: NextRequest) {
               </a>
             </div>
             <p style="font-size: 14px; color: #5A5A5A; font-family: sans-serif;">
-              Or call us at <a href="tel:+16693656533" style="color: #1A1A17;">(669) 365-6533</a>.
+              Or call us at <a href="tel:+16693161742" style="color: #1A1A17;">(669) 316-1742</a>.
             </p>
             <hr style="border: none; border-top: 1px solid #E0D8CF; margin: 32px 0;" />
             <p style="font-size: 13px; color: #888; margin: 0; font-family: sans-serif;">

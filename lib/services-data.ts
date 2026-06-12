@@ -9,7 +9,7 @@
  *  (9 weekly waves from 2026-06-08) — do not duplicate the week map here;
  *  it drifted once already. Gating is automatic via noindexSlugs().
  *
- *  Phone: (669) 365-6533 | liveanswerservice.com
+ *  Phone: (669) 316-1742 | liveanswerservice.com
  * ============================================================
  */
 
