@@ -179,7 +179,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
       </div>
 
       {/* ── HERO (StoryBrand: character + problem) ─────────── */}
-      <section className="la-hero">
+      <section className="la-hero la-hero--cream">
         <div className="wrap la-hero-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 48, alignItems: "center" }}>
           <div>
             <div className="hero-eyebrow">
@@ -260,7 +260,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
           <section
             key={idx}
             className="section-pad"
-            style={{ background: isAlt ? "#f7f2e7" : "#f7f2e7" }}
+            style={{ background: isAlt ? "#f2ead9" : "#f7f2e7" }}
             aria-labelledby={`section-${idx}-heading`}
           >
             <div className="wrap" style={{ maxWidth: 1080 }}>
@@ -288,7 +288,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 16 }}>
                   {bullets.map((s, i) => (
-                    <li key={i} style={{ display: "flex", gap: 12, padding: 16, background: isAlt ? "#f7f2e7" : "#f7f2e7", borderRadius: 8, fontSize: 15, lineHeight: 1.6, color: "#5c5147" }}>
+                    <li key={i} style={{ display: "flex", gap: 12, padding: "16px 18px", background: "#fff", border: "1px solid #e8e0d2", borderRadius: 12, fontSize: 15, lineHeight: 1.6, color: "#5c5147" }}>
                       <i className="ti ti-check" aria-hidden="true" style={{ color: "var(--accent, #5a1f2e)", flexShrink: 0, marginTop: 2 }} />
                       <span>{s}</span>
                     </li>
