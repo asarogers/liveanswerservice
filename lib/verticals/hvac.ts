@@ -4,10 +4,10 @@ export const hvacConfig: VerticalConfig = {
   slug: "hvac-answering-service",
 
   meta: {
-    title: "Live Answer for HVAC — Never lose another job",
+    title: "HVAC Answering Service California — Never Miss Another Call",
     description:
-      "24/7 bilingual AI answering service for California HVAC contractors. Every call answered, every emergency triaged, every job booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge. One recovered emergency pays for 3 months.",
-    canonical: "/",
+      "24/7 bilingual AI answering service for California HVAC contractors. Every call answered, every emergency triaged, every call booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge. One recovered emergency pays for 3 months.",
+    canonical: "/services/hvac-answering-service",
   },
 
   verticalBar: {
@@ -21,7 +21,7 @@ export const hvacConfig: VerticalConfig = {
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
     headline: "Never lose another {italicWord} to a missed call.",
-    italicWord: "job",
+    italicWord: "customer",
     subhead: {
       seoBold: "24/7 bilingual AI answering service for California HVAC contractors.",
       body:
