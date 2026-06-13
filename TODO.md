@@ -9,6 +9,27 @@
 - [ ] **Create the LAS Google Business Profile** — none exists. (Gaps #3 was wrong: CID 8611157451037066694 is Well Prepped Life's listing, not LAS's. `gbp_status='none'` in the DB is correct — do not write that CID anywhere.)
 - [x] **Set real `PLACE_ID`** in `fetch-google-reviews.mjs` — DONE 2026-06-08 (`ChIJuT9VP8QzjoAR1PJtkhd7ytE`); fetch runs clean, 0 reviews today, auto-fills when reviews land.
 
+## 🟢 Full-site copy audit vs DataForSEO rework — DONE 2026-06-13
+Audited **every** route against `COPY-REWORK-2026-06-11.md` (homepage→category, ban "job"
+in titles/meta/H1, exact-phrase targeting, 3 wedges). `main` is broadly compliant — the
+rework copy is landed here, which is why the wave-2…wave-9 branches read as stale (cut
+pre-rework). Fixes applied this pass:
+- [x] **/terms placeholder phone** — `(555) 123-4567` → `(669) 316-1742` (`app/terms/page.tsx`).
+- [x] **/calculator missing metadata** — page is `"use client"` so it can't export metadata;
+  added `app/calculator/layout.tsx` with `<title>`+description (weaves $500/mo wedge) +
+  `gatedRobots("/calculator")`.
+- [x] **HVAC "job"-language body pass** — `lib/verticals/hvac.ts`: vocQuote, scenarios,
+  plan step ("You get the booking"), success item, and FAQ de-"job"ed (titles/meta/H1 were
+  already clean). The live HVAC page is the **vertical config**, not the `services-data.ts`
+  entry (`getVertical()` shadows it in `app/services/[slug]/page.tsx`).
+
+Backlog surfaced by the audit (not blocking Monday):
+- [ ] **Build the Wave 3-6 data-driven pages** still missing on `main`: `medical` (exact
+  "medical answer service", 6,600/mo KD 7), `funeral` ("answering service for directors",
+  1,600 KD 2), plumbing-specific (only generic emergency-dispatch covers it today).
+- [ ] **Dead duplication** — `lib/services-data.ts` still defines `hvac/attorney/small-business`
+  slugs that `getVertical()` shadows (never render). Remove the stale entries.
+
 ## 🟡 External setup / credentials needed
 - [ ] **#8 Bing Places** — requires OAuth login.
 - [x] **#25 Microsoft Clarity** — DONE 2026-06-08: project `x428bvg5r1`, wired in `wrangler.toml` + `layout.tsx`, deployed + verified live in prod HTML. *(Cal.com handle already live via `/book` embed.)*

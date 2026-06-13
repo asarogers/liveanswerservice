@@ -79,3 +79,29 @@ naturally. No keyword stuffing — KD on our targets is 0–18; clean targeting 
    promotes** (6/22), so the AI pages launch into a site Google reads as buyer-intent.
 2. Apply Fix 3 briefs to the Wave 3–4 new/cherry-picked pages as they're built.
 3. Re-run the `keywords_for_site` check post-deploy to confirm the intent flip.
+
+---
+
+## Audit + fixes — 2026-06-13 (every route checked)
+
+Full route-by-route audit of `main` against Fixes 1–4. **Result: `main` is broadly
+compliant** — Fix 1 (category homepage), Fix 2 in titles/meta/H1, Fix 3 (appointment→"AI
+appointment setter", AI pages verbatim), and Fix 4 (3 wedges) are all landed. This is why
+the `wave-2…wave-9` branches read as out-of-whack: they were cut **before** this rework and
+still carry pre-rework copy + the old `(669) 365-6533` phone. Any wave merge must favor
+`main` (see `WAVE-REWORK-2026-06-11.md` branch mechanics + the safe-merge recipe).
+
+Three concrete gaps found and fixed this pass:
+1. **`/terms`** had a placeholder `(555) 123-4567` → corrected to the canonical AI line
+   `(669) 316-1742`.
+2. **`/calculator`** shipped with **no `metadata` export** (it's a `"use client"` page) — added
+   `app/calculator/layout.tsx` supplying `<title>` + description (with the $500/mo wedge) and
+   `gatedRobots("/calculator")`.
+3. **HVAC live page** (`lib/verticals/hvac.ts`, the vertical config that `getVertical()` renders
+   — the `services-data.ts` hvac entry is dead/shadowed) still had ~5 prominent body "job" uses;
+   de-"job"ed per Fix 2's body-copy guidance.
+
+Still open (backlog, tracked in `TODO.md`): the Fix-3 pages **medical** ("medical answer
+service"), **funeral** ("answering service for directors"), and a **plumbing**-specific page
+are not built on `main` yet; and the dead `services-data.ts` vertical duplicates should be
+removed.

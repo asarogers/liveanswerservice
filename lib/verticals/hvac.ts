@@ -55,7 +55,7 @@ export const hvacConfig: VerticalConfig = {
   },
 
   vocQuote: {
-    quote: "We used to just let calls go to voicemail. We definitely lost jobs over it.",
+    quote: "We used to just let calls go to voicemail. We definitely lost customers over it.",
     attribution: "— What we hear from California service-business owners every week",
   },
 
@@ -73,7 +73,7 @@ export const hvacConfig: VerticalConfig = {
     sectionNum: "03 · We get it",
     title: "You didn't start an HVAC business to answer phones.",
     empathy:
-      "You started it to do clean installs and fast repairs — not chase voicemails. But the phone never stops. It rings 20 feet up a ladder. It rings during dinner. It rings at 11 PM on a Saturday in July. Every call you can't answer is a job your competitor just booked.",
+      "You started it to do clean installs and fast repairs — not chase voicemails. But the phone never stops. It rings 20 feet up a ladder. It rings during dinner. It rings at 11 PM on a Saturday in July. Every call you can't answer is a customer your competitor just booked.",
     authority: [
       { num: "24/7", label: "Every call, every hour — including 2 AM emergencies" },
       { num: "EN/ES", label: "Bilingual from the first ring" },
@@ -88,7 +88,7 @@ export const hvacConfig: VerticalConfig = {
     steps: [
       { num: 1, heading: "Forward your phone", body: "60 seconds. Works with any provider — Twilio, Google Voice, RingCentral, Verizon, AT&T." },
       { num: 2, heading: "We qualify the call", body: "No heat? No AC? Capacitor? Tune-up? Triaged, scheduled, dispatched — 24/7, in English or Spanish." },
-      { num: 3, heading: "You get the job", body: "Booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge — plus SMS in 60 seconds. Emergencies routed to your cell within 30 seconds." },
+      { num: 3, heading: "You get the booking", body: "Booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge — plus SMS in 60 seconds. Emergencies routed to your cell within 30 seconds." },
     ],
   },
 
@@ -106,7 +106,7 @@ export const hvacConfig: VerticalConfig = {
       { icon: "moon", text: "You sleep through the night." },
       { icon: "calendar-check", text: "Your calendar fills itself." },
       { icon: "trending-up", text: "Revenue climbs without more trucks." },
-      { icon: "mood-smile", text: "You go back to liking your job." },
+      { icon: "mood-smile", text: "You go back to liking your business." },
     ],
     before: [
       { icon: "phone-ringing", text: "You answer the phone at dinner." },
@@ -189,7 +189,7 @@ export const hvacConfig: VerticalConfig = {
     },
     {
       q: "How long does setup take?",
-      a: "48 hours from your kickoff call. We script the AI, train it on your business, and go live before you lose another weekend job.",
+      a: "48 hours from your kickoff call. We script the AI, train it on your business, and go live before you lose another weekend call.",
     },
     {
       q: "Do you integrate with my existing phone system?",

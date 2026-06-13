@@ -153,7 +153,7 @@ export default function TermsPage() {
             Questions about these terms? Contact us at{' '}
             <a href="mailto:ace@liveanswerservice.com" className="text-[var(--color-brand)] underline">
               ace@liveanswerservice.com
-            </a>, or call our office during regular business hours at (555) 123-4567. Our customer 
+            </a>, or call our office during regular business hours at (669) 316-1742. Our customer
             support team is available Monday through Friday from 9 AM to 6 PM Pacific Time.
           </p>
         </section>
