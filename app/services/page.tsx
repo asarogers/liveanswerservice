@@ -26,6 +26,7 @@ const ICON_FOR: Record<string, string> = {
   "salon-and-spa-answering-service":     "ti-cut",
   "medical-office-answering-service":    "ti-stethoscope",
   "live-answering-service":              "ti-phone-call",
+  "sms-text-answering-service":          "ti-message-2",
 };
 
 export default function ServicesIndexPage() {

@@ -24,6 +24,7 @@ import { insuranceConfig, insuranceDetail } from "./insurance-answering-service"
 import { chiropracticConfig, chiropracticDetail } from "./chiropractic-answering-service";
 import { mentalHealthConfig, mentalHealthDetail } from "./mental-health-answering-service";
 import { medSpaConfig, medSpaDetail } from "./med-spa-answering-service";
+import { smsTextConfig, smsTextDetail } from "./sms-text-answering-service";
 
 export const EXPANSION_VERTICALS: Record<string, VerticalConfig> = {
   "appointment-scheduling-answering-service": appointmentSchedulingConfig,
@@ -36,6 +37,7 @@ export const EXPANSION_VERTICALS: Record<string, VerticalConfig> = {
   "chiropractic-answering-service": chiropracticConfig,
   "mental-health-answering-service": mentalHealthConfig,
   "med-spa-answering-service": medSpaConfig,
+  "sms-text-answering-service": smsTextConfig,
 };
 
 export const EXPANSION_DETAILS: ServiceDetail[] = [
@@ -49,4 +51,5 @@ export const EXPANSION_DETAILS: ServiceDetail[] = [
   chiropracticDetail,
   mentalHealthDetail,
   medSpaDetail,
+  smsTextDetail,
 ];

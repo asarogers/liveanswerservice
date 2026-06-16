@@ -160,6 +160,10 @@ export const smallBusinessConfig: VerticalConfig = {
       a: "Yes — native EN/ES on every account, no upcharge. The AI detects the caller's language in the first 3 seconds and switches automatically.",
     },
     {
+      q: "Is this like having a dedicated full-time virtual receptionist?",
+      a: "Yes — it's a dedicated virtual receptionist that works full-time and then some: 24/7, including nights, weekends, and holidays, with no breaks, sick days, or turnover. Unlike a shared answering pool, your AI is scripted specifically for your business, recognizes returning callers, and follows your booking and escalation rules every time — at a flat $500/mo instead of the $4,000–$6,000/mo a full-time California receptionist costs in salary, taxes, and benefits.",
+    },
+    {
       q: "Is there a contract?",
       a: "No. Month-to-month. Cancel anytime. The 7-day free trial requires no credit card. Annual prepay saves you $900/year and waives the setup fee.",
     },

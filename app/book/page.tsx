@@ -45,9 +45,9 @@ export default function BookPage() {
             scope your CRM integration — all in one call. No credit card. No commitment.
           </p>
           <p style={{ color: "#5c5147", fontSize: 14, marginTop: "8px" }}>
-            By booking this consult, you&rsquo;ll gain insights into how our AI receptionist can
-            revolutionize your business communication. We understand that every business is unique,
-            which is why we tailor our solutions to fit your specific needs and industry.
+            This call is about your phones, not a sales pitch. We&rsquo;ll look at how many calls
+            you&rsquo;re missing, when they come in, and what a caught call is worth to you &mdash;
+            then show you exactly how the AI would handle them for your business and industry.
           </p>
         </div>
       </section>
@@ -105,11 +105,11 @@ export default function BookPage() {
           <h2 className="section-title">Benefits of choosing Live Answer</h2>
           <ul style={{ listStyle: "none", padding: 0, margin: "24px 0" }}>
             {[
-              "Increase your first-call resolution rate",
-              "Reduce missed calls by up to 90%",
-              "Save time and improve customer satisfaction",
-              "Get a customized solution for your industry needs",
-              "Start seeing results within days, not weeks"
+              "Every call answered, 24/7 — nights, weekends, and holidays included",
+              "Bilingual English & Spanish on every call, never an upcharge",
+              "Appointments booked and leads captured into your calendar or CRM",
+              "Flat monthly price — no per-minute billing surprises",
+              "Live fast: your 7-day free trial starts within 48 hours of kickoff"
             ].map((benefit) => (
               <li
                 key={benefit}
@@ -234,7 +234,7 @@ export default function BookPage() {
           <ul style={{ listStyle: "none", padding: 0, margin: "16px auto" }}>
             {[
               "Secure a spot on our calendar — no credit card required",
-              "Start your free trial and see results within days",
+              "Start your 7-day free trial within 48 hours of kickoff",
               "Get personalized attention to maximize your setup"
             ].map((reason) => (
               <li

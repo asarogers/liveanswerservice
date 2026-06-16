@@ -265,6 +265,12 @@
     "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
    },
    {
+    "url": "/services/sms-text-answering-service",
+    "tier": "G",
+    "action": "exclude",
+    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 Bucket C NEW PAGE (GBP 1:1 for Text/SMS answering & response, Telecom provider category). Added 2026-06-12; gated on prior wave indexing in GSC."
+   },
+   {
     "url": "/services/towing-roadside-answering-service",
     "tier": "G",
     "action": "exclude",
@@ -519,9 +525,10 @@
     "/services/med-spa-answering-service",
     "/services/emergency-dispatch-answering-service",
     "/services/live-chat-answering-service",
-    "/services/crm-integration-answering-service"
+    "/services/crm-integration-answering-service",
+    "/services/sms-text-answering-service"
    ],
-   "count": 6
+   "count": 7
   }
  ],
  "_schedule_update": "2026-06-11: Waves 3-8 rebuilt on measured data (clickstream/KD/YoY/SERP, report \u00a71A/\u00a71C). Wave 1 shipped, Wave 2 unchanged. Cherry-picks needed: /ai-receptionist + medical (from wave-6 branch), plumbing (from wave-9). New builds: /ai-answering-service, funeral-home, insurance-verification, prior-authorization-service. Cuts: towing/accounting/cleaning/it-msp/nonprofit/roofing (zero or declining demand; CNI risk). Medical page copy MUST target exact phrase 'medical answer service' (6600/mo KD7; the -ing variant is 0/mo KD25). Worklist: WAVE-REWORK-2026-06-11.md"

@@ -207,6 +207,10 @@ export const appointmentSchedulingConfig: VerticalConfig = {
       a: "A regular answering service takes a message and emails it to you. We book the appointment directly into your calendar — Calendly, Acuity, Google Calendar, Dentrix, Clio, Jobber, ServiceTitan, or Housecall Pro — before the caller hangs up. The caller leaves with a confirmed slot and an SMS. You leave with a booking, not a callback to do.",
     },
     {
+      q: "Can it handle reservation and booking management, not just appointments?",
+      a: "Yes. Whether you call them appointments, reservations, or bookings, the AI manages the full lifecycle — taking the reservation live, writing it to your system, sending a confirmation SMS, fielding reschedule and cancellation requests, and freeing the slot when someone cancels so it can be rebooked. Restaurants, salons, clinics, and service businesses all run on the same engine: capture the booking while the caller is on the line, then keep it managed so no slot sits empty by mistake.",
+    },
+    {
       q: "What if a time slot isn't available when the caller wants?",
       a: "The AI has live access to your availability and offers the nearest open alternatives in real time. It can also take a waitlist request and automatically confirm via SMS if a slot opens. Nothing sits in a voicemail queue waiting for a human to check it.",
     },

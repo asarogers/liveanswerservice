@@ -54,6 +54,7 @@ export default function PricingPage() {
                 <li><i className="ti ti-check" aria-hidden="true" />No-show + follow-up SMS automation</li>
                 <li><i className="ti ti-check" aria-hidden="true" />Real-time analytics and reporting tools</li>
                 <li><i className="ti ti-check" aria-hidden="true" />Multi-device call forwarding options</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Local &amp; toll-free number provisioning included</li>
               </ul>
               <div className="setup-fee">
                 $199 one-time setup · <em>waived with annual prepay</em>
