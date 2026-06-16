@@ -156,6 +156,74 @@ export const serviceDetails: ServiceDetail[] = [
     relatedLocations: ["san-jose", "sacramento", "los-angeles", "san-francisco-bay-area"],
   },
 
+  /* ──────────────────────────────────────────────────────────
+     WEEK 2 — DENTAL (noindex via site-plan until launch)
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "dental-answering-service",
+    title: "Dental Answering Service — AI Front Desk for California Practices",
+    metaDescription:
+      "AI front desk for California dental practices. Books new patients 24/7 into Dentrix, Open Dental, Eaglesoft, Curve, or NexHealth. Bilingual EN/ES. HIPAA-aware. Flat $500/mo flat.",
+    h1: "Your Front Desk Shouldn't End at 5 PM or Pause at Lunch",
+    intro:
+      "California dental practices miss 20–38% of calls — and almost all of them happen at lunch, before 9 AM, or after 5 PM. At an average $850 lifetime value per new patient, that's six figures per practice per year leaking out the front desk. Front Desk On-Call is Live Answer's offering for dental, medical, and wellness practices: a 24/7 AI receptionist that books new patients straight into your PMS, handles Spanish-speaking callers natively, and runs HIPAA-aware intake. It's built to cover the lunch-hour gap and the after-5 PM gap without replacing your existing team — your in-office staff stays with patients in the chair, the AI handles the rest.",
+    sections: [
+      {
+        heading: "Books Directly Into Your Practice Management System",
+        content:
+          "Pro and Best tiers integrate with the dominant California dental and medical PMS platforms: Dentrix, Open Dental, Eaglesoft, Curve, NexHealth, and Athenahealth for medical. Solo books to Google Calendar or any iCal-compatible system, which covers the smaller single-provider practice that hasn't yet committed to a full PMS for booking. The AI is scripted for the standard dental intake — new patient versus existing, insurance carrier and verification questions, pain level triage for emergencies, preferred provider and chair side. Recall calls are an option on Better and Best: the AI can place outbound reminder calls to lapsed patients on a schedule you set, which historically recovers 8–15% of stale patients. Booking conflicts and ambiguous schedules get flagged to your office manager for review before they hit the chair, so the AI never overbooks or double-books — it errs on escalation.",
+      },
+      {
+        heading: "HIPAA-Aware, CCPA-Compliant by Default",
+        content:
+          "Two-party-consent disclosure plays at the start of every call, satisfying California's recording laws. The intake script is set to minimum-necessary information by default — the AI does not record PHI in transcripts unless your office explicitly opts in. We provide a signed BAA for HIPAA compliance and our infrastructure encrypts call recordings at rest and in transit. Deletion requests are honored within 30 days. If your office prefers, we can disable recording entirely and retain only the structured summary (caller name, callback number, service requested, appointment booked). The AI is also scripted to refuse to give clinical advice — emergency or pain-level triage questions get routed to a triage protocol you define during onboarding, never to AI-generated medical guidance.",
+      },
+      {
+        heading: "Pricing That Closes the Math Against a Receptionist",
+        content:
+          "A California front-desk hire runs $38,000–$48,000 per year fully loaded, plus 60+ days to replace when they quit (and turnover is brutal right now). Unlimited at $500/mo is 8–10% of that cost and covers 24/7 plus bilingual plus PMS sync plus recall calls. Custom plan adds multi-location routing, custom intake by service line, and a monthly performance review. WellReceived charges $375–$395/mo for 150–300 minutes; TrueLark charges $249/mo with a dental-specific feature set; we beat both on flat-rate unlimited at the higher volume tiers. Booking guarantee: 30 booked appointments in 30 days or a full refund plus a $250 credit toward a real receptionist hire. At $850 LTV per new patient, capturing ten extra bookings is $8,500 of recovered revenue against a sub-$500 service — a 19x payback in 30 days.",
+      },
+    ],
+    relatedServices: ["medical-office-answering-service", "small-business-answering-service"],
+    relatedLocations: ["san-jose", "los-angeles", "san-francisco-bay-area"],
+  },
+
+  /* ──────────────────────────────────────────────────────────
+     WEEK 3 — RESTAURANT
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "restaurant-answering-service",
+    title: "Restaurant Answering Service — AI Phone Host for California Restaurants",
+    metaDescription:
+      "AI phone host for California restaurants. Takes reservations, handles takeout orders, answers menu questions 24/7. Bilingual EN/ES. Books into OpenTable, Resy, Toast. Flat $500/mo flat.",
+    h1: "Every Reservation. Captured.",
+    intro:
+      "Restaurants miss calls during the worst possible moments — the dinner rush, when the host is seating a six-top, when the line out the door is exactly the kind of demand signal a hungry caller hangs up on rather than waits through. Average reservation value across California sit-down restaurants runs $50–$200, and at high single-digit miss rates compounded over a year, that's another full table-turn per week walking out the door before it ever walks in. Live Answer's restaurant configuration is an AI phone host that answers every call within two rings, books reservations directly into OpenTable, Resy, or your POS, takes takeout orders, and handles routine menu and hours questions — in English or Spanish — without ever putting a caller on hold.",
+    sections: [
+      {
+        heading: "Reservations, Takeout, and FAQ in a Single Voice Layer",
+        content:
+          "The AI handles the three high-volume call types in a restaurant: reservation booking (with party size, time, special requests, allergies), takeout orders (with item-by-item ordering against your menu, modifications, total quote, and pickup time), and FAQ (hours, parking, menu items, dietary accommodations, private dining). Reservations push to OpenTable or Resy in real time; takeout orders push to Toast or Square POS as draft tickets your kitchen confirms. Anything outside scope — a wedding inquiry, a press request, a complaint — gets routed to the manager's cell with a summary, never auto-resolved. The voice model is tuned for hospitality warmth (we want the AI to sound like the best host you've ever hired, not a phone tree), and the system prompt includes your restaurant's actual personality — formal versus casual, the names of the chefs and managers, your house cocktail's correct pronunciation.",
+      },
+      {
+        heading: "Why the Slang.ai $399 Anchor Is Beatable",
+        content:
+          "Slang.ai is the visible incumbent in restaurant-specific AI phone hosts, priced at around $399/mo with a feature set similar to ours. The opportunity isn't beating them on features — it's that the rest of the restaurant AI market below $399 is wide open. Most California restaurants doing $1M–$5M in revenue cannot justify a $399/mo line item until they understand what one captured Friday-night reservation is worth. Live Answer's $500/mo Unlimited (Custom for multi-location) bracket Slang.ai with flat-rate unlimited (Slang.ai counts calls), bilingual standard (Slang.ai charges extra), and a 7-day free trial with no card. For restaurants in the LA / Inland Empire / Central Valley markets where Spanish-speaking diners are 30–50% of inbound, bilingual is the meaningful wedge — and it's included.",
+      },
+      {
+        heading: "What Happens When the Phone Rings During Rush",
+        content:
+          "Most restaurant phone systems fail during rush because the host is physically with another guest. The standard fallback is a voicemail nobody checks until the next morning, which loses the reservation entirely. Live Answer answers in parallel — the host stays at the door, the AI takes the call. If the caller wants to speak to a person specifically, the AI offers to take a message and have the manager call back within 30 minutes, or it can hot-transfer to a mobile number during business hours. Spam and robocall filtering is on by default. The AI ends every call with a confirmation SMS to the caller (\"You're booked for 4 at 7:30 PM Saturday, see you then\") and a structured summary to your manager dashboard. By Sunday morning you have a transcript of every Friday-night call, what you booked, what you couldn't accommodate, and what your phone host actually sounded like.",
+      },
+    ],
+    relatedServices: ["small-business-answering-service", "salon-and-spa-answering-service"],
+    relatedLocations: ["san-jose", "san-francisco-bay-area", "los-angeles"],
+  },
+
+
+
+
+
   // Waves 2–9 service-page expansion (16 verticals, noindex until promoted)
   ...EXPANSION_DETAILS,
 ];
