@@ -4,10 +4,10 @@ export const hvacConfig: VerticalConfig = {
   slug: "hvac-answering-service",
 
   meta: {
-    title: "Live Answer for HVAC — Never lose another job",
+    title: "HVAC Answering Service California — Never Miss Another Call",
     description:
-      "24/7 bilingual AI answering service for California HVAC contractors. Every call answered, every emergency triaged, every job booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge. One recovered emergency pays for 3 months.",
-    canonical: "/",
+      "24/7 bilingual AI answering service for California HVAC contractors. Every call answered, every emergency triaged, every call booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge. One recovered emergency pays for 3 months.",
+    canonical: "/services/hvac-answering-service",
   },
 
   verticalBar: {
@@ -16,16 +16,16 @@ export const hvacConfig: VerticalConfig = {
   },
 
   oneLiner:
-    "California HVAC contractors lose up to 6 of every 10 after-hours calls to voicemail. We answer every one 24/7 in English and Spanish and book it straight into your dispatch software — so you stop losing emergency jobs and your trucks stay full.",
+    "California HVAC contractors lose up to 6 of every 10 after-hours calls to voicemail. We answer every one 24/7 in English and Spanish and book it straight into your dispatch software — so you stop losing emergencies and your trucks stay full.",
 
   hero: {
     eyebrow: "AI receptionist · 24/7 · Bilingual EN/ES",
-    headline: "Never lose another {italicWord}.",
-    italicWord: "job",
+    headline: "Never lose another {italicWord} to a missed call.",
+    italicWord: "customer",
     subhead: {
       seoBold: "24/7 bilingual AI answering service for California HVAC contractors.",
       body:
-        "You shouldn't lose a $1,200 emergency because you were on a roof, in a crawlspace, or asleep. We answer every call, qualify the job, and text you the details.",
+        "You shouldn't lose a $1,200 emergency because you were on a roof, in a crawlspace, or asleep. We answer every call, qualify the call, and text you the details.",
     },
     sampleBusinessName: "Sunrise Heating & Air",
     chat: [
@@ -47,13 +47,15 @@ export const hvacConfig: VerticalConfig = {
     title: "The math behind every missed call.",
     stats: [
       { num: "62%", label: "of after-hours HVAC calls go unanswered" },
-      { num: "$275–$1,200", label: "value of each emergency job walking to your competitor" },
+      { num: "$275–$1,200", label: "value of each emergency call walking to your competitor" },
       { num: "3–5×", label: "summer call spike during heat waves — most go to voicemail" },
     ],
+    rankingNote:
+      "Google sees roughly half of US phone calls through Android — whether you answered, how long you talked, and whether the homeowner dialed another contractor next. Shops that stop answering measurably drop in local rank. A 100% answer rate protects the Maps position your emergency calls come from.",
   },
 
   vocQuote: {
-    quote: "We used to just let calls go to voicemail. We definitely lost jobs over it.",
+    quote: "We used to just let calls go to voicemail. We definitely lost customers over it.",
     attribution: "— What we hear from California service-business owners every week",
   },
 
@@ -71,7 +73,7 @@ export const hvacConfig: VerticalConfig = {
     sectionNum: "03 · We get it",
     title: "You didn't start an HVAC business to answer phones.",
     empathy:
-      "You started it to do clean installs and fast repairs — not chase voicemails. But the phone never stops. It rings 20 feet up a ladder. It rings during dinner. It rings at 11 PM on a Saturday in July. Every call you can't answer is a job your competitor just booked.",
+      "You started it to do clean installs and fast repairs — not chase voicemails. But the phone never stops. It rings 20 feet up a ladder. It rings during dinner. It rings at 11 PM on a Saturday in July. Every call you can't answer is a customer your competitor just booked.",
     authority: [
       { num: "24/7", label: "Every call, every hour — including 2 AM emergencies" },
       { num: "EN/ES", label: "Bilingual from the first ring" },
@@ -86,7 +88,7 @@ export const hvacConfig: VerticalConfig = {
     steps: [
       { num: 1, heading: "Forward your phone", body: "60 seconds. Works with any provider — Twilio, Google Voice, RingCentral, Verizon, AT&T." },
       { num: 2, heading: "We qualify the call", body: "No heat? No AC? Capacitor? Tune-up? Triaged, scheduled, dispatched — 24/7, in English or Spanish." },
-      { num: 3, heading: "You get the job", body: "Booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge — plus SMS in 60 seconds. Emergencies routed to your cell within 30 seconds." },
+      { num: 3, heading: "You get the booking", body: "Booked into Jobber, ServiceTitan, HousecallPro, or FieldEdge — plus SMS in 60 seconds. Emergencies routed to your cell within 30 seconds." },
     ],
   },
 
@@ -104,7 +106,7 @@ export const hvacConfig: VerticalConfig = {
       { icon: "moon", text: "You sleep through the night." },
       { icon: "calendar-check", text: "Your calendar fills itself." },
       { icon: "trending-up", text: "Revenue climbs without more trucks." },
-      { icon: "mood-smile", text: "You go back to liking your job." },
+      { icon: "mood-smile", text: "You go back to liking your business." },
     ],
     before: [
       { icon: "phone-ringing", text: "You answer the phone at dinner." },
@@ -118,11 +120,6 @@ export const hvacConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Hi, this is Sarah at Sunrise Heating..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Sunrise Heating & Air." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hey, Sunrise Heating — how can I help?" },
-    ],
   },
 
   compare: {
@@ -146,6 +143,33 @@ export const hvacConfig: VerticalConfig = {
 
   pricingAudience: "For HVAC shops that lose $1,200 every time a Saturday emergency hits voicemail",
 
+  // Homepage-only cross-vertical editorial links — one H2 + in-content link per
+  // live Wave-1 vertical. Grow per wave (cap 7–8).
+  crossVerticals: {
+    sectionNum: "13 · Beyond HVAC",
+    title: "The same receptionist, other phones.",
+    items: [
+      {
+        heading: "California law firms lose retainers, not service calls",
+        body:
+          "A missed call to a California solo or small firm averages $3,000–$10,000 in lost retainer value, and Spanish-speaking PI and immigration clients usually call three or four firms in one sitting — the first one to answer signs the case. Our ",
+        href: "/services/attorney-answering-service",
+        linkText: "attorney answering service",
+        after:
+          " runs a conflict check during the call, qualifies the matter by practice area, and books the consult into Clio, MyCase, or PracticePanther before the caller dials the next firm.",
+      },
+      {
+        heading: "Owner-operators answering their own phone",
+        body:
+          "If you are the receptionist, you already know the math: roughly 62% of calls go unanswered while you're doing the actual work, and most callers won't wait a minute before trying a competitor. Our ",
+        href: "/services/small-business-answering-service",
+        linkText: "small business answering service",
+        after:
+          " picks up within two rings, books straight into your calendar, and texts you a summary — same flat $500/mo, no per-minute fees, English and Spanish on every account.",
+      },
+    ],
+  },
+
   faqs: [
     {
       q: "How does the AI receptionist work?",
@@ -165,7 +189,7 @@ export const hvacConfig: VerticalConfig = {
     },
     {
       q: "How long does setup take?",
-      a: "48 hours from your kickoff call. We script the AI, train it on your business, and go live before you lose another weekend job.",
+      a: "48 hours from your kickoff call. We script the AI, train it on your business, and go live before you lose another weekend call.",
     },
     {
       q: "Do you integrate with my existing phone system?",

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FAQSection from "@/components/FAQSection";
+import HeroCallForm from "@/components/HeroCallForm";
+import HeroLogoVideo from "@/components/HeroLogoVideo";
 import { siteConfig } from "@/lib/siteConfig";
 import {
   getLocationBySlug,
@@ -122,13 +124,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
     serviceType: ["AI Receptionist", "Answering Service", "24/7 Call Answering", "Bilingual Answering Service"],
     priceRange: "$$",
     openingHours: ["Mo-Su 00:00-23:59"],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "1",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // aggregateRating intentionally omitted — no real Google reviews exist for
+    // Live Answer Service yet. Re-add only from a live GBP feed (never hardcode).
     sameAs: [
       siteConfig.social.instagram,
       siteConfig.social.facebook,
@@ -181,24 +178,22 @@ export default async function LocationDetailPage({ params }: PageProps) {
         {tint.label}
       </div>
 
-      {/* ── HERO (StoryBrand: character + problem) ─────────── */}
-      <section className="la-hero">
-        <div className="wrap la-hero-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 48, alignItems: "center" }}>
-          <div>
+      {/* ── HERO (StoryBrand: character + problem) ───────────
+          Mirrors the homepage hero exactly: la-hero--cream is a dark
+          burgundy→ink gradient section, and the text MUST sit inside a
+          .hero-card (the cream panel) — without it the dark default h1/.sub
+          colors render dark-on-dark and become unreadable. */}
+      <section className="la-hero la-hero--cream">
+        <div className="wrap hero-wrap">
+          <div className="hero-card">
             <div className="hero-eyebrow">
               <span className="dot" aria-hidden="true" />
               <span>{location.city} · always answering</span>
             </div>
             <h1>{location.h1}</h1>
             <p className="sub">{splitFirstSentence(location.intro).lead}</p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
-            <div style={{ fontSize: 13, color: "#94867a" }}>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
+            <div className="hero-foot-note">
               7-day free trial · no card · cancel anytime
             </div>
             <div className="hero-transitional">
@@ -207,26 +202,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
           </div>
 
           <div className="hero-phone-wrap">
-            <div className="phone-mockup" role="img" aria-label={`Sample ${location.city} call`}>
-              <div className="phone-notch" aria-hidden="true" />
-              <div className="phone-screen">
-                <div className="phone-status">
-                  <span>9:41</span>
-                  <span aria-hidden="true"><i className="ti ti-signal-4g" /> <i className="ti ti-wifi" /> <i className="ti ti-battery" /></span>
-                </div>
-                <div className="phone-callbar">
-                  <i className="ti ti-phone-call" aria-hidden="true" />
-                  <span>Live Answer · {location.city}</span>
-                </div>
-                <div className="chat-thread">
-                  <div className="chat-bubble ai">Thanks for calling — how can I help?</div>
-                  <div className="chat-bubble caller">My AC&rsquo;s out and it&rsquo;s 96 inside.</div>
-                  <div className="chat-bubble ai">I&rsquo;m sorry — what part of {location.city}?</div>
-                  <div className="chat-bubble caller">{location.neighborhoods[0]}.</div>
-                  <div className="chat-bubble ai">Booked for 4:30 PM. Text confirmation sent.</div>
-                </div>
-              </div>
-            </div>
+            <HeroLogoVideo />
           </div>
         </div>
       </section>
@@ -288,7 +264,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
           <section
             key={idx}
             className="section-pad"
-            style={{ background: isAlt ? "#f7f2e7" : "#f7f2e7" }}
+            style={{ background: isAlt ? "#f2ead9" : "#f7f2e7" }}
             aria-labelledby={`section-${idx}-heading`}
           >
             <div className="wrap" style={{ maxWidth: 1080 }}>
@@ -316,7 +292,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 16 }}>
                   {bullets.map((s, i) => (
-                    <li key={i} style={{ display: "flex", gap: 12, padding: 16, background: isAlt ? "#f7f2e7" : "#f7f2e7", borderRadius: 8, fontSize: 15, lineHeight: 1.6, color: "#5c5147" }}>
+                    <li key={i} style={{ display: "flex", gap: 12, padding: "16px 18px", background: "#fff", border: "1px solid #e8e0d2", borderRadius: 12, fontSize: 15, lineHeight: 1.6, color: "#5c5147" }}>
                       <i className="ti ti-check" aria-hidden="true" style={{ color: "var(--accent, #5a1f2e)", flexShrink: 0, marginTop: 2 }} />
                       <span>{s}</span>
                     </li>
@@ -358,7 +334,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <div className="plan-step">
               <div className="num">1</div>
               <h3>Forward your phone</h3>
-              <p>60 seconds with any carrier. Test the line first — call (669) 365-6533 and try to break it.</p>
+              <p>60 seconds with any carrier. Test the line first — call (669) 316-1742 and try to break it.</p>
             </div>
             <div className="plan-step">
               <div className="num">2</div>
@@ -374,29 +350,32 @@ export default async function LocationDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Local context (enrichment) */}
+      {/* Local context (enrichment) — scannable reference columns only.
+          The prose localParagraph is intentionally NOT rendered: it restated the
+          HQ address + vertical breakdown already covered in the hero intro and the
+          content sections above. The columns below are unique, scannable, and add
+          information rather than repeating it. */}
       {enrichment && (
         <section className="plan" aria-labelledby="local-heading">
           <div className="wrap" style={{ maxWidth: 880 }}>
             <div className="section-eyebrow">On the ground</div>
-            <h2 id="local-heading" className="section-title">{location.city} at a glance.</h2>
-            <p style={{ maxWidth: 640, margin: "0 auto 32px", fontSize: 15, lineHeight: 1.7, color: "#5c5147" }}>
-              {enrichment.localParagraph}
-            </p>
+            <h2 id="local-heading" className="section-title" style={{ marginBottom: 32 }}>{location.city} at a glance.</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24, textAlign: "left" }}>
               <Column title="Districts" items={enrichment.hospitals} />
-              <Column title="Industries we serve" items={enrichment.seniorCenters} />
+              <Column title="What we handle" items={enrichment.seniorCenters} />
               <Column title="Landmarks" items={enrichment.landmarks} />
             </div>
           </div>
         </section>
       )}
 
-      {/* Industries we serve here */}
+      {/* Service navigation cards — links to the per-vertical service pages.
+          Heading deliberately distinct from the prose "Industries We Serve"
+          content section above so the two don't read as duplicates. */}
       <section className="scenarios" aria-labelledby="services-here">
         <div className="wrap">
-          <div className="section-eyebrow">Verticals</div>
-          <h2 id="services-here" className="section-title">Industries we serve in {location.city}.</h2>
+          <div className="section-eyebrow">Services</div>
+          <h2 id="services-here" className="section-title">See the service built for your industry.</h2>
           <div className="scenarios-grid">
             {indexedServices.slice(0, 6).map((s) => (
               <Link key={s.slug} href={`/services/${s.slug}`} className="scenario-card" style={{ display: "block", textDecoration: "none" }}>
@@ -446,7 +425,6 @@ export default async function LocationDetailPage({ params }: PageProps) {
       {/* Final CTA */}
       <style>{`
         @media (max-width: 760px) {
-          .la-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           .loc-section-split { grid-template-columns: 1fr !important; gap: 24px !important; }
         }
       `}</style>
@@ -551,11 +529,11 @@ function LandmarkPageContent({ landmark }: { landmark: LandmarkPage }) {
         </div>
       </section>
 
-      {/* Job stories */}
+      {/* Field stories */}
       {landmark.jobStories.length > 0 && (
-        <section className="section-pad" aria-labelledby="job-stories-heading" style={{ background: "#f7f2e7" }}>
+        <section className="section-pad" aria-labelledby="field-stories-heading" style={{ background: "#f7f2e7" }}>
           <div className="wrap" style={{ maxWidth: 880 }}>
-            <h2 id="job-stories-heading" style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 400, letterSpacing: "-0.015em", color: "#1a1611", margin: "0 0 32px" }}>
+            <h2 id="field-stories-heading" style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 400, letterSpacing: "-0.015em", color: "#1a1611", margin: "0 0 32px" }}>
               How it works near {landmark.landmark}
             </h2>
             <div style={{ display: "grid", gap: 24 }}>

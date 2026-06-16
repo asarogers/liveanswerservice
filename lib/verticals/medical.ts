@@ -116,11 +116,6 @@ export const medicalConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & reassuring", sampleLine: "Hillview Family Medicine — how can I help?" },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Hillview Family Medicine." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Hillview Family — what brings you in?" },
-    ],
   },
 
   compare: {

@@ -3072,10 +3072,14 @@ img, svg { display: block; max-width: 100%; }
   background: #8E2138 !important;
 }
 
-/* Compare table — "us" row burgundy */
+/* Compare table — "us" row burgundy (text must be light: an earlier rule set
+   the text to dark #5a1f2e for a white background, so the burgundy bg here needs
+   its own light color override or it renders dark-on-dark). */
 .compare-us {
   background: #8E2138 !important;
+  color: #fff !important;
 }
+.compare-us strong { color: #fff !important; }
 
 /* Unlimited differentiator — "good" card burgundy */
 .unlimited-good {

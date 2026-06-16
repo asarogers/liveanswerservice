@@ -7,6 +7,7 @@ import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
 export const metadata: Metadata = {
   openGraph: {
     url: "/locations",
+    images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   title: "Service Areas — Live Answer Across California",
   description:
@@ -28,7 +29,7 @@ export default function LocationsIndexPage() {
           <p className="sub">
             Live Answer is headquartered in Willow Glen and serves California small businesses
             from the Oregon border to San Diego. Our service extends across diverse regions,
-            each with unique business needs, allowing us to provide tailored solutions.
+            each with different business needs, call patterns, and customer bases.
             Below: the metros we&rsquo;ve built dedicated local landing pages for.
           </p>
         </div>
@@ -71,7 +72,7 @@ export default function LocationsIndexPage() {
             <p className="sub-text">
               These upcoming locations are part of our commitment to expand coverage and support
               businesses across California. We'll continue to enhance our presence in these areas,
-              ensuring comprehensive service availability.
+              so coverage never depends on office hours.
             </p>
             <div
               style={{
@@ -132,7 +133,7 @@ export default function LocationsIndexPage() {
             </div>
           </div>
           <p className="sub-text">
-            Our commitment to comprehensive coverage ensures that businesses across California
+            Statewide coverage means businesses across California
             receive the support they need, regardless of location. We're dedicated to expanding
             our reach and enhancing services to meet the diverse needs of California's business community.
             With over 10 million Spanish-speakers in California, our bilingual services help bridge communication gaps,
@@ -160,7 +161,7 @@ export default function LocationsIndexPage() {
           <div className="faq-list">
             <div className="faq-item">
               <h3>How do you serve areas without dedicated landing pages?</h3>
-              <p>We offer comprehensive statewide service, ensuring businesses in all regions receive our support.
+              <p>We answer for businesses statewide — every region, every area code.
                 Our team is equipped to handle inquiries from any part of California, even if a specific landing page hasn't been created yet.</p>
             </div>
             <div className="faq-item">
@@ -202,28 +203,8 @@ export default function LocationsIndexPage() {
         </div>
       </section>
 
-      <section className="customer-stories">
-        <div className="wrap">
-          <h2>Real Success Stories</h2>
-          <p className="sub-text">
-            Don't just take our word for it. Here's what some of our California clients have to say:
-          </p>
-          <div className="testimonials-grid">
-            <div className="testimonial-item">
-              <div className="quote">"Live Answer transformed how we handle customer inquiries. Their bilingual support made a huge difference!"</div>
-              <div className="author">- Maria Gonzalez, Tech Startups</div>
-            </div>
-            <div className="testimonial-item">
-              <div className="quote">"As a small business owner in LA, Live Answer's solutions have been instrumental in growing my customer base."</div>
-              <div className="author">- John Miller, Retail Services</div>
-            </div>
-            <div className="testimonial-item">
-              <div className="quote">"Thanks to Live Answer, our Sacramento office now offers seamless 24/7 support to all our clients."</div>
-              <div className="author">- Sarah Lee, Healthcare Solutions</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* "Success stories" removed 2026-06-06 — they were fabricated (pre-launch,
+          zero customers). Re-add only with real, verifiable customer quotes. */}
 
       <section className="benefits">
         <div className="wrap">
@@ -233,10 +214,10 @@ export default function LocationsIndexPage() {
           </p>
           <ul className="benefit-list">
             <li><strong>Localized Expertise:</strong> Deep understanding of California's diverse markets and regions.</li>
-            <li><strong>Bilingual Support:</strong> Comprehensive English/Spanish services to connect with all customers.</li>
-            <li><strong>Proactive Service:</strong> We anticipate needs and provide solutions before issues arise.</li>
-            <li><strong>Scalable Solutions:</strong> Services that grow with your business, whether you're a startup or established company.</li>
-            <li><strong>24/7 Availability:</strong> Round-the-clock support to ensure no customer is left waiting.</li>
+            <li><strong>Bilingual Support:</strong> English/Spanish on every account, no upcharge.</li>
+            <li><strong>Proactive Service:</strong> We flag patterns in your calls before they become problems.</li>
+            <li><strong>Room to Grow:</strong> The same flat rate covers you from one truck to a multi-location operation.</li>
+            <li><strong>24/7 Availability:</strong> Round-the-clock answering — no customer left waiting.</li>
           </ul>
         </div>
       </section>

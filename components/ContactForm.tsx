@@ -157,7 +157,7 @@ export default function ContactForm() {
           autoComplete="tel"
           value={form.phone}
           onChange={handleChange}
-          placeholder="(669) 365-6533"
+          placeholder="(669) 316-1742"
           className="w-full rounded-lg border border-[#E0D8CF] bg-white px-4 py-3 text-[#2C2C2C] placeholder:text-[#5A5A5A]/60 focus:border-[#1A1A17] focus:outline-none focus:ring-2 focus:ring-[#1A1A17]/30 transition-colors"
         />
       </div>

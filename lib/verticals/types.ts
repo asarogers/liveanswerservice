@@ -53,6 +53,12 @@ export type VerticalConfig = {
     sectionNum: string; // "01 · The after-hours problem"
     title: string; // "The math behind every missed call."
     stats: { num: string; label: string }[]; // exactly 3
+    /**
+     * Goal-completion hook (hook #4) — "missed calls lower your Google Maps
+     * ranking." Our only unique angle in the 611-vendor set; one line per
+     * vertical, rendered under the stats grid. [LIVEANSWERSERVICE.md §alignment 1]
+     */
+    rankingNote?: string;
   };
 
   /** Voice-of-customer pull-out quote (real Reddit/forum-style) */
@@ -99,12 +105,12 @@ export type VerticalConfig = {
     before?: { icon: string; text: string }[];
   };
 
-  /** Voice agents — 3 sample voices (kept identical across verticals) */
+  /** Voice agents section header. The voice cards themselves are brand-fixed
+   *  and identical across verticals — see lib/voiceAgents.ts (VOICE_AGENTS). */
   voices: {
     sectionNum: string;
     title: string;
     sub: string;
-    cards: { name: string; label: string; sampleLine: string }[]; // 3
   };
 
   /** Comparison table — anchors $500 against "what you'd pay otherwise" */
@@ -122,6 +128,18 @@ export type VerticalConfig = {
 
   /** Pricing card audience line (the "for X who Y" tagline on the Unlimited card) */
   pricingAudience: string;
+
+  /**
+   * Cross-vertical editorial links (homepage only) — one H2 + 50–300 words per
+   * live vertical, with an in-content link. Nav links pass no authority; this
+   * is the crawl/authority path to the other Wave-1 verticals. Cap 7–8 as
+   * waves publish. [STRATEGY-PLAYBOOK §3]
+   */
+  crossVerticals?: {
+    sectionNum: string;
+    title: string;
+    items: { heading: string; body: string; href: string; linkText: string; after: string }[];
+  };
 
   /** FAQ list */
   faqs: { q: string; a: string }[];

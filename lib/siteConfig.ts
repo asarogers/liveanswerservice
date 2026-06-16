@@ -15,14 +15,15 @@ export const siteConfig = {
 
   // ── Contact ───────────────────────────────────────────────
   phone: {
-    display: "(669) 365-6533",
-    href: "tel:+16693656533",
-    schema: "+1-669-365-6533",
+    display: "(669) 316-1742",
+    href: "tel:+16693161742",
+    schema: "+1-669-316-1742",
   },
-  email: "hello@liveanswerservice.com",
+  email: "ace@liveanswerservice.com",
 
   // ── Scheduling ────────────────────────────────────────────
-  // TODO: Replace placeholder once Cal.com handle is created.
+  // Live Cal.com handle (verified 2026-06-08). Booking embedded on /book via CalEmbed.
+  // Books onto the founder's Google Calendar. cal.com/liveanswerservice/{30min,15min}.
   calcom: {
     username: "liveanswerservice",
     consultationSlug: "30min",
