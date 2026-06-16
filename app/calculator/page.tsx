@@ -123,7 +123,7 @@ export default function CalculatorPage() {
             <Field label="% of calls you miss (voicemail, busy, no answer)" suffix={`${missRatePct}%`}>
               <input type="range" min={5} max={75} step={1} value={missRatePct} onChange={(e) => setMissRatePct(Number(e.target.value))} />
             </Field>
-            <Field label="Average job value (service call, install, emergency)" suffix={`$${avgJobValue.toLocaleString()}`}>
+            <Field label="Average ticket value (service call, install, emergency)" suffix={`$${avgJobValue.toLocaleString()}`}>
               <input type="range" min={150} max={3000} step={25} value={avgJobValue} onChange={(e) => setAvgJobValue(Number(e.target.value))} />
             </Field>
           </div>
@@ -135,14 +135,14 @@ export default function CalculatorPage() {
               <span className="calc-output-per">/ year</span>
             </div>
             <div className="calc-output-sub">
-              That&rsquo;s {out.missedPerYear.toLocaleString()} missed jobs × ${avgJobValue.toLocaleString()} each ·{" "}
+              That&rsquo;s {out.missedPerYear.toLocaleString()} missed calls × ${avgJobValue.toLocaleString()} each ·{" "}
               <strong>${out.lostRevenueMonth.toLocaleString()}/month walking away</strong>
             </div>
             <div className="calc-payback">
               <strong>Payback on $500/mo Unlimited:</strong>{" "}
               {Number(out.paybackMonths) < 1
-                ? `You'd cover it in ${out.paybackMonths} months. Capture ${out.jobsPerMonthToBreakEven} job per month — that's it.`
-                : `Capture ${out.jobsPerMonthToBreakEven} jobs per month and it pays for itself.`}
+                ? `You'd cover it in ${out.paybackMonths} months. Capture ${out.jobsPerMonthToBreakEven} booking per month — that's it.`
+                : `Capture ${out.jobsPerMonthToBreakEven} bookings per month and it pays for itself.`}
             </div>
           </div>
 

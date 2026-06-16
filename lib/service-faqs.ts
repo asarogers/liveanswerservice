@@ -17,7 +17,7 @@ export const SERVICE_FAQ_MAP: Record<string, FAQ[]> = {
     },
     {
       q: "Can the AI book directly into ServiceTitan, Jobber, or Housecall Pro?",
-      a: "Yes — Pro tier integrates with Jobber, ServiceTitan, Housecall Pro, and FieldEdge directly. Bookings push as either a job or estimate based on the call type, with emergency dispatches flagged at the top of the daily board. Custom CRM integrations (RazorSync, ServiceFusion, Workiz) ship in under two weeks for Pro customers.",
+      a: "Yes — Live Answer integrates with Jobber, ServiceTitan, Housecall Pro, and FieldEdge directly, included in the flat rate. Bookings push as either a service call or estimate based on the call type, with emergency dispatches flagged at the top of the daily board. Custom CRM integrations (RazorSync, ServiceFusion, Workiz) ship in under two weeks.",
     },
     {
       q: "How does emergency triage work?",
@@ -25,11 +25,11 @@ export const SERVICE_FAQ_MAP: Record<string, FAQ[]> = {
     },
     {
       q: "What's the cost for HVAC?",
-      a: "Flat $149/mo on Good (after-hours + weekends), $249/mo on Better (24/7 with CRM sync and bilingual), $399/mo on Best (unlimited multi-line). Setup is waived for the first 30 customers. The booking guarantee is 10 booked jobs in 30 days or a full refund.",
+      a: "$500/mo flat — unlimited calls, 24/7 coverage, bilingual English/Spanish, and CRM sync (Jobber, ServiceTitan, Housecall Pro, FieldEdge) all included. No per-minute fees, no overages, and the rate is locked at sign-up. Setup is waived for the first 30 customers. The booking guarantee is 10 booked appointments in 30 days or a full refund.",
     },
     {
       q: "What if I already have a Spanish-speaking dispatcher?",
-      a: "Live Answer's bilingual covers after-hours, weekends, and any time your dispatcher is on another call — without doubling the headcount cost. Native Spanish is included on Better and Best, with the same triage logic and CRM sync regardless of language.",
+      a: "Live Answer's bilingual covers after-hours, weekends, and any time your dispatcher is on another call — without doubling the headcount cost. Native Spanish is included at no extra cost, with the same triage logic and CRM sync regardless of language.",
     },
   ],
 
@@ -59,7 +59,7 @@ export const SERVICE_FAQ_MAP: Record<string, FAQ[]> = {
   "dental-answering-service": [
     {
       q: "Can the AI book directly into Dentrix or Open Dental?",
-      a: "Yes — Pro and Best tiers integrate directly with Dentrix, Open Dental, Eaglesoft, Curve, NexHealth, and Athenahealth. Solo books to Google Calendar. The AI handles new patient versus existing patient routing and insurance pre-screening.",
+      a: "Yes — Live Answer integrates directly with Dentrix, Open Dental, Eaglesoft, Curve, NexHealth, and Athenahealth, included in the flat rate, and books to Google Calendar if you don't run a PMS. The AI handles new patient versus existing patient routing and insurance pre-screening.",
     },
     {
       q: "Is the AI HIPAA-compliant?",
@@ -67,11 +67,11 @@ export const SERVICE_FAQ_MAP: Record<string, FAQ[]> = {
     },
     {
       q: "Does it handle insurance verification?",
-      a: "On Better and Best tiers the AI collects carrier, plan name, member ID, group number, and subscriber details, and can run real-time verification through Availity, Waystar, or pVerify if API-accessible. Patients with out-of-network coverage get redirected rather than booked into slots that will later cancel.",
+      a: "Yes — the AI collects carrier, plan name, member ID, group number, and subscriber details, and can run real-time verification through Availity, Waystar, or pVerify if API-accessible. Patients with out-of-network coverage get redirected rather than booked into slots that will later cancel.",
     },
     {
       q: "What about recall calls for lapsed patients?",
-      a: "Better and Best support outbound recall calls — the AI places reminder calls to lapsed patients on a schedule you set. Historically recovers 8–15% of stale patients depending on the practice's patient mix.",
+      a: "Yes — Live Answer places outbound recall calls to lapsed patients on a schedule you set, included in the flat rate. Historically recovers 8–15% of stale patients depending on the practice's patient mix.",
     },
     {
       q: "What's the dental pricing?",

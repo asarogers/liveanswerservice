@@ -28,9 +28,8 @@ export default function FreeTrialPage() {
             <strong>7 days. AI live within 24 hours. No credit card required.</strong> If our system doesn't meet your expectations, you can cancel anytime and keep your phone number.
           </p>
           <div className="intro-text">
-            <p>Welcome to Live Answer, the premier AI-powered receptionist service designed to handle your calls professionally while you're busy or unavailable. We understand that trust is essential when it comes to managing customer interactions, which is why we offer a free trial with no credit card required.</p>
-            <p>Our goal is to help you experience the convenience and efficiency of our AI-driven solution without any upfront commitments. Whether you're running a small business or managing client calls in your personal capacity, Live Answer simplifies how you handle incoming calls.</p>
-            <p>In today's fast-paced world, having an efficient way to manage phone calls is crucial. Missed opportunities can occur when you're unavailable to answer calls, leading to potential customers feeling neglected. With Live Answer, you ensure that every call receives a professional response, maintaining your business's image and customer satisfaction.</p>
+            <p>Live Answer is an AI receptionist that answers your business line while you&rsquo;re on a service call, in a meeting, or asleep. Letting software talk to your customers is a trust decision — so the trial is free, runs on your real calls, and requires no credit card.</p>
+            <p>Forward your line, let the AI take a week of real calls, and judge it on what lands in your inbox: bookings, messages, and call summaries. If it doesn&rsquo;t earn the $500/mo, cancel and keep your number.</p>
           </div>
         </div>
       </section>
@@ -52,7 +51,7 @@ export default function FreeTrialPage() {
             <div className="stakes-stat">
               <div className="num">24 hrs</div>
               <div className="label">From sign-up to AI live on your line</div>
-              <p>Experience rapid deployment with our streamlined setup process ensuring minimal downtime and maximum efficiency. We understand time is critical, so we strive to have your service up and running quickly.</p>
+              <p>One forwarding change and the AI is on your line — most accounts go live the same day they finish the kickoff call.</p>
             </div>
           </div>
         </div>
@@ -66,7 +65,7 @@ export default function FreeTrialPage() {
             <div className="plan-step">
               <div className="num">✓</div>
               <h3>Every Feature Available</h3>
-              <p>Access our full suite of tools including unlimited calls, bilingual support (English/Spanish), seamless CRM integration, emergency escalation options, detailed call recordings, and automated no-show follow-up SMS. This comprehensive package ensures you get a true representation of what Live Answer can offer.</p>
+              <p>The trial is the full product: unlimited calls, bilingual support (English/Spanish), CRM integration, emergency escalation, call recordings, and automated no-show follow-up SMS. What you evaluate is exactly what you&rsquo;d pay for.</p>
             </div>
             <div className="plan-step">
               <div className="num">✓</div>

@@ -9,9 +9,9 @@ export const legalConfig: VerticalConfig = {
   slug: "attorney-answering-service",
 
   meta: {
-    title: "Live Answer for Law Firms — Never miss another retainer",
+    title: "Attorney Answering Service for CA Law Firms — Never Miss a Retainer",
     description:
-      "24/7 bilingual AI intake specialist for California solo and small law firms. Conflict check at the call, qualified intake, books into Clio, MyCase, PracticePanther. One captured retainer pays for a full year.",
+      "Attorney answering service for California solo and small law firms: 24/7 bilingual AI intake, conflict check at the call, qualified intake, books into Clio, MyCase, PracticePanther. One captured retainer pays for a full year.",
     canonical: "/services/attorney-answering-service",
   },
 
@@ -55,6 +55,8 @@ export const legalConfig: VerticalConfig = {
       { num: "$3K–$10K+", label: "value of each retainer walking to the next firm on Google" },
       { num: "60 sec", label: "before a PI lead calls the next listing — they don't wait" },
     ],
+    rankingNote:
+      "Google sees roughly half of US phone calls through Android — whether your firm answered, how long the intake lasted, and whether the caller dialed the next firm. Firms that stop answering measurably drop in local rank. A 100% answer rate protects the Maps position your case leads come from.",
   },
 
   vocQuote: {
@@ -117,11 +119,6 @@ export const legalConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & empathetic", sampleLine: "Anderson Law Firm — I'm so sorry to hear that..." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Anderson Law Firm." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Anderson Law — how can we help you today?" },
-    ],
   },
 
   compare: {

@@ -7,7 +7,7 @@
  *  (indexed Week 1); Sacramento / LA / Bay Area are scheduled
  *  for Week 4 launch (noindex via site-plan.json until then).
  *
- *  Phone: (669) 365-6533 | liveanswerservice.com
+ *  Phone: (669) 316-1742 | liveanswerservice.com
  * ============================================================
  */
 
@@ -36,7 +36,7 @@ export const locationDetails: LocationDetail[] = [
     state: "CA",
     title: "San Jose Answering Service — 24/7 AI Receptionist",
     metaDescription:
-      "AI answering service for San Jose small businesses. 24/7 bilingual EN/ES, books into your calendar, flat $500/mo flat. Local team in Willow Glen — call (669) 365-6533.",
+      "AI answering service for San Jose small businesses. 24/7 bilingual EN/ES, books into your calendar, $500/mo flat. Local team in Willow Glen — call (669) 316-1742.",
     h1: "AI Answering Service in San Jose, California",
     intro:
       "Live Answer is headquartered in San Jose's Willow Glen neighborhood, and the San Jose small-business market is exactly the customer we built the product for. The South Bay runs on small operators — HVAC and plumbing shops servicing the housing stock from Almaden to Berryessa, dental and medical practices clustered around Good Samaritan and Regional Medical, legal offices downtown and along Stevens Creek, salons and restaurants in Willow Glen and Japantown, real estate brokerages from Cambrian to Evergreen. All of them share the same problem: the owner or one staff member is still answering the phone, and the calls that come in during a job, during lunch, or after 5 PM go to voicemail. We answer every one of them, 24/7, in English or Spanish, and book the appointment directly into your calendar.",
@@ -49,12 +49,12 @@ export const locationDetails: LocationDetail[] = [
       {
         heading: "Bilingual English-Spanish for San Jose's Population",
         content:
-          "San Jose is roughly 31% Hispanic / Latino by population, with neighborhoods like East San Jose, Alum Rock, and parts of Evergreen carrying significantly higher Spanish-speaking concentrations. The standard answering services on the market either don't offer Spanish or charge extra for a transfer-to-Spanish-line that runs business hours only. Live Answer's bilingual coverage is included standard on Better and Best tiers — the AI detects the caller's language in the first three seconds and switches to native Spanish automatically. Same qualifying questions, same booking flow, same CRM sync, same SMS summary to you, regardless of language. For a San Jose business serving East San Jose, Alum Rock, the airport corridor, or southern parts of the city, this single feature usually pays for the service in the first month — those are the customers most likely to hang up on English-only voicemail.",
+          "San Jose is roughly 31% Hispanic / Latino by population, with neighborhoods like East San Jose, Alum Rock, and parts of Evergreen carrying significantly higher Spanish-speaking concentrations. The standard answering services on the market either don't offer Spanish or charge extra for a transfer-to-Spanish-line that runs business hours only. Live Answer's bilingual coverage is included standard — the AI detects the caller's language in the first three seconds and switches to native Spanish automatically. Same qualifying questions, same booking flow, same CRM sync, same SMS summary to you, regardless of language. For a San Jose business serving East San Jose, Alum Rock, the airport corridor, or southern parts of the city, this single feature usually pays for the service in the first month — those are the customers most likely to hang up on English-only voicemail.",
       },
       {
         heading: "Local, On-the-Ground, and Reachable",
         content:
-          "We're not a national call center. Our office is in Willow Glen at 2561 Skylark Drive, and the people who set up your AI agent and review your monthly call quality are local. You can call (669) 365-6533 for a setup consult, or stop by the office — we're between Lincoln Avenue and Meridian, two blocks south of Willow Glen Way. The 7-day free trial is no credit card, no setup fee, and no contract. We port a forwarding number, you point your after-hours or overflow line at it, the AI starts taking real calls within 24 hours. If it isn't capturing measurable bookings in your first 30 days, you get a full refund. The booking guarantee is per-vertical and concrete — see the relevant service page for the specifics for your industry.",
+          "We're not a national call center. Our office is in Willow Glen at 2561 Skylark Drive, and the people who set up your AI agent and review your monthly call quality are local. You can call (669) 316-1742 for a setup consult, or stop by the office — we're between Lincoln Avenue and Meridian, two blocks south of Willow Glen Way. The 7-day free trial is no credit card, no setup fee, and no contract. We port a forwarding number, you point your after-hours or overflow line at it, the AI starts taking real calls within 24 hours. If it isn't capturing measurable bookings in your first 30 days, you get a full refund. The booking guarantee is per-vertical and concrete — see the relevant service page for the specifics for your industry.",
       },
     ],
     neighborhoods: [
@@ -85,7 +85,7 @@ export const locationDetails: LocationDetail[] = [
     state: "CA",
     title: "Bay Area Answering Service — 24/7 AI Receptionist",
     metaDescription:
-      "AI answering service for Bay Area small businesses. 24/7 bilingual EN/ES coverage from San Francisco to San Jose. Flat $500/mo flat. Call (669) 365-6533.",
+      "AI answering service for Bay Area small businesses. 24/7 bilingual EN/ES coverage from San Francisco to San Jose. $500/mo flat. Call (669) 316-1742.",
     h1: "AI Answering Service for the San Francisco Bay Area",
     intro:
       "The Bay Area is nine counties, dozens of distinct submarkets, and tens of thousands of small businesses that all share the same structural problem: the cost of front-desk staff is prohibitively high, and the alternative — voicemail — is bleeding revenue. A Bay Area receptionist runs $48,000–$60,000 a year fully loaded. Live Answer covers every call 24/7, books into your calendar, in English or Spanish, for $500 a month flat. We're headquartered in San Jose's Willow Glen neighborhood and service the entire region from San Francisco proper through the Peninsula, Oakland and the East Bay, the Marin and North Bay markets, and the South Bay down through Gilroy.",
@@ -136,10 +136,10 @@ export const locationDetails: LocationDetail[] = [
     state: "CA",
     title: "Sacramento Answering Service — 24/7 AI Receptionist",
     metaDescription:
-      "AI answering service for Sacramento small businesses. Built for HVAC, legal, dental. 24/7 bilingual EN/ES. Flat $500/mo flat. Call (669) 365-6533.",
+      "AI answering service for Sacramento small businesses. Built for HVAC, legal, dental. 24/7 bilingual EN/ES. $500/mo flat. Call (669) 316-1742.",
     h1: "AI Answering Service in Sacramento, California",
     intro:
-      "Sacramento is HVAC-dense — Bell Bros has 11,000+ Google reviews, Rooter Hero 3,300+, and the Central Valley summer heat reliably drives a measurable spike in inbound emergency-service calls every June through September. The miss rate during those months pushes well past industry-typical 27–62% because owners can't keep up with the call volume. Live Answer was built for exactly that problem. We answer every inbound 24/7, triage HVAC emergencies, book routine into Jobber / ServiceTitan / Housecall Pro, and the rate is flat $500 a month flat no matter how busy your week gets. Beyond HVAC we serve Sacramento legal, dental, medical, real estate, and small business markets with the same model.",
+      "Sacramento is HVAC-dense — Bell Bros has 11,000+ Google reviews, Rooter Hero 3,300+, and the Central Valley summer heat reliably drives a measurable spike in inbound emergency-service calls every June through September. The miss rate during those months pushes well past industry-typical 27–62% because owners can't keep up with the call volume. Live Answer was built for exactly that problem. We answer every inbound 24/7, triage HVAC emergencies, book routine into Jobber / ServiceTitan / Housecall Pro, and the rate is a flat $500 a month no matter how busy your week gets. Beyond HVAC we serve Sacramento legal, dental, medical, real estate, and small business markets with the same model.",
     sections: [
       {
         heading: "Why Sacramento HVAC Is Our Flagship Vertical Here",
@@ -149,7 +149,7 @@ export const locationDetails: LocationDetail[] = [
       {
         heading: "Bilingual for Sacramento's Population Mix",
         content:
-          "Sacramento County is approximately 24% Hispanic / Latino, with much higher concentrations in South Sacramento, North Highlands, and West Sacramento. Spanish-speaking customers are a meaningful share of inbound calls for HVAC, plumbing, dental, and legal practices across the region — and they are the segment most likely to hang up on English-only voicemail and dial the next business. Live Answer's bilingual coverage is included standard on Better and Best tiers. For a Sacramento HVAC contractor serving the south part of the county, capturing the Spanish-speaking emergency calls alone typically pays for the service many times over.",
+          "Sacramento County is approximately 24% Hispanic / Latino, with much higher concentrations in South Sacramento, North Highlands, and West Sacramento. Spanish-speaking customers are a meaningful share of inbound calls for HVAC, plumbing, dental, and legal practices across the region — and they are the segment most likely to hang up on English-only voicemail and dial the next business. Live Answer's bilingual coverage is included standard. For a Sacramento HVAC contractor serving the south part of the county, capturing the Spanish-speaking emergency calls alone typically pays for the service many times over.",
       },
       {
         heading: "Beyond HVAC — Sacramento Legal, Dental, Real Estate",
@@ -185,15 +185,15 @@ export const locationDetails: LocationDetail[] = [
     state: "CA",
     title: "Los Angeles Answering Service — 24/7 AI Receptionist",
     metaDescription:
-      "AI answering service for LA County small businesses. Bilingual EN/ES standard. Built for HVAC, legal, dental, restaurants. Flat $500/mo flat. Call (669) 365-6533.",
+      "AI answering service for LA County small businesses. Bilingual EN/ES standard. Built for HVAC, legal, dental, restaurants. $500/mo flat. Call (669) 316-1742.",
     h1: "AI Answering Service for Los Angeles & Inland Empire",
     intro:
-      "Los Angeles County is the single biggest opportunity for Live Answer in California — over 800,000 small businesses, the highest concentration of Spanish-speaking customers of any US metro (LA County is roughly 48% Hispanic / Latino), and a competitive density that makes speed-to-lead the decisive factor for every service business. Whether you're an HVAC contractor in the San Fernando Valley, a PI law firm in Long Beach, a dental practice in Pasadena, or a restaurant in Koreatown, the call you don't answer is the call your competitor does. We answer every one of them, 24/7, in English or Spanish, and book the appointment directly. Flat $500 a month flat, no per-minute fees, locked rate at sign-up.",
+      "Los Angeles County is the single biggest opportunity for Live Answer in California — over 800,000 small businesses, the highest concentration of Spanish-speaking customers of any US metro (LA County is roughly 48% Hispanic / Latino), and a competitive density that makes speed-to-lead the decisive factor for every service business. Whether you're an HVAC contractor in the San Fernando Valley, a PI law firm in Long Beach, a dental practice in Pasadena, or a restaurant in Koreatown, the call you don't answer is the call your competitor does. We answer every one of them, 24/7, in English or Spanish, and book the appointment directly. Flat $500 a month, no per-minute fees, locked rate at sign-up.",
     sections: [
       {
         heading: "LA County's Bilingual Reality",
         content:
-          "LA County's Spanish-speaking share is so significant that for most service businesses serving the region, bilingual is not optional — it's the difference between capturing and not capturing roughly half your inbound. The standard answering service market response is either no Spanish coverage or an English-only voicemail. A handful of bilingual incumbents charge a premium for it (Acena, Reliable Receptionist, AnswerHero). Live Answer includes native bilingual standard on Better and Best, with the AI detecting the caller's language within three seconds and handling the full booking flow in either language. For an LA contractor or attorney, this is usually the single feature that closes the sale on a demo call.",
+          "LA County's Spanish-speaking share is so significant that for most service businesses serving the region, bilingual is not optional — it's the difference between capturing and not capturing roughly half your inbound. The standard answering service market response is either no Spanish coverage or an English-only voicemail. A handful of bilingual incumbents charge a premium for it (Acena, Reliable Receptionist, AnswerHero). Live Answer includes native bilingual standard, with the AI detecting the caller's language within three seconds and handling the full booking flow in either language. For an LA contractor or attorney, this is usually the single feature that closes the sale on a demo call.",
       },
       {
         heading: "Verticals That Move Hardest in LA",
@@ -293,7 +293,7 @@ export const landmarkPages: LandmarkPage[] = [
     targetService: "dental-answering-service",
     title: "Dental Answering Service near Good Samaritan Hospital, San Jose | Live Answer",
     metaDescription:
-      "AI receptionist for dental offices near Good Samaritan Hospital in San Jose. 24/7 bilingual EN/ES, books into Dentrix/Open Dental, flat $500/mo. Call (669) 365-6533.",
+      "AI receptionist for dental offices near Good Samaritan Hospital in San Jose. 24/7 bilingual EN/ES, books into Dentrix/Open Dental, flat $500/mo. Call (669) 316-1742.",
     h1: "AI Receptionist for Dental Offices near Good Samaritan Hospital, San Jose",
     intro:
       "Good Samaritan Hospital anchors a dense healthcare corridor along Bascom Avenue between San Jose and Campbell. Dental practices within a half-mile — from Bascom south to Hamilton, and east through the Cambrian Park neighborhoods — serve a patient base that skews toward families with active insurance, making every missed new-patient call a measurable lifetime-value loss. Live Answer answers every call 24/7, books directly into Dentrix, Open Dental, Eaglesoft, or Curve, and handles Spanish-speaking patients automatically. Flat $500/mo, no per-minute fees.",

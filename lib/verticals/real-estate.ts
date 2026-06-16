@@ -112,11 +112,6 @@ export const realEstateConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & approachable", sampleLine: "Garcia Realty — let me get some details." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Garcia Realty." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Garcia Realty — what can I help you find?" },
-    ],
   },
 
   compare: {
