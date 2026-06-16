@@ -9,9 +9,9 @@ export const smallBusinessConfig: VerticalConfig = {
   slug: "small-business-answering-service",
 
   meta: {
-    title: "Live Answer for Small Business — Every customer reaches you",
+    title: "Small Business Answering Service — Every Customer Reaches You | Live Answer",
     description:
-      "24/7 bilingual AI receptionist for California solo operators and small business. $500/mo flat, unlimited calls, books into the tools you already use. Built for owner-operators who can't be on the phone.",
+      "Small business answering service for California owner-operators: 24/7 bilingual AI receptionist, $500/mo flat, unlimited calls, books into the tools you already use. Built for owner-operators who can't be on the phone.",
     canonical: "/services/small-business-answering-service",
   },
 
@@ -55,6 +55,8 @@ export const smallBusinessConfig: VerticalConfig = {
       { num: "$126K", label: "average yearly cost of missed calls per small business (Aira)" },
       { num: "60 sec", label: "before they call your competitor instead" },
     ],
+    rankingNote:
+      "Google sees roughly half of US phone calls through Android — whether you answered, how long the call lasted, and whether the caller dialed a competitor next. Your answer rate is a ranking signal: businesses that stop answering measurably drop on the map. Answering every call protects the ranking that brings the next one.",
   },
 
   vocQuote: {
@@ -117,11 +119,6 @@ export const smallBusinessConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & friendly", sampleLine: "Garcia Consulting — how can I help?" },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Garcia Consulting." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Garcia Consulting — what's going on?" },
-    ],
   },
 
   compare: {
@@ -161,6 +158,10 @@ export const smallBusinessConfig: VerticalConfig = {
     {
       q: "Can it handle Spanish-speaking customers?",
       a: "Yes — native EN/ES on every account, no upcharge. The AI detects the caller's language in the first 3 seconds and switches automatically.",
+    },
+    {
+      q: "Is this like having a dedicated full-time virtual receptionist?",
+      a: "Yes — it's a dedicated virtual receptionist that works full-time and then some: 24/7, including nights, weekends, and holidays, with no breaks, sick days, or turnover. Unlike a shared answering pool, your AI is scripted specifically for your business, recognizes returning callers, and follows your booking and escalation rules every time — at a flat $500/mo instead of the $4,000–$6,000/mo a full-time California receptionist costs in salary, taxes, and benefits.",
     },
     {
       q: "Is there a contract?",

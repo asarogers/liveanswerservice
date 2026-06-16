@@ -3,10 +3,11 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { getAllServices, getAllServiceSlugs } from "@/lib/services-data";
 import { getAllLocations, getAllLocationSlugs } from "@/lib/locations-data";
-import { getAllPosts } from "@/lib/blog";
 import { getAllGuideSlugs } from "@/lib/guides";
 import { VERTICALS } from "@/lib/verticals";
 import { loadSitePlan, type SitePlanLink } from "@/lib/site-plan";
+import { existsSync } from "fs";
+import { join } from "path";
 
 /**
  * PRIVATE nav index — for the team's use, not for visitors.
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 
-type PageStatus = "live" | "gated" | "needs-content";
+type PageStatus = "live" | "gated" | "needs-content" | "branch-held";
 
 type PageEntry = {
   path: string;
@@ -100,7 +101,7 @@ const ALWAYS_LIVE: PageEntry[] = [
   { path: "/book",          label: "Book a consult",           status: "live", notes: "7-day trial" },
   { path: "/services",      label: "Industries index",         status: "live" },
   { path: "/locations",     label: "Locations index",          status: "live" },
-  { path: "/blog",          label: "Blog index",               status: "live", notes: "301s post slugs to /guides" },
+  { path: "/blog",          label: "Blog (removed)",           status: "live", notes: "route deleted 2026-06-06 — middleware 301s /blog and post slugs to /guides" },
   { path: "/guides/missed-call-cost-california-small-business", label: "Guide: missed-call cost CA", status: "live", notes: "ships with Week 1 — guides are not gated" },
   { path: "/guides/ai-vs-human-answering-service-comparison",   label: "Guide: AI vs human",         status: "live", notes: "ships with Week 1 — covers 'AI receptionist vs live answering service' (opp 0.53)" },
   { path: "/guides/bilingual-answering-service-california",     label: "Guide: bilingual CA",        status: "live", notes: "ships with Week 1" },
@@ -123,12 +124,12 @@ const STATUS_STYLE: Record<PageStatus, { bg: string; color: string; label: strin
   live:            { bg: "#000",    color: "#fff",    label: "LIVE / INDEXED" },
   gated:           { bg: "#FEF3C7", color: "#7A4F00", label: "GATED · NOINDEX" },
   "needs-content": { bg: "#FEE2E2", color: "#9B1F12", label: "NEEDS CONTENT" },
+  "branch-held":   { bg: "#ECE4F7", color: "#5B3A8E", label: "ON WAVE BRANCH" },
 };
 
 export default function DevNavPage() {
   const services = getAllServices();
   const locations = getAllLocations();
-  const posts = getAllPosts();
   const plan = loadSitePlan();
 
   // Union legacy services-data with the VERTICALS registry (vet et al. are registry-only)
@@ -148,14 +149,24 @@ export default function DevNavPage() {
     if (path.startsWith("/services/"))  return serviceSlugs.has(slug);
     if (path.startsWith("/locations/")) return locationSlugs.has(slug);
     if (path.startsWith("/guides/"))    return guideSlugs.has(slug);
-    return true; // top-level routes are statically built — assume present
+    // top-level route — check the app dir (build-time fs is fine; this page is static)
+    try {
+      return existsSync(join(process.cwd(), "app", slug, "page.tsx"));
+    } catch {
+      return true;
+    }
   };
 
-  const toEntry = (path: string): PageEntry => {
+  const toEntry = (path: string, branch?: string): PageEntry => {
     const inPriority = priorityUrls.get(path);
     const inExclude = excludeUrls.get(path);
-    const built = existsInRepo(path);
-    const status: PageStatus = !built ? "needs-content" : inExclude ? "gated" : "live";
+    const built = path === "/" ? true : existsInRepo(path);
+    // not built + wave has a branch → the CODE is held on that branch (by design).
+    // Guides are never on branches — their content lives in the MC publisher
+    // queue until publish day, so they stay "needs-content" regardless.
+    const status: PageStatus = !built
+      ? (branch && !path.startsWith("/guides/") ? "branch-held" : "needs-content")
+      : inExclude ? "gated" : "live";
     return {
       path,
       label: LABELS[path] ?? prettify(path),
@@ -167,8 +178,8 @@ export default function DevNavPage() {
   const weekSections: Section[] = (plan?.lastmod_schedule ?? []).map((w, i) => ({
     key: `week-${w.week}`,
     title: `Wave ${i + 1} (week ${w.week})`,
-    when: `Mon ${w.target_date} · ${w.count} URLs`,
-    pages: w.urls.map(toEntry),
+    when: `Mon ${w.target_date} · ${w.count} URLs${w.branch ? ` · ⎇ ${w.branch}` : ""}`,
+    pages: w.urls.map((u) => toEntry(u, w.branch)),
   }));
 
   // Excluded pages that appear in no wave — deliberately unscheduled (e.g.
@@ -178,7 +189,7 @@ export default function DevNavPage() {
   );
   const onHold: PageEntry[] = [...excludeUrls.keys()]
     .filter((url) => !scheduledPaths.has(url))
-    .map(toEntry);
+    .map((url) => toEntry(url));
 
   const sections: Section[] = [
     ...weekSections,
@@ -230,7 +241,7 @@ export default function DevNavPage() {
         </p>
         <p style={{ marginTop: 12, fontSize: 13, color: "#94A3B8" }}>
           <strong style={{ color: "#0F172A" }}>{liveCount}/{scheduled.length}</strong> scheduled pages live ·{" "}
-          {services.length} service routes · {locations.length} location routes · {posts.length} guides/posts ·{" "}
+          {services.length} service routes · {locations.length} location routes · {guideSlugs.size} guides ·{" "}
           Phone: <a href={siteConfig.phone.href} style={{ color: "#0F172A" }}>{siteConfig.phone.display}</a>
         </p>
       </header>

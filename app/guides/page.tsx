@@ -68,12 +68,10 @@ export default function GuidesIndexPage() {
             small business owners. Written by practitioners, not content farms.
           </p>
           <p style={{ color: "#5c5147", marginTop: 16 }}>
-            Effective call management is the backbone of customer relations for any local business. 
-            Our comprehensive guides provide actionable insights to help you optimize operations,
-            reduce missed opportunities, and enhance overall caller experience. In today's fast-paced
-            market, poor call handling can lead to significant revenue loss and damaged brand reputation.
-            We've compiled these resources to empower you with the knowledge needed to make informed decisions
-            and improve your business's communication strategies.
+            Every guide here answers a question California business owners actually ask us:
+            what a missed call really costs, when bilingual coverage pays for itself, and
+            how AI answering compares to a human service on price and outcomes. Each one
+            is grounded in real numbers and named California specifics — no filler.
           </p>
         </div>
       </section>
@@ -89,7 +87,7 @@ export default function GuidesIndexPage() {
             <li>Compare AI vs human answering systems objectively: Explore the pros and cons of each option based on real-world data</li>
             <li>Discover best practices for handling overflow call volume: Implement strategies to manage high traffic without losing customers</li>
             <li>Implement strategies to improve caller experience: Find out how better service leads to increased customer satisfaction and loyalty</li>
-            <li>Optimize your call handling流程 to match business needs: Tailor your approach based on specific industry challenges and goals</li>
+            <li>Match your call handling to your business: adjust your approach based on specific industry challenges and goals</li>
           </ul>
         </div>
       </section>

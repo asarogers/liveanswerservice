@@ -9,8 +9,9 @@ const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 export const metadata: Metadata = {
   openGraph: {
   url: "https://liveanswerservice.com/pricing",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
-  title: "Pricing — $500/mo flat. Unlimited calls. No per-minute fees.",
+  title: "Pricing — $500/mo Flat, Unlimited Calls, No Overages",
   description:
     "Live Answer pricing — $500/mo flat for unlimited calls, bilingual EN/ES, no overages, locked rate at sign-up. 7-day free trial, no credit card. $199 setup waived with annual prepay.",
   alternates: { canonical: `/${SLUG}` },
@@ -28,7 +29,7 @@ export default function PricingPage() {
             No per-minute fees. No overages. Ever.
           </p>
           <p className="hero-text">
-            At LiveAnswerService, we understand that your business needs a reliable, consistent phone service that doesn't break the bank or leave you guessing about costs. That's why we've designed our pricing to be transparent, predictable, and worry-free. With our flat-rate pricing model, you get all the features you need to grow your business without any hidden fees or surprise charges.
+            At Live Answer Service, we understand that your business needs a reliable, consistent phone service that doesn't break the bank or leave you guessing about costs. That's why we've designed our pricing to be transparent, predictable, and worry-free. With our flat-rate pricing model, you get all the features you need to grow your business without any hidden fees or surprise charges.
           </p>
         </div>
       </section>
@@ -53,6 +54,7 @@ export default function PricingPage() {
                 <li><i className="ti ti-check" aria-hidden="true" />No-show + follow-up SMS automation</li>
                 <li><i className="ti ti-check" aria-hidden="true" />Real-time analytics and reporting tools</li>
                 <li><i className="ti ti-check" aria-hidden="true" />Multi-device call forwarding options</li>
+                <li><i className="ti ti-check" aria-hidden="true" />Local &amp; toll-free number provisioning included</li>
               </ul>
               <div className="setup-fee">
                 $199 one-time setup · <em>waived with annual prepay</em>
@@ -131,7 +133,7 @@ export default function PricingPage() {
               <div>Per-minute fees on top — busy month = 2–3× bill</div>
             </div>
             <div className="compare-row compare-us">
-              <div><strong>LiveAnswerService</strong></div>
+              <div><strong>Live Answer Service</strong></div>
               <div><strong>$500/mo flat</strong></div>
               <div>24/7 · bilingual · unlimited · locked rate</div>
             </div>

@@ -7,6 +7,7 @@ import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
 export const metadata: Metadata = {
   openGraph: {
   url: "/services",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   title: "Industries We Serve — Live Answer AI Receptionist",
   description:
@@ -25,6 +26,7 @@ const ICON_FOR: Record<string, string> = {
   "salon-and-spa-answering-service":     "ti-cut",
   "medical-office-answering-service":    "ti-stethoscope",
   "live-answering-service":              "ti-phone-call",
+  "sms-text-answering-service":          "ti-message-2",
 };
 
 export default function ServicesIndexPage() {
@@ -39,7 +41,7 @@ export default function ServicesIndexPage() {
         <div className="wrap-narrow">
           <h1>Built for <em>your industry</em>.</h1>
           <p className="sub">
-            We specialize in providing tailored answering services that meet the unique needs of various industries. Our solutions are designed to enhance communication, improve customer satisfaction, and streamline your operations.
+            Every industry answers the phone differently. Each vertical below gets its own scripting, intake questions, and booking flow — an HVAC dispatcher does not talk like a legal intake specialist.
           </p>
           <p className="sub">
             Whether you're a California HVAC contractor needing round-the-clock support or a law firm requiring compliance-focused messaging, Live Answer is here to provide professional, reliable service that helps you grow and stand out in your industry.
@@ -164,7 +166,7 @@ export default function ServicesIndexPage() {
             </li>
             <li>
               <h3>Can you customize the scripts for my business?</h3>
-              <p>Yes! We offer full customization of greetings, intake questions, and after-hours messages to match your brand voice and specific needs. Our team works with you to create a seamless experience for your customers.</p>
+              <p>Yes! We offer full customization of greetings, intake questions, and after-hours messages to match your brand voice and specific needs. Your callers hear your business, not a generic script.</p>
             </li>
             <li>
               <h3>Do you offer technical support?</h3>
@@ -188,7 +190,7 @@ export default function ServicesIndexPage() {
             </li>
             <li>
               <h3>What kind of training is available?</h3>
-              <p>We provide comprehensive training resources, including video tutorials and a dedicated support team to help you make the most of our services. We're here to ensure your transition is smooth and successful.</p>
+              <p>You get video tutorials plus a support team that knows your account — the same people who set up your AI handle your questions afterward.</p>
             </li>
           </ul>
         </div>

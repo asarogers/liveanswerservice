@@ -170,13 +170,8 @@ const localBusinessSchema = {
       closes: "23:59",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "1",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // aggregateRating intentionally omitted — no real Google reviews exist for
+  // Live Answer Service yet. Re-add only from a live GBP feed (never hardcode).
   sameAs: [
     siteConfig.social.instagram,
     siteConfig.social.facebook,
@@ -276,7 +271,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
 
-        {/* Microsoft Clarity — TODO: replace project ID once provisioned for Live Answer */}
+        {/* Microsoft Clarity (project x428bvg5r1) — gated on NEXT_PUBLIC_CLARITY_ID (wrangler.toml) */}
         {process.env.NEXT_PUBLIC_CLARITY_ID && (
           <Script
             id="microsoft-clarity"
