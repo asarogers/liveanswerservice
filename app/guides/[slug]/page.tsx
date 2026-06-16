@@ -87,6 +87,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
   const author = guide.author ?? siteConfig.founder;
   const faqs = extractFAQ(guide.content);
+  // Contextual internal linking: surface other guides so each page passes link
+  // equity and crawlers discover the full set (the /guides hub alone is thin).
+  const related = getAllGuides().filter((g) => g.slug !== guide.slug).slice(0, 4);
 
   // Article JSON-LD
   const articleSchema = {
@@ -245,6 +248,37 @@ export default async function GuidePage({ params }: GuidePageProps) {
           />
         </div>
       </article>
+
+      {/* Related guides — contextual internal links */}
+      {related.length > 0 && (
+        <section style={{ background: "#f7f2e7", padding: "0 0 56px" }}>
+          <div className="wrap" style={{ maxWidth: 800 }}>
+            <h2
+              style={{
+                fontFamily: "var(--font-serif)",
+                fontSize: 22,
+                fontWeight: 400,
+                color: "#1a1611",
+                margin: "0 0 16px",
+              }}
+            >
+              Related guides
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
+              {related.map((g) => (
+                <li key={g.slug}>
+                  <Link
+                    href={`/guides/${g.slug}`}
+                    style={{ color: "#5a1f2e", textDecoration: "none", fontSize: 16, fontWeight: 500 }}
+                  >
+                    {g.h1 || g.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="final-cta">
