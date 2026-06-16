@@ -41,7 +41,7 @@ export const gbpCategories: GBPCategory[] = [
     gbpName: "Telephone answering service",
     tagline: "AI receptionist for every California small business — 24/7, bilingual EN/ES",
     description:
-      "Live Answer is an AI-powered telephone answering service that picks up every call, books the appointment, and texts you the summary. We serve California small businesses across HVAC, legal, dental, medical, restaurants, real estate, salons, and more. Flat $500/mo flat, no per-minute fees.",
+      "Live Answer is an AI-powered telephone answering service that picks up every call, books the appointment, and texts you the summary. We serve California small businesses across HVAC, legal, dental, medical, restaurants, real estate, salons, and more. $500/mo flat, no per-minute fees.",
     isPrimary: true,
     services: [
       { name: "24/7 AI receptionist",                slug: "live-answering-service" },

@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
+import HeroCallForm from "@/components/HeroCallForm";
+import HeroLogoVideo from "@/components/HeroLogoVideo";
 
 export const metadata: Metadata = {
   openGraph: {
   url: "/about",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   title: "About Live Answer — AI Receptionist Built for California",
   description:
     "Live Answer is an AI-powered answering service built in San Jose for California small business. Founded by Ace Rodgers. Bilingual EN/ES, 24/7, $500/mo flat.",
   alternates: { canonical: "/about" },
 };
-
-const DEMO_CHAT: Array<{ speaker: "ai" | "caller"; text: string }> = [
-  { speaker: "ai", text: "Live Answer — this is Sarah. How can I help?" },
-  { speaker: "caller", text: "Hi, my AC stopped blowing cold air. It's 96 inside." },
-  { speaker: "ai", text: "I'm sorry — let's get a tech out today. What's the address?" },
-  { speaker: "caller", text: "1240 Lincoln Ave, San Jose." },
-  { speaker: "ai", text: "Booked for 4:30 PM with Mike. Confirmation texted to your phone." },
-];
 
 export default function AboutPage() {
   return (
@@ -35,13 +30,7 @@ export default function AboutPage() {
               <strong>An AI answering service for California small business — starting with HVAC contractors and expanding to legal services.</strong>{" "}
               We offer bilingual English/Spanish support, 24/7 coverage at a flat rate of $500 per month. Our service is designed to grow with your business without additional costs.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               Have one of our AI agents call you now · no credit card · cancel anytime
             </div>
@@ -51,28 +40,7 @@ export default function AboutPage() {
           </div>
 
           <div className="hero-phone-wrap">
-            <div className="phone-mockup" role="img" aria-label="Sample AI receptionist conversation">
-              <div className="phone-notch" aria-hidden="true" />
-              <div className="phone-screen">
-                <div className="phone-status">
-                  <span>9:41</span>
-                  <span aria-hidden="true">
-                    <i className="ti ti-signal-4g" /> <i className="ti ti-wifi" /> <i className="ti ti-battery" />
-                  </span>
-                </div>
-                <div className="phone-callbar">
-                  <i className="ti ti-phone-call" aria-hidden="true" />
-                  <span>Live Answer · 0:34</span>
-                </div>
-                <div className="chat-thread">
-                  {DEMO_CHAT.map((msg, i) => (
-                    <div key={i} className={`chat-bubble ${msg.speaker}`}>
-                      {msg.text}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <HeroLogoVideo />
           </div>
         </div>
       </section>
@@ -91,7 +59,7 @@ export default function AboutPage() {
             <div className="scenario-card">
               <div className="time"><i className="ti ti-calendar-event" aria-hidden="true" /> Book</div>
               <div className="body">
-                Our system integrates seamlessly with popular CRMs like Jobber, ServiceTitan, HousecallPro, and FieldEdge for HVAC contractors. For legal professionals, we integrate with Clio, MyCase, and PracticePanther. With over 35 integrations available, we ensure your calendar stays updated in real-time.
+                Our system integrates directly with popular CRMs like Jobber, ServiceTitan, HousecallPro, and FieldEdge for HVAC contractors. For legal professionals, we integrate with Clio, MyCase, and PracticePanther. With over 35 integrations available, your calendar stays updated in real time.
               </div>
             </div>
             <div className="scenario-card">
@@ -151,21 +119,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="testimonials">
-        <div className="wrap">
-          <h2>What Our Clients Say</h2>
-          <div className="testimonial-grid">
-            <div className="testimonial-card">
-              <p>"Live Answer has been a game-changer for our HVAC business. No more missed calls and constant follow-ups."</p>
-              <div className="testimonial-author">- John Smith, AC Pro Services</div>
-            </div>
-            <div className="testimonial-card">
-              <p>"The integration with ServiceTitan is seamless and has saved us so much time. Highly recommended!"</p>
-              <div className="testimonial-author">- Sarah Johnson, Heat & Cool Inc.</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials removed 2026-06-06 — they were fabricated (pre-launch,
+          zero customers). Re-add only with real, verifiable customer quotes. */}
 
       <section className="faq">
         <div className="wrap">

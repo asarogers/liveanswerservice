@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Bytespider',      allow: '/' },
       { userAgent: 'cohere-ai',       allow: '/' },
       // All other crawlers — block private + checkout + leftover preview routes
-      { userAgent: '*', allow: '/', disallow: ['/checkout', '/logo-preview', '/dev-nav'] },
+      { userAgent: '*', allow: '/', disallow: ['/checkout', '/logo-preview', '/dev-nav', '/api/'] },
     ],
     sitemap: 'https://liveanswerservice.com/sitemap.xml',
   };

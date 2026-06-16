@@ -9,11 +9,14 @@
  *  (9 weekly waves from 2026-06-08) — do not duplicate the week map here;
  *  it drifted once already. Gating is automatic via noindexSlugs().
  *
- *  Phone: (669) 365-6533 | liveanswerservice.com
+ *  Phone: (669) 316-1742 | liveanswerservice.com
  * ============================================================
  */
 
 import { resolveImagePath } from "./image-path";
+// Waves 2–9 service-page expansion ServiceDetails — isolated in ./verticals/expansion
+// so wave-branch merges don't collide. Spec: important/business/liveanswerservice/SERVICE-PAGE-EXPANSION.md
+import { EXPANSION_DETAILS } from "./verticals/expansion";
 
 export function serviceImagePath(slug: string): string {
   return resolveImagePath("services", slug);
@@ -55,8 +58,8 @@ export const serviceDetails: ServiceDetail[] = [
     slug: "hvac-answering-service",
     title: "HVAC Answering Service — 24/7 AI Dispatcher for California",
     metaDescription:
-      "AI receptionist for California HVAC contractors. Answers every call 24/7, books straight into Jobber, ServiceTitan, or Housecall Pro. Bilingual EN/ES. Flat $500/mo flat, no overages.",
-    h1: "Never Lose Another HVAC Job to Voicemail",
+      "AI receptionist for California HVAC contractors. Answers every call 24/7, books straight into Jobber, ServiceTitan, or Housecall Pro. Bilingual EN/ES. $500/mo flat, no overages.",
+    h1: "Never Lose Another HVAC Call to Voicemail",
     intro:
       "When a homeowner's AC dies at 11 PM in July, they don't leave a voicemail and wait until morning. They Google the next contractor on the list and call them. Industry data puts the HVAC miss rate at 27–62% — and every missed call is somewhere between $275 for a routine service and $4,000 for an install. We built Live Answer specifically for the California HVAC owner who is still answering the phone between jobs, watching emergencies bleed to whichever shop happened to pick up. Our AI dispatcher answers in under two rings, qualifies the job, triages emergency vs. routine, and books it directly into Jobber, ServiceTitan, or Housecall Pro — in English or Spanish, 24/7, for less than one day of a California dispatcher's pay per month.",
     sections: [
@@ -68,12 +71,12 @@ export const serviceDetails: ServiceDetail[] = [
       {
         heading: "Why Flat Rate Wins Over Per-Minute Pricing",
         content:
-          "Most HVAC answering services either cap minutes (Whippy Lite at 2,000 credits per month, Simple Phones at 100 calls) or charge per-minute fees that surprise you on your monthly bill ($0.90–$1.50 per minute is standard for human services). During a summer heatwave or a winter cold snap your call volume can triple in a week — exactly when you can't afford for the answering service to either stop answering or send you a four-figure surprise invoice. Live Answer charges a flat $500/mo Unlimited and $500/mo Unlimited, with no per-minute fees, no overage charges, no caps on unlimited tiers, and the rate is locked at sign-up. A single recovered $1,200 emergency install pays for three months of Pro. One residential AC replacement pays for the year. The math is so favorable that pricing transparency isn't a concession — it's the wedge.",
+          "Most HVAC answering services either cap minutes (Whippy Lite at 2,000 credits per month, Simple Phones at 100 calls) or charge per-minute fees that surprise you on your monthly bill ($0.90–$1.50 per minute is standard for human services). During a summer heatwave or a winter cold snap your call volume can triple in a week — exactly when you can't afford for the answering service to either stop answering or send you a four-figure surprise invoice. Live Answer charges a flat $500/mo, unlimited — no per-minute fees, no overage charges, no call caps, and the rate is locked at sign-up. A single recovered $1,200 emergency install pays for three months of service. One residential AC replacement pays for the year. The math is so favorable that pricing transparency isn't a concession — it's the wedge.",
       },
       {
         heading: "Integrations Built for the HVAC Stack",
         content:
-          "On Solo we book into Google Calendar or any iCal-compatible calendar — that covers the one-truck owner who is still managing dispatch on his phone. On Pro we sync directly with the four dominant HVAC field-service platforms: Jobber, ServiceTitan, Housecall Pro, and FieldEdge. Bookings push as either a job or an estimate depending on call type, with the AI tagging emergency dispatches so they surface at the top of the daily board. If you use a CRM we haven't pre-built (RazorSync, ServiceFusion, Workiz), Pro customers can request a custom integration — we ship most in under two weeks. Two-way SMS means the AI can also confirm appointments with the homeowner the night before and reroute reschedules without you touching them. The result: by the time you finish a job and check your phone, the next two are already booked.",
+          "We book into Google Calendar or any iCal-compatible calendar — that covers the one-truck owner who is still managing dispatch on his phone. We also sync directly with the four dominant HVAC field-service platforms: Jobber, ServiceTitan, Housecall Pro, and FieldEdge. Bookings push as either a job or an estimate depending on call type, with the AI tagging emergency dispatches so they surface at the top of the daily board. If you use a CRM we haven't pre-built (RazorSync, ServiceFusion, Workiz), you can request a custom integration — we ship most in under two weeks. Two-way SMS means the AI can also confirm appointments with the homeowner the night before and reroute reschedules without you touching them. The result: by the time you finish a job and check your phone, the next two are already booked.",
       },
       {
         heading: "What Sign-Up Actually Looks Like",
@@ -81,7 +84,9 @@ export const serviceDetails: ServiceDetail[] = [
           "We're a done-for-you service, not a self-serve AI tool you have to configure. The 30-minute kickoff call covers fifteen questions: your pricing structure, service area, after-hours rules, who gets paged for emergencies, what's in scope vs. what gets escalated, your competitor list (so the AI doesn't recommend them by accident), and your existing CRM. We build the agent in 48 hours and you're live by day three. The 7-day free trial has no credit card and no setup fee, and you keep your phone number portable in case you ever leave. Our booking guarantee is concrete: capture ten booked jobs in your first 30 days or get a full refund. At an average $500/job that's $5,000 of recovered revenue against a sub-$500 service — the math is the guarantee.",
       },
     ],
-    relatedServices: ["attorney-answering-service", "small-business-answering-service"],
+    // Cross-silo links prohibited (silo doctrine) — no same-silo siblings live
+    // yet; the "View all industries" hub link carries discovery instead.
+    relatedServices: [],
     relatedLocations: ["san-jose", "sacramento", "los-angeles", "san-francisco-bay-area"],
   },
 
@@ -105,7 +110,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         heading: "Bilingual Is Standard, Not an Upcharge",
         content:
-          "California has 10.4 million Spanish speakers and the legal incumbents — Answering Legal, LexReception, Smith.ai — either treat Spanish as a premium add-on or cap it to business hours. We include native English-Spanish on Better and Best tiers, with the AI detecting the caller's language within three seconds and switching automatically. For a Los Angeles, Inland Empire, or Central Valley firm doing PI or immigration work, this single feature pays for the service. The Spanish intake is genuinely conversational — we use a native Spanish voice model, not English-text translated mid-call — and Spanish-speaking callers do not get a degraded version of the intake. The same conflict check, the same qualifying questions, the same calendar integration, the same SMS summary to the attorney. If your existing answering service quoted you extra for bilingual, that's because bilingual is hard for a human staffing model; for an AI built bilingual from day one, it's the same call.",
+          "California has 10.4 million Spanish speakers and the legal incumbents — Answering Legal, LexReception, Smith.ai — either treat Spanish as a premium add-on or cap it to business hours. We include native English-Spanish standard, with the AI detecting the caller's language within three seconds and switching automatically. For a Los Angeles, Inland Empire, or Central Valley firm doing PI or immigration work, this single feature pays for the service. The Spanish intake is genuinely conversational — we use a native Spanish voice model, not English-text translated mid-call — and Spanish-speaking callers do not get a degraded version of the intake. The same conflict check, the same qualifying questions, the same calendar integration, the same SMS summary to the attorney. If your existing answering service quoted you extra for bilingual, that's because bilingual is hard for a human staffing model; for an AI built bilingual from day one, it's the same call.",
       },
       {
         heading: "Pricing That Doesn't Punish Growth",
@@ -113,7 +118,8 @@ export const serviceDetails: ServiceDetail[] = [
           "The $500/mo Unlimited plan covers 24/7 calls, bilingual EN/ES, conflict check at intake, and native sync into Clio, MyCase, PracticePanther, and Lawmatics — locked rate at sign-up, no per-minute fees. Multi-attorney firms with custom routing requirements take the Custom plan (15-minute discovery call, quote in 24 hours). Setup is $199 one-time, waived with annual prepay. The booking guarantee is five qualified intakes in your first 30 days — defined up front as practice-area match plus no conflict plus consult booked — or we refund the month. A single captured retainer ($3K–$10K+) covers Unlimited for 6–20 months. Answering Legal sits at $300–$500/mo for English-only voicemail-style intake; we match the price and add 24/7 AI, native bilingual, and real CRM sync the incumbents don't have.",
       },
     ],
-    relatedServices: ["hvac-answering-service", "small-business-answering-service"],
+    // Cross-silo links prohibited (silo doctrine) — see hvac entry note.
+    relatedServices: [],
     relatedLocations: ["san-jose", "los-angeles", "sacramento", "san-francisco-bay-area"],
   },
 
@@ -124,7 +130,7 @@ export const serviceDetails: ServiceDetail[] = [
     slug: "small-business-answering-service",
     title: "Best Answering Service for Small Business — California AI Receptionist",
     metaDescription:
-      "Affordable answering service for California small businesses. Bilingual EN/ES, 24/7, books into your calendar, flat $500/mo flat. 7-day free trial, no credit card.",
+      "Affordable answering service for California small businesses. Bilingual EN/ES, 24/7, books into your calendar, $500/mo flat. 7-day free trial, no credit card.",
     h1: "Every Customer Reaches You. Even When You Can't Pick Up.",
     intro:
       "Most California small businesses lose 6 out of 10 calls — to voicemail, to busy signals, to staff who are already with another customer. Industry data has the average SMB losing $126,000 a year to missed calls, which is the kind of number a buyer dismisses until you walk them through their own math: how many calls do you miss in a week, what's an average customer worth, what does that multiply to? Live Answer is the AI receptionist for the owner who is still personally answering the phone — solo HVAC contractors, single-location dentists, sole-prop service businesses, salons, consultants. We answer every call 24/7 in English or Spanish, qualify the caller, book the appointment into your calendar, and text you the summary in under a minute. Flat rate. Unlimited calls. No per-minute surprises. Less than one captured customer pays for the year.",
@@ -132,7 +138,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         heading: "Built for the Owner Who Is Still the Front Desk",
         content:
-          "If your business has one to three people and the owner is still answering the phone between jobs, that's exactly who Live Answer is built for. $500/mo Unlimited answers every call, in English or Spanish, with calendar booking, SMS summary, emergency escalation to your cell, spam and robocall filtering, and 90 days of call recordings and transcripts. $500/mo Unlimited adds CRM sync to whichever system you actually use (Jobber, HouseCallPro, Clio, Dentrix, Jane App), known-caller recognition so returning customers are greeted by name, Google review request automation after every booking, no-show and missed-connection follow-up SMS, and business-hours human escalation between 9 and 5 for anything the AI flags as needing real judgement. Both tiers are flat-rate with no per-minute fees and no overage charges — the rate you sign up at is the rate forever. About 70% of customers pick Pro, mostly because the CRM sync alone saves more hours per week than the price difference.",
+          "If your business has one to three people and the owner is still answering the phone between calls, that's exactly who Live Answer is built for. $500/mo Unlimited answers every call, in English or Spanish, with calendar booking, SMS summary, emergency escalation to your cell, spam and robocall filtering, and 90 days of call recordings and transcripts. The same flat rate includes CRM sync to whichever system you actually use (Jobber, HouseCallPro, Clio, Dentrix, Jane App), known-caller recognition so returning customers are greeted by name, Google review request automation after every booking, no-show and missed-connection follow-up SMS, and business-hours human escalation between 9 and 5 for anything the AI flags as needing real judgement. It's flat-rate with no per-minute fees and no overage charges — the rate you sign up at is the rate forever. Everything is included; there are no add-on tiers to weigh, because the CRM sync alone usually saves more hours per week than the service costs.",
       },
       {
         heading: "Bilingual That Actually Works in Conversation",
@@ -145,7 +151,8 @@ export const serviceDetails: ServiceDetail[] = [
           "The market splits into two failure modes. Cheap AI competitors at $25–$49/mo cap minutes at 100–200, then either stop answering or hit you with per-minute overages. Human answering services like Ruby, AnswerConnect, and Posh start at $245–$400/mo and charge per-minute fees on top, so during a busy month your bill can double. Both designs make you ration calls. Live Answer is flat-rate unlimited because rationing calls is the same as not answering them — and not answering them is exactly the problem you're trying to solve. Your locked rate at sign-up never goes up. The 7-day free trial requires no credit card. The booking guarantee is concrete: if we don't generate measurable booked revenue in your first 30 days, you get a refund. There's nothing to ration, nothing to count, nothing to second-guess when call volume spikes. You answer every call, full stop.",
       },
     ],
-    relatedServices: ["hvac-answering-service", "attorney-answering-service"],
+    // Cross-silo links prohibited (silo doctrine) — see hvac entry note.
+    relatedServices: [],
     relatedLocations: ["san-jose", "sacramento", "los-angeles", "san-francisco-bay-area"],
   },
 
@@ -248,6 +255,8 @@ export const serviceDetails: ServiceDetail[] = [
 
 
 
+  // Waves 2–9 service-page expansion (16 verticals, noindex until promoted)
+  ...EXPANSION_DETAILS,
 ];
 
 /* ============================================================
