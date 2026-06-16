@@ -9,9 +9,9 @@ export const smallBusinessConfig: VerticalConfig = {
   slug: "small-business-answering-service",
 
   meta: {
-    title: "Live Answer for Small Business — Every customer reaches you",
+    title: "Small Business Answering Service — Every Customer Reaches You | Live Answer",
     description:
-      "24/7 bilingual AI receptionist for California solo operators and small business. $500/mo flat, unlimited calls, books into the tools you already use. Built for owner-operators who can't be on the phone.",
+      "Small business answering service for California owner-operators: 24/7 bilingual AI receptionist, $500/mo flat, unlimited calls, books into the tools you already use. Built for owner-operators who can't be on the phone.",
     canonical: "/services/small-business-answering-service",
   },
 

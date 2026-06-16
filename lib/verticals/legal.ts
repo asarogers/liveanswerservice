@@ -9,9 +9,9 @@ export const legalConfig: VerticalConfig = {
   slug: "attorney-answering-service",
 
   meta: {
-    title: "Live Answer for Law Firms — Never miss another retainer",
+    title: "Attorney Answering Service for CA Law Firms — Never Miss a Retainer",
     description:
-      "24/7 bilingual AI intake specialist for California solo and small law firms. Conflict check at the call, qualified intake, books into Clio, MyCase, PracticePanther. One captured retainer pays for a full year.",
+      "Attorney answering service for California solo and small law firms: 24/7 bilingual AI intake, conflict check at the call, qualified intake, books into Clio, MyCase, PracticePanther. One captured retainer pays for a full year.",
     canonical: "/services/attorney-answering-service",
   },
 
