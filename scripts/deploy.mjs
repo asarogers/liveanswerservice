@@ -9,9 +9,16 @@
  *   npm run deploy                          # build + deploy + healthcheck + autofix + redeploy if needed
  *   node scripts/deploy.mjs --skip-build    # deploy only
  *   node scripts/deploy.mjs --skip-deploy   # build only
- *   node scripts/deploy.mjs --skip-check    # skip post-deploy healthcheck + autofix
- *   node scripts/deploy.mjs --skip-autofix  # skip SEO autofix (still runs healthcheck)
+ *   node scripts/deploy.mjs --skip-check    # skip post-deploy healthcheck entirely
+ *   node scripts/deploy.mjs --with-autofix  # OPT IN to the SEO autofix (default: OFF — it mutates source)
  *   node scripts/deploy.mjs --dry-run       # print every step, touch nothing
+ *
+ * Source-mutating steps are OPT-IN ONLY. The default deploy is build + deploy +
+ * read-only healthcheck and never edits tracked files:
+ *   - audit-route  → --with-audit-route (its expand_content.py LLM writer injected
+ *                    filler prose into app/book, app/about, app/services, etc.)
+ *   - SEO autofix  → --with-autofix      (mechanical, but still rewrites source on
+ *                    deploy; kept off by default so deploys stay reproducible)
  */
 
 import { execSync }      from 'child_process';
@@ -25,7 +32,7 @@ const argv        = process.argv.slice(2);
 const SKIP_BUILD   = argv.includes('--skip-build');
 const SKIP_DEPLOY  = argv.includes('--skip-deploy');
 const SKIP_CHECK   = argv.includes('--skip-check');
-const SKIP_AUTOFIX = argv.includes('--skip-autofix');
+const WITH_AUTOFIX = argv.includes('--with-autofix'); // opt-in; default OFF (was default-on and mutated source on every deploy)
 const DRY_RUN      = argv.includes('--dry-run');
 
 const PYTHON      = '/opt/homebrew/bin/python3';
@@ -98,8 +105,8 @@ async function main() {
       log('Skipping audit-route (opt in with --with-audit-route).');
     }
 
-    if (!SKIP_AUTOFIX) {
-      log('Running SEO autofix…');
+    if (WITH_AUTOFIX) {
+      log('Running SEO autofix (--with-autofix)…');
       let autofixApplied = false;
       try {
         // seo-autofix.py exits 0 = nothing to fix, 2 = fixes applied, 1 = error
@@ -126,7 +133,7 @@ async function main() {
         log('Auto-redeploy complete. Skipping second audit run.');
       }
     } else {
-      log('Skipping SEO autofix (--skip-autofix)');
+      log('Skipping SEO autofix (default — opt in with --with-autofix). Healthcheck above is report-only.');
     }
   } else if (SKIP_CHECK) {
     log('Skipping healthcheck (--skip-check)');

@@ -13,7 +13,7 @@ export const locationLocalFaqs: Record<string, FAQ[]> = {
     },
     {
       q: "Does Live Answer work for HVAC contractors in San Jose?",
-      a: "Yes — HVAC is one of our top three verticals in the South Bay. Our AI dispatcher integrates with Jobber, ServiceTitan, Housecall Pro, and FieldEdge, and handles bilingual emergency triage for the heavily Spanish-speaking East San Jose and Alum Rock customer base. Flat $149–$399/mo depending on tier.",
+      a: "Yes — HVAC is one of our top three verticals in the South Bay. Our AI dispatcher integrates with Jobber, ServiceTitan, Housecall Pro, and FieldEdge, and handles bilingual emergency triage for the heavily Spanish-speaking East San Jose and Alum Rock customer base. Flat $500/mo, unlimited calls.",
     },
   ],
 
@@ -24,7 +24,7 @@ export const locationLocalFaqs: Record<string, FAQ[]> = {
     },
     {
       q: "How does Bay Area pricing compare to hiring a receptionist?",
-      a: "A Bay Area receptionist runs $48,000–$60,000/yr fully loaded plus 60+ days to replace when they quit. Live Answer is $500/mo flat flat-rate with no per-minute fees — about 0.7–1.2% of a receptionist's annual cost — and covers 24/7 plus bilingual.",
+      a: "A Bay Area receptionist runs $48,000–$60,000/yr fully loaded plus 60+ days to replace when they quit. Live Answer is $500/mo flat-rate with no per-minute fees — about 0.7–1.2% of a receptionist's annual cost — and covers 24/7 plus bilingual.",
     },
   ],
 
@@ -46,7 +46,7 @@ export const locationLocalFaqs: Record<string, FAQ[]> = {
     },
     {
       q: "Why does bilingual matter so much in LA?",
-      a: "LA County is roughly 48% Hispanic / Latino — the highest concentration of Spanish-speaking customers of any US metro. For most LA service businesses, bilingual is not optional; it's the difference between capturing and not capturing roughly half your inbound. Live Answer includes native bilingual standard on Better and Best.",
+      a: "LA County is roughly 48% Hispanic / Latino — the highest concentration of Spanish-speaking customers of any US metro. For most LA service businesses, bilingual is not optional; it's the difference between capturing and not capturing roughly half your inbound. Live Answer includes native bilingual standard at no extra cost.",
     },
   ],
 };

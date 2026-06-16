@@ -1,7 +1,11 @@
 import Link from "next/link";
+import VoiceSampleCard from "@/components/VoiceSampleCard";
+import { VOICE_AGENTS } from "@/lib/voiceAgents";
 import { siteConfig } from "@/lib/siteConfig";
+import { getAllGuides } from "@/lib/guides";
 import type { VerticalConfig } from "@/lib/verticals/types";
 import HeroLogoVideo from "@/components/HeroLogoVideo";
+import HeroCallForm from "@/components/HeroCallForm";
 
 /**
  * VerticalLandingPage — renders the full StoryBrand HVAC-style landing for any
@@ -13,9 +17,99 @@ import HeroLogoVideo from "@/components/HeroLogoVideo";
 export default function VerticalLandingPage({ config }: { config: VerticalConfig }) {
   const c = config;
   const [headBefore, headAfter] = c.hero.headline.split("{italicWord}");
+  // ≥3 guide links on the homepage is a zero-tolerance check_all requirement —
+  // this is the only crawl path from the homepage to longform content.
+  const guides = getAllGuides().slice(0, 3);
+
+  /* JSON-LD — vertical pages must carry the same schema stack as the legacy
+     service template (Service + FAQPage + BreadcrumbList + WebPage). The
+     homepage (canonical "/") gets FAQPage only — LocalBusiness/WebSite live
+     in app/layout.tsx. */
+  const canonicalPath = c.meta.canonical;
+  const pageUrl =
+    canonicalPath === "/" ? siteConfig.url : `${siteConfig.url}${canonicalPath}`;
+  const isServicePage = canonicalPath.startsWith("/services/");
+  const serviceName = c.meta.title.split("—")[0].trim();
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const serviceSchema = isServicePage
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: serviceName,
+        description: c.meta.description,
+        provider: {
+          "@type": "LocalBusiness",
+          name: siteConfig.name,
+          telephone: siteConfig.phone.schema,
+          url: siteConfig.url,
+          areaServed: { "@type": "State", name: "California" },
+        },
+        areaServed: { "@type": "State", name: "California" },
+        url: pageUrl,
+      }
+    : null;
+
+  const breadcrumbSchema = isServicePage
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+          { "@type": "ListItem", position: 2, name: "Services", item: `${siteConfig.url}/services` },
+          { "@type": "ListItem", position: 3, name: serviceName, item: pageUrl },
+        ],
+      }
+    : null;
+
+  const webPageSchema = isServicePage
+    ? {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": pageUrl,
+        url: pageUrl,
+        name: c.meta.title,
+        description: c.meta.description,
+        isPartOf: { "@id": `${siteConfig.url}/#website` },
+        breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+        about: { "@id": `${siteConfig.url}/#business` },
+      }
+    : null;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {serviceSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+      {webPageSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        />
+      )}
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="la-hero la-hero--cream">
         <div className="wrap hero-wrap">
@@ -32,13 +126,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
             <p className="sub">
               <strong>{c.hero.subhead.seoBold}</strong> {c.hero.subhead.body}
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
             <div className="hero-foot-note">
               Have one of our AI agents call you now · no credit card · cancel anytime
             </div>
@@ -91,6 +179,24 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
                 </div>
               ))}
             </div>
+            {c.stakes.rankingNote && (
+              <p
+                className="stakes-ranking-note"
+                style={{
+                  textAlign: "center",
+                  margin: "36px auto 0",
+                  maxWidth: 720,
+                  fontSize: 16,
+                  lineHeight: 1.55,
+                  color: "#5c5147",
+                }}
+              >
+                <strong style={{ color: "#5a1f2e" }}>
+                  Missed calls don&rsquo;t just lose the customer — they lower your Google Maps ranking.
+                </strong>{" "}
+                {c.stakes.rankingNote}
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -262,29 +368,9 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
             <p className="voices-sub">{c.voices.sub}</p>
           </div>
           <div className="voices-grid">
-            {c.voices.cards.map((v, i) => {
-              const seed = i * 1.3;
-              return (
-                <div key={i} className="voice-card">
-                  <span className="voice-pill">{v.label}</span>
-                  <div className="voice-name">{v.name}</div>
-                  <button type="button" className="voice-play" aria-label={`Play ${v.name}`}>
-                    <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true" style={{ display: "block" }}>
-                      <polygon points="5,3 13,8 5,13" fill="#1a1611" stroke="#1a1611" strokeLinejoin="round" strokeWidth="0.5" />
-                    </svg>
-                  </button>
-                  <div className="voice-wave" aria-hidden="true">
-                    <div className="voice-wave-bars">
-                      {Array.from({ length: 64 }).map((_, j) => {
-                        const h = 18 + (Math.sin(j * 0.45 + seed) + 1) * 30 + (Math.sin(j * 0.13 + seed * 2) + 1) * 18;
-                        return <span key={j} style={{ height: `${Math.min(100, h)}%` }} />;
-                      })}
-                    </div>
-                    <span className="voice-wave-scrub" />
-                  </div>
-                </div>
-              );
-            })}
+            {VOICE_AGENTS.map((a, i) => (
+              <VoiceSampleCard key={a.name} index={i} name={a.name} env={a.env} src={a.src} />
+            ))}
           </div>
         </div>
       </section>
@@ -311,7 +397,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
               </div>
             ))}
             <div className="compare-row compare-us">
-              <div><strong>LiveAnswerService</strong></div>
+              <div><strong>Live Answer Service</strong></div>
               <div><strong>$500/mo flat</strong></div>
               <div>24/7 · bilingual · unlimited</div>
             </div>
@@ -334,7 +420,7 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
             ))}
             <div className="unlimited-good">
               <span className="check">✓</span>
-              <strong>LiveAnswerService $500/mo</strong>
+              <strong>Live Answer Service $500/mo</strong>
               <span>Unlimited, flat-rate, locked in</span>
             </div>
           </div>
@@ -438,8 +524,8 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
           <span className="section-num">10 · Coverage</span>
           <div className="ca-map-visual">
             <iframe
-              title="California coverage map — San Francisco"
-              src="https://maps.google.com/maps?q=San+Francisco,+California&ll=37.75,-122.25&z=9&t=m&ie=UTF8&iwloc=&output=embed"
+              title="California coverage map — San Jose"
+              src="https://maps.google.com/maps?q=San+Jose,+California&ll=37.298,-121.873&z=9&t=m&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
@@ -458,8 +544,10 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
               <h2 className="section-title" style={{ margin: 0 }}>Frequently asked questions.</h2>
             </div>
             <div className="faq-list">
+              {/* `open` is required: answers must be in the initial HTML —
+                  Google and LLM crawlers can't click (WEBSITE-TEMPLATE FAQ invariant) */}
               {c.faqs.map((faq, i) => (
-                <details key={i}>
+                <details key={i} open>
                   <summary>{faq.q}</summary>
                   <p>{faq.a}</p>
                 </details>
@@ -468,6 +556,116 @@ export default function VerticalLandingPage({ config }: { config: VerticalConfig
           </div>
         </div>
       </section>
+
+      {/* ── CROSS-VERTICAL EDITORIAL LINKS (homepage only) ─── */}
+      {c.crossVerticals && (
+        <section
+          className="cross-verticals"
+          aria-label="Other industries we answer for"
+          style={{ padding: "64px 24px" }}
+        >
+          <div className="wrap" style={{ maxWidth: 820 }}>
+            <div style={{ textAlign: "center", marginBottom: 40 }}>
+              <span className="section-num">{c.crossVerticals.sectionNum}</span>
+              <h2 className="section-title" style={{ margin: 0 }}>
+                {c.crossVerticals.title}
+              </h2>
+            </div>
+            {c.crossVerticals.items.map((item, i) => (
+              <div key={i} style={{ marginBottom: i < c.crossVerticals!.items.length - 1 ? 40 : 0 }}>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(20px, 2.2vw, 26px)",
+                    fontWeight: 400,
+                    letterSpacing: "-0.015em",
+                    color: "#1a1611",
+                    margin: "0 0 12px",
+                  }}
+                >
+                  {item.heading}
+                </h2>
+                <p style={{ fontSize: 16, lineHeight: 1.65, color: "#5c5147", margin: 0 }}>
+                  {item.body}
+                  <Link
+                    href={item.href}
+                    style={{ color: "#5a1f2e", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: 3 }}
+                  >
+                    {item.linkText}
+                  </Link>
+                  {item.after}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ── GUIDES PREVIEW ─────────────────────────────────── */}
+      {guides.length > 0 && (
+        <section className="guides-preview" aria-label="Guides" style={{ padding: "64px 24px" }}>
+          <div className="wrap" style={{ maxWidth: 1100 }}>
+            <div style={{ textAlign: "center", marginBottom: 32 }}>
+              <span className="section-num">12 · Guides</span>
+              <h2 className="section-title" style={{ margin: 0 }}>
+                The numbers behind the problem.
+              </h2>
+            </div>
+            <ul
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+                gap: 24,
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+              }}
+              aria-label="Guide list"
+            >
+              {guides.map((g) => (
+                <li key={g.slug}>
+                  <Link
+                    href={`/guides/${g.slug}`}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      height: "100%",
+                      padding: 24,
+                      background: "#fdfaf3",
+                      border: "1px solid #d9cdb1",
+                      borderRadius: 12,
+                      textDecoration: "none",
+                    }}
+                    aria-label={`Read guide: ${g.h1 || g.title}`}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontSize: 19,
+                        fontWeight: 400,
+                        lineHeight: 1.25,
+                        letterSpacing: "-0.015em",
+                        color: "#1a1611",
+                        margin: "0 0 10px",
+                      }}
+                    >
+                      {g.h1 || g.title}
+                    </h3>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: "#5c5147", flex: 1, margin: 0 }}>
+                      {g.description}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p style={{ textAlign: "center", marginTop: 24 }}>
+              <Link href="/guides" style={{ color: "#5a1f2e", fontWeight: 600 }}>
+                All guides →
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* ── FINAL CTA ──────────────────────────────────────── */}
       <section className="final-cta">

@@ -1,0 +1,541 @@
+{
+  "project": "liveanswerservice",
+  "generated": "2026-06-06T00:00:00Z",
+  "scored_date": "2026-06-05",
+  "total_keywords": 161,
+  "_comment": "MANUALLY MAINTAINED PUBLISHING SCHEDULE — `lastmod_schedule` in this file is canonical (9 weekly waves from 2026-06-08; BUSINESS.md's old week-by-week roadmap is superseded). URLs in `exclude` get robots:noindex + omitted from sitemap. URLs in `sitemaps.priority` get sitemap priority 0.95 (vs 0.8 default). Each wave Monday, MOVE that wave's URLs from `exclude` into `sitemaps.priority.urls` and redeploy — via Mission Control's page-schedule panel or by hand. Strategy/rationale: important/business/liveanswerservice/LIVEANSWERSERVICE.md §Release Plan.",
+  "sitemaps": {
+    "priority": {
+      "filename": "sitemap-priority.xml",
+      "description": "Week 1 launch — pages indexed and prioritized in the sitemap.",
+      "urls": [
+        {
+          "url": "/services/hvac-answering-service",
+          "tier": "G",
+          "action": "target_now",
+          "reason": "Week 1 launch — HVAC vertical"
+        },
+        {
+          "url": "/services/attorney-answering-service",
+          "tier": "G",
+          "action": "target_now",
+          "reason": "Week 1 launch — Legal vertical"
+        },
+        {
+          "url": "/services/small-business-answering-service",
+          "tier": "G",
+          "action": "target_now",
+          "reason": "Week 1 launch — SMB landing"
+        },
+        {
+          "url": "/locations/san-jose",
+          "tier": "F",
+          "action": "target_now",
+          "reason": "Week 1 launch — HQ/NAP city"
+        },
+        {
+          "url": "/pricing",
+          "tier": "F",
+          "action": "target_now",
+          "reason": "Week 1 launch — pricing page"
+        },
+        {
+          "url": "/calculator",
+          "tier": "F",
+          "action": "target_now",
+          "reason": "Week 1 launch — missed-call calculator"
+        }
+      ]
+    },
+    "longtail": {
+      "filename": "sitemap-longtail.xml",
+      "description": "Lower-priority pages currently indexed (default 0.8 priority).",
+      "urls": []
+    }
+  },
+  "orphans": {
+    "description": "Pages built but linked from nowhere. Empty for now.",
+    "urls": []
+  },
+  "exclude": {
+    "description": "Pages built into the repo but NOT indexed yet (per the lastmod_schedule waves below). robots:noindex emitted per page; omitted from sitemap. Move into sitemaps.priority on the wave's Monday, then redeploy.",
+    "urls": [
+      {
+        "url": "/services/dental-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 2 (wk 2, Jun 15) — gated on Wave 1 indexing in GSC"
+      },
+      {
+        "url": "/how-it-works",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 2 (wk 2, Jun 15)"
+      },
+      {
+        "url": "/start-trial",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 2 (wk 2, Jun 15)"
+      },
+      {
+        "url": "/services/restaurant-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 2 (wk 2, Jun 15)"
+      },
+      {
+        "url": "/comparison",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 2 (wk 2, Jun 15)"
+      },
+      {
+        "url": "/ccpa-compliance-call-recording",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 2 (wk 2, Jun 15) — zero-competitor whitespace"
+      },
+      {
+        "url": "/24-7-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 3 (wk 3, Jun 22) — '24/7 answering service cost bay area' opp 0.63, diff 30 (forum_fallback easy win)"
+      },
+      {
+        "url": "/vs-hiring-a-receptionist",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 3 (wk 3, Jun 22) — 'virtual receptionist vs hiring receptionist' opp 0.58, diff 34 (forum_fallback easy win)"
+      },
+      {
+        "url": "/cheap-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 3 (wk 3, Jun 22) — +130% YoY trend + 'cheapest virtual receptionist service' opp 0.58, diff 35"
+      },
+      {
+        "url": "/guides/how-much-does-an-answering-service-cost",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 3 (wk 3, Jun 22) — queued in Mission Control publisher (#19); absorbs 5+ cost queries incl. #1 'live answering service pricing per call' (opp 0.64, diff 29)"
+      },
+      {
+        "url": "/guides/do-i-need-an-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 3 (wk 3, Jun 22) — queued in Mission Control publisher (#20); 'do I need an answering service' opp 0.58"
+      },
+      {
+        "url": "/guides/what-is-call-overflow-handling",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 3 (wk 3, Jun 22) — queued in Mission Control publisher (#21); 'what is call overflow handling' opp 0.59"
+      },
+      {
+        "url": "/guides/after-hours-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 4 (wk 4, Jun 29) — queued in Mission Control publisher (#22); covers 3 scored after-hours queries (0.54-0.58)"
+      },
+      {
+        "url": "/bilingual-answering-service-california",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 4 (wk 4, Jun 29) — CA whitespace (only Reliable Receptionist competes)"
+      },
+      {
+        "url": "/services/live-answering-service",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 4 (wk 4, Jun 29)"
+      },
+      {
+        "url": "/services/real-estate-answering-service",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 5 (wk 5, Jul 6) — long-tail verticals pushed out a week per 2026-06-06 decision"
+      },
+      {
+        "url": "/services/property-management-answering-service",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 5 (wk 5, Jul 6) — long-tail verticals pushed out a week per 2026-06-06 decision"
+      },
+      {
+        "url": "/services/salon-and-spa-answering-service",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 5 (wk 5, Jul 6) — long-tail verticals pushed out a week per 2026-06-06 decision"
+      },
+      {
+        "url": "/services/medical-office-answering-service",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 6 (wk 6, Jul 13) — deliberately last: HIPAA/multi-stakeholder, all medical keywords target_later diff 59-63"
+      },
+      {
+        "url": "/services/veterinary-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 5 (wk 5, Jul 6) — NEW: 'veterinary answering service near me' opp 0.57, diff 34, forum_fallback target_now (only unshipped vertical with one). Built 2026-06-06 (lib/verticals/veterinary.ts, sourced stats: 1-in-4 missed, $5K LTV; ezyVet/Cornerstone/AVImark/Shepherd/Vetspire)"
+      },
+      {
+        "url": "/free-trial",
+        "tier": "F",
+        "action": "exclude",
+        "reason": "Wave 5 (wk 5, Jul 6) — paid-ad LP (noindex doesn't block ad use)"
+      },
+      {
+        "url": "/locations/sacramento",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "ON HOLD — not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report §G"
+      },
+      {
+        "url": "/locations/los-angeles",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "ON HOLD — not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report §G"
+      },
+      {
+        "url": "/locations/san-francisco-bay-area",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "ON HOLD — not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report §G"
+      },
+      {
+        "url": "/ai-receptionist",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 6 (wk 6, Jul 13) — NEW per 2026-06-05 demand brief cluster mapping; absorbs 'best AI receptionist for small business' (opp 0.55, target_now) + reframed virtual-receptionist long-tail; single beatable competitor (Nuvaris AI). Built 2026-06-06"
+      },
+      {
+        "url": "/missed-call-recovery",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 6 (wk 6, Jul 13) — NEW per 2026-06-05 demand brief cluster mapping; product page for the event-driven missed-call trigger (geo variant is gbp_only). Built 2026-06-06"
+      },
+      {
+        "url": "/guides/virtual-receptionist-cost",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 4 (wk 4, Jun 29) — 'virtual receptionist cost per month' opp 0.58, diff 35, forum_fallback target_now; sibling of the answering-service cost guide (#19) with the virtual-receptionist query family"
+      },
+      {
+        "url": "/guides/what-does-a-virtual-receptionist-do",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 7 (wk 7, Jul 20) — 'what does a virtual receptionist do' opp 0.54, diff 35, forum_fallback target_now (definitional)"
+      },
+      {
+        "url": "/guides/best-answering-service-for-small-business",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 7 (wk 7, Jul 20) — 'best answering service for small business' opp 0.54, diff 38, forum_fallback target_now; how-to-choose framework (SMB landing carries commercial intent)"
+      },
+      {
+        "url": "/spam-call-filtering",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 8 (wk 8, Jul 27) — 'spam call filtering service for business' opp 0.50, diff 33 (lowest-diff unmapped kw); feature page — spam filtering is in the $500 bundle"
+      },
+      {
+        "url": "/guides/is-an-answering-service-worth-it",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 8 (wk 8, Jul 27) — 'is an answering service worth it' opp 0.50, diff 39, forum_fallback; ROI framework, cross-links do-i-need (#20) without duplicating it"
+      },
+      {
+        "url": "/services/plumbing-answering-service",
+        "tier": "E",
+        "action": "exclude",
+        "reason": "Wave 9 (wk 9, Aug 3) — NEW plumbing vertical: 'plumber answering service San Jose' opp 0.50, diff 42, target_now; the brief's gap ('no HVAC competitor owns a San Jose page'); split out of the HVAC config"
+      },
+      {
+        "url": "/services/appointment-scheduling-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 3 (2026-06-22) — service-expansion feature, opp 0.45. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/emergency-dispatch-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 3 (2026-06-22) — service-expansion feature, opp 0.42. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/lead-capture-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 2 (2026-06-15) — service-expansion feature, opp 0.47. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/live-chat-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 4 (2026-06-29) — service-expansion feature, opp 0.40. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/crm-integration-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 4 (2026-06-29) — service-expansion feature, opp 0.40. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/outbound-reminder-answering-service",
+        "tier": "C",
+        "action": "exclude",
+        "reason": "Wave 2 (2026-06-15) — service-expansion feature, opp 0.49. Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/insurance-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 5 (2026-07-06) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/accounting-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 7 (2026-07-20) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/it-msp-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 8 (2026-07-27) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/roofing-construction-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 6 (2026-07-13) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/cleaning-landscaping-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 7 (2026-07-20) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/towing-roadside-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 6 (2026-07-13) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/chiropractic-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 5 (2026-07-06) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/mental-health-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 9 (2026-08-03) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/med-spa-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 8 (2026-07-27) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      },
+      {
+        "url": "/services/nonprofit-answering-service",
+        "tier": "G",
+        "action": "exclude",
+        "reason": "Wave 9 (2026-08-03) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+      }
+    ]
+  },
+  "internal_linking": {
+    "homepage": {
+      "description": "Featured service cards on the homepage hero — top Week 1 verticals.",
+      "links": [
+        {
+          "url": "/services/hvac-answering-service",
+          "keyword": "HVAC answering service",
+          "tier": "G"
+        },
+        {
+          "url": "/services/attorney-answering-service",
+          "keyword": "Attorney answering service",
+          "tier": "G"
+        },
+        {
+          "url": "/services/small-business-answering-service",
+          "keyword": "Small business answering service",
+          "tier": "G"
+        }
+      ]
+    },
+    "hub": {
+      "description": "Service-index page secondary links.",
+      "links": []
+    },
+    "footer": {
+      "description": "Footer navigation links.",
+      "links": []
+    }
+  },
+  "clusters": {},
+  "_schedule_comment": "WEEKLY WAVES per WEBSITE-GROWTH-TIMING.md: ship batches 1-2 weeks apart (weekly = lower bound of the rule). Each wave is GATED ON GSC: before promoting, confirm the prior wave is indexing (3-14 day window) and has no 'Crawled - not indexed' rows (those suppress crawl of NEW pages domain-wide) — if Wave 1 hasn't started indexing yet, SLIP the next wave a week rather than ship into a stalled domain. Every promoted URL needs >=1 external backlink (Mission Control warns on promote). Geo pages (sacramento/LA/SF-bay) are ON HOLD — not scheduled — until rank map shows >=25-35% top-3 coverage and the 30-URL backlink floor is met; city-list pages are a spam flag since Aug 2025. CODE PAGES FOR FUTURE WAVES live on stacked git branches (wave-5 -> wave-6 -> wave-8 -> wave-9, each containing its predecessors): on a wave's Monday, Mission Control's publish-week action merges `branch` into main, promotes the wave's URLs, and deploys. Merge IN ORDER — branches are stacked, so merging a later wave brings earlier waves' pages too (their URLs stay noindexed until promoted, so it's safe, but order keeps the repo matching the schedule).",
+  "lastmod_schedule": [
+    {
+      "week": 1,
+      "target_date": "2026-06-08",
+      "count": 7,
+      "urls": [
+        "/",
+        "/services/hvac-answering-service",
+        "/services/attorney-answering-service",
+        "/services/small-business-answering-service",
+        "/locations/san-jose",
+        "/pricing",
+        "/calculator"
+      ]
+    },
+    {
+      "week": 2,
+      "target_date": "2026-06-15",
+      "count": 8,
+      "urls": [
+        "/services/dental-answering-service",
+        "/how-it-works",
+        "/start-trial",
+        "/services/restaurant-answering-service",
+        "/comparison",
+        "/ccpa-compliance-call-recording",
+        "/services/outbound-reminder-answering-service",
+        "/services/lead-capture-answering-service"
+      ],
+      "branch": "wave-2",
+      "expansion_added": [
+        "/services/outbound-reminder-answering-service",
+        "/services/lead-capture-answering-service"
+      ]
+    },
+    {
+      "week": 3,
+      "target_date": "2026-06-22",
+      "count": 8,
+      "urls": [
+        "/24-7-answering-service",
+        "/vs-hiring-a-receptionist",
+        "/cheap-answering-service",
+        "/guides/how-much-does-an-answering-service-cost",
+        "/guides/do-i-need-an-answering-service",
+        "/guides/what-is-call-overflow-handling",
+        "/services/appointment-scheduling-answering-service",
+        "/services/emergency-dispatch-answering-service"
+      ],
+      "branch": "wave-3",
+      "expansion_added": [
+        "/services/appointment-scheduling-answering-service",
+        "/services/emergency-dispatch-answering-service"
+      ]
+    },
+    {
+      "week": 4,
+      "target_date": "2026-06-29",
+      "count": 6,
+      "urls": [
+        "/guides/after-hours-answering-service",
+        "/bilingual-answering-service-california",
+        "/services/live-answering-service",
+        "/guides/virtual-receptionist-cost",
+        "/services/live-chat-answering-service",
+        "/services/crm-integration-answering-service"
+      ],
+      "branch": "wave-4",
+      "expansion_added": [
+        "/services/live-chat-answering-service",
+        "/services/crm-integration-answering-service"
+      ]
+    },
+    {
+      "week": 5,
+      "target_date": "2026-07-06",
+      "count": 7,
+      "urls": [
+        "/services/real-estate-answering-service",
+        "/services/property-management-answering-service",
+        "/services/salon-and-spa-answering-service",
+        "/services/veterinary-answering-service",
+        "/free-trial",
+        "/services/insurance-answering-service",
+        "/services/chiropractic-answering-service"
+      ],
+      "branch": "wave-5",
+      "expansion_added": [
+        "/services/insurance-answering-service",
+        "/services/chiropractic-answering-service"
+      ]
+    },
+    {
+      "week": 6,
+      "target_date": "2026-07-13",
+      "count": 5,
+      "urls": [
+        "/services/medical-office-answering-service",
+        "/ai-receptionist",
+        "/missed-call-recovery",
+        "/services/roofing-construction-answering-service",
+        "/services/towing-roadside-answering-service"
+      ],
+      "branch": "wave-6",
+      "expansion_added": [
+        "/services/roofing-construction-answering-service",
+        "/services/towing-roadside-answering-service"
+      ]
+    },
+    {
+      "week": 7,
+      "target_date": "2026-07-20",
+      "count": 4,
+      "urls": [
+        "/guides/what-does-a-virtual-receptionist-do",
+        "/guides/best-answering-service-for-small-business",
+        "/services/accounting-answering-service",
+        "/services/cleaning-landscaping-answering-service"
+      ],
+      "expansion_added": [
+        "/services/accounting-answering-service",
+        "/services/cleaning-landscaping-answering-service"
+      ]
+    },
+    {
+      "week": 8,
+      "target_date": "2026-07-27",
+      "count": 4,
+      "urls": [
+        "/spam-call-filtering",
+        "/guides/is-an-answering-service-worth-it",
+        "/services/med-spa-answering-service",
+        "/services/it-msp-answering-service"
+      ],
+      "branch": "wave-8",
+      "expansion_added": [
+        "/services/med-spa-answering-service",
+        "/services/it-msp-answering-service"
+      ]
+    },
+    {
+      "week": 9,
+      "target_date": "2026-08-03",
+      "count": 3,
+      "urls": [
+        "/services/plumbing-answering-service",
+        "/services/mental-health-answering-service",
+        "/services/nonprofit-answering-service"
+      ],
+      "branch": "wave-9",
+      "expansion_added": [
+        "/services/mental-health-answering-service",
+        "/services/nonprofit-answering-service"
+      ]
+    }
+  ]
+}

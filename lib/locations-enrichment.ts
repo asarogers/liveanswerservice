@@ -71,7 +71,7 @@ export const locationEnrichments: Record<string, LocationEnrichment> = {
       "SFO / OAK / SJC",
     ],
     localParagraph:
-      "Live Answer is HQ'd in San Jose's Willow Glen neighborhood and services the entire nine-county Bay Area. We work with SoMa restaurants, Mission salons, and Marina law firms in the City; Peninsula HVAC and home services from Daly City through Palo Alto; Oakland and Berkeley restaurants and legal practices; Hayward through Fremont contractors; Marin and North Bay real estate and property management; and the full South Bay where our customer density is highest. The Bay Area's structural problem is the cost of front-desk staff — $48K–$60K/yr fully loaded plus 60+ days to replace — against an answering service that runs $500/mo flat flat with 24/7 plus bilingual coverage included.",
+      "Live Answer is HQ'd in San Jose's Willow Glen neighborhood and services the entire nine-county Bay Area. We work with SoMa restaurants, Mission salons, and Marina law firms in the City; Peninsula HVAC and home services from Daly City through Palo Alto; Oakland and Berkeley restaurants and legal practices; Hayward through Fremont contractors; Marin and North Bay real estate and property management; and the full South Bay where our customer density is highest. The Bay Area's structural problem is the cost of front-desk staff — $48K–$60K/yr fully loaded plus 60+ days to replace — against an answering service that runs $500/mo flat with 24/7 plus bilingual coverage included.",
   },
 
   "sacramento": {
