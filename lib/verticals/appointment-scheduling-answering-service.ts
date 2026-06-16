@@ -244,10 +244,10 @@ export const appointmentSchedulingConfig: VerticalConfig = {
 
 export const appointmentSchedulingDetail: ServiceDetail = {
   slug: "appointment-scheduling-answering-service",
-  title: "Answering Service That Books Appointments — Live 24/7 | Live Answer Service",
+  title: "AI Appointment Setter — Answering Service That Books Appointments 24/7 | Live Answer Service",
   metaDescription:
-    "An AI answering service that books appointments directly into your calendar in real time. Works with Calendly, Acuity, Google Calendar, Dentrix, Clio, Jobber, and more. Bilingual EN/ES, flat $500/mo, 7-day free trial.",
-  h1: "The Answering Service That Books Appointments in Real Time",
+    "An AI appointment setter and answering service that books appointments directly into your calendar in real time. Works with Calendly, Acuity, Google Calendar, Dentrix, Clio, Jobber, and more. Bilingual EN/ES, flat $500/mo, 7-day free trial.",
+  h1: "The AI Appointment Setter That Books Calls Into Your Calendar in Real Time",
   intro:
     "Taking a message is not booking a job. The average appointment-based California business misses roughly 40% of its booking demand because those calls arrive after hours, during a session, or in Spanish — and the standard response is voicemail. Research consistently shows 80% of callers who hit voicemail hang up without leaving a message and call the next result on Google. Live Answer Service is built specifically to close that gap: we answer every call 24/7 in English or Spanish, capture the caller's service request and preferred time, and book the slot directly into your scheduling software before the caller hangs up. Confirmation SMS goes to the caller, summary to you, within 60 seconds — no callback queue, no manual follow-up, no lost booking.",
   sections: [
