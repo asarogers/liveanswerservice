@@ -137,11 +137,6 @@ export const veterinaryConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & reassuring", sampleLine: "Willow Creek Animal Hospital — let's get your pet seen." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Willow Creek Animal Hospital." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Willow Creek Animal Hospital — how can we help?" },
-    ],
   },
 
   compare: {

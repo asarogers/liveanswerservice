@@ -30,7 +30,12 @@ npm run postdeploy    # ping Bing + submit changed URLs to Google Indexing API
 
 ## Template spec
 
-This repo conforms to `/Users/atlas/repo/important/WEBSITE-TEMPLATE.md`. Run `preflight --client liveanswerservice` to verify.
+This repo conforms to `/Users/atlas/repo/important/strategy/WEBSITE-TEMPLATE.md`. Run `preflight --client liveanswerservice` to verify.
+
+**Documented deviations from the template:**
+- `app/services/categories/` (REQ route in the spec) is intentionally absent — the entire GBP-categories layer was archived for this site; `middleware.ts` returns **410 Gone** for `/services/categories` and its subroutes. Vertical landing pages (`lib/verticals/`) carry the category-intent keywords instead.
+- `/blog` has no route — `content/guides/` is the sole long-form surface; `middleware.ts` 301s `/blog` and all post slugs to `/guides` (blog route + `lib/blog.ts` removed 2026-06-06).
+- `aggregateRating` is intentionally absent from all LocalBusiness JSON-LD until a real Live Answer Service GBP with real reviews exists (`scripts/fetch-google-reviews.mjs` needs its PLACE_ID set then). Never hardcode it.
 
 ## Publishing schedule
 

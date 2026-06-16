@@ -112,11 +112,6 @@ export const propertyManagementConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & professional", sampleLine: "Madrone Property — let me check on that." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Madrone Property Group." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Madrone Property — what can I help with?" },
-    ],
   },
 
   compare: {
