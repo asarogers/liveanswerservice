@@ -9,10 +9,14 @@ import { salonConfig } from "./salon";
 import { smallBusinessConfig } from "./small-business";
 import { veterinaryConfig } from "./veterinary";
 import { plumbingConfig } from "./plumbing";
+import { EXPANSION_VERTICALS } from "./expansion";
 
 /**
  * Registry of all vertical configs. Add new verticals by importing the config
  * and adding it here. The slug must match the route at /services/<slug>.
+ *
+ * EXPANSION_VERTICALS (Waves 2–9 service-page expansion) is kept in
+ * ./expansion.ts so wave-branch merges don't collide with it — see that file.
  */
 export const VERTICALS: Record<string, VerticalConfig> = {
   "hvac-answering-service": hvacConfig,
@@ -25,6 +29,7 @@ export const VERTICALS: Record<string, VerticalConfig> = {
   "small-business-answering-service": smallBusinessConfig,
   "veterinary-answering-service": veterinaryConfig,
   "plumbing-answering-service": plumbingConfig,
+  ...EXPANSION_VERTICALS,
 };
 
 export function getVertical(slug: string): VerticalConfig | undefined {

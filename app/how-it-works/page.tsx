@@ -45,7 +45,7 @@ export default function HowItWorksPage() {
               <div className="num">2</div>
               <h3>We answer every call</h3>
               <p>24/7, English or Spanish, your vertical script. Books into your CRM, calendar, or PMS in real time.</p>
-              <p>Our AI is trained on thousands of real-world interactions to provide natural, professional responses tailored to your industry. We handle everything from scheduling appointments to providing essential information about your services, ensuring every caller feels valued and supported.</p>
+              <p>Our AI is trained on thousands of real-world interactions, so responses sound natural and use your industry&rsquo;s vocabulary. It schedules appointments, answers common questions about your services, and takes complete messages — every caller gets a real conversation, not a phone tree.</p>
             </div>
             <div className="plan-step">
               <div className="num">3</div>
@@ -65,9 +65,9 @@ export default function HowItWorksPage() {
             <div className="scenario-card">
               <div className="time"><i className="ti ti-microphone" aria-hidden="true" /> Voice</div>
               <div className="body">
-                Best-in-class TTS (Inworld 1.5 Max, Cartesia, ElevenLabs) tuned for phone audio.
+                TTS from Inworld 1.5 Max, Cartesia, and ElevenLabs, tuned for phone audio.
                 Sub-300ms latency with Deepgram Nova for speech recognition.
-                <p>These technologies ensure crystal-clear communication, making every interaction sound natural and professional. We continuously optimize our systems to provide the best possible experience for both you and your callers.</p>
+                <p>The result is a voice that sounds like a person on a clear line — callers respond to it the way they respond to a good receptionist, not a robocall.</p>
               </div>
             </div>
             <div className="scenario-card">
@@ -75,7 +75,7 @@ export default function HowItWorksPage() {
               <div className="body">
                 Claude Sonnet 4.6 with vertical-specific system prompts. Hard guardrails against
                 fabrication, advice-giving, and overbooking. Escalation by design.
-                <p>Our AI is designed to be both intelligent and safe, ensuring it provides accurate information while avoiding potentially harmful or inaccurate responses. The escalation feature guarantees that complex situations are brought to your attention promptly.</p>
+                <p>The AI is scripted not to fake confidence: anything it isn&rsquo;t sure about becomes a message and a callback slot, and complex situations are escalated to you promptly instead of guessed at.</p>
               </div>
             </div>
             <div className="scenario-card">
@@ -83,7 +83,7 @@ export default function HowItWorksPage() {
               <div className="body">
                 Direct API into Jobber, Service Titan, HousecallPro, FieldEdge, Clio, MyCase,
                 PracticePanther, Lawmatics. 35+ total. Custom integrations on the Custom plan.
-                <p>These integrations allow seamless data flow between Live Answer and your existing tools, saving you time and reducing manual entry. Whether you're managing a law firm, a service business, or a medical practice, we've got you covered with tailored solutions.</p>
+                <p>Bookings, messages, and call notes flow straight into the tools you already use — no manual re-entry. Setup is specific to your stack, whether you run a law firm, a service business, or a medical practice.</p>
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function HowItWorksPage() {
             <div className="stakes-stat">
               <div className="num">&lt;2 rings</div>
               <div className="label">average pick-up time, 24/7</div>
-              <p>Minimal wait times ensure your customers feel valued and attended to immediately, enhancing their experience and building trust in your brand.</p>
+              <p>Callers reach a voice before they reach for the next listing — the 60-second window where most missed calls become a competitor&rsquo;s customer.</p>
             </div>
             <div className="stakes-stat">
               <div className="num">60 sec</div>
@@ -129,7 +129,7 @@ export default function HowItWorksPage() {
             </div>
             <div className="faq-item">
               <dt>What if I need help setting up?</dt>
-              <dd>Our dedicated support team is here to assist you every step of the way. We offer comprehensive onboarding and ongoing support to ensure your experience is smooth and successful.</dd>
+              <dd>A real person walks you through onboarding on a kickoff call, and the same team handles support afterward. If something isn&rsquo;t working, you talk to someone who can fix it.</dd>
             </div>
           </dl>
         </div>

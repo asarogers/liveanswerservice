@@ -73,7 +73,7 @@ export default function StartTrialPage() {
               <h3>Decide</h3>
               <p>Continue at $500/mo, cancel, or extend. No card on file. We port any number out free if you leave. At the end of your trial, you'll have a clear understanding of how Live Answer can benefit your business. Whether you choose to continue, pause, or extend your trial, we're committed to supporting your decision-making process with transparent pricing and flexible options.</p>
               <ul className="benefits-list">
-                <li>Flexible payment plans tailored to your needs</li>
+                <li>Month-to-month billing — no contract</li>
                 <li>No obligation to continue after the trial</li>
                 <li>Free number porting if you decide to leave</li>
               </ul>
@@ -99,7 +99,7 @@ export default function StartTrialPage() {
           <div className="faq-grid">
             <div className="faq-item">
               <h3>How long does the setup take?</h3>
-              <p>Setup typically takes 48 hours from your kickoff call. We work quickly to ensure minimal disruption to your operations while maximizing the AI's effectiveness.</p>
+              <p>Setup typically takes 48 hours from your kickoff call. Your phone keeps working normally the whole time — the switch-over is a single forwarding change.</p>
             </div>
             <div className="faq-item">
               <h3>What happens after the trial ends?</h3>
@@ -111,7 +111,7 @@ export default function StartTrialPage() {
             </div>
             <div className="faq-item">
               <h3>Do I need a specific phone number?</h3>
-              <p>We handle all number porting and forwarding seamlessly. You don't need a specific number upfront; we'll work with whatever setup you currently have in place.</p>
+              <p>We handle all number porting and forwarding for you. You don't need a specific number upfront; we'll work with whatever setup you currently have in place.</p>
             </div>
           </div>
         </div>

@@ -51,7 +51,7 @@ export type SitePlan = {
     footer:   { description: string; links: SitePlanLink[] };
   };
   clusters: Record<string, unknown>;
-  lastmod_schedule: Array<{ week: number; target_date: string; count: number; urls: string[] }>;
+  lastmod_schedule: Array<{ week: number; target_date: string; count: number; urls: string[]; branch?: string }>;
 };
 
 let _cached: SitePlan | null | undefined = undefined;

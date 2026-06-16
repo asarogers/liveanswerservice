@@ -112,11 +112,6 @@ export const salonConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & welcoming", sampleLine: "Studio Maple — let me find an opening for you." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Studio Maple." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Studio Maple — what can I book for you?" },
-    ],
   },
 
   compare: {

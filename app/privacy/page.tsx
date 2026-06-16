@@ -25,10 +25,10 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Information We Collect</h2>
           <p>
-            When you contact us or sign up for our service, we collect essential details such as your name, business name, email address, phone number, and billing information. This allows us to effectively communicate with you, manage your account, and provide the services you’ve requested. Additionally, we gather general usage data including login credentials, account activity, preferences, and communication choices to enhance your experience and ensure our service meets your needs.
+            When you contact us or sign up for our service, we collect essential details such as your name, business name, email address, phone number, and billing information. This allows us to effectively communicate with you, manage your account, and provide the services you’ve requested. Additionally, we gather general usage data including login credentials, account activity, preferences, and communication choices to operate your account and improve the service.
           </p>
           <p>
-            As part of our answering service, we process caller information such as their name, phone number, reason for calling, and the audio of the call. This data is crucial for providing accurate message-taking services, scheduling appointments, and ensuring seamless communication between you and your customers. All collected information is stored securely in compliance with relevant privacy regulations.
+            As part of our answering service, we process caller information such as their name, phone number, reason for calling, and the audio of the call. This data is required for accurate message-taking, appointment scheduling, and passing messages reliably between you and your customers. All collected information is stored securely in compliance with relevant privacy regulations.
           </p>
         </section>
 
@@ -76,12 +76,12 @@ export default function PrivacyPage() {
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--color-ink)] mb-2">Contact Us</h2>
           <p>
             If you have any questions about this privacy policy, please reach out to us at{' '}
-            <a href="mailto:hello@liveanswerservice.com" className="text-[var(--color-brand)] underline">
-              hello@liveanswerservice.com
+            <a href="mailto:ace@liveanswerservice.com" className="text-[var(--color-brand)] underline">
+              ace@liveanswerservice.com
             </a>{' '}
             or call{' '}
-            <a href="tel:+16693656533" className="text-[var(--color-brand)] underline">
-              (669) 365-6533
+            <a href="tel:+16693161742" className="text-[var(--color-brand)] underline">
+              (669) 316-1742
             </a>.
           </p>
           <p>

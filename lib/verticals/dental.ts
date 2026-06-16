@@ -117,11 +117,6 @@ export const dentalConfig: VerticalConfig = {
     sectionNum: "06 · Voices",
     title: "Human-standard AI voice agents.",
     sub: "Out of the box, ready to use.",
-    cards: [
-      { name: "Professional Sarah", label: "Warm & reassuring", sampleLine: "Cedar Grove Dental — let me get you in this week." },
-      { name: "Executive Marcus", label: "Authoritative", sampleLine: "Thank you for calling Cedar Grove Dental." },
-      { name: "Casual Jamie", label: "Conversational", sampleLine: "Cedar Grove Dental — how can we help?" },
-    ],
   },
 
   compare: {
