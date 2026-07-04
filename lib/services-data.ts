@@ -221,6 +221,37 @@ export const serviceDetails: ServiceDetail[] = [
   },
 
 
+  /* ──────────────────────────────────────────────────────────
+     WEEK 7 — MEDICAL OFFICE
+     ────────────────────────────────────────────────────────── */
+  {
+    slug: "medical-office-answering-service",
+    title: "Medical Office Answering Service — California AI Front Desk",
+    metaDescription:
+      "AI front desk for California medical offices. Books patients into Athena, Epic, Cerner, NextGen. Bilingual EN/ES. HIPAA-compliant with signed BAA. Flat $500/mo flat.",
+    h1: "Every Patient Call. Answered. Booked. Charted.",
+    intro:
+      "California medical practices face the same structural problem as dental: a front desk that's drowning between patient check-ins, insurance verification, and the phones, with the result that lunch-hour and after-hours calls — which is where most new patients try to reach you — go to voicemail. The cost is steep: a new patient is worth $1,200–$3,500 in lifetime value in primary care, much more in specialty practices. Live Answer's medical office configuration is a HIPAA-compliant AI front desk that books patients directly into Athena, Epic, Cerner, NextGen, or any major EHR, handles insurance pre-screening, and triages clinical urgency to your protocol — in English or Spanish, 24/7.",
+    sections: [
+      {
+        heading: "Clinical Triage to Your Protocol, Not AI Guesses",
+        content:
+          "The AI does not give clinical advice. That's a hard guardrail. What it does is run an urgency-screening script that your practice defines during onboarding — a structured set of questions the front desk would normally ask (chief complaint, duration, severity, current medications, recent ER visits, etc.) that map to a routing decision: same-day appointment, next-available appointment, nurse callback, or 911 redirect. The AI never decides — it follows the protocol you wrote. Anything outside the script gets routed to your on-call provider or office manager. Recordings and transcripts are encrypted, retention is configurable from 7 days to indefinite, and we provide a signed BAA before any clinical deployment.",
+      },
+      {
+        heading: "Insurance Pre-Screening That Saves Real Front-Desk Hours",
+        content:
+          "On Better and Best tiers the AI handles insurance pre-screening — collecting carrier, plan name, member ID, group number, and primary subscriber details — and can run real-time verification through your existing verification tooling if it's API-accessible (Availity, Waystar, pVerify). Patients without coverage or with coverage the practice doesn't accept get redirected appropriately rather than booked into a slot that will later cancel for billing reasons. New-patient packets get sent via SMS or email automatically, with reminders if the patient doesn't complete them before the appointment. The hours saved at the front desk add up quickly — a single FTE freed from insurance phone-tag is usually worth the cost of the service.",
+      },
+      {
+        heading: "Bilingual Medical Intake Without an Interpreter Line",
+        content:
+          "Medical practices serving Spanish-speaking populations either staff bilingual front desk (expensive, hard to hire) or rely on interpreter services that add a call-leg and friction. Live Answer's medical configuration is native bilingual on Better and Best — same clinical triage protocol, same EHR sync, same insurance pre-screening, in Spanish. For practices in LA County, the Inland Empire, Central Valley, and parts of the Bay Area, this addresses a meaningful share of the patient population without the interpreter overhead. The voice model is tuned for medical Spanish vocabulary specifically; the AI handles common conditions, symptoms, and medications fluently.",
+      },
+    ],
+    relatedServices: ["dental-answering-service", "small-business-answering-service"],
+    relatedLocations: ["san-jose", "los-angeles", "san-francisco-bay-area"],
+  },
 
 
 
