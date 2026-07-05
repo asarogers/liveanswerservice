@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import HeroCallForm from "@/components/HeroCallForm";
 
 const SLUG = "bilingual-answering-service-california";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -9,6 +10,7 @@ const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 export const metadata: Metadata = {
   openGraph: {
   url: "https://liveanswerservice.com/bilingual-answering-service-california",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   robots: gatedRobots("/bilingual-answering-service-california"),
   title: "Bilingual Answering Service in California — Native EN/ES",
@@ -52,13 +54,7 @@ export default function BilingualPage() {
               Live Answer detects the caller&rsquo;s language in three seconds and answers natively in
               either. Included on every plan. Never an upcharge.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Llámame · Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} label="Llámame · Call me" />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               Speak Spanish or English when we call — the AI matches you.
             </div>

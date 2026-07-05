@@ -50,6 +50,9 @@ yarn-error.log*
 # Cloudflare Workers local secrets — never commit
 .dev.vars
 
+# Cloudflare Workers local dev state (D1 sqlite, cache)
+.wrangler/
+
 # vercel
 .vercel
 

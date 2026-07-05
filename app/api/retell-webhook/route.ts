@@ -4,6 +4,15 @@ import { verifyRetellSignature } from '@/lib/retell';
 import { updateLeadAnalysis } from '@/lib/leads';
 import { getClientId, type D1Database } from '@/lib/rate-limit';
 import { sendGaEvents, funnelEvents } from '@/lib/ga-mp';
+import { notifyOwner } from '@/lib/notify';
+
+/** Two agent ids from .dev.vars / Worker secrets — used to label direction in the owner email. */
+function agentDirection(agentId: string | undefined): 'inbound' | 'outbound' | 'unknown' {
+  if (!agentId) return 'unknown';
+  if (agentId === process.env.RETELL_INBOUND_AGENT_ID) return 'inbound';
+  if (agentId === process.env.RETELL_OUTBOUND_AGENT_ID) return 'outbound';
+  return 'unknown';
+}
 
 /** D1 binding (env.DEMO_DB) for the client_id lookup — same as /api/demo-call. */
 function getDemoDb(): D1Database | undefined {
@@ -35,7 +44,10 @@ const DEV = process.env.NODE_ENV !== 'production';
 
 interface RetellCall {
   call_id?: string;
-  metadata?: { lead_id?: string; [k: string]: unknown };
+  agent_id?: string;
+  from_number?: string;
+  to_number?: string;
+  metadata?: { lead_id?: string; lead_phone?: string; [k: string]: unknown };
   disconnection_reason?: string;
   duration_ms?: number;
   transcript?: string;
@@ -135,6 +147,39 @@ export async function POST(request: NextRequest) {
     durationS: typeof call.duration_ms === 'number' ? Math.round(call.duration_ms / 1000) : undefined,
     costUsd: typeof call.call_cost?.combined_cost === 'number' ? call.call_cost.combined_cost / 100 : undefined,
   });
+
+  // Owner email on call completion — one send per call, keyed on call_analyzed
+  // (the only event carrying the finished analysis; call_started/call_ended
+  // never reach here).
+  if (event === 'call_analyzed') {
+    const direction = agentDirection(call.agent_id);
+    const contactNumber =
+      (direction === 'outbound' ? call.to_number : call.from_number) ||
+      call.to_number ||
+      call.from_number ||
+      call.metadata?.lead_phone ||
+      'unknown';
+    await notifyOwner(
+      `${direction === 'inbound' ? 'Inbound' : direction === 'outbound' ? 'Outbound demo' : ''} call completed — ${contactNumber}`.replace(/\s+/g, ' ').trim(),
+      `
+        <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto;">
+          <h2 style="color:#2C2C2C;">Call completed</h2>
+          <table style="width:100%; border-collapse:collapse;">
+            <tr><td style="padding:6px 0; color:#5A5A5A; width:140px;"><strong>Direction</strong></td><td style="padding:6px 0;">${direction}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>Contact number</strong></td><td style="padding:6px 0;">${contactNumber}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>From</strong></td><td style="padding:6px 0;">${call.from_number || 'unknown'}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>To</strong></td><td style="padding:6px 0;">${call.to_number || 'unknown'}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>Caller name</strong></td><td style="padding:6px 0;">${str(custom.caller_name) || 'unknown'}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>Business type</strong></td><td style="padding:6px 0;">${str(custom.business_type) || 'unknown'}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>Outcome</strong></td><td style="padding:6px 0;">${str(custom.outcome) || status}</td></tr>
+            <tr><td style="padding:6px 0; color:#5A5A5A;"><strong>Wants meeting</strong></td><td style="padding:6px 0;">${bool(custom.wants_meeting) ? 'yes' : 'no'}</td></tr>
+          </table>
+          ${call.call_analysis?.call_summary ? `<div style="margin-top:16px; padding:16px; background:#FAF9F5; border-left:4px solid #1A1A17; border-radius:4px;"><p style="margin:0; color:#2C2C2C; white-space:pre-wrap;">${call.call_analysis.call_summary}</p></div>` : ''}
+          ${call.recording_url ? `<p style="margin-top:16px;"><a href="${call.recording_url}">Listen to recording</a></p>` : ''}
+        </div>
+      `,
+    );
+  }
 
   // Server-side GA4 funnel replay (TRACKING-PLAN.md §2c) — no-ops without
   // GA_API_SECRET. Stitched to the web user via the client_id captured at submit

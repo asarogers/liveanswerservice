@@ -24,7 +24,16 @@ declare global {
   }
 }
 
-export default function HeroCallForm({ recaptchaSiteKey }: { recaptchaSiteKey?: string }) {
+export default function HeroCallForm({
+  recaptchaSiteKey,
+  label = 'Call me',
+  loadingLabel = 'Calling…',
+}: {
+  recaptchaSiteKey?: string;
+  /** Idle button text. Defaults to "Call me" — override for page-specific copy (e.g. "Call me now"). */
+  label?: string;
+  loadingLabel?: string;
+}) {
   const [phone, setPhone] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -104,7 +113,7 @@ export default function HeroCallForm({ recaptchaSiteKey }: { recaptchaSiteKey?: 
         />
         <button type="submit" disabled={status === 'loading'}>
           <i className="ti ti-phone-outgoing" aria-hidden="true" />
-          {status === 'loading' ? 'Calling…' : 'Call me'}
+          {status === 'loading' ? loadingLabel : label}
         </button>
       </form>
       {message && (

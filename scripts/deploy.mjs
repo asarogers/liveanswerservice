@@ -1,15 +1,22 @@
 #!/usr/bin/env node
 /**
- * deploy.mjs — Build → Cloudflare Workers → Health Check
+ * deploy.mjs — Build → Cloudflare Workers → Health Check → Indexing
  *
- * Google indexing runs automatically as postdeploy via request-indexing.mjs.
+ * Indexing (request-indexing.mjs + indexnow-submit.mjs) runs from inside this
+ * script now, gated the same as every other step — NOT via npm's "postdeploy"
+ * lifecycle hook. That hook used to run unconditionally after ANY successful
+ * `npm run deploy`, including `--dry-run`, `--skip-deploy`, and `--skip-check`
+ * invocations — so a "preview" run was silently pinging Google/IndexNow with
+ * real production URLs. Fixed 2026-07-05; see package.json (postdeploy removed).
+ *
  * After deploy, runs Arnold's check-page healthcheck against the live sitemap.
  *
  * Usage:
- *   npm run deploy                          # build + deploy + healthcheck + autofix + redeploy if needed
+ *   npm run deploy                          # build + deploy + healthcheck + autofix + index
  *   node scripts/deploy.mjs --skip-build    # deploy only
  *   node scripts/deploy.mjs --skip-deploy   # build only
  *   node scripts/deploy.mjs --skip-check    # skip post-deploy healthcheck entirely
+ *   node scripts/deploy.mjs --skip-index    # skip Google/IndexNow indexing ping
  *   node scripts/deploy.mjs --with-autofix  # OPT IN to the SEO autofix (default: OFF — it mutates source)
  *   node scripts/deploy.mjs --dry-run       # print every step, touch nothing
  *
@@ -33,6 +40,7 @@ const SKIP_BUILD   = argv.includes('--skip-build');
 const SKIP_DEPLOY  = argv.includes('--skip-deploy');
 const SKIP_CHECK   = argv.includes('--skip-check');
 const WITH_AUTOFIX = argv.includes('--with-autofix'); // opt-in; default OFF (was default-on and mutated source on every deploy)
+const SKIP_INDEX   = argv.includes('--skip-index');
 const DRY_RUN      = argv.includes('--dry-run');
 
 const PYTHON      = '/opt/homebrew/bin/python3';
@@ -53,6 +61,8 @@ function run(cmd) {
 async function main() {
   if (DRY_RUN) log('DRY-RUN mode — no real changes will be made');
 
+  log(`[deploy.mjs] NODE_ENV as seen by the build = ${JSON.stringify(process.env.NODE_ENV ?? '(unset)')}`);
+
   if (!SKIP_BUILD) {
     log('Building with @opennextjs/cloudflare…');
     run('npx opennextjs-cloudflare build');
@@ -66,8 +76,6 @@ async function main() {
   } else {
     log('Skipping deploy (--skip-deploy)');
   }
-
-  log('Done. Indexing will run via postdeploy (npm run index).');
 
   if (!SKIP_DEPLOY && !SKIP_CHECK) {
     log('Waiting 10s for Cloudflare edge to propagate…');
@@ -137,6 +145,17 @@ async function main() {
     }
   } else if (SKIP_CHECK) {
     log('Skipping healthcheck (--skip-check)');
+  }
+
+  if (!SKIP_DEPLOY) {
+    if (SKIP_INDEX) {
+      log('Skipping Google/IndexNow indexing (--skip-index)');
+    } else {
+      log('Pinging Google indexing…');
+      run('node scripts/request-indexing.mjs');
+      log('Submitting to IndexNow…');
+      run('node scripts/indexnow-submit.mjs');
+    }
   }
 }
 

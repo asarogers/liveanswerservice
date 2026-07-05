@@ -34,6 +34,9 @@ NEXT_PUBLIC_CLARITY_ID = "x428bvg5r1"
 DEMO_CALL_LIVE = "true"
 RETELL_FROM_NUMBER = "+16693161742"
 RETELL_OUTBOUND_AGENT_ID = "agent_0ad6f3400c9549a0837a048594"
+# Inbound SPIN qualify+book agent (built, not yet bound to a number). Only used
+# to label call direction in the owner-notification email — harmless if unset.
+RETELL_INBOUND_AGENT_ID = "agent_23ca1a982b60c93c06ff844c93"
 # Optional rate-limit overrides (defaults: 3 / 10 / 50 per 24h — see lib/rate-limit.ts)
 # DEMO_CALL_NUMBER_LIMIT = "3"
 # DEMO_CALL_IP_LIMIT = "10"
@@ -62,3 +65,5 @@ database_id = "5ae70b90-486d-4838-b20a-03204d6b4830"
 #   LEADS_INGEST_URL          — Hetzner base, e.g. https://audit.assurgit.com  [SET]
 #   LEADS_INGEST_TOKEN        — bearer for the Hetzner /api/leads endpoint     [SET]
 #   RECAPTCHA_SECRET_KEY      — reCAPTCHA v3 secret (server verify); unset = reCAPTCHA skipped
+#   STRIPE_SECRET_KEY         — Checkout/Portal/webhook API calls (sk_test_/sk_live_)
+#   STRIPE_WEBHOOK_SECRET     — verify Stripe webhook signatures (whsec_...)

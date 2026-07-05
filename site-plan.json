@@ -3,47 +3,119 @@
  "generated": "2026-06-06T00:00:00Z",
  "scored_date": "2026-06-05",
  "total_keywords": 161,
- "_comment": "MANUALLY MAINTAINED PUBLISHING SCHEDULE \u2014 `lastmod_schedule` in this file is canonical (9 weekly waves from 2026-06-08; BUSINESS.md's old week-by-week roadmap is superseded). URLs in `exclude` get robots:noindex + omitted from sitemap. URLs in `sitemaps.priority` get sitemap priority 0.95 (vs 0.8 default). Each wave Monday, MOVE that wave's URLs from `exclude` into `sitemaps.priority.urls` and redeploy \u2014 via Mission Control's page-schedule panel or by hand. Strategy/rationale: important/business/liveanswerservice/LIVEANSWERSERVICE.md \u00a7Release Plan.",
+ "_comment": "MANUALLY MAINTAINED PUBLISHING SCHEDULE — `lastmod_schedule` in this file is canonical (9 weekly waves from 2026-06-08; BUSINESS.md's old week-by-week roadmap is superseded). URLs in `exclude` get robots:noindex + omitted from sitemap. URLs in `sitemaps.priority` get sitemap priority 0.95 (vs 0.8 default). Each wave Monday, MOVE that wave's URLs from `exclude` into `sitemaps.priority.urls` and redeploy — via Mission Control's page-schedule panel or by hand. Strategy/rationale: important/business/liveanswerservice/LIVEANSWERSERVICE.md §Release Plan.",
  "sitemaps": {
   "priority": {
    "filename": "sitemap-priority.xml",
-   "description": "Week 1 launch \u2014 pages indexed and prioritized in the sitemap.",
+   "description": "Week 1 launch — pages indexed and prioritized in the sitemap.",
    "urls": [
     {
      "url": "/services/hvac-answering-service",
      "tier": "G",
      "action": "target_now",
-     "reason": "Week 1 launch \u2014 HVAC vertical"
+     "reason": "Week 1 launch — HVAC vertical"
     },
     {
      "url": "/services/attorney-answering-service",
      "tier": "G",
      "action": "target_now",
-     "reason": "Week 1 launch \u2014 Legal vertical"
+     "reason": "Week 1 launch — Legal vertical"
     },
     {
      "url": "/services/small-business-answering-service",
      "tier": "G",
      "action": "target_now",
-     "reason": "Week 1 launch \u2014 SMB landing"
+     "reason": "Week 1 launch — SMB landing"
     },
     {
      "url": "/locations/san-jose",
      "tier": "F",
      "action": "target_now",
-     "reason": "Week 1 launch \u2014 HQ/NAP city"
+     "reason": "Week 1 launch — HQ/NAP city"
     },
     {
      "url": "/pricing",
      "tier": "F",
      "action": "target_now",
-     "reason": "Week 1 launch \u2014 pricing page"
+     "reason": "Week 1 launch — pricing page"
     },
     {
      "url": "/calculator",
      "tier": "F",
      "action": "target_now",
-     "reason": "Week 1 launch \u2014 missed-call calculator"
+     "reason": "Week 1 launch — missed-call calculator"
+    },
+    {
+     "url": "/ai-receptionist",
+     "tier": "E",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/ai-answering-service",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/guides/after-hours-answering-service",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/24-7-answering-service",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/guides/how-much-does-an-answering-service-cost",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/cheap-answering-service",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/vs-hiring-a-receptionist",
+     "tier": "F",
+     "action": "target_now",
+     "reason": "Wave 3 (wk 3, 2026-06-22) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/services/medical-office-answering-service",
+     "tier": "F",
+     "action": "target_now",
+     "reason": "Wave 4 (wk 4, 2026-06-29) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/bilingual-answering-service-california",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 4 (wk 4, 2026-06-29) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/services/funeral-home-answering-service",
+     "tier": "G",
+     "action": "target_now",
+     "reason": "Wave 4 (wk 4, 2026-06-29) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/guides/best-answering-service-for-small-business",
+     "tier": "E",
+     "action": "target_now",
+     "reason": "Wave 4 (wk 4, 2026-06-29) — promoted 2026-07-04 (merged to main)"
+    },
+    {
+     "url": "/services/property-management-answering-service",
+     "tier": "F",
+     "action": "target_now",
+     "reason": "Wave 4 (wk 4, 2026-06-29) — promoted 2026-07-04 (merged to main)"
     }
    ]
   },
@@ -61,256 +133,184 @@
   "description": "Pages built into the repo but NOT indexed yet (per the lastmod_schedule waves below). robots:noindex emitted per page; omitted from sitemap. Move into sitemaps.priority on the wave's Monday, then redeploy.",
   "urls": [
    {
-    "url": "/ai-receptionist",
-    "tier": "E",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/ai-answering-service",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/guides/after-hours-answering-service",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/24-7-answering-service",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/guides/how-much-does-an-answering-service-cost",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/cheap-answering-service",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/vs-hiring-a-receptionist",
-    "tier": "F",
-    "action": "exclude",
-    "reason": "Wave 3 (wk 3, 2026-06-22) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/services/medical-office-answering-service",
-    "tier": "F",
-    "action": "exclude",
-    "reason": "Wave 4 (wk 4, 2026-06-29) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/bilingual-answering-service-california",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 4 (wk 4, 2026-06-29) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/services/funeral-home-answering-service",
-    "tier": "G",
-    "action": "exclude",
-    "reason": "Wave 4 (wk 4, 2026-06-29) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/guides/best-answering-service-for-small-business",
-    "tier": "E",
-    "action": "exclude",
-    "reason": "Wave 4 (wk 4, 2026-06-29) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
-    "url": "/services/property-management-answering-service",
-    "tier": "F",
-    "action": "exclude",
-    "reason": "Wave 4 (wk 4, 2026-06-29) \u2014 gated on prior wave indexing in GSC"
-   },
-   {
     "url": "/missed-call-recovery",
     "tier": "E",
     "action": "exclude",
-    "reason": "Wave 5 (wk 5, 2026-07-06) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 5 (wk 5, 2026-07-06) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/insurance-verification",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 5 (wk 5, 2026-07-06) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 5 (wk 5, 2026-07-06) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/plumbing-answering-service",
     "tier": "E",
     "action": "exclude",
-    "reason": "Wave 5 (wk 5, 2026-07-06) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 5 (wk 5, 2026-07-06) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/free-trial",
     "tier": "F",
     "action": "exclude",
-    "reason": "Wave 5 (wk 5, 2026-07-06) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 5 (wk 5, 2026-07-06) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/veterinary-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 5 (wk 5, 2026-07-06) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 5 (wk 5, 2026-07-06) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/prior-authorization-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 6 (wk 6, 2026-07-13) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 6 (wk 6, 2026-07-13) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/appointment-scheduling-answering-service",
     "tier": "C",
     "action": "exclude",
-    "reason": "Wave 6 (wk 6, 2026-07-13) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 6 (wk 6, 2026-07-13) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/salon-and-spa-answering-service",
     "tier": "F",
     "action": "exclude",
-    "reason": "Wave 6 (wk 6, 2026-07-13) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 6 (wk 6, 2026-07-13) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/guides/what-does-a-virtual-receptionist-do",
     "tier": "E",
     "action": "exclude",
-    "reason": "Wave 6 (wk 6, 2026-07-13) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 6 (wk 6, 2026-07-13) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/guides/do-i-need-an-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 6 (wk 6, 2026-07-13) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 6 (wk 6, 2026-07-13) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/live-answering-service",
     "tier": "F",
     "action": "exclude",
-    "reason": "Wave 7 (wk 7, 2026-07-20) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 7 (wk 7, 2026-07-20) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/real-estate-answering-service",
     "tier": "F",
     "action": "exclude",
-    "reason": "Wave 7 (wk 7, 2026-07-20) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 7 (wk 7, 2026-07-20) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/guides/virtual-receptionist-cost",
     "tier": "E",
     "action": "exclude",
-    "reason": "Wave 7 (wk 7, 2026-07-20) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 7 (wk 7, 2026-07-20) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/spam-call-filtering",
     "tier": "E",
     "action": "exclude",
-    "reason": "Wave 7 (wk 7, 2026-07-20) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 7 (wk 7, 2026-07-20) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/guides/is-an-answering-service-worth-it",
     "tier": "E",
     "action": "exclude",
-    "reason": "Wave 7 (wk 7, 2026-07-20) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 7 (wk 7, 2026-07-20) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/guides/what-is-call-overflow-handling",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 7 (wk 7, 2026-07-20) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 7 (wk 7, 2026-07-20) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/chiropractic-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 8 (wk 8, 2026-07-27) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/mental-health-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 8 (wk 8, 2026-07-27) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/med-spa-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 8 (wk 8, 2026-07-27) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/emergency-dispatch-answering-service",
     "tier": "C",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 8 (wk 8, 2026-07-27) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/live-chat-answering-service",
     "tier": "C",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 8 (wk 8, 2026-07-27) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/crm-integration-answering-service",
     "tier": "C",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 gated on prior wave indexing in GSC"
+    "reason": "Wave 8 (wk 8, 2026-07-27) — gated on prior wave indexing in GSC"
    },
    {
     "url": "/services/sms-text-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 8 (wk 8, 2026-07-27) \u2014 Bucket C NEW PAGE (GBP 1:1 for Text/SMS answering & response, Telecom provider category). Added 2026-06-12; gated on prior wave indexing in GSC."
+    "reason": "Wave 8 (wk 8, 2026-07-27) — Bucket C NEW PAGE (GBP 1:1 for Text/SMS answering & response, Telecom provider category). Added 2026-06-12; gated on prior wave indexing in GSC."
    },
    {
     "url": "/services/towing-roadside-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "CUT 2026-06-11 \u2014 zero/declining demand (towing 10/mo flat); see report \u00a71A. Do not schedule; revisit next quarter only with new data."
+    "reason": "CUT 2026-06-11 — zero/declining demand (towing 10/mo flat); see report §1A. Do not schedule; revisit next quarter only with new data."
    },
    {
     "url": "/services/accounting-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "CUT 2026-06-11 \u2014 zero/declining demand (cpa 10/mo, -100% trend); see report \u00a71A. Do not schedule; revisit next quarter only with new data."
+    "reason": "CUT 2026-06-11 — zero/declining demand (cpa 10/mo, -100% trend); see report §1A. Do not schedule; revisit next quarter only with new data."
    },
    {
     "url": "/services/cleaning-landscaping-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "CUT 2026-06-11 \u2014 zero/declining demand (20-30/mo, flat); see report \u00a71A. Do not schedule; revisit next quarter only with new data."
+    "reason": "CUT 2026-06-11 — zero/declining demand (20-30/mo, flat); see report §1A. Do not schedule; revisit next quarter only with new data."
    },
    {
     "url": "/services/it-msp-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "CUT 2026-06-11 \u2014 zero/declining demand (10/mo); see report \u00a71A. Do not schedule; revisit next quarter only with new data."
+    "reason": "CUT 2026-06-11 — zero/declining demand (10/mo); see report §1A. Do not schedule; revisit next quarter only with new data."
    },
    {
     "url": "/services/nonprofit-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "CUT 2026-06-11 \u2014 zero/declining demand (10/mo declining); see report \u00a71A. Do not schedule; revisit next quarter only with new data."
+    "reason": "CUT 2026-06-11 — zero/declining demand (10/mo declining); see report §1A. Do not schedule; revisit next quarter only with new data."
    },
    {
     "url": "/services/roofing-construction-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "CUT 2026-06-11 \u2014 zero/declining demand (roofing no durable track; construction -28% YoY); see report \u00a71A. Do not schedule; revisit next quarter only with new data."
+    "reason": "CUT 2026-06-11 — zero/declining demand (roofing no durable track; construction -28% YoY); see report §1A. Do not schedule; revisit next quarter only with new data."
    },
    {
     "url": "/services/dental-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 2 (wk 2, Jun 15) \u2014 gated on Wave 1 indexing in GSC"
+    "reason": "Wave 2 (wk 2, Jun 15) — gated on Wave 1 indexing in GSC"
    },
    {
     "url": "/how-it-works",
@@ -340,49 +340,49 @@
     "url": "/ccpa-compliance-call-recording",
     "tier": "F",
     "action": "exclude",
-    "reason": "Wave 2 (wk 2, Jun 15) \u2014 zero-competitor whitespace"
+    "reason": "Wave 2 (wk 2, Jun 15) — zero-competitor whitespace"
    },
    {
     "url": "/locations/sacramento",
     "tier": "G",
     "action": "exclude",
-    "reason": "ON HOLD \u2014 not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report \u00a7G"
+    "reason": "ON HOLD — not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report §G"
    },
    {
     "url": "/locations/los-angeles",
     "tier": "G",
     "action": "exclude",
-    "reason": "ON HOLD \u2014 not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report \u00a7G"
+    "reason": "ON HOLD — not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report §G"
    },
    {
     "url": "/locations/san-francisco-bay-area",
     "tier": "G",
     "action": "exclude",
-    "reason": "ON HOLD \u2014 not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report \u00a7G"
+    "reason": "ON HOLD — not scheduled. City-list pages = spam flag since Aug 2025; no geo expansion until rank map >=25-35% top-3 + 30-URL backlink floor (WEBSITE-GROWTH-TIMING.md). Geo conceded to GBP/local pack per 2026-06-05 report §G"
    },
    {
     "url": "/services/lead-capture-answering-service",
     "tier": "C",
     "action": "exclude",
-    "reason": "Wave 2 (2026-06-15) \u2014 service-expansion feature, opp 0.47. Spec: SERVICE-PAGE-EXPANSION.md"
+    "reason": "Wave 2 (2026-06-15) — service-expansion feature, opp 0.47. Spec: SERVICE-PAGE-EXPANSION.md"
    },
    {
     "url": "/services/outbound-reminder-answering-service",
     "tier": "C",
     "action": "exclude",
-    "reason": "Wave 2 (2026-06-15) \u2014 service-expansion feature, opp 0.49. Spec: SERVICE-PAGE-EXPANSION.md"
+    "reason": "Wave 2 (2026-06-15) — service-expansion feature, opp 0.49. Spec: SERVICE-PAGE-EXPANSION.md"
    },
    {
     "url": "/services/insurance-answering-service",
     "tier": "G",
     "action": "exclude",
-    "reason": "Wave 5 (2026-07-06) \u2014 service-expansion vertical \u2014 VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
+    "reason": "Wave 5 (2026-07-06) — service-expansion vertical — VALIDATE-FIRST (keyword-check before ship; reorder verticals highest-demand-first). Spec: SERVICE-PAGE-EXPANSION.md"
    }
   ]
  },
  "internal_linking": {
   "homepage": {
-   "description": "Featured service cards on the homepage hero \u2014 top Week 1 verticals.",
+   "description": "Featured service cards on the homepage hero — top Week 1 verticals.",
    "links": [
     {
      "url": "/services/hvac-answering-service",
@@ -411,7 +411,7 @@
   }
  },
  "clusters": {},
- "_schedule_comment": "WEEKLY WAVES per WEBSITE-GROWTH-TIMING.md: ship batches 1-2 weeks apart (weekly = lower bound of the rule). Each wave is GATED ON GSC: before promoting, confirm the prior wave is indexing (3-14 day window) and has no 'Crawled - not indexed' rows (those suppress crawl of NEW pages domain-wide) \u2014 if Wave 1 hasn't started indexing yet, SLIP the next wave a week rather than ship into a stalled domain. Every promoted URL needs >=1 external backlink (Mission Control warns on promote). Geo pages (sacramento/LA/SF-bay) are ON HOLD \u2014 not scheduled \u2014 until rank map shows >=25-35% top-3 coverage and the 30-URL backlink floor is met; city-list pages are a spam flag since Aug 2025. CODE PAGES FOR FUTURE WAVES live on stacked git branches (wave-5 -> wave-6 -> wave-8 -> wave-9, each containing its predecessors): on a wave's Monday, Mission Control's publish-week action merges `branch` into main, promotes the wave's URLs, and deploys. Merge IN ORDER \u2014 branches are stacked, so merging a later wave brings earlier waves' pages too (their URLs stay noindexed until promoted, so it's safe, but order keeps the repo matching the schedule).",
+ "_schedule_comment": "WEEKLY WAVES per WEBSITE-GROWTH-TIMING.md: ship batches 1-2 weeks apart (weekly = lower bound of the rule). Each wave is GATED ON GSC: before promoting, confirm the prior wave is indexing (3-14 day window) and has no 'Crawled - not indexed' rows (those suppress crawl of NEW pages domain-wide) — if Wave 1 hasn't started indexing yet, SLIP the next wave a week rather than ship into a stalled domain. Every promoted URL needs >=1 external backlink (Mission Control warns on promote). Geo pages (sacramento/LA/SF-bay) are ON HOLD — not scheduled — until rank map shows >=25-35% top-3 coverage and the 30-URL backlink floor is met; city-list pages are a spam flag since Aug 2025. CODE PAGES FOR FUTURE WAVES live on stacked git branches (wave-5 -> wave-6 -> wave-8 -> wave-9, each containing its predecessors): on a wave's Monday, Mission Control's publish-week action merges `branch` into main, promotes the wave's URLs, and deploys. Merge IN ORDER — branches are stacked, so merging a later wave brings earlier waves' pages too (their URLs stay noindexed until promoted, so it's safe, but order keeps the repo matching the schedule).",
  "lastmod_schedule": [
   {
    "week": 1,
@@ -531,5 +531,5 @@
    "count": 7
   }
  ],
- "_schedule_update": "2026-06-11: Waves 3-8 rebuilt on measured data (clickstream/KD/YoY/SERP, report \u00a71A/\u00a71C). Wave 1 shipped, Wave 2 unchanged. Cherry-picks needed: /ai-receptionist + medical (from wave-6 branch), plumbing (from wave-9). New builds: /ai-answering-service, funeral-home, insurance-verification, prior-authorization-service. Cuts: towing/accounting/cleaning/it-msp/nonprofit/roofing (zero or declining demand; CNI risk). Medical page copy MUST target exact phrase 'medical answer service' (6600/mo KD7; the -ing variant is 0/mo KD25). Worklist: WAVE-REWORK-2026-06-11.md"
+ "_schedule_update": "2026-06-11: Waves 3-8 rebuilt on measured data (clickstream/KD/YoY/SERP, report §1A/§1C). Wave 1 shipped, Wave 2 unchanged. Cherry-picks needed: /ai-receptionist + medical (from wave-6 branch), plumbing (from wave-9). New builds: /ai-answering-service, funeral-home, insurance-verification, prior-authorization-service. Cuts: towing/accounting/cleaning/it-msp/nonprofit/roofing (zero or declining demand; CNI risk). Medical page copy MUST target exact phrase 'medical answer service' (6600/mo KD7; the -ing variant is 0/mo KD25). Worklist: WAVE-REWORK-2026-06-11.md"
 }

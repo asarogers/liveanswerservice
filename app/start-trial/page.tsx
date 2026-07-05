@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import CheckoutButtons from "@/components/CheckoutButtons";
 
 const SLUG = "start-trial";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -33,13 +34,16 @@ export default function StartTrialPage() {
       </section>
 
       <section className="phone-cta">
-        <div className="eyebrow">Two ways to start. Pick one.</div>
+        <div className="eyebrow">Three ways to start. Pick one.</div>
         <a href={siteConfig.phone.href} className="phone-btn">
           <i className="ti ti-phone-call" aria-hidden="true" />
           <span>{siteConfig.phone.display}</span>
         </a>
         <div className="phone-secondary">
           Call to talk to a person · or <Link href="/book">book a 30-min setup consult</Link>
+        </div>
+        <div style={{ marginTop: 24 }}>
+          <CheckoutButtons />
         </div>
       </section>
 

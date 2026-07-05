@@ -4,6 +4,7 @@ import { normalizeE164 } from '@/lib/phone';
 import { createPhoneCall } from '@/lib/retell';
 import { persistLead } from '@/lib/leads';
 import { verifyRecaptcha } from '@/lib/recaptcha';
+import { notifyOwner as sendOwnerEmail } from '@/lib/notify';
 import {
   checkRateLimit,
   recordAttempt,
@@ -60,25 +61,14 @@ function limitsFromEnv(): RateLimitConfig {
   };
 }
 
-/** Best-effort owner notification (kept from the original stub). Never throws. */
+/** Best-effort owner notification. Never throws. */
 async function notifyOwner(phone: string, note: string): Promise<void> {
-  if (!process.env.RESEND_API_KEY) return;
-  try {
-    const { Resend } = await import('resend');
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    const from = process.env.RESEND_FROM_EMAIL || 'Live Answer <onboarding@resend.dev>';
-    const to = process.env.CONTACT_FORM_TO_EMAIL || 'jselah@gmail.com';
-    await resend.emails.send({
-      from,
-      to,
-      subject: `Demo call requested — ${phone}`,
-      html: `<p>Someone requested a live AI demo call.</p>
-             <p><strong>Phone:</strong> ${phone}</p>
-             <p>${note}</p>`,
-    });
-  } catch (err) {
-    console.error('[demo-call] resend failed', err);
-  }
+  await sendOwnerEmail(
+    `Demo call requested — ${phone}`,
+    `<p>Someone requested a live AI demo call.</p>
+     <p><strong>Phone:</strong> ${phone}</p>
+     <p>${note}</p>`,
+  );
 }
 
 async function readBody(
@@ -182,7 +172,7 @@ export async function POST(request: NextRequest) {
       fromNumber,
       toNumber: phone,
       overrideAgentId: agentId,
-      metadata: { lead_id: leadId, source: 'homepage_outbound' },
+      metadata: { lead_id: leadId, source: 'homepage_outbound', lead_phone: phone },
     });
     await recordAttempt(db, { id: leadId, phoneE164: phone, ip, callId: call.call_id, clientId });
     await persistLead({

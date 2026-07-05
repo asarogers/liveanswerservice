@@ -30,7 +30,7 @@ const PHONE_HREF = siteConfig.phone.href;
 
 export default function CTABlock({
   headline = "Ready to Start? Let\u2019s Talk.",
-  subtext = "Book your free Kitchen & Nutrition Assessment \u2014 no pressure, no obligation. Just a conversation about how we can help you eat better and live more confidently.",
+  subtext = "Book your free 30-minute setup consult \u2014 no pressure, no obligation. Just a conversation about how a live AI receptionist can stop missed calls from costing you business.",
   ctaText = "Book Your Free 30-min Setup Consult",
   headingId = "cta-block-heading",
   showPhone = false,

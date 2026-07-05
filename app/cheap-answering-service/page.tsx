@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import HeroCallForm from "@/components/HeroCallForm";
 
 const SLUG = "cheap-answering-service";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -9,6 +10,7 @@ const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 export const metadata: Metadata = {
   openGraph: {
   url: "https://liveanswerservice.com/cheap-answering-service",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   robots: gatedRobots("/cheap-answering-service"),
   title: "Affordable Answering Service — Flat $500/mo, No Per-Minute Fees",
@@ -41,13 +43,7 @@ export default function CheapPage() {
               $500/mo flat. Unlimited calls. Bilingual EN/ES. No overages, no surprise bills,
               locked rate at sign-up.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               No card · 7-day free trial · cancel anytime
             </div>

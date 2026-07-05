@@ -22,11 +22,12 @@ npm run dev
 ## Deploy
 
 ```bash
-npm run deploy        # build → wrangler deploy → check_all.py healthcheck → autofix
-npm run postdeploy    # ping Bing + submit changed URLs to Google Indexing API
+npm run deploy        # build → wrangler deploy → check_all.py healthcheck → autofix → indexing
+npm run deploy -- --dry-run     # preview every step, touch nothing (safe to run any time)
+npm run deploy -- --skip-index  # same deploy, skip the Google/IndexNow ping
 ```
 
-`scripts/deploy.mjs` is the canonical deploy path. It runs the OpenNext build, deploys to Cloudflare Workers, then runs `check_all.py` against the live sitemap. If healthcheck flags fixable issues, it patches the repo and redeploys.
+`scripts/deploy.mjs` is the canonical deploy path. It runs the OpenNext build, deploys to Cloudflare Workers, runs `check_all.py` against the live sitemap, then pings Google/IndexNow. All steps (including indexing) live inside this one script now — there's no separate `postdeploy` npm hook, so `--dry-run` and `--skip-*` flags are honored for every step, not just build/deploy.
 
 ## Template spec
 

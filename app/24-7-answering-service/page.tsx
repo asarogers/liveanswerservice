@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import HeroCallForm from "@/components/HeroCallForm";
 
 const SLUG = "24-7-answering-service";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -9,6 +10,7 @@ const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 export const metadata: Metadata = {
   openGraph: {
   url: "https://liveanswerservice.com/24-7-answering-service",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   robots: gatedRobots("/24-7-answering-service"),
   title: "24/7 Answering Service — Genuine Round-the-Clock Coverage",
@@ -64,13 +66,7 @@ export default function TwentyFourSevenPage() {
               or a smaller skeleton crew. <strong>Live Answer answers every call in parallel — 3 AM
               Sunday the same as 10 AM Tuesday.</strong>
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me now
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} label="Call me now" />
             <div style={{ fontSize: 13, color: "var(--color-text-muted)" }}>
               Test the line — it&rsquo;s the same agent at 3 AM as 3 PM.
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import HeroCallForm from "@/components/HeroCallForm";
 
 const SLUG = "ccpa-compliance-call-recording";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -39,13 +40,7 @@ export default function CCPAPage() {
               §632 lawsuit.</strong> Every Live Answer call opens with a compliant disclosure,
               encrypted recording, 30-day deletion. You stay out of the courtroom.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Hear the disclosure
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} label="Hear the disclosure" />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               We&rsquo;ll call you and play the exact two-party-consent prompt your callers hear.
             </div>

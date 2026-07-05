@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { notifyOwner, ownerEmailFrom } from '@/lib/notify';
 
 // Info-level logging only outside production — console noise in the Worker
 // logs is an audit flag. Errors always log.
@@ -22,19 +23,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    const { Resend } = await import('resend');
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    const from = process.env.RESEND_FROM_EMAIL || 'Live Answer <onboarding@resend.dev>';
-    const to = process.env.CONTACT_FORM_TO_EMAIL || 'jselah@gmail.com';
+    const from = ownerEmailFrom();
     const firstName = name.split(' ')[0];
 
-    // ── 1. Notification to Justine (critical) ──────────────────
-    const { error: notifyError } = await resend.emails.send({
-      from,
-      to,
-      replyTo: email,
-      subject: `New message from ${name} — Live Answer`,
-      html: `
+    // ── 1. Notification to owner (critical) ──────────────────
+    const sent = await notifyOwner(
+      `New message from ${name} — Live Answer`,
+      `
         <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto;">
           <h2 style="color: #2C2C2C;">New Contact Form Submission</h2>
           <table style="width:100%; border-collapse:collapse;">
@@ -48,18 +43,18 @@ export async function POST(request: NextRequest) {
           <p style="color:#888; font-size:12px; margin-top:24px;">Reply to this email to respond directly to ${firstName}.</p>
         </div>
       `,
-    });
+      email,
+    );
 
-    if (notifyError) {
-      console.error('Notification email failed:', notifyError);
-      return NextResponse.json({ success: false, error: notifyError.message }, { status: 500 });
+    if (!sent) {
+      return NextResponse.json({ success: false, error: 'Failed to send notification email.' }, { status: 500 });
     }
-
-    if (DEV) console.log('Notification sent to', to);
 
     // ── 2. Confirmation to submitter (best-effort) ──────────────
     // NOTE: Requires liveanswerservice.com to be verified in Resend dashboard.
     // Until then this will fail silently — the form still succeeds.
+    const { Resend } = await import('resend');
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { error: confirmError } = await resend.emails.send({
       from,
       to: email,

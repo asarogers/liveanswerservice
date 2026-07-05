@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import HeroCallForm from "@/components/HeroCallForm";
 
 const SLUG = "missed-call-recovery";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -94,13 +95,7 @@ export default function MissedCallRecoveryPage() {
               unanswered gets <strong>answered, qualified, and either booked or followed up</strong> —
               while you&rsquo;re on the job, after hours, or slammed at lunch.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Watch a call get recovered
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} label="Watch a call get recovered" />
             <div style={{ fontSize: 13, color: "var(--color-text-muted)" }}>
               Call the demo line and watch the recovery chain run live.
             </div>

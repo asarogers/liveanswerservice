@@ -9,6 +9,7 @@ const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 export const metadata: Metadata = {
   openGraph: {
   url: "https://liveanswerservice.com/vs-hiring-a-receptionist",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
   },
   robots: gatedRobots("/vs-hiring-a-receptionist"),
   title: "AI Receptionist vs Hiring a Human — California Cost Comparison",

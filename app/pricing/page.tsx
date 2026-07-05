@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import BillingPortalForm from "@/components/BillingPortalForm";
 
 const SLUG = "pricing";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -90,6 +91,10 @@ export default function PricingPage() {
             <span><i className="ti ti-shield-check" aria-hidden="true" />7-day free trial · no card</span>
             <span><i className="ti ti-shield-check" aria-hidden="true" />Miss a booking? Month free</span>
             <span><i className="ti ti-shield-check" aria-hidden="true" />Cancel anytime</span>
+          </div>
+          <div style={{ textAlign: "center", marginTop: 40 }}>
+            <p style={{ marginBottom: 12 }}>Already a customer? Manage your billing:</p>
+            <BillingPortalForm />
           </div>
         </div>
       </section>

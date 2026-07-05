@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import HeroCallForm from "@/components/HeroCallForm";
 
 const SLUG = "ai-receptionist";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
 
 export const metadata: Metadata = {
+  openGraph: {
+  url: "https://liveanswerservice.com/ai-receptionist",
+  images: [{ url: "https://liveanswerservice.com/opengraph-image.png", width: 1024, height: 1024, alt: "Live Answer Service" }],
+  },
   robots: gatedRobots("/ai-receptionist"),
   title: "Best AI Receptionist for Small Business — Live Answer",
   description:
@@ -39,13 +44,7 @@ export default function AIReceptionistPage() {
               monitor it. You just forward your phone.</strong>{" "}
               Not a DIY tool you configure and babysit.
             </p>
-            <form className="hero-call-form" action="/api/demo-call" method="post">
-              <input type="tel" name="phone" placeholder="Enter your phone number" required aria-label="Your phone number" />
-              <button type="submit">
-                <i className="ti ti-phone-outgoing" aria-hidden="true" />
-                Call me now
-              </button>
-            </form>
+            <HeroCallForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} label="Call me now" />
             <div style={{ fontSize: 13, color: "#94867a" }}>
               Or hear it yourself — call the live demo line: <strong>{siteConfig.phone.display}</strong>
             </div>
