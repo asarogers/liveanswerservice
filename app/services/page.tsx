@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { getAllServices } from "@/lib/services-data";
 import { loadSitePlan, noindexSlugs } from "@/lib/site-plan";
+import CTABlock from "@/components/CTABlock";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -196,6 +197,15 @@ export default function ServicesIndexPage() {
         </div>
       </section>
 
+      {/* Dual CTA — book (direct) + hear a real call (transitional) */}
+      <CTABlock
+        headline="Ready to stop missing calls?"
+        subtext="Book a free 30-minute setup consult and we'll tailor the AI to your trade — or hear a real call first."
+        direct={{ variant: "book" }}
+        transitional={{ text: "Hear a real call", href: "/how-it-works#hear-it", event: "services_index" }}
+        showPhone
+        location="services_final"
+      />
     </>
   );
 }

@@ -61,8 +61,8 @@ export default function PricingPage() {
                 $199 one-time setup · <em>waived with annual prepay</em>
               </div>
               <div className="annual">Annual: $5,100/yr ($425/mo)</div>
-              <Link href="/start-trial" className="btn-secondary" style={{ marginTop: 16, display: "inline-block" }}>
-                Start free trial →
+              <Link href="/start-trial" className="btn-primary" style={{ marginTop: 16, display: "inline-block" }}>
+                Start your 7-day free trial →
               </Link>
             </div>
             <div className="price-card">

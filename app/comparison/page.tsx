@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import CTABlock from "@/components/CTABlock";
 
 const SLUG = "comparison";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -146,6 +147,16 @@ export default function ComparisonPage() {
           </div>
         </div>
       </section>
+
+      {/* Dual CTA — book (direct) + hear a real call (transitional) */}
+      <CTABlock
+        headline="Compared enough? Put it to the test."
+        subtext="Book a free 30-minute setup consult, or hear a real call and judge for yourself — no per-minute pricing, no contract."
+        direct={{ variant: "book" }}
+        transitional={{ text: "Hear a real call", href: "/how-it-works#hear-it", event: "comparison" }}
+        showPhone
+        location="comparison_final"
+      />
     </>
   );
 }

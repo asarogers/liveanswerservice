@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 import { loadSitePlan, noindexSlugs, gatedRobots } from "@/lib/site-plan";
+import CTABlock from "@/components/CTABlock";
+import SampleCallPlayer from "@/components/SampleCallPlayer";
+import ResourcesSection from "@/components/ResourcesSection";
+import SectionViewTracker from "@/components/SectionViewTracker";
+import { availableResources } from "@/lib/resources";
 
 const SLUG = "how-it-works";
 const NOINDEX = noindexSlugs(loadSitePlan()).has(SLUG);
@@ -27,6 +32,18 @@ export default function HowItWorksPage() {
             Three minutes to set up. Real calls answered within 24 hours. Here&rsquo;s the
             whole flow — and the engineering behind it.
           </p>
+        </div>
+      </section>
+
+      {/* Proof asset — hear the product before reading about it (StoryBrand Ch.8 sample CTA) */}
+      <section id="hear-it" aria-label="Hear a sample call" className="section-pad bg-[#FBF8F2]">
+        <SectionViewTracker section="how_it_works_hear_it" />
+        <div className="container-xl">
+          <div className="mx-auto mb-8 max-w-2xl text-center">
+            <div className="section-eyebrow">Hear it yourself</div>
+            <h2 className="section-title">This is what your 2am caller hears.</h2>
+          </div>
+          <SampleCallPlayer />
         </div>
       </section>
 
@@ -135,16 +152,19 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="final-cta">
-        <div className="wrap">
-          <h2>Try it now. Three minutes.</h2>
-          <div className="sub">Dial the demo line and roleplay your worst customer. See what happens.</div>
-          <a href={siteConfig.phone.href} className="phone-btn">
-            <i className="ti ti-phone-call" aria-hidden="true" />
-            <span>{siteConfig.phone.display}</span>
-          </a>
-        </div>
-      </section>
+      {/* Transitional CTA — free resources for the not-yet-ready visitor */}
+      <SectionViewTracker section="how_it_works_resources" />
+      <ResourcesSection resources={availableResources()} />
+
+      {/* Dual CTA — direct (book) + transitional (hear a real call) side by side */}
+      <CTABlock
+        headline="Try it now. Three minutes."
+        subtext="Dial the demo line and roleplay your worst customer — or book a free 30-minute setup consult and we'll walk you through it."
+        direct={{ variant: "book" }}
+        transitional={{ text: "Hear a real call", href: "#hear-it", event: "how_it_works" }}
+        showPhone
+        location="how_it_works_final"
+      />
     </>
   );
 }

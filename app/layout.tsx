@@ -7,6 +7,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MobileStickyButton from "@/components/MobileStickyButton";
 import CookieBanner from "@/components/CookieBanner";
+import ChatWidget from "@/components/ChatWidget";
+import SessionTracker from "@/components/SessionTracker";
 import { siteConfig } from "@/lib/siteConfig";
 
 /* ============================================================
@@ -253,6 +255,8 @@ export default function RootLayout({
           <Navigation />
         </Suspense>
 
+        <SessionTracker />
+
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
@@ -260,6 +264,7 @@ export default function RootLayout({
         <Footer />
 
         <MobileStickyButton />
+        <ChatWidget />
         <CookieBanner />
 
         <script

@@ -11,13 +11,38 @@
  * and LEADS_INGEST_TOKEN (bearer). If LEADS_INGEST_URL is unset, these no-op.
  */
 
+/**
+ * Where a lead originated. The voice-demo path uses 'homepage_outbound' /
+ * 'inbound_call' (unchanged). The transitional-CTA surfaces (StoryBrand Ch.8)
+ * add lower-commitment sources: a bare lead form, a gated PDF download, or the
+ * chat widget. A free-form string is also accepted so per-page tags like
+ * 'lead_form:spam_page' or 'download:missed-call-checklist' pass through.
+ */
+export type LeadSource =
+  | 'homepage_outbound'
+  | 'inbound_call'
+  | 'lead_form'
+  | 'download'
+  | 'chat'
+  | (string & {});
+
 export interface LeadSubmission {
   leadId: string;
-  phoneE164: string;
-  source: 'homepage_outbound' | 'inbound_call';
+  /** E.164 phone. Required for the voice-demo path; optional for form/download
+   *  leads where email is the primary identifier. */
+  phoneE164?: string;
+  source: LeadSource;
   ip?: string;
   status: string;
   retellCallId?: string;
+  /** Optional contact fields captured by the non-voice forms. */
+  name?: string;
+  email?: string;
+  message?: string;
+  /** First-party journey keys (lib/session.ts) — join a lead to the exact
+   *  visitor path that produced it. */
+  visitorId?: string;
+  sessionId?: string;
 }
 
 export interface LeadAnalysisUpdate {
@@ -75,11 +100,16 @@ async function postJson(path: string, payload: unknown): Promise<boolean> {
 export async function persistLead(sub: LeadSubmission): Promise<boolean> {
   return postJson('/api/leads', {
     id: sub.leadId,
-    phone_e164: sub.phoneE164,
+    phone_e164: sub.phoneE164 ?? '',
     source: sub.source,
     status: sub.status,
     ip: sub.ip,
     retell_call_id: sub.retellCallId,
+    name: sub.name,
+    email: sub.email,
+    message: sub.message,
+    visitor_id: sub.visitorId,
+    session_id: sub.sessionId,
   });
 }
 
