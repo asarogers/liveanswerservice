@@ -18,7 +18,9 @@ export function trackEvent(name: string, params: Record<string, unknown> = {}) {
     window.gtag('event', name, {
       page_path: window.location.pathname,
       visitor_id,
-      session_id,
+      // `session_id` is a GA4-reserved param name — send ours under a distinct
+      // key so it's usable as a custom dimension (las_session_id).
+      las_session_id: session_id,
       ...params,
     })
   }
